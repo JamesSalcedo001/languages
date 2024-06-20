@@ -43,3 +43,54 @@ let and = (a < b && b > 10); // AND
 
 let or = (a < b || b < 10); // OR
 
+
+
+// control flow
+
+
+// if else statement
+
+let number = 10;
+
+if (number > 5) {
+    console.log("Greater than 5");
+} else {
+    console.log("5 or less");
+}
+
+
+// ternary operator
+
+let result = (number > 5) ? "Greater than 5" : "5 or less";
+console.log(result);
+
+
+
+// loops
+
+
+// for loop 
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+
+// while loop
+
+let j = 0;
+while (j < 5) {
+    console.log(j);
+    j++;
+}
+
+
+// do while loop
+
+let k = 0;
+do {
+    console.log(k);
+    k++;
+} while (k < 5);
+
+
