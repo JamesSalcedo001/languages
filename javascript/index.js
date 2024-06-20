@@ -94,3 +94,38 @@ do {
 } while (k < 5);
 
 
+
+
+// functions/methods
+
+
+function greet(name) {
+    return `Hello, ${name}`;
+}
+
+console.log(greet("John")); // output: Hello, John.
+
+
+
+// arrays/lists
+
+let fruits = ["apple", "banana", "cherry"];
+console.log(fruits[0]); // output: apple
+
+
+
+
+// objects/dictionaries
+
+let person = {
+    firstName: "James",
+    lastName: "Salcedo",
+    age: 28 
+};
+
+
+console.log(person.firstName); // output: James
+console.log(person["lastName"]); // output: Salcedo
+
+
+
