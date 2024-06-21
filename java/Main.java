@@ -307,7 +307,6 @@ public class Main {
 
 abstract class Shape {
     abstract double area();
-    // find out what abstract means in java
 }
 
 class Circle extends Shape {
