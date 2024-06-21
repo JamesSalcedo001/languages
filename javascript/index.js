@@ -207,7 +207,7 @@ console.log(emp.getSalary()); // output: 50000
 
 
 
-// polymorphism
+// polymorphism (OOP)
 
 
 class Shape {
@@ -247,3 +247,17 @@ class Rectangle extends Shape {
 let shapes = [new Circle(10), new Rectangle(5, 10)];
 
 shapes.forEach(shape => console.log(shape.area()));
+
+
+
+
+
+// exceptions/ error handling
+
+try {
+    let result = riskyOp();
+} catch (error) {
+    console.error("Error occurred:", error.message);
+} finally {
+    console.log("Cleanup actions if needed");
+}
