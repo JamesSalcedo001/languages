@@ -256,3 +256,27 @@ def factorial(n):
         return n * factorial(n - 1)
 
 print(factorial(5)) # output: 120
+
+
+
+
+
+
+
+# libraries/modules
+
+
+
+# using built in library
+import datetime
+
+
+print(datetime.date.today()) # output: current date
+
+
+
+# using external library (eg requests for HTTP requests)
+import requests
+
+response = requests.get('http://example.com')
+print(response.status_code) # output: 200 if successful
