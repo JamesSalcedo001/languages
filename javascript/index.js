@@ -203,3 +203,47 @@ class Employee {
 
 let emp = new Employee("Alice", 50000);
 console.log(emp.getSalary()); // output: 50000
+
+
+
+
+// polymorphism
+
+
+class Shape {
+    area() {
+        return 0;
+    }
+}
+
+
+class Circle extends Shape {
+    constructor(radius) {
+        super();
+        this.radius = radius;
+    }
+
+    area() {
+        return Math.PI * this.radius ** 2;
+        // formula for calculating area of circle or pi r squared
+    }
+}
+
+
+class Rectangle extends Shape {
+    constructor(width, height) {
+        super();
+        this.width = width;
+        this.height = height;
+    }
+
+    area() {
+        return this.width * this.height;
+        // formula for calculating rectangle or width * height
+    }
+}
+
+
+let shapes = [new Circle(10), new Rectangle(5, 10)];
+
+shapes.forEach(shape => console.log(shape.area()));
