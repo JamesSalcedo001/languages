@@ -189,3 +189,38 @@ print(emp.get_salary()) # output: 50000
 
 
 
+
+
+
+# polymorphism (OOP)
+
+
+class Shape:
+    def area(self):
+        return 0
+    
+
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+    
+
+class Rectangle(Shape):
+    def __init__(self, height, width):
+        self.height = height
+        self.width = width
+
+    def area(self):
+        return self.height * self.width
+    
+
+
+shapes = [Circle(10), Rectangle(5, 10)]
+
+for shape in shapes:
+    print(shape.area())
