@@ -86,3 +86,23 @@ while True:
         break
 
 
+
+
+# functions/methods
+
+
+def greet(name):
+    return f"Hello, {name}"
+
+print(greet("John")) # output: Hello, John
+
+
+
+
+# lists
+
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0]) # output: apple
+
+
+
