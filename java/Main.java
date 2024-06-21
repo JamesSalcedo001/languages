@@ -391,4 +391,28 @@ public class Main {
 
 
 
-// 
+// libraries/ modules
+
+
+import java.util.Date; // importing built in library
+
+
+public class Main {
+    public static void main(String[] args) {
+        Date date = new Date();
+        System.out.println(date); // output: current date and time
+    }
+}
+
+
+// using external library 
+
+import org.apache.commons.lang3.StringUtils;
+
+
+public class Main {
+    public static void main(String[] args) {
+        String str = " Hello World ";
+        System.out.println(StringUtils.trim(str)); // output: Hello World
+    }   
+}
