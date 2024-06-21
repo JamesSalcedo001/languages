@@ -99,10 +99,46 @@ print(greet("John")) # output: Hello, John
 
 
 
+
 # lists
 
 fruits = ["apple", "banana", "cherry"]
 print(fruits[0]) # output: apple
+
+
+
+
+# dictionaries
+
+person = {
+    "first_name": "John",
+    "last_name": "Doe",
+    "age": 30
+}
+
+
+print(person["first_name"]) # output: John
+
+
+
+
+# classes/objects (OOP) 
+
+
+
+class Person:
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+
+    def greet(self):
+        return f"Hello, my name is {self.first_name} {self.last_name}"
+    
+
+person1 = Person("John", "Doe", 30)
+print(person1.greet()) # output: Hello, my name is John Doe
 
 
 
