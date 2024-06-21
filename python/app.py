@@ -224,3 +224,35 @@ shapes = [Circle(10), Rectangle(5, 10)]
 
 for shape in shapes:
     print(shape.area())
+
+
+
+
+
+
+# exceptions/error handling
+
+
+try:
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print(f"an error occurred: {e}")
+finally:
+    print("cleanup actions if needed")
+
+
+
+
+
+
+
+# recursion 
+
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5)) # output: 120
