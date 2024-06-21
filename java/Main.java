@@ -113,3 +113,38 @@ do {
 
 
 
+
+
+
+// functions/methods
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(greet("John")); // output: hello john
+    }
+
+    public static String greet(String name) {
+        return "Hello, " + name;
+    }
+}
+
+
+
+
+
+
+
+// arrays/lists
+
+
+public class Main {
+    public static void main(String[] args) {
+        String[] fruits = {"apple", "banana", "cherry"};
+        System.out.println(fruits[0]); // output: apple 
+    }
+}
+
+// notice how arrays are not the typical [] form they are in an {} form, but similar manner of accessing them. write String[] as the data type, then the name, and then the elements inside an {}
+
