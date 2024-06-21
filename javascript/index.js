@@ -153,3 +153,30 @@ console.log(person1.greet()); // output: Hello, my name is John Doe
 
 
 
+
+
+
+// inheritance (OOP)
+
+
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    speak() {
+        console.log(`${this.name} makes a noise.`)
+    }
+}
+
+
+
+class Dog extends Animal {
+    speak() {
+        console.log(`${this.name} barks.`);
+    }
+}
+
+let dog = new Dog("Rex");
+
+dog.speak(); // output: Rex barks.
