@@ -148,3 +148,36 @@ public class Main {
 
 // notice how arrays are not the typical [] form they are in an {} form, but similar manner of accessing them. write String[] as the data type, then the name, and then the elements inside an {}
 
+
+
+
+
+// objects/ dictionaries
+
+
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person("John", "Doe", 30);
+        System.out.println(person.getFirstName()); // output: John
+    }
+}
+
+
+class Person {
+    private String firstName;
+    private String lastName;
+    private int age;
+
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+}
+
+
