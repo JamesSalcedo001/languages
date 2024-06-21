@@ -282,3 +282,41 @@ console.log(factorial(5)); // output 120;
 
 
 
+
+
+// libraries/ modules
+
+
+
+
+// using built in module node.js for example
+
+
+const fs = require('fs');
+
+// or
+
+import fs from 'fs';
+
+
+fs.readFile('example.txt', 'utf8', (err, data) => {
+    if (err) throw err;
+    console.log(data)
+});
+
+
+
+// using external library eg. lodash
+
+const _ = require('lodash');
+
+// or
+
+import _ from 'lodash';
+
+
+let numbers = [1, 2, 3, 4, 5];
+
+let reversed = _.reverse(numbers);
+
+console.log(reversed); // output: [5, 4, 3, 2, 1]
