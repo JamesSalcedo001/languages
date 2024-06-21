@@ -129,3 +129,27 @@ console.log(person["lastName"]); // output: Salcedo
 
 
 
+
+
+// classes and objects (OOP)
+
+
+
+class Person {
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    greet() {
+        return `Hello, my name is ${this.firstName} ${this.lastName}`;
+    }
+}
+
+
+let person1 = new Person("John", "Doe", 30);
+console.log(person1.greet()); // output: Hello, my name is John Doe
+
+
+
