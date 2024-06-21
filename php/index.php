@@ -49,4 +49,34 @@ $orOp = ($a < $b || $b < 10); // OR
 
 
 
+
+
+
+// control flow
+
+$number = 10;
+
+// if statement 
+
+if ($number > 5) {
+    echo "Greater than 5";
+} else {
+    echo "5 or less";
+}
+
+
+// ternary 
+
+$result = ($number > 5) ? "Greater than 5" : "5 or less";
+echo $result;
+
+
+
+
+
+
+
+
+
+
 ?>
