@@ -142,3 +142,26 @@ print(person1.greet()) # output: Hello, my name is John Doe
 
 
 
+
+
+
+
+# inheritance (OOP)
+
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+
+    def speak(self);
+        print(f"{self.name} makes a noise")
+
+
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name} barks")
+
+
+dog = Dog("Rex")
+dog.speak() #output: Rex barks
