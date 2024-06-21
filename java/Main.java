@@ -342,3 +342,53 @@ class Rectangle extends Shape {
 
 
 
+
+
+
+// error handling
+
+
+
+public class Main  {
+    public static void main(String[] args) {
+        try {
+            int result = riskyOp();
+        } catch (ArithmeticExcetption e) {
+            System.out.println("Error: ", e.getMessage());
+        } finally {
+            System.out.println("Cleanup actions needed");
+        }
+    }
+
+
+    public static int riskyOp() {
+        return 10 / 0; // cause ArithmeticException
+    }
+}
+
+
+
+
+// recursion 
+
+
+
+public class Main {
+    public static void main (String[] args) {
+        System.out.println(factorial(5)); // output: 120
+    }
+
+
+    public static int factorial(int n) {
+        if (n === 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+}
+
+
+
+
+// 
