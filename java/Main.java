@@ -51,3 +51,65 @@ boolean orOp = (a < b || b > 10); // OR
 
 
 
+// control flow
+
+
+// if statement
+
+int number = 10;
+
+if (number > 5) {
+    System.out.println("Greater than 5");
+} else {
+    System.out.println("5 or less")
+}
+
+
+
+
+// ternary operator
+
+String result = (number > 5) ? "Greater than 5" : "5 or less";
+System.out.println(result);
+
+
+
+
+
+
+
+
+// loops
+
+
+
+// for loop 
+
+
+
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+
+
+// while loop
+
+int j = 0;
+while (j < 5) {
+    System.out.println(j);
+    j++;
+}
+
+
+
+// do while loop
+
+
+int k = 0;
+do {
+    System.out.println(k);
+    k++;
+} while (k < 5);
+
+
+
