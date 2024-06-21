@@ -165,3 +165,27 @@ class Dog(Animal):
 
 dog = Dog("Rex")
 dog.speak() #output: Rex barks
+
+
+
+
+
+
+
+# encapsulation (OOP)
+
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.__salary = salary #private attribute
+    
+    def get_salary(self):
+        return self.__salary
+    
+
+emp = Employee("Alice", 50000)
+print(emp.get_salary()) # output: 50000
+
+
+
+
