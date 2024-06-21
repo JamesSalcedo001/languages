@@ -181,3 +181,80 @@ class Person {
 }
 
 
+// look into arrays/ objects/ what the private and public keywords are used for
+
+
+
+
+// classes and objects (OOP)
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        Person person1 = new Person("John", "Doe", 30);
+        System.out.println(person1.greet()); // output: Hello my name is John Doe
+    }
+}
+
+
+class Person {
+    private String firstName;
+    private String lastName;
+    private int age;
+
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+
+    public String greet() {
+        return "Hello, my name is " + firstName + " " + lastName;
+    }
+}
+
+
+
+
+
+// inheritance (OOP)
+
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog("Rex");
+        dog.speak(); // Rex barks
+    }
+}
+
+
+class Animal {
+    protected String name;
+    // ask what protected does
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void speak() {
+        System.out.println(name + " makes a noise");
+    }
+}
+
+
+class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+
+    @Override
+    public void speak() {
+        System.out.println(name + " barks.")
+    } 
+
+}
+
+
