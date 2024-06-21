@@ -258,3 +258,34 @@ class Dog extends Animal {
 }
 
 
+
+
+
+
+// encapsulation (OOP)
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee("Alice", 50000);
+        System.out.println(emp.getSalary()); // output: 50000
+    }
+}
+
+
+class Employee {
+    private String name;
+    private int salary;
+
+    public Employee(String name, int salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+}
+
+
