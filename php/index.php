@@ -309,4 +309,25 @@ foreach ($shapes as $shape) {
 }
 
 
+
+
+
+
+
+// exceptions/error handling
+
+try {
+    $result = 10 / 0;
+} catch (DivisionByZeroError $e) {
+    echo "An error occurred: " . $e->getMessage();
+} finally {
+    echo "Cleanup actions if needed";
+}
+
+
+
+
+
+
+
 ?>
