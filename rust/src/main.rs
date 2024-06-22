@@ -13,5 +13,19 @@ fn main() {
 
 
 
+    // the println macro requires the first argument to be a format string, specifiying how to display the information given in the second argument
+    println!("__integer: {}, __float_num: {}, __string: {}, __boolean: {}, __variable: {}, __CONSTANT: {}" , __integer, __float_num, __string, __boolean, __variable, __CONSTANT);
+
+
+
+    // as you can see, if one is directly typing a string it does need syntax like above, perhaps for variables only
+    println!("Hello, World!");
+
+
+
+    // it seems one can print strings without prefacing with a format, but for other values, one must at least show some value, like this {} to show formatting 
+    println!("{}, {}, {}", 5, 6, 7);
+
+
     
 }
