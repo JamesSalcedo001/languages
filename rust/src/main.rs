@@ -117,4 +117,27 @@ fn main() {
 
 
 
+    // functions/methods
+
+
+    fn greet(name: &str) -> String {
+        format!("Hello, {}", name)
+    }
+
+    println!("{}", greet("John"));
+
+
+
+    // arrays/lists
+
+
+    let fruits = ["apple", "banana", "cherry"];
+    println!("{}", fruits[0]); // output: apple
+
+
+
+
+    
+
+
 }
