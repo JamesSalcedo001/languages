@@ -164,4 +164,35 @@ echo $person["first_name"]; // output: John
 
 
 
+
+// classes/objects(OOP)
+
+
+
+class Person {
+    public $first_name;
+    public $last_name;
+    public $age;
+
+
+    public function __construct($first_name, $last_name, $age) {
+        $this->first_name = $first_name;
+        $this->last_name = $last_name;
+        $this->age = $age;
+    }
+
+    // notice how the -> is used similar to how the dot operator in ruby is used to call methods 
+
+    public function greet() {
+        return "Hello, my name is " . $this->first_name . " " . $this->last_name;
+    }
+}
+
+
+
+$person1 = new Person("John", "Doe", 30);
+echo $person1->greet(); // output: Hello, my name is John Doe 
+
+
+
 ?>
