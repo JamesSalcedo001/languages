@@ -258,7 +258,46 @@ console.log(emp.getSalary()); // output: 50000
 
 
 
+// polymorphism
+
+
+abstract class Shape {
+    abstract area(): number;
+}
+
+
+class Circle extends Shape {
+    radius: number;
+
+    constructor(radius: number) {
+        super();
+        this.radius = radius;
+    }
+
+    area(): number {
+        return Math.PI * this.radius ** 2;
+    }
+}
 
 
 
 
+
+class Rectangle extends Shape {
+    height: number;
+    width: number;
+
+    constructor(width: number, height: number) {
+        super();
+        this.width = width;
+        this.height = height;
+    }
+
+    area(): number {
+        return this.width * this.height;
+    }
+}
+
+
+let shapes: Shape[] = [new Circle(10), new Rectangle(5, 10)];
+shapes.forEach(shape => console.log(shape.area()));
