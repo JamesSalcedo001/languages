@@ -352,6 +352,29 @@ echo factorial(5); //output: 120
 
 
 
+// libraries/modules
+
+
+
+// using built in library 
+$date = date("Y-m-d");
+echo $date; // output: current date
+
+
+
+// external library like guzzle for HTTP requests
+
+
+
+require 'vendor/autoload.php';
+
+
+use GuzzleHttp\Client;
+
+
+$client = new Client();
+$response = $client->get('http://example.com');
+echo $response->getStatusCode(); // output: 200 if successful
 
 
 ?>
