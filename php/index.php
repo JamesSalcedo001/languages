@@ -232,4 +232,34 @@ $dog->speak(); // output: Rex barks
 
 
 
+
+
+
+
+// encapsulation (OOP)
+
+
+
+class Employee {
+    private $name;
+    private $salary;
+
+
+    public function __construct($name, $salary) {
+        $this->name = $name;
+        $this->salary = $salary;
+    }
+
+
+    public function getSalary() {
+        return $this->salary;
+    }
+}
+
+
+$emp = new Employee("Alice", 50000);
+echo $emp->getSalary(); //output: 50000
+
+
+
 ?>
