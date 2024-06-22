@@ -301,3 +301,18 @@ class Rectangle extends Shape {
 
 let shapes: Shape[] = [new Circle(10), new Rectangle(5, 10)];
 shapes.forEach(shape => console.log(shape.area()));
+
+
+
+
+
+// exceptions/error handling
+
+
+try {
+    let result = 10 / 0;
+} catch (error) {
+    console.log("error occurred: ", error.message);
+} finally {
+    console.log("cleanup if neccessary");
+}
