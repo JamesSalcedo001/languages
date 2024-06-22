@@ -191,3 +191,35 @@ class Person {
 
 let person1 = new Person("John", "Doe", 30);
 console.log(person1.greet()); // output: Hello, my name is John Doe
+
+
+
+
+
+
+// inheritance (OOP)
+
+
+class Animal {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    speak(): void {
+        console.log(`${this.name} makes a noise`);
+    }
+}
+
+
+class Dog extends Animal {
+    speak(): void {
+        console.log(`${this.name} barks`);
+        // look into void, possibly when no return value
+    }
+}
+
+
+let dog = new Dog("Rex");
+dog.speak(); // output: Rex barks
