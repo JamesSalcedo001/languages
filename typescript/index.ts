@@ -141,19 +141,53 @@ console.log(fruits[0]); // output: apple
 
 
 
-interface Person {
+interface Person1 {
     firstName: string;
     lastName: string;
     age: number; 
 }
 
-// differs from javascript, use interface keyword look into this, above is creating the class, below is instantiating it
+// differs from javascript, use interface keyword look into this
 
-let person: Person = {
+let person_01: Person1 = {
     firstName: "John",
     lastName: "Doe",
     age: 30
 }
 
 
-console.log(person.firstName); // output: John
+console.log(person_01.firstName); // output: John
+
+
+
+
+
+
+
+
+// classes and objects(OOP)
+
+
+
+
+class Person {
+    firstName: string;
+    lastName: string;
+    age: number;
+
+
+    constructor(firstName: string, lastName: string, age: number) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+
+    greet(): string {
+        return `Hello, my name is ${this.firstName} ${this.lastName}`;
+    }
+}
+
+
+let person1 = new Person("John", "Doe", 30);
+console.log(person1.greet()); // output: Hello, my name is John Doe
