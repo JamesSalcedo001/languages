@@ -114,3 +114,22 @@ function greet(name: string) {
 }
 
 console.log(greet("John")); // output: Hello, John
+
+
+
+
+
+
+
+
+
+
+// arrays
+
+
+let fruits: string[] = ["apple", "banana", "cherry"];
+console.log(fruits[0]); // output: apple
+
+
+
+
