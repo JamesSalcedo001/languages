@@ -223,3 +223,42 @@ class Dog extends Animal {
 
 let dog = new Dog("Rex");
 dog.speak(); // output: Rex barks
+
+
+
+
+
+
+
+// encapsulation (OOP)
+
+
+
+
+class Employee {
+    private name: string;
+    private salary: number;
+
+
+    constructor(name: string, salary: number) {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    getSalary(): number {
+        return this.salary;
+    }
+}
+
+
+let emp = new Employee("Alice", 50000);
+console.log(emp.getSalary()); // output: 50000
+
+
+
+
+
+
+
+
+
