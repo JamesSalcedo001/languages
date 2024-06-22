@@ -41,3 +41,62 @@ let isGreater: boolean = (a > b); // greater than
 // logical
 let andOp: boolean = (a < b && b > 10); // AND
 let orOp: boolean = (a < b || b < 10); // OR
+
+
+
+
+// control flow
+
+
+
+let number: number = 10;
+
+// if statement 
+
+if (number > 5) {
+    console.log("Greater than 5");
+} else {
+    console.log("5 or less");
+}
+
+
+// ternary operator
+let result: string = (number > 5) ? "Greater than 5" : "5 or less";
+console.log(result);
+
+
+
+
+
+
+// loops
+
+
+
+// for loop 
+
+
+for (let i: number = 0; i < 5; i++) {
+    console.log(i);
+}
+
+
+
+
+// while loop
+let j: number = 0;
+while(j < 5) {
+    console.log(j);
+    j++;
+}
+
+
+
+
+// do while loop
+let k: number = 0;
+
+do {
+    console.log(k);
+    k++;
+} while (k < 5);
