@@ -115,6 +115,8 @@ do {
 
 // functions
 
+
+
 function greet($name) {
     return "Hello, " . $name;
     // notice how concatenation is written with the . instead of the usual +
@@ -130,8 +132,36 @@ echo greet("John"); // output: Hello, John
 
 
 //arrays
+
+
+
 $fruits = ["apple", "banana", "cherry"];
 echo $fruits[0]; // output: apple
+
+
+
+
+
+
+// objects/dictionaries
+
+
+
+$person = [
+    "first_name" => "John",
+    "last_name" => "Doe",
+    "age" => 30
+];
+
+
+// notice how this is using different syntax from the usual {} and key:value pairs 
+
+
+echo $person["first_name"]; // output: John
+
+
+
+
 
 
 ?>
