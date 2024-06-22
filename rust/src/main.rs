@@ -137,7 +137,16 @@ fn main() {
 
 
 
-    
+    // objects / dictionaries
+
+    use std::collections::HashMap;
+
+    let mut person = HashMap::new();
+    person.insert("first_name", "John");
+    person.insert("last_name", "Doe");
+    person.insert("age", "30");
+
+    println!("{}", person.get("first_name").unwrap()); // output: John 
 
 
 }
