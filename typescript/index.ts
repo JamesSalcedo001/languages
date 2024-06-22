@@ -316,3 +316,54 @@ try {
 } finally {
     console.log("cleanup if neccessary");
 }
+
+
+
+
+
+
+
+
+// recursion
+
+function factorial(n: number): number {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+
+
+
+console.log(factorial(5)); // output: 120
+
+
+
+
+
+
+
+// libraries/modules
+
+
+// built in module
+import {format} from "date-fns";
+
+let date: Date = new Date();
+console.log(format(date, 'yyy-MM-dd')); // current date in year month day format
+
+
+
+
+// using external library like Axios for HTTP
+import axios from "axios";
+
+axios.get('http://example.com')
+.then(response => {
+    console.log(response.status); //output: 200 if successful
+})
+.catch(error => {
+    console.log(error.message);
+})
