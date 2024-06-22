@@ -133,3 +133,27 @@ console.log(fruits[0]); // output: apple
 
 
 
+
+
+
+
+// objects
+
+
+
+interface Person {
+    firstName: string;
+    lastName: string;
+    age: number; 
+}
+
+// differs from javascript, use interface keyword look into this, above is creating the class, below is instantiating it
+
+let person: Person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30
+}
+
+
+console.log(person.firstName); // output: John
