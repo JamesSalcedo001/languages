@@ -316,6 +316,8 @@ foreach ($shapes as $shape) {
 
 // exceptions/error handling
 
+
+
 try {
     $result = 10 / 0;
 } catch (DivisionByZeroError $e) {
@@ -323,6 +325,28 @@ try {
 } finally {
     echo "Cleanup actions if needed";
 }
+
+
+
+
+
+// recursion
+
+
+
+
+
+function factorial($n) {
+    if ($n == 0) {
+        return 1;
+    } else {
+        return $n * factorial($n - 1);
+    }
+}
+
+echo factorial(5); //output: 120
+
+
 
 
 
