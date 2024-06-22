@@ -100,3 +100,17 @@ do {
     console.log(k);
     k++;
 } while (k < 5);
+
+
+
+
+
+
+
+//functions
+
+function greet(name: string) {
+    return `Hello, ${name}`;
+}
+
+console.log(greet("John")); // output: Hello, John
