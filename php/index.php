@@ -191,7 +191,44 @@ class Person {
 
 
 $person1 = new Person("John", "Doe", 30);
-echo $person1->greet(); // output: Hello, my name is John Doe 
+echo $person1->greet(); // output: Hello, my name is John Doe
+
+
+
+
+
+
+
+
+
+// inheritance (OOP)
+
+
+
+class Animal {
+    protected $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+
+
+    public function speak() {
+        echo $this->name . " makes a noise";
+    }
+}
+
+
+class Dog extends Animal {
+    public function speak() {
+        echo $this->name . " barks";
+    }
+}
+
+
+
+$dog = new Dog("Rex");
+$dog->speak(); // output: Rex barks
 
 
 
