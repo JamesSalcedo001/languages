@@ -107,4 +107,31 @@ do {
 } while ($k <5);
 
 
+
+
+
+
+
+
+// functions
+
+function greet($name) {
+    return "Hello, " . $name;
+    // notice how concatenation is written with the . instead of the usual +
+}
+
+
+echo greet("John"); // output: Hello, John
+
+
+
+
+
+
+
+//arrays
+$fruits = ["apple", "banana", "cherry"];
+echo $fruits[0]; // output: apple
+
+
 ?>
