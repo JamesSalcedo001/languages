@@ -52,8 +52,67 @@ fn main() {
 
 
     // logical 
-    let and_op = a < b && b > 10; // AND
-    let or_op = a < b || b < 10; // OR notice how parentheses aren't used even for longer operations
+    let _and_op = a < b && b > 10; // AND
+    let _or_op = a < b || b < 10; // OR notice how parentheses aren't used even for longer operations
+
+
+
+    // control flow
+
+    let _number: i32 = 10;
+
+    // if statement
+
+    if _number > 5 {
+        println!("Greater than 5");
+    } else {
+        println!("5 or less");
+    }
+
+
+    // ternary
+    let result = if _number > 5 { "Greater than 5" } else { "5 or less" };
+    println!("{}", result);
+
+
+
+
+
+
+    // loops
+
+
+    // for loop 
+
+    for i in 0..5 {
+        println!("{}", i);
+    }
+
+
+
+    // while loop
+
+    // mut allows value to become mutable, as rust values are by standard immutable 
+
+    let mut j = 0;
+    while j < 5 {
+        println!("{}", j);
+        j += 1;
+    }
+
+
+
+    // loop similar to do while
+    let mut k = 0;
+
+    loop {
+        println!("{}", k);
+        k += 1;
+        if k >= 5 {
+            break;
+        }
+    }
+
 
 
 
