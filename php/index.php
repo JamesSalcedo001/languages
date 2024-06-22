@@ -76,7 +76,35 @@ echo $result;
 
 
 
+// loops 
 
+
+
+// for loop 
+
+for ($i = 0; $i < 5; $i++) {
+    echo $i;
+}
+
+
+
+// while loop
+$j = 0;
+while ($j < 5) {
+    echo $j;
+    $j++;
+}
+
+
+
+
+
+// do while loop
+$k = 0;
+do {
+    echo $k;
+    $k++;
+} while ($k <5);
 
 
 ?>
