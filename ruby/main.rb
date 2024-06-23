@@ -225,3 +225,41 @@ puts emp.get_salary #output: 50000
 
 
 
+
+# polymorphism (OOP)
+
+
+
+class Shape
+    def area
+        0
+    end
+end
+
+
+class Circle < Shape
+    def initialize(radius)
+        @radius = radius
+    end
+
+    def area
+        Math::PI * @radius ** 2
+    end
+end
+
+
+class Rectangle < Shape
+    def initialize(width, height)
+        @width = width
+        @height = height
+    end
+
+
+    def area
+        @height * @width
+    end
+end
+
+
+shapes = [Circle.new(10), Rectangle.new(5, 10)]
+shapes.each { |shape| puts shape.area }
