@@ -297,3 +297,19 @@ puts factorial(5) #output: 120
 
 
 
+# using a built in library 
+require 'date'
+
+
+puts Date.today # output: current date
+
+
+# using external library like nokogiri for parsing html
+
+require 'nokogiri'
+require 'open-uri'
+
+
+doc = Nokogiri::HTML(URI.open('http://example.com'))
+
+puts doc.title
