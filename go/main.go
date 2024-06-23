@@ -152,11 +152,28 @@ func main() {
 	// arrays
 
 	fruits := [3]string{"apple", "banana", "cherry"}
+	// note the difference in how arrays are structured is shown, there's the declaration and then the amount of items, the data type, and the array is with {} instead
 
 	fmt.Println((fruits[0])) //output: apple 
 
 
 
 
+
+	// objects/dictionaries
+
+	person := map[string]string{
+		"first_name": "John",
+		"last_name": "Doe",
+		"age": "30",
+	}
+
+	fmt.Println(person["first_name"]) //output: John
+
+
+	// classes and objects(OOP)
+
+
+	
 
 }
