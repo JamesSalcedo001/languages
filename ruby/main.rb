@@ -199,3 +199,29 @@ puts dog.speak #output: Rex barks.
 
 
 
+
+
+
+# encapsulation (OOP)
+
+
+class Employee 
+    attr_reader :name
+
+    def initialize(name, salary)
+        @name = name
+        @salary = salary # private instance variable
+    end
+
+    def get_salary
+        @salary
+    end
+
+end
+
+
+emp = Employee.new("Alice", 50000)
+puts emp.get_salary #output: 50000
+
+
+
