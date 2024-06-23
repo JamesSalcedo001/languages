@@ -116,3 +116,21 @@ end
 puts greet("John") # output: Hello, John
 
 
+
+# arrays
+
+fruits = ["apple", "banana", "cherry"]
+puts fruits[0] #output: apple
+
+
+
+# dictionaries
+
+person = {
+    first_name: "John",
+    last_name: "Doe",
+    age: 30
+}
+
+
+puts person[:first_name] #output: John
