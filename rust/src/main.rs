@@ -181,6 +181,51 @@ fn main() {
     
         let person1 = Person::new("John", "Doe", 30);
         println!("{}", person1.greet());  // Output: Hello, my name is John Doe
+
+
+
+
+
+
     
+
+    // inheritance (OOP) rust does not support inheritance directly, but one can use traits for similar behavior
+
+
+    struct Animal {
+        name: String,
+    }
+
+
+    impl Animal {
+        fn new(name: &str) -> Animal {
+            Animal { name: name.to_string() }
+        }
+
+        fn speak(&self) {
+            println!("{} makes a noise.", self.name);
+        }
+    }
+
+
+    struct Dog {
+        animal: Animal,
+    }
+
+    impl Dog {
+        fn new(name: &str) -> Dog {
+            Dog { animal: Animal::new(name) }
+        }
+
+        fn speak(&self) {
+            println!("{} barks.", self.animal.name);
+        }
+    }
+
+
+    let animal = Animal::new("Generic animal");
+    animal.speak(); // output: Generic animal makes noise
+    let dog = Dog::new("Rex");
+    dog.speak(); // output: Rex barks.
 
 }
