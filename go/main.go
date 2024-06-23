@@ -4,6 +4,13 @@ import "fmt"
 // note, cannot import using single quotes
 
 
+func greet(name string) string {
+	return "Hello, " + name
+}
+
+
+
+
 func main() {
 
 	// data types
@@ -12,11 +19,11 @@ func main() {
 
 	var integer int = 10 //integer, notice the usage of data types
 	var floatNum float64 = 10.5 // float, notice the datatype float64, as well as the usage of camelCase
-	var string string = "Hello"; // string, also note the optional ;
+	var str string = "Hello"; // string, also note the optional ;
 	var boolean bool = true // boolean is just bool in go
 
 
-	fmt.Println(integer, floatNum, string, boolean)
+	fmt.Println(integer, floatNum, str, boolean)
 
 
 
@@ -126,8 +133,27 @@ func main() {
 
 
 
-	
 
+
+	// functions/methods
+// see top of page for function 
+
+
+	fmt.Println(greet("John")) // output: Hello, John
+
+
+
+
+
+
+
+
+
+	// arrays
+
+	fruits := [3]string{"apple", "banana", "cherry"}
+
+	fmt.Println((fruits[0])) //output: apple 
 
 
 
