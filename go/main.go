@@ -101,6 +101,22 @@ func riskyOp() error {
 }
 
 // see lines 343ish for rest
+
+
+
+
+
+
+func factorial(n int) int {
+	if n == 0 {
+		return 1
+	}
+	return n * factorial(n-1)
+}
+
+// see lines 370ish for rest
+
+
  
 func main() {
 
@@ -350,5 +366,15 @@ func main() {
 
 
 	//recursion 
+
+	// see top 
+
+
+	fmt.Println(factorial(5)) // output: 120
+
+
+
+
+	
 
 }
