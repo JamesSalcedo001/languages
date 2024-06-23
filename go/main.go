@@ -7,7 +7,14 @@ import (
 	"fmt"
 	"math"
 	"errors"
+	"time"
+	// "log"
+	// "net/http"
+
+	// "github.com/gorilla/mux"
 )
+
+// above I am using built in and external libraries, see lines 390ish for the rest
 
 func greet(name string) string {
 	return "Hello, " + name
@@ -375,6 +382,28 @@ func main() {
 
 
 
-	
+
+
+	// libraries/modules
+
+
+
+
+
+	// built in: 
+	fmt.Println(time.Now().Format("2006-01-02")) // output: current date
+
+
+
+
+	//external like gorilla/mux for HTTP
+
+
+	// r := mux.NewRouter()
+	// r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	// 	fmt.Fprintf(w, "Hello, World!")
+	// })
+	// log.Fatal(http.ListenAndServe(":8080", r))
+
 
 }
