@@ -170,3 +170,32 @@ puts person1.greet # output: Hello, my name is John Doe
 
 
 
+
+# inheritance (OOP)
+
+
+class Animal
+    attr_accessor :name
+
+    def initialize(name)
+        @name = name
+    end
+
+    def speak
+        "#{@name} makes noise"
+    end
+
+end
+
+
+class Dog < Animal
+    def speak
+        "#{@name} barks"
+    end
+end
+
+dog = Dog.new("Rex")
+puts dog.speak #output: Rex barks.
+
+
+
