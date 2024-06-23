@@ -351,4 +351,38 @@ fn main() {
 
 
     println!("{}", factorial(5)); // output: 120
+
+
+
+
+
+
+
+    // libraries modules
+
+
+    // using built in library
+
+    // use chrono::prelude::*;
+
+
+    // let local: DateTime<Local> = Local::now();
+    // println!("{}", local.format("%Y-%m-%d")); // output: current date in year month day format
+
+
+    // // using external library like reqwest for HTTP
+    // use reqwest;
+
+    // #[tokio::main]
+    // async fn main() -> Result<(), request::Error> {
+    //     let response = reqwest::get("http://example.com").await?;
+    //     println!("{}", response.status()); // output: 200 if successful
+    //     Ok(());
+    // }
+
+
+    // commented out to remove errors for now
+
+
+
 }
