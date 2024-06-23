@@ -18,6 +18,8 @@ CONSTANT = "I cannot change"
 
 # operators
 
+
+
 a = 10
 b = 20
 
@@ -109,6 +111,7 @@ end while k < 5
 # methods
 
 
+
 def greet(name)
     "Hello, #{name}"
 end
@@ -119,12 +122,16 @@ puts greet("John") # output: Hello, John
 
 # arrays
 
+
+
 fruits = ["apple", "banana", "cherry"]
 puts fruits[0] #output: apple
 
 
 
 # dictionaries
+
+
 
 person = {
     first_name: "John",
@@ -134,3 +141,32 @@ person = {
 
 
 puts person[:first_name] #output: John
+
+
+
+
+
+# classes and objects (OOP)
+
+
+
+class Person
+    attr_accessor :first_name, :last_name, :age
+
+    def initialize(first_name, last_name, age)
+        @first_name = first_name
+        @first_name = last_name
+        @age = age
+    end
+
+    def greet
+        "Hello, my name is #{@first_name} #{@last_name}"
+    end
+end
+
+
+person1 = Person.new("John", "Doe", 30)
+puts person1.greet # output: Hello, my name is John Doe
+
+
+
