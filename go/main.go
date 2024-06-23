@@ -9,6 +9,58 @@ func greet(name string) string {
 }
 
 
+type Person struct {
+	firstName string
+	lastName string 
+	age int
+}
+
+// cannot put functions or classes inside of other functions like main
+
+
+
+func (p Person) greet_2() string {
+	return "Hello, my name is " + p.firstName + " " + p.lastName
+}
+
+
+
+type Animal struct {
+	name string
+}
+
+
+func (a Animal) speak() {
+	fmt.Println(a.name + " makes a noise")
+}
+
+
+type Dog struct {
+	Animal
+}
+
+
+func (d Dog) speak() {
+	fmt.Println((d.name + " barks"))
+}
+
+// see inheritance section lines  240ish
+
+
+
+
+type Employee struct {
+	name string
+	salary int
+}
+
+
+func (e Employee) getSalary() int {
+	return e.salary
+}
+
+// see encapsulation lines 270ish
+
 
 
 func main() {
@@ -162,6 +214,9 @@ func main() {
 
 	// objects/dictionaries
 
+
+
+
 	person := map[string]string{
 		"first_name": "John",
 		"last_name": "Doe",
@@ -171,9 +226,69 @@ func main() {
 	fmt.Println(person["first_name"]) //output: John
 
 
+
+
+
 	// classes and objects(OOP)
 
 
-	
+
+
+
+
+	// see top of page for function
+
+
+
+	person1 := Person{"John", "Doe", 30}
+	fmt.Println(person1.greet_2()) // output: Hello, my name is John Doe
+
+
+
+
+
+
+
+
+
+	// go does not support inheritance but one can use embedding for similar behavior
+
+	// see top 
+
+
+
+
+
+	dog := Dog{Animal{name: "Rex"}}
+	dog.speak() // output: Rex barks
+
+
+
+
+
+	// encapsulation (OOP)
+
+
+	// see top 
+
+
+
+
+
+
+
+
+	emp := Employee{"Alice", 50000}
+	fmt.Println(emp.getSalary()) //output 50000
+
+
+	// polymorphism (OOP)
+
+
+
+
+
+
+
 
 }
