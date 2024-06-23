@@ -1,3 +1,32 @@
+use std::collections::HashMap;
+
+
+
+    // classes and Objects (OOP)
+
+
+    struct Person {
+        first_name: String,
+        last_name: String,
+        age: i32,
+    }
+    
+    impl Person {
+        fn new(first_name: &str, last_name: &str, age: i32) -> Person {
+            Person {
+                first_name: first_name.to_string(),
+                last_name: last_name.to_string(),
+                age,
+            }
+        }
+    
+        fn greet(&self) -> String {
+            format!("Hello, my name is {} {} and I am {} years old", self.first_name, self.last_name, self.age)
+        }
+    }
+
+
+
 fn main() {
 
     // data types
@@ -139,7 +168,6 @@ fn main() {
 
     // objects / dictionaries
 
-    use std::collections::HashMap;
 
     let mut person = HashMap::new();
     person.insert("first_name", "John");
@@ -148,5 +176,11 @@ fn main() {
 
     println!("{}", person.get("first_name").unwrap()); // output: John 
 
+
+
+    
+        let person1 = Person::new("John", "Doe", 30);
+        println!("{}", person1.greet());  // Output: Hello, my name is John Doe
+    
 
 }
