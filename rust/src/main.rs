@@ -322,4 +322,33 @@ fn main() {
         println!("{}", shape.area());
     }
 
+
+
+
+
+    // error handling/exceptions
+
+    fn risky_operation() -> Result<(), &'static str> {
+        Err("Something went wrong")
+    }
+
+
+    match risky_operation() {
+        Ok(_) => println!("Op succeeded"),
+        Err(e) => println!("error occurred: {}", e),
+    }
+
+
+
+
+    fn factorial(n: u32) -> u32 {
+        if n == 0 {
+            1
+        } else {
+            n * factorial(n-1)
+        }
+    }
+
+
+    println!("{}", factorial(5)); // output: 120
 }
