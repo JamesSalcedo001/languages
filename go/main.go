@@ -34,7 +34,36 @@ func main() {
 
 
 
+	//operators
 
+	var a int = 10
+	var b int = 20
+
+
+	// arithmetic
+
+	sum := a + b // addition, this can also be written as below:
+	// var sum int = a + b
+	diff := a - b // subt
+	prod := a * b // mult
+	quot := a / b // divide
+
+
+	// comparison
+
+
+	isEqual := (a == b) // equality
+	isNotEqual := (a != b) // inequality
+	isGreater := (a > b) // greater than
+
+
+	// logical 
+
+	andOp := (a < b && b > 10) // AND
+	orOp := (a < b || b < 10) // OR
+
+
+	fmt.Println(sum, diff, prod, quot, isEqual, isNotEqual, isGreater, andOp, orOp)
 
 
 }
