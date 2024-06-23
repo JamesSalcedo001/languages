@@ -1,8 +1,13 @@
 package main
 
-import "fmt"
+// import "fmt"
 // note, cannot import using single quotes
 
+import (
+	"fmt"
+	"math"
+	"errors"
+)
 
 func greet(name string) string {
 	return "Hello, " + name
@@ -63,6 +68,40 @@ func (e Employee) getSalary() int {
 
 
 
+
+
+type Shape interface {
+	area() float64
+}
+
+
+type Circle struct {
+	radius float64
+}
+
+func (c Circle) area() float64 {
+	return math.Pi * c.radius * c.radius
+}
+
+
+type Rectangle struct {
+	width, height float64
+}
+
+
+func (r Rectangle) area() float64 {
+	return r.width * r.height
+}
+
+
+
+
+func riskyOp() error {
+	return errors.New("something wrong")
+}
+
+// see lines 343ish for rest
+ 
 func main() {
 
 	// data types
@@ -282,13 +321,34 @@ func main() {
 	fmt.Println(emp.getSalary()) //output 50000
 
 
+
+
+
+
 	// polymorphism (OOP)
 
+	// see top 
+
+
+	shapes := []Shape{Circle{10}, Rectangle{5, 10}}
+
+
+	for _, shape := range shapes {
+		fmt.Println(shape.area())
+	}
 
 
 
+	// see top for error handling
+
+	if err := riskyOp(); err != nil {
+		fmt.Println("An error occurred: ", err)
+	} else {
+		fmt.Println("Operation succeeded")
+	}
 
 
 
+	//recursion 
 
 }
