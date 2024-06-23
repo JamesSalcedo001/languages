@@ -101,3 +101,18 @@ begin
     puts k
     k += 1
 end while k < 5
+
+
+
+
+
+# methods
+
+
+def greet(name)
+    "Hello, #{name}"
+end
+
+puts greet("John") # output: Hello, John
+
+
