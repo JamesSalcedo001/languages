@@ -66,4 +66,26 @@ func main() {
 	fmt.Println(sum, diff, prod, quot, isEqual, isNotEqual, isGreater, andOp, orOp)
 
 
+
+	
+
+	// control flow
+
+	var number int = 10
+
+	// if statement
+
+	if number > 5 {
+		fmt.Println("Greater than 5")
+	} else {
+		fmt.Println("5 or less")
+	}
+
+
+
+	// go does not have a ternary operator
+
+
+
+	
 }
