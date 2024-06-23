@@ -235,6 +235,9 @@ fn main() {
     // encapsulation (OOP)
 
 
+
+
+
     struct Employee {
         name: String,
         salary: i32,
@@ -258,5 +261,65 @@ fn main() {
     let emp = Employee::new("Alice", 50000);
 
     println!("{}, {}", emp.get_salary(), emp.name); // output: 50000
+
+
+
+
+
+
+
+    // Polymorphism (OOP)
+
+
+
+    trait Shape {
+        fn area(&self) -> f64;
+    }
+
+
+    struct Circle {
+        radius: f64,
+    }
+
+
+    impl Circle {
+        fn new(radius: f64) -> Circle {
+            Circle { radius }
+        }
+    }
+
+    impl Shape for Circle {
+        fn area(&self) -> f64 {
+            std::f64::consts::PI * self.radius * self.radius
+        }
+    }
+
+    struct Rectangle {
+        width: f64,
+        height: f64,
+    }
+
+    impl Rectangle {
+        fn new(width: f64, height: f64) -> Rectangle {
+            Rectangle { width, height }
+        }
+    }
+
+
+    impl Shape for Rectangle {
+        fn area(&self) -> f64 {
+            self.width * self.height
+        }
+    }
+
+
+    let shapes: Vec<Box<dyn Shape>> = vec![
+        Box::new(Circle::new(10.0)),
+        Box::new(Rectangle::new(5.0, 10.0)),
+    ];
+
+    for shape in shapes {
+        println!("{}", shape.area());
+    }
 
 }
