@@ -263,3 +263,37 @@ end
 
 shapes = [Circle.new(10), Rectangle.new(5, 10)]
 shapes.each { |shape| puts shape.area }
+
+
+
+
+
+# exceptions/error handling
+
+
+begin
+    #risky op
+    result = 10 / 0
+rescue ZeroDivisionError => e
+    puts "Error occurred: #{e.message}"
+ensure
+    puts "Cleanup actions"
+end
+
+
+
+
+
+# recursion
+
+
+def factorial(n)
+    return 1 if n == 0
+    n * factorial(n - 1)
+end
+
+
+puts factorial(5) #output: 120
+
+
+
