@@ -228,4 +228,35 @@ fn main() {
     let dog = Dog::new("Rex");
     dog.speak(); // output: Rex barks.
 
+
+
+
+
+    // encapsulation (OOP)
+
+
+    struct Employee {
+        name: String,
+        salary: i32,
+    }
+
+
+    impl Employee {
+        fn new(name: &str, salary: i32) -> Employee {
+            Employee {
+                name: name.to_string(),
+                salary,
+            }
+        }
+
+        fn get_salary(&self) -> i32 {
+            self.salary
+        }
+    }
+
+
+    let emp = Employee::new("Alice", 50000);
+
+    println!("{}, {}", emp.get_salary(), emp.name); // output: 50000
+
 }
