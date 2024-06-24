@@ -14,6 +14,8 @@ int main() {
 
 
 
+    // variables
+
 
 
 
@@ -55,12 +57,59 @@ int main() {
 
 
 
+    // control flow
+
+
+    int number = 10;
+
+    // if statement
+
+    if (number > 5) {
+        printf("Greater than 5\n");
+    } else {
+        printf("5 or less \n");
+    }
+
+
+    // ternary operator
+
+    char *result = (number > 5) ? "Greater than 5" : "5 or less";
+    
 
 
 
 
 
+    // loops
+    
 
+    // for loop
+
+    for (int i = 0; i < 5; i++) {
+        printf("%d\n", i);
+    }
+
+
+
+
+
+    // while loop 
+
+    int j = 0;
+    while (j < 5) {
+        printf("%d\n", j);
+        j++;
+    }
+
+
+
+    // do while loop
+
+    int k = 0;
+    do {
+        printf("%d\n", k);
+        k++;
+    } while (k < 5);
 
 
 
@@ -75,6 +124,8 @@ int main() {
     printf("%d, %.1f, %s, %d\n", integer, floatNum, string, boolean);
     printf("%d, %d\n", variable, CONSTANT);
     printf("%d, %d, %d, %.2f, %d, %d, %d, %d, %d\n", sum, diff, prod, quot, isEqual, isNotEqual, isGreater, andOp, orOp);
+
+    printf("%s\n", result);
     return 0;
 
 
