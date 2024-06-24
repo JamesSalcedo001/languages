@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+
+char* greet(char name[]) {
+    static char result[50];
+    sprintf(result, "Hello, %s", name);
+    return result;
+}
+
+
+
 int main() {
 
     // data types 
@@ -116,6 +125,10 @@ int main() {
 
 
 
+    // see top for functions, cannot define functions in other functions
+    
+
+
 
 
 
@@ -126,6 +139,10 @@ int main() {
     printf("%d, %d, %d, %.2f, %d, %d, %d, %d, %d\n", sum, diff, prod, quot, isEqual, isNotEqual, isGreater, andOp, orOp);
 
     printf("%s\n", result);
+
+    printf("%s\n", greet("John")); // output: Hello, John
+
+
     return 0;
 
 
