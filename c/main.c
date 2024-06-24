@@ -129,6 +129,10 @@ int main() {
     
 
 
+    // arrays
+
+    char *fruits[] = {"apple", "banana", "cherry"};
+
 
 
 
@@ -141,6 +145,8 @@ int main() {
     printf("%s\n", result);
 
     printf("%s\n", greet("John")); // output: Hello, John
+
+    printf("%s\n", fruits[0]); // output: apple
 
 
     return 0;
