@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h> 
 
 
 char* greet(char name[]) {
@@ -6,6 +7,7 @@ char* greet(char name[]) {
     sprintf(result, "Hello, %s", name);
     return result;
 }
+
 
 
 
@@ -136,6 +138,28 @@ int main() {
 
 
 
+    // objects/dictionaries
+
+
+    // include the string library
+
+
+
+  struct Person {
+        char firstName[50];
+        char lastName[50];
+        int age;
+    };
+
+  struct Person person;
+
+
+
+    strcpy(person.firstName, "John");
+    strcpy(person.lastName, "Doe");
+    person.age = 30;
+
+   
 
     
     printf("%d, %.1f, %s, %d\n", integer, floatNum, string, boolean);
@@ -147,6 +171,9 @@ int main() {
     printf("%s\n", greet("John")); // output: Hello, John
 
     printf("%s\n", fruits[0]); // output: apple
+
+
+    printf("First name: %s\n", person.firstName); //output: John
 
 
     return 0;
