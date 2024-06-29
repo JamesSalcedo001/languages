@@ -140,11 +140,41 @@ class Program
         {
             Console.WriteLine(shape.Area());
         }
+
+
+
+        try 
+        {
+            int result = 10 / 0;
+        }
+        catch (DivideByZeroException e)
+        {
+            Console.WriteLine("Error occurred: " + e.Message);
+        }
+        finally
+        {
+            Console.WriteLine("Cleanup actions");
+        }
     }
 
     static string Greet(string name)
     {
         return $"Hello, {name}";
+    }
+
+    // recursion
+
+
+    static int Factorial(int n)
+    {
+        if (n == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return n * Factorial(n-1);
+        }
     }
 }
 
