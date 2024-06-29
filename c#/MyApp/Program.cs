@@ -134,6 +134,12 @@ class Program
 
         Employee emp = new Employee("Alice", 50000);
         Console.WriteLine(emp.GetSalary());
+
+        Shape[] shapes = { new Circle(10), new Rectangle(5, 10) };
+        foreach (Shape shape in shapes)
+        {
+            Console.WriteLine(shape.Area());
+        }
     }
 
     static string Greet(string name)
@@ -210,5 +216,49 @@ class Employee
     public int GetSalary()
     {
         return salary;
+    }
+}
+
+
+
+// polymorphism (OOP)
+
+
+abstract class Shape
+{
+    public abstract double Area();
+}
+
+
+class Circle : Shape
+{
+    private double radius;
+
+    public Circle(double radius)
+    {
+        this.radius = radius;
+    }
+
+    public override double Area()
+    {
+        return Math.PI * radius * radius;
+    }
+}
+
+
+
+class Rectangle : Shape
+{
+    private double width, height;
+
+    public Rectangle(double width, double height)
+    {
+        this.width = width;
+        this.height = height;
+    }
+
+    public override double Area()
+    {
+        return width * height;
     }
 }
