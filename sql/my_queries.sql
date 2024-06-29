@@ -14,6 +14,9 @@ INSERT INTO users (name, age) VALUES ('Tomo', 5);
 
 INSERT INTO users (name, age) VALUES ('Dhalia', 6);
 
+INSERT INTO users (name, age) VALUES ('Dhalia', 7);
+
+
 -- read a table's records
 
 
@@ -38,5 +41,52 @@ DELETE FROM users WHERE name = 'Dhalia';
     -- foreign key: references a primary key in another table
     -- unique: ensures all values in column are different
     -- not null: ensures a column cannot have null values
+
+
+
+
+
+
+
+-- data retrieval
+
+
+
+
+
+
+-- WHERE clause - filter results
+
+
+-- returns records from users table which have values in age column less than 4
+SELECT * FROM users where age < 4;
+
+
+
+
+-- ORDER BY - sort results
+
+
+-- returns records ordered alphabetically by name
+SELECT * FROM users ORDER BY name ASC;
+
+-- the same except descending order
+SELECT * FROM users ORDER BY name DESC;
+
+
+
+-- LIMIT - limit the number of results
+
+
+
+-- returns only top 2 records
+SELECT * FROM users LIMIT 2;
+
+
+
+-- DISTINCT - remove duplicate rows
+
+
+SELECT DISTINCT name FROM users;
 
 
