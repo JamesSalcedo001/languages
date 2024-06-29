@@ -201,6 +201,11 @@ SELECT name, title, amount FROM users LEFT JOIN orders ON users.id = orders.user
 
 -- right join: returns records with matching values in both tables as well as all records from the right table which in this case is orders
 
-SELECT * FROM users RIGHT JOIN orders ON users.id = orders.user_id;
+SELECT name, title, amount FROM users RIGHT JOIN orders ON users.id = orders.user_id;
 
 
+
+
+-- full outer join: returns records with matching values in both tables as well as the other values that didn't match from both tables
+
+SELECT name, title, amount FROM users FULL OUTER JOIN orders ON users.id = orders.user_id;
