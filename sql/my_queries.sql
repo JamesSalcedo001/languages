@@ -22,3 +22,14 @@ SELECT name, age FROM users WHERE age > 28;
 UPDATE users SET age = 30 WHERE name = 'John';
 
 
+-- this deletes the user named John from the table
+DELETE FROM users WHERE name = 'John';
+
+
+
+-- constraints
+    -- primary key: uniquely identifies each row
+    -- foreign key: references a primary key in another table
+    -- unique: ensures all values in column are different
+    -- not null: ensures a column cannot have null values
+    
