@@ -104,12 +104,33 @@ SELECT DISTINCT name FROM users;
 --count, sum, avg, min, max
 
 
--- counts all records and returns the total
+-- Counts the number of rows that match a specified condition.
 SELECT COUNT(*) FROM users;
 
 
 
+-- calculates the total sum of numeric column
 
+SELECT SUM(age) FROM users;
+
+
+
+-- computes average value of numeric column
+
+SELECT AVG(age) FROM users;
+
+
+
+--  Returns the smallest value in a set
+
+SELECT MIN(age) FROM users;
+
+
+
+
+--  Returns the largest value in a set
+
+SELECT MAX(age) FROM users;
 
 
 -- string functions: manipulate text
