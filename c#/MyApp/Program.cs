@@ -75,12 +75,29 @@ class Program
 
 
         // for loop 
-        
+
         for (int i = 0; i < 5; i++)
         {
             Console.WriteLine(i);
         }
 
+
+        // while loop
+        int j = 0;
+        while (j < 5)
+        {
+            Console.WriteLine(j);
+            j++;
+        }
+
+
+        // do while loop
+        int k = 0;
+        do
+        {
+            Console.WriteLine(k);
+            k++;
+        } while (k < 5);
 
 
         Console.WriteLine($"{integer}, {floatNum}, {str}, {boolean}");
