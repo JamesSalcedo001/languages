@@ -133,6 +133,31 @@ class Program
 
 
 
+        // classes and objects (OOP)
+
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
+
+
+
+        public Person(string firstName, string lastName, int age)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Age = age;
+        }
+
+
+        public string Greet_2()
+        {
+            return $"Hello, my name is {FirstName} {LastName}";
+        }
+
+        Person person1 = new Person("John", "Doe", 30);
+
+
 
         Console.WriteLine($"{integer}, {floatNum}, {str}, {boolean}");
 
@@ -143,5 +168,7 @@ class Program
         Console.WriteLine(result);
 
         Console.WriteLine(person["first_name"]); // output: John
+
+        Console.WriteLine(person1.Greet()); // output: Hello, my name is John doe
     }
 }
