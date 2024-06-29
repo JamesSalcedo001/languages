@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class Program
 {
@@ -111,6 +112,28 @@ class Program
         }
 
 
+
+        // arrays
+
+        string[] fruits = { "apple", "banana", "cherry" };
+        Console.WriteLine(fruits[0]); // output: apple
+
+
+
+        // objects/dictionaries
+        // see above using library line 2
+
+        Dictionary<string, string> person = new Dictionary<string, string>
+        {
+            { "first_name", "John" },
+            { "last_name", "Doe" },
+            { "age", "30" }
+        };
+
+
+
+
+
         Console.WriteLine($"{integer}, {floatNum}, {str}, {boolean}");
 
         Console.WriteLine($"{variable}, {CONSTANT}");
@@ -118,5 +141,7 @@ class Program
         Console.WriteLine($"{sum}, {diff}, {prod}, {quot}, {isEqual}, {isNotEqual}, {isGreater}, {andOp}, {orOp}");
 
         Console.WriteLine(result);
+
+        Console.WriteLine(person["first_name"]); // output: John
     }
 }
