@@ -7,7 +7,20 @@ CREATE TABLE users (
 );
 
 
--- this inserts information into an existing table
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    user_id INT,
+    title TEXT,
+    amount DECIMAL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+
+
+
+
+-- this inserts information into an existing table users
 INSERT INTO users (name, age) VALUES ('Binx', 3);
 
 INSERT INTO users (name, age) VALUES ('Tomo', 5);
@@ -17,11 +30,26 @@ INSERT INTO users (name, age) VALUES ('Dhalia', 6);
 INSERT INTO users (name, age) VALUES ('Dhalia', 7);
 
 
+
+
+
+-- inserts data into another related table, orders
+INSERT INTO orders (user_id, title, amount) VALUES (1, 'Mouse', 15.00);
+
+INSERT INTO orders (user_id, title, amount) VALUES (2, 'Rat with Feathers', 20.00);
+
+
+INSERT INTO orders (user_id, title, amount) VALUES (3, 'Bird on stick and String', 18.00);
+
+
+
 -- read a table's records
 
 
 -- this displays all records in users table
 SELECT * FROM users;
+
+SELECT * FROM orders;
 
 -- this displays the name and age of all records in users table with the condition that the age is greater than 3
 
@@ -152,3 +180,14 @@ SELECT UPPER(name) FROM users;
 -- returns current date in year-month-day format
 
 SELECT CURRENT_DATE;
+
+
+
+
+
+-- joins - combine rows from two or more tables based on a related column
+
+
+-- inner join: returns records with matching values in both tables
+
+
