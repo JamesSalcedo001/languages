@@ -45,10 +45,50 @@ class Program
 
 
 
+
+
+        // control flow
+
+
+        int number = 10;
+
+
+        if (number > 5)
+        {
+            Console.WriteLine("Greater than 5");
+        }
+        else
+        {
+            Console.WriteLine("5 or less");
+        }
+
+
+
+
+        // ternary 
+        string result = number > 5 ? "Greater than 5" : "5 or less";
+
+
+
+
+        // loops
+
+
+        // for loop 
+        
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine(i);
+        }
+
+
+
         Console.WriteLine($"{integer}, {floatNum}, {str}, {boolean}");
 
         Console.WriteLine($"{variable}, {CONSTANT}");
 
         Console.WriteLine($"{sum}, {diff}, {prod}, {quot}, {isEqual}, {isNotEqual}, {isGreater}, {andOp}, {orOp}");
+
+        Console.WriteLine(result);
     }
 }
