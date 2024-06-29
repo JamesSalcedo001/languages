@@ -90,3 +90,44 @@ SELECT * FROM users LIMIT 2;
 SELECT DISTINCT name FROM users;
 
 
+
+
+
+
+-- functions
+
+
+
+
+-- aggregate functions: perform calculations on sets of rows
+
+--count, sum, avg, min, max
+
+
+-- counts all records and returns the total
+SELECT COUNT(*) FROM users;
+
+
+
+
+
+
+-- string functions: manipulate text
+
+
+
+-- returns all records in uppercase
+
+SELECT UPPER(name) FROM users;
+
+
+
+
+
+-- date functions: manipulate dates
+
+
+
+-- returns current date in year-month-day format
+
+SELECT CURRENT_DATE;
