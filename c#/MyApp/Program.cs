@@ -100,6 +100,17 @@ class Program
         } while (k < 5);
 
 
+
+
+        // functions / methods 
+
+
+        static string Greet(string name)
+        {
+            return $"Hello, {name}";
+        }
+
+
         Console.WriteLine($"{integer}, {floatNum}, {str}, {boolean}");
 
         Console.WriteLine($"{variable}, {CONSTANT}");
