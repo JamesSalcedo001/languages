@@ -1,5 +1,12 @@
-﻿using System;
+﻿// using built in libraries
+
+using System;
 using System.Collections.Generic;
+
+
+// external libraries
+// using Newtonsoft.Json;
+
 
 class Program
 {
@@ -141,6 +148,15 @@ class Program
             Console.WriteLine(shape.Area());
         }
 
+
+        // built in library
+        Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd"));
+
+
+        // external lib
+        // var json = JsonConvert.SerializeObject(new { Name = "John", Age = 30 });
+
+        // Console.WriteLine(json); // output: {"Name": "John", "Age": 30 }
 
 
         try 
@@ -296,3 +312,5 @@ class Rectangle : Shape
         return width * height;
     }
 }
+
+
