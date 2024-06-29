@@ -145,7 +145,9 @@ class Program
 
         try 
         {
-            int result = 10 / 0;
+            int divisor = 0;
+            int divisionResult = 10 / divisor;
+            Console.WriteLine(divisionResult);
         }
         catch (DivideByZeroException e)
         {
@@ -155,6 +157,8 @@ class Program
         {
             Console.WriteLine("Cleanup actions");
         }
+
+        Console.WriteLine(Factorial(5));
     }
 
     static string Greet(string name)
