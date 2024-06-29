@@ -41,6 +41,7 @@ INSERT INTO orders (user_id, title, amount) VALUES (2, 'Rat with Feathers', 20.0
 
 INSERT INTO orders (user_id, title, amount) VALUES (3, 'Bird on stick and String', 18.00);
 
+INSERT INTO orders (user_id, title, amount) VALUES (null, 'Cool stuffed turtle', 25.00);
 
 
 -- read a table's records
@@ -189,5 +190,17 @@ SELECT CURRENT_DATE;
 
 
 -- inner join: returns records with matching values in both tables
+
+SELECT name, title, amount FROM users INNER JOIN orders on users.id = orders.user_id;
+
+
+-- left join: returns records with matching values in both tables as well as all records from the left table which in this case is users
+
+SELECT name, title, amount FROM users LEFT JOIN orders ON users.id = orders.user_id;
+
+
+-- right join: returns records with matching values in both tables as well as all records from the right table which in this case is orders
+
+SELECT * FROM users RIGHT JOIN orders ON users.id = orders.user_id;
 
 
