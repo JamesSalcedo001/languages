@@ -12,6 +12,11 @@ class Program
         bool boolean = true;
 
 
+        // variables
+
+        int variable = 10;
+        const int CONSTANT = 20;
+
 
 
         Console.WriteLine($"{integer}, {floatNum}, {str}, {boolean}");
