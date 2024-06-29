@@ -109,6 +109,26 @@ int main() {
     person.age = 30;
     person.greet = personGreet;
 
+
+
+    // recursion
+
+    int factorial(int n) {
+        if (n== 0) {
+            return 1;
+        } else {
+            return n * factorial(n-1);
+        }
+    }
+
+
+
+
+
+
+
+
+
     // Print statements to display the values
     printf("%d, %.1f, %s, %d\n", integer, floatNum, string, boolean);
     printf("%d, %d\n", variable, CONSTANT);
@@ -130,5 +150,6 @@ int main() {
     // Use the printDetails method of the Car struct
     car.printDetails(car); // output: Car: Toyota Corolla, Year: 2020
 
+    printf("%d\n", factorial(5));
     return 0;
 }
