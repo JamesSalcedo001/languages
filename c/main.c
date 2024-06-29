@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+// using libraries
 
 // Greet function for general use
 char* greet(char name[]) {
@@ -35,6 +36,18 @@ struct Car {
 void printCarDetails(struct Car c) {
     printf("Car: %s %s, Year: %d\n", c.make, c.model, c.year);
 }
+
+  // recursion
+
+    int factorial(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * factorial(n-1);
+        }
+    }
+
+
 
 int main() {
     // Data types
@@ -108,20 +121,6 @@ int main() {
     strcpy(person.lastName, "Doe");
     person.age = 30;
     person.greet = personGreet;
-
-
-
-    // recursion
-
-    int factorial(int n) {
-        if (n== 0) {
-            return 1;
-        } else {
-            return n * factorial(n-1);
-        }
-    }
-
-
 
 
 
