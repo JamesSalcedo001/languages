@@ -49,7 +49,38 @@ class Persona {
 };
 
 
-// see rest on lines 
+// see rest on lines 186 and 187
+
+
+
+// inheritance (OOP)
+
+
+class Animal {
+    public:
+        string name;
+
+        Animal(string n) {
+            name = n;
+        }
+
+        virtual void speak() {
+            cout << name << " makes a noise" << endl;
+        }
+};
+
+
+class Dog : public Animal {
+    public:
+        Dog(string n) : Animal(n) {}
+
+        void speak() override {
+            cout << name << " barks" << endl;
+        }
+};
+
+
+// see rest on lines
 
 
 
@@ -185,6 +216,9 @@ int main() {
 
     Persona persona1("John", "Doe", 30);
     cout << persona1.greet() << endl; // output: Hello my name is John Doe
+
+    Dog dog("Rex");
+    dog.speak(); // output: Rex barks
 
 
     return 0;
