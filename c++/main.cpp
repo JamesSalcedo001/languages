@@ -5,6 +5,20 @@
 using namespace std;
 
 
+
+// functions/methods
+
+string greet(string name) {
+    return "Hello, " + name;
+}
+
+// see rest on line 136
+
+
+
+
+
+
 int main() {
 
     // data types
@@ -118,6 +132,8 @@ int main() {
     cout << sum << ", " << diff << ", " << prod << ", " << quot << ", " << isEqual << ", " << isNotEqual << ", " << isGreater << ", " << ", " << andOp << ", " << orOp << endl;
 
     cout << result << endl;
+
+    cout << greet("John") << endl; // output: Hello, John
 
     return 0;
 }
