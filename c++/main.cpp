@@ -1,7 +1,8 @@
-// to run code: compile with: g++ main.cpp -o main, and then ./main
+// to run code: compile with: g++11 main.cpp -o main, and then ./main
 
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 
@@ -106,7 +107,54 @@ class Employee {
 };
 
 
-// see the rest on lines
+// see the rest on lines 251 and 252
+
+
+
+
+// polymorphism (OOP)
+
+// added cmath library above
+
+
+class Shape {
+    public:
+        virtual double area() = 0;
+};
+
+
+class Circle : public Shape {
+    private:
+        double radius;
+
+    public: 
+        Circle(double r) {
+            radius = r;
+        }
+
+        double area() override {
+            return M_PI * radius * radius;
+        }
+};
+
+
+class Rectangle : public Shape {
+private:
+    double width, height;
+
+public:
+    Rectangle(double w, double h) {
+        width = w;
+        height = h;
+    }
+
+    double area() override {
+        return width * height;
+    }
+};
+
+
+// see rest on lines 303ish
 
 
 
@@ -219,7 +267,14 @@ int main() {
 
 
 
+    // exceptions/error handling
 
+    try {
+        int divisor = 0;
+        int divisionResult = 10 / divisor;
+    } catch (const exception& e) {
+        cout << "Error occurred: " << e.what() << endl;
+    }
 
 
 
@@ -250,6 +305,15 @@ int main() {
 
     Employee emp("Alice", 50000);
     cout << emp.getSalary() << endl; // output: 50000
+
+
+
+    Shape* shapes[] = {new Circle(10), new Rectangle(5, 10)};
+
+    for (Shape* shape : shapes) {
+        cout << shape->area() << endl;
+    }
+
 
 
     return 0;
