@@ -80,7 +80,35 @@ class Dog : public Animal {
 };
 
 
-// see rest on lines
+// see rest on lines 220 - 221
+
+
+
+
+
+// Encapsulation (OOP)
+
+
+class Employee {
+    private:
+        string name;
+        int salary;
+
+    public:
+        Employee(string n, int s) {
+            name = n;
+            salary = s;
+        }
+
+        int getSalary() {
+            return salary;
+        }
+};
+
+
+// see the rest on lines
+
+
 
 
 
@@ -219,6 +247,9 @@ int main() {
 
     Dog dog("Rex");
     dog.speak(); // output: Rex barks
+
+    Employee emp("Alice", 50000);
+    cout << emp.getSalary() << endl; // output: 50000
 
 
     return 0;
