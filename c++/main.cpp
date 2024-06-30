@@ -16,6 +16,40 @@ string greet(string name) {
 
 
 
+// objects/dictionaries
+
+struct Person {
+    string firstName;
+    string lastName;
+    int age;
+};
+
+// see rest on lines 158-159
+
+
+
+// classes and objects (OOP)
+
+
+class Persona {
+    public:
+        string firstName;
+        string lastName;
+        int age;
+
+        Persona(string fn, string ln, int a) {
+            firstName = fn;
+            lastName = ln;
+            age = a;
+        }
+
+        string greet() {
+            return "Hello, my name is " + firstName + " " + lastName;
+        }
+};
+
+
+// see rest on lines 
 
 
 
@@ -121,7 +155,10 @@ int main() {
     // arrays
 
     string fruits[] = {"apple", "banana", "cherry"};
-    cout << fruits[0] << endl; // output: apple
+
+
+
+
 
 
 
@@ -139,6 +176,16 @@ int main() {
     cout << result << endl;
 
     cout << greet("John") << endl; // output: Hello, John
+
+    cout << fruits[0] << endl; // output: apple
+
+    Person person = {"John", "Doe", 30};
+    cout << person.firstName << endl; //output: John
+
+
+    Persona persona1("John", "Doe", 30);
+    cout << persona1.greet() << endl; // output: Hello my name is John Doe
+
 
     return 0;
 }
