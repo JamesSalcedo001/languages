@@ -19,10 +19,20 @@ int main() {
 
 
 
+    // variables
+
+    int variable = 10;
+    const int CONSTANT = 20;
+
+
+
+
 
 
 
     cout <<  integer << ", " << floatNum << ", " << str << ", " << boolean << endl;
+
+    cout << variable << ", " << CONSTANT << endl;
 
     return 0;
 }
