@@ -54,11 +54,70 @@ int main() {
 
 
 
+
+    // control flow
+
+    int number = 10;
+
+    // if statement
+
+    if (number > 5) {
+        cout << "Greater than 5" << endl;
+    } else {
+        cout << "5 or less" << endl;
+    }
+
+
+    // ternary
+
+    string result = (number > 5) ? "Greater than 5" : "5 or less";
+    
+
+
+
+
+    // loops
+
+
+
+    // for loop
+    for (int i = 0; i < 5; i++) {
+        cout << i << endl;
+    }
+
+
+
+    //while loop
+    int j = 0;
+    while (j < 5) {
+        cout << j << endl;
+        j++;
+    }
+
+
+    //do while loop
+    int k = 0;
+    do {
+        cout << k << endl;
+        k++;
+    } while (k < 5);
+
+
+
+
+
+
+
+
+
+
     cout <<  integer << ", " << floatNum << ", " << str << ", " << boolean << endl;
 
     cout << variable << ", " << CONSTANT << endl;
 
     cout << sum << ", " << diff << ", " << prod << ", " << quot << ", " << isEqual << ", " << isNotEqual << ", " << isGreater << ", " << ", " << andOp << ", " << orOp << endl;
+
+    cout << result << endl;
 
     return 0;
 }
