@@ -272,3 +272,134 @@
 
 
 
+
+
+# dictionaries and sets
+
+
+# creating and manipulating dictionaries
+
+    
+    # adding, updating deleting
+
+        # my_dict = {"name": "Alice", "age": 30}
+
+        # my_dict["age"] = 31
+        # my_dict["city"] = "New York"
+        # del my_dict["name"]
+
+
+
+    # iterating over dictionaries
+
+
+    # items(), keys(), values()
+
+
+        # for key, value in my_dict.items():
+        #     print(f"{key}: {value}")
+
+
+# sets
+
+    # creating and using sets
+
+        # my_set = {1, 2, 3, 4, 5}
+
+        # my_set.add(6)
+        # my_set.remove(3)
+
+    # set operations: union, intersection, difference
+
+        # set1 = {1, 2, 3}
+        # set2 = {3, 4, 5}
+
+        # union = set | set2 # {1, 2, 3, 4, 5}
+        # intersection = set1 & set2 # {3}
+
+
+
+# File I/O
+
+
+# reading and writing files
+
+
+    # using open, read, write, and context managers
+
+        # with open('file.txt', 'r') as file:
+        #     content = file.read()
+
+        
+        # with open('file.txt', 'w') as file:
+        #     file.write("Hello, World!")
+
+
+# file operations
+
+    # common operations: reading lines, writing data, using different file modes: (r, w, a)
+
+
+
+
+
+
+
+# Advanced Python
+
+
+# exception handling
+
+
+    # try except blocks
+
+        # try:
+        #     result = 10 / 0
+        # except ZeroDivisionError:
+        #     print("Cannot divide by zero!")
+
+    #finally block
+
+        # try:
+        #     file = open('file.txt', 'r')
+        # except FileNotFoundError:
+        #     print("File not found!")
+        # finally:
+        #     file.close()
+
+
+
+    # custom exceptions
+
+    # creating custom exception classes
+
+
+    # class CustomError(Exception):
+    #     pass
+
+    # try:
+    #     raise CustomError("This is a custom error!")
+    # except CustomError as e:
+    #     print(e)
+
+
+
+# Decorators and Generators
+
+
+# go into 
+
+# Decorators
+
+    # creating and using decorators
+
+    # def decorator_function(func):
+    #     def wrapper():
+    #         print("Before function")
+    #         func()
+    #         print("After function")
+    #     return wrapper
+
+    # @decorator_function
+    # def say_hello():
+    #     print("Hello")
