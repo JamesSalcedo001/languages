@@ -118,6 +118,8 @@
 # creating objects and classes
 
 
+# *** go into __init__, instance methods, class methods, instance variables, and class variables
+
 # defining classes
 
     # class Dog:
@@ -190,8 +192,10 @@
 
 
 
-# inheritance and polymophism
+# inheritance and polymorphism
 
+
+# *** go into inheritance, polymorphism, what single inheritance vs double inheritance is
 
 # single inheritance
 
@@ -387,7 +391,7 @@
 # Decorators and Generators
 
 
-# go into 
+# *** go into decorators and generators
 
 # Decorators
 
@@ -403,3 +407,54 @@
     # @decorator_function
     # def say_hello():
     #     print("Hello")
+
+
+# generators
+
+# def count_up_to(n):
+#     count = 1
+#     while count <= n:
+#         yield count
+#         count += 1
+
+# for number in count_up_to(5):
+#     print(number)
+
+
+
+# *** go into what concurrency, threads and processes are
+
+
+# Concurrency
+
+# Threads and Processes
+
+# Creating and Managing Threads
+
+    # import threading
+
+    # def print_numbers():
+    #     for i in range(5):
+    #         print(i)
+
+    # thread = threading.Thread(target=print_numbers)
+    # thread.start()
+    # thread.join()
+
+
+# Asyncio
+
+# Using Asynchronous Programming with asyncio
+
+
+    # import asyncio
+
+    # async def say_hello():
+    #     print("Hello")
+    #     await asyncio.sleep(1)
+    #     print("World")
+
+    # asyncio.run(say_hello())
+
+
+
