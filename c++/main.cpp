@@ -3,6 +3,8 @@
 #include <iostream>
 #include <cmath>
 #include <stdexcept>
+#include <ctime> // library for time functions
+using namespace std;
 
 // Functions/methods
 std::string greet(std::string name) {
@@ -203,6 +205,10 @@ int main() {
     }
 
     std::cout << factorial(5) << std::endl;
+
+    time_t now = time(0);
+    tm* ltm = localtime(&now);
+    cout << 1900 + ltm->tm_year << "-" << 1 + ltm->tm_mon << "-" << ltm->tm_mday << endl;
 
     return 0;
 }
