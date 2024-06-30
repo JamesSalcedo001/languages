@@ -1,320 +1,208 @@
-// to run code: compile with: g++11 main.cpp -o main, and then ./main
-
+// To run code: compile with: g++11 main.cpp -o main, and then ./main
 
 #include <iostream>
 #include <cmath>
-using namespace std;
+#include <stdexcept>
 
-
-
-// functions/methods
-
-string greet(string name) {
+// Functions/methods
+std::string greet(std::string name) {
     return "Hello, " + name;
 }
 
-// see rest on line 136
-
-
-
-// objects/dictionaries
-
+// Objects/dictionaries
 struct Person {
-    string firstName;
-    string lastName;
+    std::string firstName;
+    std::string lastName;
     int age;
 };
 
-// see rest on lines 158-159
-
-
-
-// classes and objects (OOP)
-
-
+// Classes and objects (OOP)
 class Persona {
-    public:
-        string firstName;
-        string lastName;
-        int age;
+public:
+    std::string firstName;
+    std::string lastName;
+    int age;
 
-        Persona(string fn, string ln, int a) {
-            firstName = fn;
-            lastName = ln;
-            age = a;
-        }
+    Persona(std::string fn, std::string ln, int a) : firstName(fn), lastName(ln), age(a) {}
 
-        string greet() {
-            return "Hello, my name is " + firstName + " " + lastName;
-        }
+    std::string greet() {
+        return "Hello, my name is " + firstName + " " + lastName;
+    }
 };
 
-
-// see rest on lines 186 and 187
-
-
-
-// inheritance (OOP)
-
-
+// Inheritance (OOP)
 class Animal {
-    public:
-        string name;
+public:
+    std::string name;
 
-        Animal(string n) {
-            name = n;
-        }
+    Animal(std::string n) : name(n) {}
 
-        virtual void speak() {
-            cout << name << " makes a noise" << endl;
-        }
+    virtual void speak() {
+        std::cout << name << " makes a noise" << std::endl;
+    }
 };
-
 
 class Dog : public Animal {
-    public:
-        Dog(string n) : Animal(n) {}
+public:
+    Dog(std::string n) : Animal(n) {}
 
-        void speak() override {
-            cout << name << " barks" << endl;
-        }
+    void speak() override {
+        std::cout << name << " barks" << std::endl;
+    }
 };
-
-
-// see rest on lines 220 - 221
-
-
-
-
 
 // Encapsulation (OOP)
-
-
 class Employee {
-    private:
-        string name;
-        int salary;
+private:
+    std::string name;
+    int salary;
 
-    public:
-        Employee(string n, int s) {
-            name = n;
-            salary = s;
-        }
+public:
+    Employee(std::string n, int s) : name(n), salary(s) {}
 
-        int getSalary() {
-            return salary;
-        }
+    int getSalary() {
+        return salary;
+    }
 };
 
-
-// see the rest on lines 251 and 252
-
-
-
-
-// polymorphism (OOP)
-
-// added cmath library above
-
-
+// Polymorphism (OOP)
 class Shape {
-    public:
-        virtual double area() = 0;
+public:
+    virtual double area() = 0;
 };
-
 
 class Circle : public Shape {
-    private:
-        double radius;
+private:
+    double radius;
 
-    public: 
-        Circle(double r) {
-            radius = r;
-        }
+public:
+    Circle(double r) : radius(r) {}
 
-        double area() override {
-            return M_PI * radius * radius;
-        }
+    double area() override {
+        return M_PI * radius * radius;
+    }
 };
-
 
 class Rectangle : public Shape {
 private:
     double width, height;
 
 public:
-    Rectangle(double w, double h) {
-        width = w;
-        height = h;
-    }
+    Rectangle(double w, double h) : width(w), height(h) {}
 
     double area() override {
         return width * height;
     }
 };
 
-
-// see rest on lines 303ish
-
-
-
-
+// Recursion
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
 
 int main() {
-
-    // data types
-
+    // Data types
     int integer = 10;
     float floatNum = 10.5f;
-    string str = "Hello";
+    std::string str = "Hello";
     bool boolean = true;
 
-
-
-
-
-
-    // variables
-
+    // Variables
     int variable = 10;
     const int CONSTANT = 20;
 
-
-
-
-
-    // operators
-
+    // Operators
     int a = 10;
     int b = 20;
 
-    // arithmetic
+    // Arithmetic
     int sum = a + b;
     int diff = a - b;
     int prod = a * b;
-    float quot = (float)a / b;
+    float quot = static_cast<float>(a) / b;
 
-
-    // comparison
+    // Comparison
     bool isEqual = (a == b);
     bool isNotEqual = (a != b);
     bool isGreater = (a > b);
 
-
-    // logical
+    // Logical
     bool andOp = (a < b && b < 10); // AND
     bool orOp = (a < b || b < 10); // OR
 
-
-
-
-
-
-    // control flow
-
+    // Control flow
     int number = 10;
 
-    // if statement
-
+    // If statement
     if (number > 5) {
-        cout << "Greater than 5" << endl;
+        std::cout << "Greater than 5" << std::endl;
     } else {
-        cout << "5 or less" << endl;
+        std::cout << "5 or less" << std::endl;
     }
 
+    // Ternary
+    std::string result = (number > 5) ? "Greater than 5" : "5 or less";
 
-    // ternary
-
-    string result = (number > 5) ? "Greater than 5" : "5 or less";
-    
-
-
-
-
-    // loops
-
-
-
-    // for loop
+    // Loops
+    // For loop
     for (int i = 0; i < 5; i++) {
-        cout << i << endl;
+        std::cout << i << std::endl;
     }
 
-
-
-    //while loop
+    // While loop
     int j = 0;
     while (j < 5) {
-        cout << j << endl;
+        std::cout << j << std::endl;
         j++;
     }
 
-
-    //do while loop
+    // Do while loop
     int k = 0;
     do {
-        cout << k << endl;
+        std::cout << k << std::endl;
         k++;
     } while (k < 5);
 
+    // Arrays
+    std::string fruits[] = {"apple", "banana", "cherry"};
 
-
-    // arrays
-
-    string fruits[] = {"apple", "banana", "cherry"};
-
-
-
-
-
-    // exceptions/error handling
-
+    // Exceptions/error handling
     try {
         int divisor = 0;
         int divisionResult = 10 / divisor;
-    } catch (const exception& e) {
-        cout << "Error occurred: " << e.what() << endl;
+    } catch (const std::exception& e) {
+        std::cout << "Error occurred: " << e.what() << std::endl;
     }
 
-
-
-
-
-
-    cout <<  integer << ", " << floatNum << ", " << str << ", " << boolean << endl;
-
-    cout << variable << ", " << CONSTANT << endl;
-
-    cout << sum << ", " << diff << ", " << prod << ", " << quot << ", " << isEqual << ", " << isNotEqual << ", " << isGreater << ", " << ", " << andOp << ", " << orOp << endl;
-
-    cout << result << endl;
-
-    cout << greet("John") << endl; // output: Hello, John
-
-    cout << fruits[0] << endl; // output: apple
+    std::cout << integer << ", " << floatNum << ", " << str << ", " << boolean << std::endl;
+    std::cout << variable << ", " << CONSTANT << std::endl;
+    std::cout << sum << ", " << diff << ", " << prod << ", " << quot << ", " << isEqual << ", " << isNotEqual << ", " << isGreater << ", " << andOp << ", " << orOp << std::endl;
+    std::cout << result << std::endl;
+    std::cout << greet("John") << std::endl; // output: Hello, John
+    std::cout << fruits[0] << std::endl; // output: apple
 
     Person person = {"John", "Doe", 30};
-    cout << person.firstName << endl; //output: John
-
+    std::cout << person.firstName << std::endl; // output: John
 
     Persona persona1("John", "Doe", 30);
-    cout << persona1.greet() << endl; // output: Hello my name is John Doe
+    std::cout << persona1.greet() << std::endl; // output: Hello, my name is John Doe
 
     Dog dog("Rex");
     dog.speak(); // output: Rex barks
 
     Employee emp("Alice", 50000);
-    cout << emp.getSalary() << endl; // output: 50000
-
-
+    std::cout << emp.getSalary() << std::endl; // output: 50000
 
     Shape* shapes[] = {new Circle(10), new Rectangle(5, 10)};
-
     for (Shape* shape : shapes) {
-        cout << shape->area() << endl;
+        std::cout << shape->area() << std::endl;
     }
 
-
+    std::cout << factorial(5) << std::endl;
 
     return 0;
 }
