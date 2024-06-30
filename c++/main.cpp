@@ -118,6 +118,11 @@ int main() {
 
 
 
+    // arrays
+
+    string fruits[] = {"apple", "banana", "cherry"};
+    cout << fruits[0] << endl; // output: apple
+
 
 
 
