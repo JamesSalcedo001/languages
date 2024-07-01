@@ -118,6 +118,75 @@
 // int age = 25
 
 
+
+
+// break: exits loop immediately
+
+// continue: skips current iteration and proceeds to next
+
+
+
+
+
+
+
+
+
+
+
+
+
+// OOP - programming paradigm uses objects and classes to structure software in a way that models real world entities and relationships
+
+
+    // key concepts
+
+        // encapsulation: bundling data (attributes) and methods (functions) that operate on the data into a single unit, or class
+
+
+        // abstraction: hiding the complex implmentation details and showing only the necessary features of an object
+
+        // inheritance: creating new classes from existing ones, allowing for code reuse and creation of class hierarchy
+
+
+        // polymorphism: ability for different classes to be treated as instances of the same class through a common interface, typically achieved through method overriding and overloading
+
+
+// classes and objects 
+
+    // class: blueprint for creating objects, defining attributes and methods 
+
+    // object: an instance of a class 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public class Main {
 
     // main method 
@@ -168,12 +237,25 @@ public class Main {
         // iterate through elems in array or collection 
 
         int[] numbers = {1, 2, 3, 4, 5};
+
         for (int num : numbers) {
             System.out.println("Number: " + num);
         }
 
 
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                continue;
+            }
+            System.out.println("i is: " + i);
+        }
 
 
+        // creating object of Car class
+        Car myCar = new Car();
+        myCar.color = "Red";
+        myCar.model = "Toyota";
+        myCar.year = 2020;
+        myCar.displayDetails();
     }
 }
