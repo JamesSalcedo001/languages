@@ -26,12 +26,12 @@
 
 # variables/ datatypes
 
-    # -strings: "Hello, World"
-    # -numbers: int, float, double etc
+    # -strings: "Hello, World" - str 
+    # -numbers: int, float, complex (numbers with real and imaginary like 1 + 2j)
     # -lists: ordered mubtable collections eg. [1, 2, 3]
     # -dictionaries: key value pairs eg. {"key", "value"}
     # -tuples: ordered immutable collections eg. (1, 2, 3)
-    # -booleans: true or false
+    # -booleans: bool, true or false
 
 
 # operators
