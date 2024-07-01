@@ -159,7 +159,11 @@
     // object: an instance of a class 
 
     
+    // instance variables and methods 
 
+            // instance variables - attributes defined in class, each obj gets its own copy of these variables
+
+            // instance methods - functions defined in class that operates on instance variables of class
 
 
 
