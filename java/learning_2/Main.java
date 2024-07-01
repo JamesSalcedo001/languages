@@ -154,9 +154,11 @@
 
 // classes and objects 
 
-    // class: blueprint for creating objects, defining attributes and methods 
+    // class: blueprint for creating objects, defining attributes and methods, encapsulates data for the object and methods to manipulate
 
     // object: an instance of a class 
+
+    // instance: specific realization of any object 
 
     
     // instance variables and methods 
@@ -165,6 +167,7 @@
 
             // instance methods - functions defined in class that operates on instance variables of class
 
+    // use . operator to access instance variables and methods 
 
 
 
@@ -255,11 +258,16 @@ public class Main {
         }
 
 
-        // creating object of Car class
-        Car myCar = new Car();
-        myCar.color = "Red";
-        myCar.model = "Toyota";
-        myCar.year = 2020;
+
+        // creating object of Car class without parameters in class
+        // Car myCar = new Car();
+        // myCar.color = "Red";
+        // myCar.model = "Toyota";
+        // myCar.year = 2020;
+        // myCar.displayDetails();
+
+        // using parameterized constructor in Car class:
+        Car myCar = new Car("Red", "Toyota", 2020);
         myCar.displayDetails();
     }
 }
