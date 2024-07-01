@@ -15,6 +15,13 @@ public class Car {
     String model;
     int year;
 
+    // default constructor
+    public Car() {
+        this.color = "Unknown";
+        this.model = "Unknown";
+        this.year = 0;
+    }
+
 
     // parameterized constructor
     public Car(String color, String model, int year) {

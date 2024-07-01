@@ -171,6 +171,7 @@
 
 
 
+    // this keyword: refers to current instance of the class, used to access instance variables and methods of the current object
 
 
 
@@ -259,12 +260,13 @@ public class Main {
 
 
 
-        // creating object of Car class without parameters in class
-        // Car myCar = new Car();
-        // myCar.color = "Red";
-        // myCar.model = "Toyota";
-        // myCar.year = 2020;
-        // myCar.displayDetails();
+        // creating object of Car class without parameters in class, 
+        // using default constructor
+        Car myCar1 = new Car();
+        myCar1.color = "Blue";
+        myCar1.model = "Honda";
+        myCar1.year = 2021;
+        myCar1.displayDetails();
 
         // using parameterized constructor in Car class:
         Car myCar = new Car("Red", "Toyota", 2020);
