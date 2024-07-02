@@ -154,7 +154,7 @@ class Animal:
         self.name = name
 
 
-    def speak(self);
+    def speak(self):
         print(f"{self.name} makes a noise")
 
 
@@ -276,7 +276,7 @@ print(datetime.date.today()) # output: current date
 
 
 # using external library (eg requests for HTTP requests)
-import requests
+# import requests
 
-response = requests.get('http://example.com')
-print(response.status_code) # output: 200 if successful
+# response = requests.get('http://example.com')
+# print(response.status_code) # output: 200 if successful
