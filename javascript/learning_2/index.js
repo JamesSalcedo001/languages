@@ -413,4 +413,36 @@
         })
 
 
+
+
+    ** functions and error handling
+
+        - function declaration: functions are defined using function keyword, followed by name of function and parentheses ()
+
+            syntax: function functionName(parameters) {
+                // code
+            }
+
+            ex:
+                function greet(name) {
+                    console.log("Hello, " + name + "!");
+                }
+
+                greet("Alice");
+
+        - function expression: can be defined using function expressions, where a function is assigned to a variable
+
+            - syntax: const functionName = function(parameters) {
+                // code to be executed
+            }
+
+
+            ex:
+                const greet = function(name) {
+                    console.log("Hello, " + name + "!");
+                };
+
+                greet("Bob"); prints "Hello, Bob!"
+
+
 */
