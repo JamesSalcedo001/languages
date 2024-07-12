@@ -417,7 +417,7 @@
 
     ** functions and error handling
 
-        - function declaration: functions are defined using function keyword, followed by name of function and parentheses ()
+    ** function declaration: functions are defined using function   keyword, followed by name of function and parentheses ()
 
             syntax: function functionName(parameters) {
                 // code
@@ -430,7 +430,7 @@
 
                 greet("Alice");
 
-        - function expression: can be defined using function expressions, where a function is assigned to a variable
+    ** function expression: can be defined using function expressions, where a function is assigned to a variable
 
             - syntax: const functionName = function(parameters) {
                 // code to be executed
@@ -443,6 +443,39 @@
                 };
 
                 greet("Bob"); prints "Hello, Bob!"
+
+
+    ** arrow functions: created in ES6, provide a shorter syntax for writing function expressions
+
+            - syntax: const functionName = (parameters) => {
+                        // code 
+                      }
+
+            ex:
+                const greet = (name) => {
+                    console.log("Hello, " + name + "!");
+                };
+
+                greet("Charlie"); prints Hello, Charlie!
+
+
+    ** parameters and default values: functions can have parameters, which are variables listed as part of the function definition. default parameter values can also be specified
+
+            - syntax: function greet(name = "Guest") {
+                        console.log("Hello, " + name + "!");
+                      } 
+
+                      greet(); prints "Hello, Guest!"
+                      greet("David") prints "Hello, David!"
+
+    ** return statement: stops the execution of a function, and returns a value from that function
+
+            - syntax: function add(a, b) {
+                        return a + b;
+                      }
+
+                      let sum = add(3, 4); sum is 7
+                      console.log(sum); 7
 
 
 */
