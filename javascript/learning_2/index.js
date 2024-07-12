@@ -478,4 +478,62 @@
                       console.log(sum); 7
 
 
+
+    ** arrow functions p2: provide more concise syntax for writing functions and have lexical 'this' binding
+
+            - syntax: const add = (a, b) => a + b; 
+                      console.log(add(3, 4));
+
+
+    ** callbacks: a function passed as an argument to another function, to be 'called back' at a later time
+
+            - example: 
+                    function fetchData(callback) {
+                        // simulate async operation
+                        setTimeout(() => {
+                            let data = "Hello, World!";
+                            callback(data);
+                        }, 1000);
+                    }
+
+                    function displayData(data) {
+                        console.log(data);
+                    }
+
+                    fetchData(displayData); prints "Hello, World!" after 1 second
+
+
+    ** error handling with try-catch
+
+        - try statement allows you to define a block of code to be tested for errors while it is being executed
+
+        - catch statement allows you to define a block of code to be executed if an error occurs in the try block
+
+        - syntax: try {
+                    // code to try
+                    let result = riskyOp();
+                  } catch (error) {
+                    // handle errors
+                    console.error("An error occurred:", error);
+                  } finally {
+                    // code to be executed regardless of result
+                    console.log("Cleanup or finalization code");
+                  }
+
+    ** throwing errors: throw statement allows you to create a custom error
+
+        ex:
+            function riskyOp() {
+                if (somethingWrong) {
+                    throw new Error("Something went wrong!");
+                }
+                return "Success!";
+            }
+
+            try {
+                let result = riskyOp();
+                console.log(result);
+            } catch {
+                console.error(error.message); // prints something went wrong!
+            }
 */
