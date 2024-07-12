@@ -572,4 +572,49 @@
             console.log(person.firstName); prints "John"
             console.log(person[lastName]); prints "Doe"
             person.greet(); prints "Hello, John"
+
+
+    ** sets and maps
+
+    ** sets: a collection of unique data
+
+        ex:
+            let mySet = new Set([1, 2, 3, 4, 4])
+            console.log(mySet); prints Set { 1, 2, 3, 4 } leaving out repeats 
+
+        - common set methods:
+            - add(value): adds new elem to set
+            - delete(value): removes elem from set
+            - has(value): checks if elem exists in set
+            - clear(): removes all elems from set
+
+        ex:
+            mySet.add(5);
+            console.log(mySet.has(5)); prints true
+            mySet.delete(5);
+            mySet.clear();
+
+    ** maps: collection of key-value pairs
+
+        ex:
+            let myMap = new Map([
+                ["name", "Alice"],
+                ["age", 25]
+            ]);
+
+        - common map methods:
+            - set(key, value): adds new key value pair to map
+            - get(key): returns value associated with the key,
+            - delete(key): removes the key value pair from map
+            - has(key): checks if key exists in map
+            - clear(): removes all key value pairs from map
+
+        ex:
+            myMap.set("city", "New York");
+            console.log(myMap.get("name")); prints "Alice"
+            myMap.delete("age");
+            console.log(myMap.has("age")) prints false
+            myMap.clear();
+
+        
 */
