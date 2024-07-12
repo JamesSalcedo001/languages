@@ -111,4 +111,89 @@
             let _age = 30;
             let $salary = 5000; PHP what are you doing here?
 
+
+
+    ** variables
+
+        - declaration: variables can be declared using var, let, or const
+
+            - var: function scoped or globally scoped variable
+
+            - let: block-scoped variable
+
+            - const: block scoped constant, must be initialized at the time of declaration
+
+                ex: 
+                
+                var name = "Alice";
+                let age = 25;
+                const country = "USA";
+
+
+    ** data types"
+
+        - primitive:
+            - number: numeric values, both integer and floating point nums
+
+                let count = 10;
+                let price = 19.99;
+
+            - string: sequence of characters
+                    
+                    let message = "Hello, World!";
+
+            - boolean: true or false
+
+                    let isAvailable = true;
+            
+            - null: represents intentional absence of any object value
+
+                    let emptyValue = null;
+            
+            - undefined: indicates a variable that has been declared but not assigned a value 
+
+                    let notAssigned;
+
+            - symbol: unique and immutable value used as an identifier introduced in ES6
+
+                    let symbol = Symbol("description");
+
+
+    
+        - non-primitive:
+            - object: collection of properties, each of which has a name and a value
+
+
+                ex: 
+                    let person = {
+                        firstName: "Alice",
+                        lastName: "Smith",
+                        age: 25 
+                    }
+
+
+    ** variable scope
+
+
+        - global scope: variables declared outside any function, available throughout the code
+
+        - function scope: variables declared inside a function, accessible only within that function
+
+        - block scope: variables declared with let or const inside a block {}, accessible only within that block
+
+
+            ex: 
+                var globalVar "I am global";
+
+                function exampleFunction() {
+                    var functionVar = "I am in a function";
+                    console.log(globalVar); // accessible
+                    console.log(functionVar)
+                }
+                
+                exampleFunction();
+                console.log(globalVar); // accessible
+                console.log(functionVar); // error: functionVar is not defined
+
+
 */
