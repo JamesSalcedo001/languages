@@ -536,4 +536,40 @@
             } catch {
                 console.error(error.message); // prints something went wrong!
             }
+
+
+    ** data structures
+
+    ** intro to data structures
+
+        - arrays: list like object used to store multiple values in a single variable
+
+        ex: 
+            let fruits = ["Apple", "Orange", "Cherry"];
+
+        - accessing elements: use index numbers starting from 0 to access array elements(bracket notation)
+
+        ex: 
+            console.log(fruits[0]); prints apple
+            console.log(fruits[2]); prints cherry
+
+
+    ** objects: a collection of key-value pairs
+
+        ex:
+            let person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 30,
+                greet: function() {
+                    console.log("Hello, " + this.firstName);
+                }
+            }
+
+        - accessing properties: use dot notation or bracket notation to access properties
+
+        ex:
+            console.log(person.firstName); prints "John"
+            console.log(person[lastName]); prints "Doe"
+            person.greet(); prints "Hello, John"
 */
