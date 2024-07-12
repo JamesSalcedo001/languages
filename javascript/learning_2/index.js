@@ -273,7 +273,37 @@
 
                     result = !(5 > 3); false, the bang operator or not operator reverses the truth value of whatever it's placed in front of, so this reads NOT (5 is greater than 3), where (5 > 3) normally returns true, it is set to the opposite truth value which is false in this case
                     
-            
+        - conditional statements
+           
+            - if statement: executes block of code if a specified condition is true
+
+                let number = 10;
+                if (number > 0) {
+                    console.log("Positive");
+                }
+
+            if else statement: Executes one block of code is condition is true, and another if it is false
+
+                let number = -10;
+                if (number > 0) {
+                    console.log("Positive number");
+                } else {
+                    console.log("Non positive num");
+                }
+
+            if else if ladder: used to test multiple conditions
+
+                let number = 0;
+                if (number > 0) {
+                    console.log("Positive");
+                } else if (number < 0) {
+                    console.log("Negative"); 
+                } else {
+                    console.log("Zero");
+                }
+
+
+            - switch statement: 
 
 
 */
