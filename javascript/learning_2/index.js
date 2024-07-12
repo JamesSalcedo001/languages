@@ -381,5 +381,36 @@
                 i++;
             } while (i < 5);
 
+        
+
+        - break and continue: 
+
+            - break: exits loop immediately
+
+            ex:
+                for (let i = 0; i < 10; i++) {
+                    if (i === 5) {
+                        break;
+                    }
+                    console.log("i is " + i);
+                }
+
+            
+            - continue: skips current iteration and proceeds to next iteration
+
+            ex: 
+                for (let i = 0; i < 10; i++) {
+                    if (i === 5) {
+                        continue;
+                    }
+                    console.log("i is " + i);
+                }
+
+        - forEach method: executes provided function once for each array element
+
+        syntax: array.forEach(function(currentValue, index, array) {
+            // code to be executed
+        })
+
 
 */
