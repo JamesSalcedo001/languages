@@ -196,4 +196,84 @@
                 console.log(functionVar); // error: functionVar is not defined
 
 
+
+    ** hoisting
+
+        - javascript hoists var declarations to the top of their scope, but not the initialization. let and const declarations are not hoisted.
+
+
+            ex: 
+                console.log(hoistedVar); // undefined, notice how this variable is still accessible, but the whole I am hoisted part is not accessible in this manner
+
+                var hoistedVar = "I am hoisted";
+
+
+                console.log(hoistedLet); // error: cannot access 'hoistedLet', notice how this will produce an error because the declaration is not hoisted therefore it will not be read.
+
+                let hoistedLet = "I am not hoisted";
+
+
+    
+
+
+    ** control flow: operators and conditional statements
+
+        - operators
+
+            - arithmetic
+                +, -, *, /, %, ** (ES6)
+
+                ex: 
+                    let sum = 5 + 3;
+                    let diff = 5 - 3;
+                    let product = 5 * 3;
+                    let quot = 5 / 3;
+                    let remainder = 5 % 3;
+                    let power = 5 ** 3;
+
+            - assignment: assigning values to variables
+                =, +=, -=, *=, /=, %=, **=
+
+                ex: 
+                    let a = 5;
+
+                    all of these below are shorthand for this syntax: a = a (operation) b. for example: the first one is equal to:
+                    
+                    a = a + 3;  < == >  a += 3;
+
+                    a += 3; => 8
+                    a -= 2; => 6
+                    a *= 4; => 24
+                    a /= 6; => 4
+                    a %= 3; => 1
+                    a **= 2; => 25
+
+
+            - comparison
+                ==, ===, !=, !==, >, <, >=, <=
+
+                ex: 
+                    let isEqual = (5 == "5"); true (loose equality)
+                    let isStrictEqual = (5 === "5"); false ( strict equality ) 
+                    let isNotEqual = (5 != 3); true
+                    let isStrictNotEqual = (5 !== "5"); true
+                    let isGreater = (5 > 3); true
+                    let isLess = ( 5 < 3); true
+                    let isGreaterOrEqual = (5 >= 3); true
+                    let isLessThanOrEqual = (5 <= 5); true
+
+
+            - logical: used for combining boolean expressions
+                && (logical AND ), || (logical OR ), ! (logical NOT)
+
+                ex:
+                    let result = (5 > 3) && ( 5 < 10); true 5 is greater than 3? yes AND 5 is less than 10? yes, both are true therefore the return value is true
+                    
+                    result = (5 > 3) || ( 5 > 10); true 5 is greater than 3? yes OR 5 is greater than 10 no, one of these is true therefore the return value is true
+
+                    result = !(5 > 3); false, the bang operator or not operator reverses the truth value of whatever it's placed in front of, so this reads NOT (5 is greater than 3), where (5 > 3) normally returns true, it is set to the opposite truth value which is false in this case
+                    
+            
+
+
 */
