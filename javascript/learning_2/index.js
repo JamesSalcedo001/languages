@@ -303,7 +303,83 @@
                 }
 
 
-            - switch statement: 
+            - switch statement: tests a variable against a list of values, executing the corresponding block of code
+
+                ex:
+                    let day = 3;
+
+                    switch (day) {
+                        case 1:
+                            console.log("Monday");
+                            break;
+                        case 2:
+                            console.log("tuesday");
+                            break;
+                        case 3:
+                            console.log("wednesday");
+                            break;
+                        // add more cases
+                        default:
+                            console.log("Invalid day");
+                            break;
+                    }
+
+
+
+    ** loops
+
+        - for loop: used to iterate a block of code a specific number of times
+
+        syntax: for (initialization; condition; update) {
+                    // code to be executed
+                }
+
+        ex:    
+            for (let i = 0; i < 5; i++) {
+                console.log("i is " + i);
+            }
+
+
+        - enhanced for loop (for..of loop): used to iterate through elements in an array
+
+        syntax: for (variable of iterable) {
+                    // code to be executed
+                }
+
+        ex: 
+            const numbers = [1, 2, 3, 4, 5];
+
+            for (let num of numbers) {
+                console.log("Number: " + num);
+            }
+
+        - while loop: repeats block of code as a specified condition is true
+
+        syntax: while (condition) {
+                    // code to be executed
+                }
+
+        ex:
+            let i = 0;
+
+            while (i < 5) {
+                console.log("i is " + i);
+                i++;
+            }
+
+        - do while loop: similar to while loop, but executes block of code at least once before checking the condition
+
+        syntax: do {
+            // code to be executed
+        } while (condition);
+
+
+        ex: 
+            let i = 0;
+            do {
+                console.log("i is " + i);
+                i++;
+            } while (i < 5);
 
 
 */
