@@ -616,5 +616,22 @@
             console.log(myMap.has("age")) prints false
             myMap.clear();
 
-        
+    ** destructuring and spread operator
+
+    ** destructuring
+        - arrays: extract values from arrays into variables
+
+        ex:
+            let [a, b, c] = [1, 2, 3];
+            console.log(a) prints 1
+            console.log(b) prints 2
+            console.log(c) prints 3
+
+        - objects: extract values from objects into variables
+
+        ex:
+            let person = { name: "Alice", age: 25 };
+            let {name, age} = person;
+            console.log(name) prints Alice
+            console.log(age) prints 25
 */
