@@ -678,4 +678,27 @@
             .catch(error => {
                 console.error(error); // op failed
             });
+
+
+        - chaining promises: multiple .then methods can be chained for sequential asynchronous ops
+
+        ex:
+            let promise = new Promise((resolve, reject) => {
+                setTimeout(() => resolve(1), 1000); // resolve 1 after 1 second
+            });
+
+            promise
+                .then(result => {
+                    console.log(result); // 1
+                    return result * 2;
+                })
+                .then(result => {
+                    console.log(result); // 2
+                    return result * 2; 
+                })
+                .then(result => {
+                    console.log(result); // 4
+                })
+
+
 */
