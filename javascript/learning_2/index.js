@@ -736,6 +736,29 @@
             .catch(error => {
                 console.error("Problem with your fetch op: ", error);
             });
+
+
+        - using axios: axios is a promise based HTTP client for the browser and Node.js
+
+
+        -installation: intall using NPM or via CDN
+
+        npm install axios
+
+
+        ex: 
+            const axios = require('axios');
+
+            axios.get('https://pokeapi.co/api/v2/pokemon/ditto');
+            .then(res => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error('problem with axios op: ', error);
+            });
+
+
+
             
 
 
