@@ -634,4 +634,21 @@
             let {name, age} = person;
             console.log(name) prints Alice
             console.log(age) prints 25
+
+
+    ** spread operator
+        - arrays: spread elements of an array into another array
+
+        ex: 
+            let arr1 = [1, 2, 3];
+            let arr2 = [...arr1, 4, 5];
+            console.log(arr2); prints [1, 2, 3, 4, 5]
+
+
+        - objects: spread properties of an object into another object
+
+        ex: 
+            let obj1 = { a: 1, b: 2 };
+            let obj2 = { ...obj1, c: 3 };
+            console.log(obj2); prints { a: 1, b: 2, c: 3 };
 */
