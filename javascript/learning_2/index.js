@@ -701,4 +701,44 @@
                 })
 
 
+
+        - async/await: provide a way to write asynchronous code in a synchronous like manner
+
+        ex: 
+            async function fetchData() {
+                try {
+                    let response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+                    let data = await response.json();
+                    console.log(data);
+                } catch (error) {
+                    console.error('Error: ', error);
+                }
+            }
+
+            fetchData();
+
+
+    ** fetching data from API's
+
+        - fetch API: provides an interface for fetching resources (including across the network)
+
+        ex:
+            fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+            .then(respones => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error("Problem with your fetch op: ", error);
+            });
+            
+
+
 */
+
+
