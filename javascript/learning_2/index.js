@@ -651,4 +651,31 @@
             let obj1 = { a: 1, b: 2 };
             let obj2 = { ...obj1, c: 3 };
             console.log(obj2); prints { a: 1, b: 2, c: 3 };
+
+
+
+
+    ** asynchronous JS
+
+    ** promises and async await
+
+        - promise: an object representing the eventual completion or failure of an asynchronous operation
+        
+        ex:
+            let promise = new Promise((resolve, reject) => {
+                // async operation
+                if (success) {
+                    resolve("op succeeded");
+                } else {
+                    reject("op failed");
+                }
+            });
+
+            promise
+            .then(result => {
+                console.log(result); // op succeeded
+            })
+            .catch(error => {
+                console.error(error); // op failed
+            });
 */
