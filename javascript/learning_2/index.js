@@ -765,22 +765,86 @@
 
 
     ** key concepts of OOP
-        ** classes and prototypes: 
+
+    ** classes and prototypes: 
         
             - prototypes: JS objects have a prototype. a prototype is also an object. all JS objects inherit their properties and methods from their prototype
 
             - classes: ES6 added new syntax to create objects and deal with inheritance, called classes. classes are syntactical sugar over JavaScript's existing prototype-based inheritance
 
 
-        ** inheritance: a way to create a new class from an existing class. the new class (child class) inherits the properties and methods of the existing class (parent class)
+    ** inheritance: a way to create a new class from an existing class. the new class (child class) inherits the properties and methods of the existing class (parent class)
 
 
-        ** encapsulation: means bundling the data (variables) and code (methods) that work on the data into a single unit called an object
+    ** encapsulation: means bundling the data (variables) and code (methods) that work on the data into a single unit called an object
 
 
-        ** abstraction: means hiding the complex reality while exposing only the necessary parts. helps reducing programming complexity and effort
+    ** abstraction: means hiding the complex reality while exposing only the necessary parts. helps reducing programming complexity and effort
 
-        ** polymorphism: means the ability to present the same interface for different underlying forms (data types)
+    ** polymorphism: means the ability to present the same interface for different underlying forms (data types)
+
+
+    ** prototypes: 
+    
+        - definition: in JS, every object has a prototype. a prototype is also an object from which other objects inherit properites and methods.
+
+        - prototype chain: JS objects have special property called __proto__, which points to the prototype object. this chain continues until it reaches Object.prototype, the root of all objects
+
+
+    ** creating objects with prototypes
+
+        - function constructors: before ES6, function constructors were used to create objects and their prototypes
+
+        ex:
+            function Person(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            Person.prototype.greet = function() {
+                console.log("Hello my name is " + this.name);
+            };
+
+            let person1 = new Person("Alice", 30);
+            person1.greet(); // prints hello my name is alice
+
+
+    ** prototype methods: methods can be added to the prototype object, allowing all instances to share the same method.
+
+        ex:
+            Person.prototype.sayAge = function() {
+                console.log("I am " + this.age + " years old");
+            };
+
+            person1.sayAge(); prints I am 30 years old
+
+    ** inheritance with prototypes
+    
+        - inheritance: objects can inherit properties and methods from their prototypes
+
+
+        ex: 
+            function Employee(name, age, jobTitle) {
+                Person.call(this, name, age); // call parent constructor
+                this.jobTitle = jobTitle;
+            }
+
+
+            Employee.prototype = Object.create(Person.prototype);
+            Employee.prototype.constructor = Employee;
+
+
+            Employee.prototype.work = function() {
+                console.log(this.name + " is working as a " + this.jobTitle);
+            };
+
+
+            let employee1 = new Employee("Bob", 25, "Developer");
+            employee1,greet(); prints hello my name is Bob
+            e,ployee1.work(); prints bob is working as a developer
+
+
+            
 
             
 
