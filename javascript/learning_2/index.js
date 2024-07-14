@@ -759,6 +759,29 @@
 
 
 
+
+
+    ** OOP: a programming paradigm based on the concept of "objects" which can contain data and code: data in the form of fields (often known as properties or attributes) and code, in the form of procedures (often known as methods)
+
+
+    ** key concepts of OOP
+        ** classes and prototypes: 
+        
+            - prototypes: JS objects have a prototype. a prototype is also an object. all JS objects inherit their properties and methods from their prototype
+
+            - classes: ES6 added new syntax to create objects and deal with inheritance, called classes. classes are syntactical sugar over JavaScript's existing prototype-based inheritance
+
+
+        ** inheritance: a way to create a new class from an existing class. the new class (child class) inherits the properties and methods of the existing class (parent class)
+
+
+        ** encapsulation: means bundling the data (variables) and code (methods) that work on the data into a single unit called an object
+
+
+        ** abstraction: means hiding the complex reality while exposing only the necessary parts. helps reducing programming complexity and effort
+
+        ** polymorphism: means the ability to present the same interface for different underlying forms (data types)
+
             
 
 
