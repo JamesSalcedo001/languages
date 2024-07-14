@@ -844,7 +844,53 @@
             e,ployee1.work(); prints bob is working as a developer
 
 
-            
+    ** classes
+
+    ** intro to classes
+
+        - ES6 classes: ES6 introduced a new class syntax to create objects, which is syntactic sugar over JS's existing prototype based inheritance
+
+        - class declaration: classes are declared using the class keyword
+
+        ex:
+            class Person {
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+
+                greet() {
+                    console.log("Hello my name is " + this.name);
+                }
+            }
+
+
+            let person2 = new Person("Charlie", 35);
+            person2.greet(); prints hello my name is charlie
+
+
+    ** class methods
+
+        - instance methods: methods defined inside a class
+
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            greet() {
+                console.log("Hello my name is " + this.name);
+            }
+
+            saying() {
+                console.log("I am " + this.age + " years old");
+            }
+        }
+
+
+        let person3 = new Person("Dave", 40);
+        person3.sayAge(); princts I am 40 years old
 
             
 
