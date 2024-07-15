@@ -873,26 +873,59 @@
 
         - instance methods: methods defined inside a class
 
-        class Person {
-            constructor(name, age) {
-                this.name = name;
-                this.age = age;
-            }
+            ex:            
+                class Person {
+                    constructor(name, age) {
+                        this.name = name;
+                        this.age = age;
+                    }
 
-            greet() {
-                console.log("Hello my name is " + this.name);
-            }
+                    greet() {
+                        console.log("Hello my name is " + this.name);
+                    }
 
-            saying() {
-                console.log("I am " + this.age + " years old");
-            }
-        }
+                    saying() {
+                        console.log("I am " + this.age + " years old");
+                    }
+                }
 
 
-        let person3 = new Person("Dave", 40);
-        person3.sayAge(); princts I am 40 years old
+                let person3 = new Person("Dave", 40);
+                person3.sayAge(); prints I am 40 years old
 
             
+
+
+        - static methods: methods defined on the class itself, not on instances of the class
+
+        ex:
+            class MathUtil {
+                static add(a, b) {
+                    return a + b;
+                }
+            }
+
+            console.log(MathUtil.add(5, 3)); prints 8
+
+
+        - inheritance with classes: classes can extend other classes, inheriting their properties and methods
+
+        ex: 
+            class Employee extends Person {
+                constructor(name, age, jobTitle) {
+                    super(name, age); // call parent constructor
+                    this.jobTitle = jobTitle;
+                }
+
+                work() {
+                    console.log(this.name + " is working as a " + this.jobTitle);
+                }
+            }
+
+
+            let employee2 = new Empkoyee("Eve", 28, "Manager");
+            employee2.greet(); // prints hello, my name is Eve
+            employee2.work
 
 
 */
