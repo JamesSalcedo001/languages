@@ -1423,6 +1423,26 @@
 
 
 
+    ** Abstraction: hides complex implementation details and shows only necessary features of object
+
+    ex:
+
+        class Car {
+            startEngine() {
+               console.log("Engine started"); 
+            }
+
+            drive() {
+                console.log("Car is driving")
+            }
+        }
+
+        let myCar = new Car();
+        myCar.startEngine(); prints engine started
+        myCar.drive(); prints car is driving
+
+
+
 */
 
 
