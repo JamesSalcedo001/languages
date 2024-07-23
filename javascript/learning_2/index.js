@@ -1321,8 +1321,26 @@
             use named exports when module exports multiple items
 
         - consistent naming for files for maintainability
-        
 
+    ** conclusion to OOP in JS
+
+    ** summary of OOP in JS
+
+        - overview of concepts:
+
+            classes and prototypes: JS uses prototypes for inheritance and ES6 classes which provide a more familiar syntax for OOP
+
+            inheritance: creating new classes that inherit properties and methods from existing classes
+
+            encapsulation: building data and methods that operate on the data wihin a single unit and controlling access to them
+
+            abstraction: simplifying complex systems by modeling classes appropriate to the problem
+
+            polymorphism: ability to present same interface for diff underlying forms (data types)
+
+    ** detailed review
+
+    
             
 
 
