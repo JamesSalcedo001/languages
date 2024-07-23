@@ -1391,6 +1391,37 @@
 
     ** Encapsulation
 
+        - involves bundling data and methods within a class and restricting access to some of the objects components
+
+        - use of private fields and methods with the # prefix in ES2022+
+
+        ex:
+
+            class Person {
+                #ssn;
+
+                constructor(name, age, ssn) {
+                    this.name = name;
+                    this.age = age;
+                    this.#ssn = ssn;
+                }
+
+                #showSSN() {
+                    console.log(`SSN: ${this.#ssn}`);
+                }
+
+                greet() {
+                    console.log(`Hello my name is ${this.name}`);
+                    this.#showSSN();
+                }
+            }
+
+
+            let person2 = new Person("Dave", 40, '123-45-6789');
+            person2.greet(); prints "Hello my name is Dave" and "SSN: 123-45-6789"
+            person2.#showSSN(); error: private method cannot be accessed outside class
+
+
 
 */
 
