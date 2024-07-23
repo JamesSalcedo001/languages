@@ -1340,8 +1340,34 @@
 
     ** detailed review
 
-    
-            
+    ** classes and prototypes: 
+
+        - prototypes are objects from which other objects inherit properties and methods
+
+        - ES6 classes are syntactic sugar over JS prototype based inheritance, providing clearer and more ocncise way to create and manage objects
+
+        - creating class and adding methods to prototype:
+
+        ex:
+                class Person {
+                    
+                    constructor(name, age) {
+                        this.name = name;
+                        this.age = age;
+                    }
+
+
+                    greet() {
+                        console.log(`Hello my name is ${this.name});
+                    }
+                }
+
+
+                let person1 = new Person('Alice', 30);
+                person1.greet(); prints hello my name is alice
+                
+                
+    ** Inheritance: allows a class to inherit properties and methods from another class, enabling code reuse
 
 
 */
