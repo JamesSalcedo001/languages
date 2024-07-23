@@ -1472,6 +1472,20 @@
 
 
 
+    ** common pitfalls and best practices
+
+    - avoiding overuse of inheritance: only use when there is a clear "is-a" relationship. overuse can lead to complex and hard to maintain code
+
+    - favor composition over inheritance: involves building complex objects by combining simpler ones, which can lead to more flexible and maintainable code
+
+    - encapsulate internal state: ensure that internal state of object is not accessible directly from outside object to prevent unintended side effects
+
+    - use meaningful names
+
+    Applications of OOP: Design patterns such as singleton, Factory, Observer, and Strategy
+
+
+
 */
 
 
