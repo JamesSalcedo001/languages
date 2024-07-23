@@ -1486,6 +1486,22 @@
 
 
 
+
+    ** intro to web dev
+
+    ** client server architecture: web dev involves a client server architecture where the client (browser) requests resources, and the server responds with the requested resources
+
+    ** components:
+
+        - client: the front end part of the app that interacts with user. it includes web pages built with H, C, and JS
+
+        - server: back end part of the app that processes requests, performs computations, and interacts with the database. it can be built using server side langs like Node.js, python, ruby etc
+
+        - database: stores data used by app. common dbs include SQL (MySQL, PostgreSQL, and SQL Server), and NoSQL(MongoDB)
+
+    ** HTTP and HTTPS: Hypertext Transfer Protocol and the same but with Secure. used for transmitting data over the web, defines how messages are formatted and transmitted, and how web servers and browsers should respond to various commands. the Secure one is an extension that uses SSL/TLS to encrypt the data being transferred, ensuring secure communication between client and server
+
+
 */
 
 
