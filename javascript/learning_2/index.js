@@ -1117,6 +1117,215 @@
 
 
 
+
+
+    ** Modules and imports/exports
+
+    ** modules are reusable pieces of code that can be exported from one program and imported for use in another program. they help in organizing code, avoiding global scope pollution, and reusing code across different parts of an app.
+
+    - benefits: help maintain a clean and maintainable codebase by dividing the code into logical, self contained units
+
+    - types: 
+        - CommonJS Modules used in Node.js
+        - ES6 Modules: standardized in ECMAScript 2015(ES6), and widely used in modern JS apps
+
+    ** CommonJS Modules(Node.js)
+
+    - exporting:
+
+        ex: 
+
+            // file mathUtil.js
+            
+            function add(a, b) {
+                return a + b;
+            }
+
+            module.exports = {
+                add
+            }
+
+    - importing:
+
+        ex:
+
+            // file main.js
+            const mathUtil = require('./mathUtil');
+
+            console.log(mathUTil.add(5, 3)); prints 8
+
+
+    ** ES6 modules
+
+    - exporting: 
+    
+    - named exports: export multiple values by name
+
+        ex:
+
+            file:mathUtil.js
+
+            export function add(a, b) {
+                return a + b;
+            }
+
+            export function subtract(a, b) {
+                return a - b;
+            }
+
+
+
+
+    - default exports: export single value as default export
+
+        ex:
+
+            file: mathUtil.js
+
+            export default function multiple(a, b) {
+                return a * b;
+            } 
+
+
+    ** importing modules:
+
+    - named imports: import specific named exports
+
+        ex:
+
+            file: main.js
+
+            import { add, subtract } from "./mathUtil.js";
+
+            console.log(add(5, 3)); prints 8
+            console.log(subtract(5, 3)); prints 2
+
+    - default imports: import default export
+
+        ex:
+            file: main.js
+
+            import multiply from "./mathUtil.js";
+
+            console.log(multiply(5, 3)); prints 15
+
+
+    ** combining named and default imports
+
+    file: mathUtil.js
+
+    export function add(a, b) {
+        return a + b;
+    }
+
+    export function subtract(a, b) {
+        return a - b;
+    }
+
+    export default function multiply(a, b) {
+        return a * b;
+    }
+
+
+    // file: main.js
+
+    import multiply, { add, subtract } from "./mathUtil.js";
+
+    console.log(add(5, 3)); prints 8
+    console.log(subtract(5, 3)); prints 2
+    console.log(multiply(5, 3)); prints 15
+
+
+    ** reexporting modules
+
+        ex:
+
+            file: anotherUtil.js
+            export { add, subtract } from "./mathUtil.js";
+            export { default as multiply } from "./mathUtil.js";
+
+            file: main.js
+            import { add, subtract, multiply } from "./anotherUtil,js";
+
+
+            
+            console.log(add(5, 3)); prints 8
+            console.log(subtract(5, 3)); prints 2
+            console.log(multiply(5, 3)); prints 15
+
+
+    ** create simple module system
+
+        - file structure:
+
+        myApp/
+        ├── index.html
+        ├── main.js
+        ├── utils/
+        │   ├── math.js
+        │   └── string.js
+
+
+        - math.js
+
+            / file: utils/math.js
+
+            export function add(a, b) {
+                return a + b;
+            }
+
+            export function subtract(a, b) {
+                return a - b;
+            }
+
+            export default function multiply(a, b) {
+                return a * b;
+            }
+
+
+            / file: utils/string.js
+
+            export function uppercase(str) {
+                return str.toUpperCase();
+            }
+
+            export function lowercase(str) {
+                return str.toLowerCase();
+            }
+
+
+
+            / file: main.js
+
+
+            import multiply, { add, subtract } from "./utils/math.js";
+            import  { uppercase, lowercase } from "./utils/string.js";
+
+            console.log(add(5, 3)); prints 8
+            console.log(subtract(5, 3)); prints 2
+            console.log(multiply(5, 3)); prints 15
+
+            console.log(uppercase("hello")); prints HELLO
+            console.log(lowercase("WORLD")); prints world
+
+
+
+    ** common pitfalls and best practices: 
+
+        - avoid circular dependencies: occur when two or more modules depend on each other, either directly or indirectly. refactor the code to remove the circular dependency or use lazy loading
+
+        - default vs named exports
+
+            use default when module only exports single item
+
+            use named exports when module exports multiple items
+
+        - consistent naming for files for maintainability
+        
+
+            
+
+
 */
 
 
