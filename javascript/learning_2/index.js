@@ -1370,6 +1370,28 @@
     ** Inheritance: allows a class to inherit properties and methods from another class, enabling code reuse
 
 
+    ex:
+        class Employee extends Person {
+            constructor(name, age, jobTitle) {
+                super(name, age);
+                this.jobTitle = jobTitle;
+            }
+
+            work() {
+                console.log(`${this.name} is working as a ${this.jobTitle}`);
+            }
+        }
+
+
+        let emp1 = new Employee("Bob", 25, 'Dev');
+        emp1.greet(); prints Hello my name is Bob
+        emp1.work(); prints Bob is working as a Dev
+
+
+
+    ** Encapsulation
+
+
 */
 
 
