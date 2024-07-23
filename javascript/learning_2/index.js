@@ -1443,6 +1443,35 @@
 
 
 
+    ** Polymorphism: allows objects of different classes to be treated as objects of a common super class
+
+    ex:
+
+        class Animal {
+            speak() {
+                console.log("Animal makes noise");
+            }
+        }
+
+
+        class Dog extends Animal {
+            speak() {
+                console.log("Dog barks")
+            }
+        }
+
+        class Cat extends Animal {
+            speak() {
+                console.log("Cat meows");
+            }
+        }
+
+
+        let animals = [new Dog(), new Cat()];
+        animals.forEach(animal => animal.speak()); prints Dog barks and Cat meows
+
+
+
 */
 
 
