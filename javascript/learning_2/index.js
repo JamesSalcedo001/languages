@@ -1502,6 +1502,55 @@
     ** HTTP and HTTPS: Hypertext Transfer Protocol and the same but with Secure. used for transmitting data over the web, defines how messages are formatted and transmitted, and how web servers and browsers should respond to various commands. the Secure one is an extension that uses SSL/TLS to encrypt the data being transferred, ensuring secure communication between client and server
 
 
+    ** web servers: a software that serves web pages to client. popular web servers include Apache, NGinx, and Microsoft IIS
+
+        - function: receives HTTP requests from clients, processses those requests, (potentially interacting with a database ) and sends back HTTP responses with the requested resources
+
+
+    ** Tools and setup
+
+    ** version control with Git
+
+        git: distributed version control system to track changes in source code during software development
+
+        basic commands:
+
+            - git init: initialize new repo
+            - git clone: clone existing repo
+            - git add: add files to staging area
+            - git commit -m "" commit changes to repo
+            - git push: push local changes to remote repo
+            - git pull: fetch and merge changes from remote repo
+
+
+    ** package managers: 
+
+        - npm: package manager for JS, included with Node.js, allows one to install, share, and manage dependencies for projects
+
+        basic commands: 
+
+            - npm init: initialize new project
+            npm install <package> install package
+            npm uninstall <package> uninstall
+
+
+    ** dev servers
+
+        - live server: VSCode extension that provides local dev server with live reload feature for static and dynamic pages
+
+
+    ** workflow
+
+        - set up project
+            - create new project folder
+            - init git repo and set up version control
+            - create basic HTML, CSS, and JS files
+
+        - build and commit changes
+
+        - deploy: to web server or cloud service like GHPages, Netlify, or Vercel
+
+
 */
 
 
