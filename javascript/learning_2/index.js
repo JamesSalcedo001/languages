@@ -934,7 +934,119 @@
 
 
 
-            
+    ** inheritance and encapsulation
+
+    ** inheritance
+
+    ** with prototypes: allows one object to aquire the properties and methods of another object
+
+        - function constructors and prototypes
+
+        ex:
+
+            function Person(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            Person.prototype.greet = function() {
+                console.log("Hello my name is " + this.name);
+            }
+
+            function Employee(name, age, jobTitle) {
+                Person.call(this, name, age); // call parent constructor
+                this.jobTitle = jobTitle;
+            }
+
+            Employee.prototype = Object.create(Person.prototype)
+            Employee.prototype.constructor = Employee;
+
+            Employee.prototype.work = function() {
+                console.log(this.name + " is working as a " + this.jobTitle);
+            }
+
+
+            let employee1 = new Employee("Alice", 30, "Dev");
+            employee1.greet(); // prints Hello my name is Alice
+            employee1.work(); // prints Alice is working as a Dev
+
+
+
+    ** with classes: provides a more intuitive syntax for inheritance
+    
+        - using extends keyword
+
+        ex: 
+
+            class Person {
+
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+
+
+                greet() {
+                    console.log("Hello my name is " + this.name);
+                }
+
+            }
+
+
+
+            class Employee extends Person {
+
+                constructor(name, age, jobTitle) {
+                    super(name, age); call parent constructor
+                    this.jobTitle = jobTitle;
+                }
+
+                work() {
+                    console.log(this.name + " is working as a " + this.jobTitle);
+                }
+            }
+
+
+            let employee2 = new Employee("Bob", 25, "Manager");
+            employee2.greet(); // prints Hello my name is Bob
+            employee2.work(); // prints Bob is working as a manager
+
+
+        - method overriding: allows a child class to provide a specific implementation of a method that is already defined in its parent class
+        
+        ex: 
+            class Person {
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+
+                greet() {
+                    console.log("Hello my name is " + this.name); 
+                }
+            }
+
+
+            class Employee extends Person {
+                constructor(name, age, jobTitle) {
+                    super(name, age);
+                    this.jobTitle = jobTitle;
+                }
+
+                greet() {
+                    console.log("Hello my name is " + this.name + " and I work as a(n) " + this.jobTitle);
+                }
+            }
+
+
+            let employee3 = new Employee("Charlie", 28, "Engineer");
+            employee3.greet(); // prints Hello my name is Charlie and I work as a(n) Engineer
+
+
+
+
+
+
 
 
 */
