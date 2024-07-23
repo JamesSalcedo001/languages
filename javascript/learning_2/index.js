@@ -1044,8 +1044,76 @@
 
 
 
+    ** encapsulation: bundling of data and methods that operate on that data within a single unit, or class. restricts direct access to some of the object's components
+
+    ** private fields and methods: ES2022+ private fields and methods are denoted by # prefix
+
+        ex:
+
+            class Person {
+                #ssn // private field
+
+                constructor(name, age, ssn) {
+                    this.name = name;
+                    this.age = age;
+                    this.#ssn = ssn;
+                }
+
+                #showSSN() { // private method
+                    console.log("SSN: " + this.#ssn);
+                }
+
+                greet() {
+                    console.log("Hello, my name is " + this.name);
+                    this.#showSSN();
+                }
+            }
 
 
+            let person3 = new Person("Dave", 40, "123-45-6789");
+            person3.greet(); prints "Hello my name is Dave" and "SSN: 123-45-6789"
+
+            person2.#showSSN(); // error: Private method cannot be accessed outside the class
+
+
+
+
+    ** getters and setters: special methods that provide controlled access to the properties of an object
+
+        ex:
+            class Person {
+
+                constructor(name, age) {
+                    this._name = name; // convention to indicate private-like field
+                    this.age = age;
+                }
+
+                get name() {
+                    return this._name;
+                }
+
+                set name(newName) {
+                    if (newName.length > 0) {
+                        this._name = newName;
+                    } else {
+                        console.log("Name cannot be empty");
+                    }
+                }
+            }
+
+
+            let person4 = new Person("Eve", 22);
+            console.log(person4.name); // prints Eve
+            person4.name = "Eva"; sets new name
+            console.log(person4.name); prints Eva
+            person4.name = ""; prints name cannot be empty
+
+
+        - benefits of encapsulation
+
+            - improved code maintenance: keeps data safe from outside interference and misuse
+
+            - enhanced security: provides a way to protect the internal state of an object from unintended modification
 
 
 
