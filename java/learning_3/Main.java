@@ -1,16 +1,32 @@
-import java.text.NumberFormat;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // NumberFormat currency =  NumberFormat.getCurrencyInstance();
-        // String result = currency.format(1234567.891);
-        // System.out.println(result);
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Enter your age: ");
+        // byte age = scanner.nextByte();
+        // System.out.println("You are " + age);
 
-        // NumberFormat percent =  NumberFormat.getPercentInstance();
-        // String result = percent.format(0.1);
-        // System.out.println(result);
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Enter your age: ");
+        // float age = scanner.nextFloat();
+        // System.out.println("You are " + age);
 
-       String result = NumberFormat.getPercentInstance().format(0.1);
-        System.out.println(result);
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Enter your age: ");
+        // double age = scanner.nextDouble();
+        // System.out.println("You are " + age);
+
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.print("Enter your name: ");
+        // String name = scanner.next();
+        // // next method reads one token, if you type words with space it will only read the first one as that counts as two tokens, and the second time it will read the second token
+        // System.out.println("You are " + name);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine().trim();
+        // next method reads one token, if you type words with space it will only read the first one as that counts as two tokens, and the second time it will read the second token
+        System.out.println("You are " + name);
     }
 }
