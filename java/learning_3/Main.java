@@ -1,48 +1,16 @@
-import java.util.Arrays;
-import java.util.Date;
-
-import java.awt.*;
-import java.lang.reflect.Array;
+import java.text.NumberFormat;
 
 public class Main {
     public static void main(String[] args) {
+        // NumberFormat currency =  NumberFormat.getCurrencyInstance();
+        // String result = currency.format(1234567.891);
+        // System.out.println(result);
 
-    //   int result = (int)Math.ceil(1.1F);
-    //   System.out.println(result);
- 
-    // int result = (int)Math.floor(1.1F);
-    //   System.out.println(result);
+        // NumberFormat percent =  NumberFormat.getPercentInstance();
+        // String result = percent.format(0.1);
+        // System.out.println(result);
 
-    // int result = Math.max(1, 2);
-    // System.out.println(result);
-
-    // int result = Math.min(1, 2);
-    // System.out.println(result);
-
-    // double result = Math.random() ;
-    // System.out.println(result);
-
-    // double result = Math.random() * 100;
-    // System.out.println(result);
-
-
-
-    // if you want a decimal value
-    // double result = Math.round(Math.random() * 100);
-    // System.out.println(result);
-
-       
-
-    // if you want an integer
-
-    // int result = (int) Math.round(Math.random() * 100);
-    // System.out.println(result);
-       
-
-    int result = (int) (Math.random() * 100);
-    System.out.println(result);
-       
-
-
+       String result = NumberFormat.getPercentInstance().format(0.1);
+        System.out.println(result);
     }
 }
