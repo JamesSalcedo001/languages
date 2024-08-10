@@ -7,17 +7,23 @@ import java.lang.reflect.Array;
 public class Main {
     public static void main(String[] args) {
 
-        // int x = 1;
-        // x++;
+        // implicit casting (value can be converted to data type that is bigger)
+        // byte > short > int > long > float > double 
+        // short x = 1;
+        // int y = x + 2;
 
-        int x = 1;
-        x = x + 2;
-        x += 2;
-        // shorthand
+        // explicit casting between converting a double to an int so it can work with the other int
+        // double x = 1.1;
+        // int y = (int)x + 2;
+
+        String x = "1";
+        double y = Double.parseDouble(x) + 2;
+        System.out.println(y) ;
 
 
 
-       System.out.println(x);
+
+       System.out.println(y);
        
 
 
