@@ -18,32 +18,38 @@ public class Main {
 
         // better to use for loop when you know how many times you'll need to execute the code, use while loop when you dont
 
-    //    int i = 0;
-    //    while (i > 0) {
-    //         System.out.println("Hello World " + i);
-    //         i--;
-    //    }
+        // int i = 0;
+        // while (i > 0) {
+        //     System.out.println("Hello World " + i);
+        //     i--;
+        // }
 
-    // Scanner scanner = new Scanner(System.in);
-    // String input = "";
-    // while (!input.equals("quit"));
-    // System.out.print("Input: ");
-    // input = scanner.next().toLowerCase();
-    // System.out.println(input);
-    // }
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
 
-    Scanner scanner = new Scanner(System.in);
-    String input = "";
+        while (true) {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            if (input.equals("pass"))
+            continue;
+            // moves back to beginning of loop
+            if (input.equals("quit")) {
+                break;
+            }
+            System.out.println(input);
+        }
 
-    do {
-        System.out.print("Input: ");
-        input = scanner.next().toLowerCase();
-        System.out.println(input);
-    } while (!input.equals("quit"));
+        // Scanner scanner = new Scanner(System.in);
+        // String input = "";
 
-
+        // do {
+        //     System.out.print("Input: ");
+        //     input = scanner.next().toLowerCase();
+        //     System.out.println(input);
+        // } while (!input.equals("quit"));
     }
 }
+
 
 
 
