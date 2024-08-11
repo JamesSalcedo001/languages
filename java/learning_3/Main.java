@@ -33,21 +33,35 @@
 // Ex 2: Odd or Even
 // checks whether a given integer is odd or even
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter an integer: ");
-        int number = scanner.nextInt();
+//         System.out.print("Enter an integer: ");
+//         int number = scanner.nextInt();
 
        
 
-        if (number % 2 == 0) {
-            System.out.println(number + " is even");
-        } else {
-            System.out.println(number + " is odd");
+//         if (number % 2 == 0) {
+//             System.out.println(number + " is even");
+//         } else {
+//             System.out.println(number + " is odd");
+//         }
+//     }
+// }
+
+
+// Ex 3: PRint numbers from 1 - 10 using a for loop
+
+public class Main {
+    public static void main(String[] args) {
+        // for (int i = 1; i < 11; i++) {
+        //     System.out.println(i);
+        // }
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
         }
     }
 }
