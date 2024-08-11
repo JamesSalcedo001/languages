@@ -1,29 +1,54 @@
-// ex 1: write java program that prompts user to input two integers and then displays the sum, difference, product, quotient, of two numbers
+// ex 1: Basic Arithmetic Operations: 
+// write java program that prompts user to input two integers and then displays the sum, difference, product, quotient, of two numbers
+
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+
+//         Scanner scanner = new Scanner(System.in);
+
+//         System.out.print("Enter first number: ");
+//         double num1 = scanner.nextDouble();
+
+//         System.out.print("Enter the second number: ");
+//         double num2 = scanner.nextDouble();
+
+//         double sum = num1 + num2;
+//         double difference = num1 - num2;
+//         double product = num1 * num2;
+//         double quotient = num1 / num2;
+
+//         System.out.println("Sum: " + sum);
+//         System.out.println("Difference: " + difference);
+//         System.out.println("Product: " + product);
+//         System.out.println("Quotient: " + quotient);
+         
+       
+//     }
+// }
+
+
+
+// Ex 2: Odd or Even
+// checks whether a given integer is odd or even
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter first number: ");
-        double num1 = scanner.nextDouble();
+        System.out.print("Enter an integer: ");
+        int number = scanner.nextInt();
 
-        System.out.print("Enter the second number: ");
-        double num2 = scanner.nextDouble();
-
-        double sum = num1 + num2;
-        double difference = num1 - num2;
-        double product = num1 * num2;
-        double quotient = num1 / num2;
-
-        System.out.println("Sum: " + sum);
-        System.out.println("Difference: " + difference);
-        System.out.println("Product: " + product);
-        System.out.println("Quotient: " + quotient);
-         
        
+
+        if (number % 2 == 0) {
+            System.out.println(number + " is even");
+        } else {
+            System.out.println(number + " is odd");
+        }
     }
 }
 
