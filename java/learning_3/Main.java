@@ -1,23 +1,45 @@
 public class Main {
     public static void main(String[] args) {
-        // int income = 120_000;
-        // String className;
-        // if (income > 100_000) {
-        //     className = "First";
-        // } else {
-        //     className = "Economy";
-        // } more amateur code
+    //    String role = "admin";
+    //    if (role == "admin") {
+    //         System.out.println("You're an admin");
+    //    } else if (role == "moderator") {
+    //     System.out.println("you're a moderator");
+    //    } else {
+    //     System.out.println("You're a guest");
+    //    }
 
 
-        // int income = 120_000;
-        // String className = "Economy";
-        // if (income > 100_000) {
-        //     className = "First";
-        // } better
+    // String role = "admin";
 
-        int income = 120_000;
-        String className = income > 100_000 ? "First" : "Economy";
-        // way better
+    // switch (role) {
+    //     case "admin":
+    //         System.out.println("You're an admin");
+    //         break;
+    //     case "moderator":
+    //         System.out.println("you're a moderator");
+    //         break;
+    //     default:
+    //         System.out.println("you're a guest");
+
+    // }
+
+   int role = 1;
+
+    switch (role) {
+        case 1:
+            System.out.println("You're an admin");
+            break;
+        case 2:
+            System.out.println("you're a moderator");
+            break;
+        default:
+            System.out.println("you're a guest");
+
+    }
+
+
+
     }
 }
 
