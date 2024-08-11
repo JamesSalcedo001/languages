@@ -55,15 +55,42 @@
 
 // Ex 3: PRint numbers from 1 - 10 using a for loop
 
+// public class Main {
+//     public static void main(String[] args) {
+//         // for (int i = 1; i < 11; i++) {
+//         //     System.out.println(i);
+//         // }
+//         for (int i = 1; i <= 10; i++) {
+//             System.out.println(i);
+//         }
+//     }
+// }
+
+
+
+
+// Ex 4: Factorial Calculation - calculate factorial of given number using a while loop
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // for (int i = 1; i < 11; i++) {
-        //     System.out.println(i);
-        // }
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        int factorial = 1;
+        int i = 1;
+
+        while (i <= number) {
+            factorial *= i;
+            i++;
         }
+
+        System.out.println("Factorial of " + number + " is: " + factorial);
     }
+    
 }
 
 
