@@ -98,46 +98,70 @@
 
 // Ex 5: Simple Calculator - should be able to take in two numbers and an operator from the user and perform corresponding operations
 
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+
+//         System.out.print("Enter first number: ");
+//         double num1 = scanner.nextDouble();
+
+//         System.out.print("Enter second number: ");
+//         double num2 = scanner.nextDouble();
+
+//         System.out.print("Enter an operator(+, -, *, /): ");
+//         char operator = scanner.next().charAt(0);
+
+//         double result;
+
+//         switch (operator) {
+//             case '+':
+//                 result = num1 + num2;
+//                 break;
+//             case '-':
+//                 result = num1 - num2;
+//                 break;
+//             case '*':
+//                 result = num1 * num2;
+//                 break;
+//             case '/':
+//                 result = num1 / num2;
+//                 break;
+//             default:
+//                 System.out.println("invalid operator: ");
+//                 return;
+//         }
+//         System.out.println("Result of: \n" + num1 + " " + operator + " " + num2 + " is: " + result);
+
+//     }
+    
+// }
+
+
+
+
+// Ex 6: Reverse a String - take a string from user and print it in reverse order using a for loop
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter first number: ");
-        double num1 = scanner.nextDouble();
+        System.out.println("Enter a string: ");
+        String input = scanner.nextLine();
 
-        System.out.print("Enter second number: ");
-        double num2 = scanner.nextDouble();
+        String reversed = "";
 
-        System.out.print("Enter an operator(+, -, *, /): ");
-        char operator = scanner.next().charAt(0);
-
-        double result;
-
-        switch (operator) {
-            case '+':
-                result = num1 + num2;
-                break;
-            case '-':
-                result = num1 - num2;
-                break;
-            case '*':
-                result = num1 * num2;
-                break;
-            case '/':
-                result = num1 / num2;
-                break;
-            default:
-                System.out.println("invalid operator: ");
-                return;
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed += input.charAt(i);
         }
-        System.out.println("Result of: \n" + num1 + " " + operator + " " + num2 + " is: " + result);
 
+        System.out.println("Reversed String: " + reversed);
     }
     
 }
-
 
 
 
