@@ -1,104 +1,56 @@
+// ex 1: write java program that prompts user to input two integers and then displays the sum, difference, product, quotient, of two numbers
 
-import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       final byte MONTHS_IN_YEAR = 12;
-       final byte PERCENT = 100;
 
-       int principal = 0;
-       float monthlyInterest = 0;
-       int numberOfPayments = 0;
+        Scanner scanner = new Scanner(System.in);
 
-       Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
 
-       while (true) {
-        System.out.print("Principal: ");
-        principal = scanner.nextInt();
-        if (principal >= 1000 && principal <= 1_000_000) {
-            break;
-        }
-        System.out.println("Enter value between 1000 and 1000000");
-       }
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
 
-      while (true) {
-        System.out.print("Annual interest rate: ");
-        float annualInterest = scanner.nextFloat();
-        if (annualInterest >= 1 && annualInterest <= 30) {
-            monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
-            break;
-        }
-        System.out.println("Enter value between 1 and 30");
-        
-      }
+        double sum = num1 + num2;
+        double difference = num1 - num2;
+        double product = num1 * num2;
+        double quotient = num1 / num2;
 
-       while (true) {
-        System.out.print("Period (Years): ");
-        byte years = scanner.nextByte();
-        if (years >= 1 && years <= 30) {
-            numberOfPayments = years * MONTHS_IN_YEAR;
-            break;
-        }
-        System.out.println("Enter value between 1 and 30");
-       }
-
-       double mortgage = principal
-                * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))
-                / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);
-
-        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
-        System.out.println("Mortgage: " + mortgageFormatted);
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + difference);
+        System.out.println("Product: " + product);
+        System.out.println("Quotient: " + quotient);
+         
+       
     }
 }
 
 
 
 
+/*
 
 
 
 
+Java variables - container which holds the value while the Java program is executed. a variable is assigned with a data type
+
+variable is a name of memory location. there are three types in Java: 
+
+- local: variable declared inside the body of the mthod is called a local variable. you can use only within that method and other methods in class don't have access to it.
+
+a local variable cannot be defined with static keyword
+
+- instance: variable declared inside the class but outside the body of the method. not declared as static. called instance variable because it is instance specific and is not shared among instances
+
+- static: variable that is declared as static is called static variable. cannot be local. you can create a single copy of the static variable and share it among all the instances of the class. memory allocation for static variables happens only once when the class is loaded in the memory
+
+two types of data types: primitive non-primitive
+
+variable is a name of a reserved area allocated in memory/ a name of the memory location. 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// import java.text.NumberFormat;
-// import java.util.Scanner;
-
-// public class Main {
-//     public static void main(String[] args) {
-//        final byte MONTHS_IN_YEAR = 12;
-//        final byte PERCENT = 100;
-
-//        Scanner scanner = new Scanner(System.in);
-
-//        System.out.print("Principal: ");
-//        int principal = scanner.nextInt();
-
-//        System.out.print("Annual interest rate: ");
-//        float annualInterest = scanner.nextFloat();
-//        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
-
-//        System.out.print("Period (Years): ");
-//        byte years = scanner.nextByte();
-//        int numberOfPayments = years * MONTHS_IN_YEAR;
-
-//        double mortgage = principal
-//                 * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))
-//                 / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);
-
-//         String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
-//         System.out.println("Mortgage: " + mortgageFormatted);
-//     }
-// }
+ */
