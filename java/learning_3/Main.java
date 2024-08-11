@@ -2,51 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // for (int i = 0; i < 5; i++) {
-        //     System.out.println("Hello World");
-        // }
-        // for (int i = 1; i <= 5; i++) {
-        //     System.out.println("Hello World " + i);
-        // }
-        // for (int i = 0; i < 5; i++) {
-        //     System.out.println("Hello World " + i);
-        // }
-
-        // for (int i = 5; i > 5; i--) {
-        //     System.out.println("Hello World " + i);
-        // }
-
-        // better to use for loop when you know how many times you'll need to execute the code, use while loop when you dont
-
-        // int i = 0;
-        // while (i > 0) {
-        //     System.out.println("Hello World " + i);
-        //     i--;
-        // }
-
-        Scanner scanner = new Scanner(System.in);
-        String input = "";
-
-        while (true) {
-            System.out.print("Input: ");
-            input = scanner.next().toLowerCase();
-            if (input.equals("pass"))
-            continue;
-            // moves back to beginning of loop
-            if (input.equals("quit")) {
-                break;
-            }
-            System.out.println(input);
+        String[] fruits = { "Apple", "Mango", "Orange" };
+        
+        for (int i = 0; i < fruits.length; i++) {
+            System.out.println(fruits[i]);
         }
 
-        // Scanner scanner = new Scanner(System.in);
-        // String input = "";
+        for (int i = fruits.length; i > 0; i--) {
+            System.out.println(fruits[i]);
+        }
 
-        // do {
-        //     System.out.print("Input: ");
-        //     input = scanner.next().toLowerCase();
-        //     System.out.println(input);
-        // } while (!input.equals("quit"));
+        for (String fruit : fruits) {
+            System.out.println(fruit); 
+        }
+
     }
 }
 
