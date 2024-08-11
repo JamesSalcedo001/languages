@@ -71,24 +71,69 @@
 
 // Ex 4: Factorial Calculation - calculate factorial of given number using a while loop
 
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+
+//         System.out.print("Enter a number: ");
+//         int number = scanner.nextInt();
+
+//         int factorial = 1;
+//         int i = 1;
+
+//         while (i <= number) {
+//             factorial *= i;
+//             i++;
+//         }
+
+//         System.out.println("Factorial of " + number + " is: " + factorial);
+//     }
+    
+// }
+
+
+
+
+// Ex 5: Simple Calculator - should be able to take in two numbers and an operator from the user and perform corresponding operations
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
 
-        int factorial = 1;
-        int i = 1;
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
 
-        while (i <= number) {
-            factorial *= i;
-            i++;
+        System.out.print("Enter an operator(+, -, *, /): ");
+        char operator = scanner.next().charAt(0);
+
+        double result;
+
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            default:
+                System.out.println("invalid operator: ");
+                return;
         }
+        System.out.println("Result of: \n" + num1 + " " + operator + " " + num2 + " is: " + result);
 
-        System.out.println("Factorial of " + number + " is: " + factorial);
     }
     
 }
