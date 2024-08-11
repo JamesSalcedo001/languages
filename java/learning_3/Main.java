@@ -143,25 +143,78 @@
 
 // Ex 6: Reverse a String - take a string from user and print it in reverse order using a for loop
 
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+
+//         System.out.println("Enter a string: ");
+//         String input = scanner.nextLine();
+
+//         String reversed = "";
+
+//         for (int i = input.length() - 1; i >= 0; i--) {
+//             reversed += input.charAt(i);
+//         }
+
+//         System.out.println("Reversed String: " + reversed);
+//     }
+    
+// }
+
+
+
+// Ex 7: Find the largest number - take in three numbers from user and print the largest using if-else statements
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a string: ");
-        String input = scanner.nextLine();
+        System.out.print("Enter first number: ");
+        int num1 = scanner.nextInt();
 
-        String reversed = "";
+        System.out.print("Enter second number: ");
+        int num2 = scanner.nextInt();
 
-        for (int i = input.length() - 1; i >= 0; i--) {
-            reversed += input.charAt(i);
+        System.out.print("Enter third number: ");
+        int num3 = scanner.nextInt();
+
+        int largest;
+
+        if (num1 >= num2 && num1 >= num3) {
+            largest = num1;
+        } else if (num2 >= num1 && num2 >= num3) {
+            largest = num2;
+        } else {
+            largest = num3;
         }
 
-        System.out.println("Reversed String: " + reversed);
+        System.out.println("Largest num is: " + largest);
     }
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
