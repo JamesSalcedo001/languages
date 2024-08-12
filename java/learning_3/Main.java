@@ -470,6 +470,61 @@ ex abstract class:
     }
 
 
+5. psuedocode
+
+    ex: 
+        find the maximum of three numbers
+
+        START
+        - input three numbers: num1, num2, num3
+        - IF num1 is greater than num2 AND num1 is greater than num3
+            - print "num1 is the largest"
+        - ELSE IF num2 is greater than num1 AND num2 is greater than num3
+            - print "num2 is the largest"
+        - ELSE
+            - print "num3 is the largest"
+        END
+
+
+practice exercises: 
+
+ex1: calculate the area of a circle - takes the radius of circle as input and returns area of circle
+
+START
+- define method called calculateArea that takes a single param(radius)
+
+- inside the method:
+    - calculate area using the formula: area = pi * radius * radius
+    - return the calculated area
+- in main method:
+    - set value for radius
+    - call the calculateArea method with the radius as an argument and store result in variable called area
+    - print value of area
+END
+
+
+code solution:
+
+    public class Main {
+        public static void main (String[] args) {
+            double radius = 5.0;
+            double area = calculateArea(radius);
+            System.out.println("Area of circle: " + area);
+        }
+
+        public static double calculateArea(double radius) {
+            return Math.PI * radius * radius;
+        }
+    }
+
+
+
+
+ex: 2: create class called Book with properties like title, author, and price, include a method to display the book details
+
+
+ex 3: find the sum of all even numbers in an array psuedocode
+
 
 
  */
