@@ -666,4 +666,28 @@ variable is a name of a reserved area allocated in memory/ a name of the memory 
 
 
 
+
+// data structures usage
+
+1. arrays
+- used for storing fixed-size sequences of elements where direct access to elements by index is required
+
+2. linked lists
+- suitablle for dynamic data where frequent insertions and deletions occur
+
+3. stacks and queues
+- using when requiring LIFO(last in first out) or FIFO(First in first out) processing, such as undo operations in text editors or task scheduling
+
+4. trees
+- essential for representing hierarchical data, like folder structures in operating systems or decision making processes
+
+5. graphs
+- useful in representing networks such as social networks, road maps or communication systems
+
+6. hash tables
+- ideal for situations requiring fast lookup, insertion, deletion, like implementing dictionaries or caches
+
+
+
+
  */
