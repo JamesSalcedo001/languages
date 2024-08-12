@@ -825,4 +825,101 @@ ex:
     }
 
 
+ex: working with arrays in Java
+
+- example demonstrating declaring, initializing, traversing, and manipulating a 1D array
+
+
+    public class Main {
+        public static void main(String[] args) {
+
+            // declare & initialize
+
+            int[] numbers = {10, 20, 30, 40, 50};
+
+            // access elems
+
+            System.out.println("Elem at index 2: " + numbers[2]); // output: 30
+
+            // modify elems
+
+            numbers[2] = 35;
+            System.out.println("Modified elem at index 2: " + numbers[2]); //output: 35
+
+            // traversing array
+
+            System.out.println("Array elems: ");
+            for (int i = 0; i < numbers.length; i++) {
+                System.out.println(numbers[i] + " ");
+            }
+            System.out.println();
+
+
+            // search for elem
+
+            int target = 40;
+            boolean found = false;
+            for (int i = 0; i < numbers.length; i++) {
+                if (numbers[i] == target) {
+                    found = true;
+                    break;
+                }
+            }
+            System.out.println("Elem: " + target + " found" + found); // output: true
+
+
+            
+
+            // sorting array
+
+            java.util.Arrays.sort(numbers);
+            System.out.println("Sorted array:");
+            for (int number : numbers) {
+                System.out.print(number + " ");
+            }
+            System.out.println();
+
+
+
+
+        }
+    }
+
+
+
+
+
+
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// public class Main {
+//     public static void main(String[] args) {
+        
+//     }
+// }
