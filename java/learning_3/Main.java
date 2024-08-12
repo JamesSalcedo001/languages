@@ -383,6 +383,36 @@ ex:
 
 
 
+3. inheritance
+
+- allows a new class to inherit the props and methods of an existing class
+
+- class that is inherited is called the superclass and class that inherits is called subclass
+
+ex:
+
+    class Animal {
+        void sound() {
+            System.out.println("Animal makes noise");
+        }
+    }
+
+    class Dog extends Animal {
+        void sound() {
+            System.out.println("Dog barks");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+
+            Dog dog = new Dog();
+            dog.sound(); // output: Dog barks
+
+        }
+    }
+
+
 
 
 
