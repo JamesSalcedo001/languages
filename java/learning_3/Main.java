@@ -303,6 +303,49 @@ ex:
 
 key concepts: 
 
+1. classes and objects: 
+
+    - class: a blueprint for creating objs. defines datatype by bujndling data and methods that work on data.
+
+    - object: an instance of a class. obj have states (attributes) and behaviors(methods)
+
+    ex:
+
+        class Car {
+            // Attributes
+            String model;
+            int year;
+
+
+            // constructor
+            Car(String model, int year) {
+                this.model = model;
+                this.year = year;
+            }
+
+            // method
+            void displayInfo() {
+                System.out.println("Model: " + model + ", Year: " + year);
+            }
+        }
+
+
+
+        public class Main {
+               public static void main(String[] args) {
+
+               // creating an object
+               Car car1 = new Car("Toyota", 2021);
+
+
+               // accessing object methods
+               car1.displayInfo(); // output: Model: Toyota, Year: 2021
+
+               }
+
+
+        }
+
 
 
 
