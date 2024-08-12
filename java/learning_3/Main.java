@@ -523,7 +523,57 @@ code solution:
 ex: 2: create class called Book with properties like title, author, and price, include a method to display the book details
 
 
+START
+- define class called Book
+    - inside class:
+        - declare three props: title, author, and price
+        - define a constructor that takes title, author and price as params and initializes the props
+        - define method called displayDetails;
+            - inside the method:
+                - print title, author, and price of book
+
+- in main method:
+    - create instance of Book class by passing title, author and price to the constructor
+    - call displayDetails method on book instance to print book's details
+END
+
+
+
+class Book {
+    String title;
+    String author;
+    double price;
+
+    Book(String title, String author, double price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+
+    void displayDetails() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Price: $" + price);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+    Book book = new Book("Java Programming", "John Doe", 29.99);
+    book.displayDetails();
+
+    }
+}
+
+
+
+
+
+
+
 ex 3: find the sum of all even numbers in an array psuedocode
+
 
 
 
