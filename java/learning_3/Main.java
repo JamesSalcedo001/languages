@@ -349,6 +349,39 @@ key concepts:
 
 
 
+2. Encapsulation
+
+- the concept of wrapping data (variables) and code (methods) together as a single unit
+
+- access to data is restricted using access modifiers like private and access is provided through public methods
+
+ex:
+
+    class Employee {
+
+        private int id;
+        private String name;
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+
+    }
+
+
 
 
 
