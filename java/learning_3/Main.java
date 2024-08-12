@@ -444,6 +444,32 @@ ex:
     }
 
 
+5. abstraction
+
+- abstraction is concept of hiding complex implementation details and showing only essential features
+
+- achieved using abstract classes and interfaces
+
+ex abstract class:
+
+    abstract class Shape {
+        abstract void draw();
+    }
+
+    class Circle extends Shape {
+        void draw() {
+            System.out.println("Drawing a circle");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            Shape shape = new Circle();
+            shape.draw(); // output: drawing a circle
+        }
+    }
+
+
 
 
  */
