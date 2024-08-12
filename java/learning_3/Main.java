@@ -413,6 +413,36 @@ ex:
     }
 
 
+4. Polymorphism
+
+- allows methods to do different things based on object it is acting upon
+
+- method overloading and method overriding are two types of plymrphsm in Java
+
+ex:
+
+    class Animal {
+        void sound() {
+            System.out.println("animal makes noise");
+        }
+    }
+
+    class Cat extends Animal {
+        void sound() {
+            System.out.println("Cat meows");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            
+            Animal myAnimal = new Cat();
+            myAnimal.sound(); // output cat meows
+
+
+        }
+    }
+
 
 
 
