@@ -708,8 +708,60 @@ ex:
     int thirdElem = numbers[2]; // accessing third (30)
 
 
+- common ops on arrays
+
+1. traversing array
+    
+- loop through the array to access each elem
+
+ex:
+
+    for (int i = 0; i < numbers.length; i++) {
+        System.out.println(numbers[i]);
+    }
 
 
+2. inserting elems
+
+- arrays have fixed size, you cannot directly insert elem into a full array. if you want to add a new elem, you create a new array with larger size.
+
+ex:
+
+    int[] newArray = new int[numbers.length + 1];
+    for (int i = 0; i < numbers.length; i++) {
+        newArray[i] = numbers[i];
+    }
+
+    newArray[newArray.length - 1] = 60;  // adding new elem 60 to the end
+
+
+3. deleting elems
+
+- involves shifting the remaining elems to fill the gap
+
+ex:
+
+    for (int i = 2; i < numbers.length - 1; i++) {
+        numbers[i] = numbers[i + 1];
+    } 
+
+    // note the last elem is duplicated or remains unchanged
+
+4. searching for an elem
+
+- you can search by iterating through the array and comparing each elem
+
+ex:
+
+    int target = 30;
+    boolean found = false;
+    for (int i = 0; i < numbers.length; i++) {
+        if (numbers[i] == target) {
+            found = true;
+            break;
+        }
+    }
+    System.out.println("Elem found: " + found);
 
 
  */
