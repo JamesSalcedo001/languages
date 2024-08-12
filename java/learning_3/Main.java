@@ -887,6 +887,24 @@ ex: working with arrays in Java
 
 
 
+- advantages of arrays
+
+    - fast access: O(1) time complexity for accessing elems by index
+
+    - memory efficiency: arrays are stored in contiguous memory locations, which can be efficient in terms of space and cache usage
+
+- disadvantages of arrays:
+
+    - fixed size: size is fixed once declared, which can lead to either insufficient or wasted space
+
+    - costly insertion/deletion: inserting or deleting elems( except at the end) requires shifting elems, which can be time consuming
+
+- when to use arrays
+
+    - when you need to store a fixed size collection of elements
+    - when you need fast access to elems by index
+    - when memory layout is crucial for performance, such as in systems programming or real-time applications
+
 
 
 
