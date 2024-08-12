@@ -677,6 +677,36 @@ key characteristics
 - contiguous memory allocation: elems are stored in contiguous memory locations, which allows for efficient access and manipulation
 
 
+- array declaration and initialization
+
+1. declaration
+
+ex: 
+
+    int[] numbers; // declaration of an array of integers
+
+2. allocation
+
+ex:
+
+    numbers = new int[5]; // allocating memory for 5 integers
+
+3. initialization
+
+ex:
+
+    int numbers = {10, 20, 30, 40, 50}; // declaration, allocation, and initialization in one step
+
+
+4. accessing elems
+
+- use their index
+
+ex:
+
+    int firstElem = numbers[0]; // accessing first elem (10)
+    int thirdElem = numbers[2]; // accessing third (30)
+
 
 
 
