@@ -618,35 +618,6 @@ code solution:
 
 
 
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-
 
 Java variables - container which holds the value while the Java program is executed. a variable is assigned with a data type
 
@@ -686,6 +657,27 @@ variable is a name of a reserved area allocated in memory/ a name of the memory 
 
 6. hash tables
 - ideal for situations requiring fast lookup, insertion, deletion, like implementing dictionaries or caches
+
+
+
+
+
+
+** sec 5 arrays
+
+- collection of elements, all of the same data type, stored in contiguous memory locations, in other words all elements are stored in a single block of memory(contiguous means everything is connected in a sequence without interruption). allows you to store multiple items of the same type together. arrays are used when you need to manage collection of data in a structured way, where each elem can be accessed by its index
+
+key characteristics
+
+- fixed size: once array is created, its size cannot be changed
+- homogeneous elements: all elems in array are of the same data type: eg. all int, all float, or all String
+
+-indexed access: elems in array are accessed using their index, starting from 0
+
+- contiguous memory allocation: elems are stored in contiguous memory locations, which allows for efficient access and manipulation
+
+
+
 
 
 
