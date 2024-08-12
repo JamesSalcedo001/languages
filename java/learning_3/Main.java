@@ -167,32 +167,56 @@
 
 // Ex 7: Find the largest number - take in three numbers from user and print the largest using if-else statements
 
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+
+//         System.out.print("Enter first number: ");
+//         int num1 = scanner.nextInt();
+
+//         System.out.print("Enter second number: ");
+//         int num2 = scanner.nextInt();
+
+//         System.out.print("Enter third number: ");
+//         int num3 = scanner.nextInt();
+
+//         int largest;
+
+//         if (num1 >= num2 && num1 >= num3) {
+//             largest = num1;
+//         } else if (num2 >= num1 && num2 >= num3) {
+//             largest = num2;
+//         } else {
+//             largest = num3;
+//         }
+
+//         System.out.println("Largest num is: " + largest);
+//     }
+// }
+
+
+// Ex 8: Count vowels in a string - count num of vowels in given string using a for loop
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter first number: ");
-        int num1 = scanner.nextInt();
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
 
-        System.out.print("Enter second number: ");
-        int num2 = scanner.nextInt();
+        int count = 0;
 
-        System.out.print("Enter third number: ");
-        int num3 = scanner.nextInt();
-
-        int largest;
-
-        if (num1 >= num2 && num1 >= num3) {
-            largest = num1;
-        } else if (num2 >= num1 && num2 >= num3) {
-            largest = num2;
-        } else {
-            largest = num3;
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ) {
+                count++;
+            }
         }
-
-        System.out.println("Largest num is: " + largest);
+        System.out.println("Number of vowels: " + count);
     }
 }
 
