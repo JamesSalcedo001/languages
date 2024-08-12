@@ -763,5 +763,66 @@ ex:
     }
     System.out.println("Elem found: " + found);
 
+5. sorting an array
+
+- use various algorithms or built in methods to sort an array
+
+ex:
+
+    import java.util.Arrays;
+
+    Arrays.sort(numbers); // sort an array in ascending order
+
+6. copying an array
+
+- use the clone method or System.arraycopy
+
+ex:
+
+    int[] copy = numbers.clone(); // cloning array
+
+
+- multidimensional arrays
+
+- arrays can have more than one dimension like 2D arrays (arrays of arrays) in other words a matrix
+
+1. declaration of 2d array
+
+ex:
+
+    int[][] matrix = new int[3][3]; // 3x3 matrix
+
+2. initialization of 2d array
+
+ex:
+
+    int[][] matrix = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+3. accessing elems in 2d array
+
+- use 2 indices: one for row, one for column
+
+ex:
+
+    int elem = matrix[1][2]; // accessing the elem at row 1, column 2 (value is 6)
+
+
+4. traversing a 2d array
+
+- use nested loop to traverse a 2d array
+
+ex:
+
+    for (int i = 0; i < matrix.length; i++) {
+        for (int j = 0; j < matrix[i].length; j++) {
+            System.out.println(matrix[i][j] + " ");
+        }
+        System.out.println();
+    }
+
 
  */
