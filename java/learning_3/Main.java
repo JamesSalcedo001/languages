@@ -266,6 +266,50 @@ ex:
 
 
 
+
+
+4. params and args
+
+- params are variables listed in the method definition and arguments are the actual values passed to the method
+
+ex:
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+5. overloading methods
+
+- you can define multiple methods with the same name but diff parameter lists
+
+ex:
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+
+
+
+
+
+** Sec 4 OOP Basics
+
+- java is an OOP programming language, which relies on the concept of objects and classes
+
+
+key concepts: 
+
+
+
+
+
+
+
+
  */
 
 
