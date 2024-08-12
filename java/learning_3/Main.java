@@ -199,26 +199,75 @@
 
 // Ex 8: Count vowels in a string - count num of vowels in given string using a for loop
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter a string: ");
-        String input = scanner.nextLine();
+//         System.out.print("Enter a string: ");
+//         String input = scanner.nextLine();
 
-        int count = 0;
+//         int count = 0;
 
-        for (int i = 0; i < input.length(); i++) {
-            char ch = input.charAt(i);
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ) {
-                count++;
-            }
-        }
-        System.out.println("Number of vowels: " + count);
+//         for (int i = 0; i < input.length(); i++) {
+//             char ch = input.charAt(i);
+//             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ) {
+//                 count++;
+//             }
+//         }
+//         System.out.println("Number of vowels: " + count);
+//     }
+// }
+
+
+/*
+
+** sec 3 functions
+
+
+- in Java, functions are called methods. methods are blocks of code that perform a specific task and can be called to execute that task when needed
+
+
+key concepts
+
+1. method declaration
+
+syntax: 
+
+    returnType methodName(params) {
+        // body 
+        return value; if returnType is not void
     }
-}
+
+ex:
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+
+2. method invocation
+
+- to call a method, use method name followed by parens and pass arguments if required
+
+ex:
+    int result = add(5, 3);
+    System.out.println(result); // output: 8
+
+3. return type
+
+- specifies what type of value the method will return. if method doesn't return value use void
+
+ex:
+
+    public void printMessage(String message) {
+        System.out.println(message)
+    }
+
+
+
+ */
+
 
 
 
