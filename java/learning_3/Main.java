@@ -538,6 +538,8 @@ START
 END
 
 
+code solution:
+
 
 class Book {
     String title;
@@ -573,6 +575,45 @@ public class Main {
 
 
 ex 3: find the sum of all even numbers in an array psuedocode
+
+START
+- initialize a variable called sum to 0
+- FOR each number in the array
+    - IF the number is even
+        - add the number to the sum
+- END FOR
+- Print value of sum
+
+END
+
+
+
+code solution:
+
+
+    public class Main {
+        public static void main(String[] args) {
+           // define an array of integers
+           int[] numbers = {1,2,3,4,5,6,7,8,9,10};
+
+           // initialize sum to 0
+           int sum = 0;
+
+           // loop through each number in the array
+           for (int number : numbers) {
+                // check if number is even
+                if (number % 2 == 0) {
+                    // add even number to sum
+                    sum += number;
+                }
+           }
+
+           // print the sum of all numbers
+           System.out.println("The sum of all even numbers in array is: " + sum);
+        }
+    }
+    
+
 
 
 
