@@ -948,6 +948,58 @@ ex: working with arrays in Java
         [data | next] -> [data | next] -> [data | next] -> [data | next] (points back to first node)
 
 
+ - ops on linked lists
+
+ 1. insertion 
+ 
+    - at the beginning: a new node is created and pointed to the current head. the new node becomes the new head
+
+    ex:
+
+        public void insertAtBeginning(int data ){ 
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+        }
+
+    - at the end: traverse to the end of the list, set the next pointer of the last node to the new node
+
+    ex:
+        public void insertAtEnd(int data) {
+            Node newNode = new Node(data);
+
+            if (head == null) {
+                head = newNode;
+                return;
+            }
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+
+    - at specific position: traverse to desired position and adjust the pointers to insert the new node:
+
+    ex:
+        public void insertAtPosition(int data, int position) {
+            Node newNode = new Node(data);
+            if (position == 0) {
+                newNode.next = head;
+                head = newNode;
+                return;
+            }
+            Node temp = head;
+            for (int i = 0; i < position - 1 && temp != null; i++) {
+                temp = temp.next;
+            }
+            if (temp == null) {
+                throw new IndexOutOfBoundsException("Pos out of bounds");
+            }
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+
 
 
  */
