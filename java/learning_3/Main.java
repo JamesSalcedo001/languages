@@ -1030,6 +1030,72 @@ ex: working with arrays in Java
         }
 
 
+    - delete at specific position: traverse to the position and adjust the pointers to remove the node
+
+    ex:
+
+        public void deleteAtPosition(int position) {
+            if (head == null) return;
+
+            Node temp = head;
+
+            if (position == 0) {
+                head = temp.next;
+                return;
+            }
+
+            for (int i = 0; temp != null && i < position - 1; i++) {
+                temp = temp.next;
+            }
+
+            if (temp == null || temp.next == null) return;
+
+            temp.next = temp.next.next;
+        }
+
+
+3. traversal: traverse the list from the head to the last node
+
+ex: 
+    public void printList() {
+        Node current = head;
+        while (curent != null) {
+            System.out.println(current.data + " ");
+            current = current.next;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
  */
 
 
