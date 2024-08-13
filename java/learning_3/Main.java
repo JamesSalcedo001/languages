@@ -908,6 +908,31 @@ ex: working with arrays in Java
 
 
 
+
+
+
+
+
+
+
+** sec 6 linked lists
+
+- linear data structure in which elements, called nodes, are not stored in contiguous memory locations. instead, each node contains a data part and a reference (or link) to the next node in the sequence. linked lists are used for dynamic data storage and are ideal when you need frequent insertions and deletions
+
+key characteristics
+
+    - dynamic size: unlike arrays, size of linked list can grow or shrink dynamically as elems are added and removed
+
+    - sequential access: elems in linked list must be accessed sequentially, starting from the first node(head)
+
+    - nodes: each element in a linked list is stored in a node. a node contains two parts:
+        - data: the value stored in the node
+        - Next: a reference or pointer to the next node in the list
+
+
+
+
+
  */
 
 
