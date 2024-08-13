@@ -1001,6 +1001,34 @@ ex: working with arrays in Java
         }
 
 
+2. deletion
+
+    - delete by key: traverse the list to find the node containing the key and remove it by adjusting the pointers
+
+    ex:
+
+        public void deleteNode(int key) {
+            Node temp = head, prev = null;
+
+            // if head node itself holds the key
+            if (temp != null && temp.data == key) {
+                head = temp.next;
+                return;
+            }
+
+            // search for the key
+            while(temp != null && temp.data != key) {
+                prev = temp;
+                temp = temp.next;
+            }
+
+            // if key was not present
+            if (temp == null) return;
+
+            // unlink the node from the list
+            prev.next = temp.next;
+        }
+
 
  */
 
