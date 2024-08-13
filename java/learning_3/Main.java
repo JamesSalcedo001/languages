@@ -919,7 +919,7 @@ ex: working with arrays in Java
 
 - linear data structure in which elements, called nodes, are not stored in contiguous memory locations. instead, each node contains a data part and a reference (or link) to the next node in the sequence. linked lists are used for dynamic data storage and are ideal when you need frequent insertions and deletions
 
-key characteristics
+- key characteristics
 
     - dynamic size: unlike arrays, size of linked list can grow or shrink dynamically as elems are added and removed
 
@@ -929,6 +929,23 @@ key characteristics
         - data: the value stored in the node
         - Next: a reference or pointer to the next node in the list
 
+- types of linked lists
+
+    - singly linked lists: each node points to the next node in the sequence, and the last node points to null
+
+    ex:
+        [data | next] -> [data | next] -> [data | next] -> null
+
+    - doubly linked list: each node points to both the next node and the previous node. the first node's previous pointer is null, and the last node's next pointer is null
+
+    ex:
+        null <- [prev | data | next] <-> [prev | data | next] -> [prev | data | next] -> null
+
+
+    - circular linked list: similar to singly linked list but last node points back to first node, forming a circle
+    
+    ex:
+        [data | next] -> [data | next] -> [data | next] -> [data | next] (points back to first node)
 
 
 
