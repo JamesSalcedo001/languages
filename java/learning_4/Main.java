@@ -1,17 +1,94 @@
-import javax.swing.JOptionPane;
-
 public class Main {
     public static void main(String[] args) {
-        String name = JOptionPane.showInputDialog("Enter your name");
+        double x = 3.14;
+        double y = 10;
 
-        JOptionPane.showMessageDialog(null, "Hello " + name);
+        double z = Math.max(x, y);
+        // double z = Math.min(x, y);
 
-        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age "));
+        // double z = Math.abs(y);
 
-        JOptionPane.showMessageDialog(null, "You are " + age + " years old");
+        // double z = Math.sqrt(y);
+
+        // double z = Math.round(x);
         
-        double height = Double.parseDouble(JOptionPane.showInputDialog("Enter your height "));
+        // double z = Math.floor(x);
 
-        JOptionPane.showMessageDialog(null, "You are " + height + " cm tall");
+        // double z = Math.ceil(x);
+
+        System.out.println(z);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import javax.swing.JOptionPane;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         String name = JOptionPane.showInputDialog("Enter your name");
+
+//         JOptionPane.showMessageDialog(null, "Hello " + name);
+
+//         int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age "));
+
+//         JOptionPane.showMessageDialog(null, "You are " + age + " years old");
+        
+//         double height = Double.parseDouble(JOptionPane.showInputDialog("Enter your height "));
+
+//         JOptionPane.showMessageDialog(null, "You are " + height + " cm tall");
+//     }
+// }
+
+
+
+
+
+
+// public class Main {
+//     public static void main(String[] args) {
+        
+//     }
+// }
