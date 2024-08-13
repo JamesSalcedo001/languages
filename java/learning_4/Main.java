@@ -1,31 +1,8 @@
-// create a program that will find hypotenuse of triangle
-
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        double x;
-        double y;
-        double z;
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter side x: ");
-        x = scanner.nextDouble();
-
-        System.out.println("Enter side y: ");
-        y = scanner.nextDouble();
-
-
-        // Math formula to find hypotenuse of triangle given side x and side y are known
-        z = Math.sqrt((x*x)+(y*y));
-
-        System.out.println("The hypotenuse is: " + z);
-
-        scanner.close();
+// public class Main {
+//     public static void main(String[] args) {
         
-    }
-}
+//     }
+// }
 
 
 
@@ -52,6 +29,14 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+// simple math operations
 
 
 
@@ -83,6 +68,8 @@ public class Main {
 
 
 
+// simple GUI program asking for user input and answering
+
 
 // import javax.swing.JOptionPane;
 
@@ -107,8 +94,55 @@ public class Main {
 
 
 
+
+// create a program that will find hypotenuse of triangle
+
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         double x;
+//         double y;
+//         double z;
+
+//         Scanner scanner = new Scanner(System.in);
+
+//         System.out.println("Enter side x: ");
+//         x = scanner.nextDouble();
+
+//         System.out.println("Enter side y: ");
+//         y = scanner.nextDouble();
+
+
+//         // Math formula to find hypotenuse of triangle given side x and side y are known
+//         z = Math.sqrt((x*x)+(y*y));
+
+//         System.out.println("The hypotenuse is: " + z);
+
+//         scanner.close();
+        
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // public class Main {
 //     public static void main(String[] args) {
         
 //     }
 // }
+
+
