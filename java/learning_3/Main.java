@@ -1067,6 +1067,127 @@ ex:
 
 
 
+4. search for node with specific value by traversing the list
+
+ex:
+
+    public boolean search(int key) {
+        Node current = head;
+        while(current != null) {
+            if ( current.data == key) return true;
+            current = current.next;
+        }
+        return false;
+    }
+
+
+
+
+
+ex: working with singly linked list in Java
+
+// Node class representing each element in the linked list
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+// LinkedList class containing the operations
+public class LinkedListExample {
+    Node head;
+
+    // Insert at the beginning
+    public void insertAtBeginning(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
+
+    // Insert at the end
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+    }
+
+    // Delete a node by key
+    public void deleteNode(int key) {
+        Node temp = head, prev = null;
+
+        // If head node itself holds the key
+        if (temp != null && temp.data == key) {
+            head = temp.next;
+            return;
+        }
+
+        // Search for the key
+        while (temp != null && temp.data != key) {
+            prev = temp;
+            temp = temp.next;
+        }
+
+        // If key was not present
+        if (temp == null) return;
+
+        // Unlink the node from the list
+        prev.next = temp.next;
+    }
+
+    // Print the linked list
+    public void printList() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+    // Search for a node with a given key
+    public boolean search(int key) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == key) return true;
+            current = current.next;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        LinkedListExample list = new LinkedListExample();
+
+        // Insert elements
+        list.insertAtBeginning(1);
+        list.insertAtEnd(2);
+        list.insertAtEnd(3);
+        list.insertAtBeginning(0);
+
+        // Print list
+        System.out.println("Linked List:");
+        list.printList();  // Output: 0 1 2 3 
+
+        // Search for an element
+        boolean found = list.search(2);
+        System.out.println("Element 2 found: " + found);  // Output: true
+
+        // Delete an element
+        list.deleteNode(1);
+        System.out.println("Linked List after deletion:");
+        list.printList();  // Output: 0 2 3
+    }
+}
 
 
 
@@ -1090,11 +1211,6 @@ ex:
 
 
 
-
-
-
-
-    
 
  */
 
