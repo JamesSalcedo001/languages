@@ -1190,8 +1190,17 @@ public class LinkedListExample {
 }
 
 
+- advantages of linked lists
 
+    - dynamic size: size of linked list can grow or shrink as needed, unlike arrays which have fixed size
 
+    - efficient insertions/deletions: insertion or deletion of elems can be done more efficiently(O(1) time complexity) if position is known, especially at beginning or end of list
+
+    - no wasted space: mem allocation for linked lists is dynamic, which means no need to allocate extra space in advance
+
+- disadvantages of linked lists
+
+    - sequential access: unlike arrays, where you can access any elem in O(1) time, linked lists require O(n)
 
 
 
