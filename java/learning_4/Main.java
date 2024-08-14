@@ -36,12 +36,26 @@ public class Main {
 
         String response = scanner.next();
 
-        if (response.equals("q") || response.equals("Q")) {
-            System.out.println("You quit the game");
-        }
-        else {
+        // if (response.equals("q") || response.equals("Q")) {
+        //     System.out.println("You quit the game");
+        // }
+        // else {
+        //     System.out.println("You are still playing the game!");
+        // }
+
+
+
+        // NOT
+
+        if (!response.equals("q") && !response.equals("Q")) {
             System.out.println("You are still playing the game!");
         }
+        else {
+            System.out.println("You quit the game ");
+        }
+
+
+
 
 
     }
