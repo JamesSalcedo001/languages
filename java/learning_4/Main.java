@@ -1,30 +1,62 @@
-// arraylists - collection, a type of resizeable array, elements can be added and removed after compilation phase, only store reference data types
+// separate shopping lists - add together
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Main {
+
     public static void main(String[] args) {
-        ArrayList<String> food = new ArrayList<String>();
-
-        // add values to arraylist
-
-        food.add("pizza");
-        food.add("hamburger");
-        food.add("hotdog");
-
-        // replace value at index 0 with "sushi"
-        food.set(0, "sushi");
-
-        food.remove(2); // removes elem at index 2
-        food.clear(); // clears entire array
+        
+        // 2d arraylists - dynamic list of lists
+        // change size during runtime
 
 
-        // use size instead of length for arraylist
-        for (int i = 0; i < food.size(); i++) {
+        ArrayList<ArrayList<String>> groceryList = new ArrayList<>();
 
-            // use get to retrieve values from arraylist
-            System.out.println(food.get(i));
-        }
+
+
+
+
+
+
+        ArrayList<String> bakeryList = new ArrayList<>();
+        bakeryList.add("pasta");
+        bakeryList.add("garlic bread");
+        bakeryList.add("donuts");
+
+
+        ArrayList<String> produceList = new ArrayList<>();
+
+        produceList.add("tomatoes");
+        produceList.add("zucchini");
+        produceList.add("peppers");
+
+        ArrayList<String> drinksList = new ArrayList<>();
+
+        drinksList.add("soda");
+        drinksList.add("coffee");
+
+
+        groceryList.add(bakeryList);
+        groceryList.add(produceList);
+        groceryList.add(drinksList);
+
+        
+        // retrieves first list of lists
+        // System.out.println(groceryList.get(0));
+
+
+        // retrieves first element of the first list
+        System.out.println(groceryList.get(0).get(0));
+
+
+        // getting last element of the last list
+        System.out.println(groceryList.get(2).get(1));
+
+
+        
+
+        // System.out.println(bakeryList.get(0)); // retrieves a specific elem
+
     }
 }
 
@@ -46,6 +78,53 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// arraylists - collection, a type of resizeable array, elements can be added and removed after compilation phase, only store reference data types
+
+// import java.util.ArrayList;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         ArrayList<String> food = new ArrayList<String>();
+
+//         // add values to arraylist
+
+//         food.add("pizza");
+//         food.add("hamburger");
+//         food.add("hotdog");
+
+//         // replace value at index 0 with "sushi"
+//         food.set(0, "sushi");
+
+//         food.remove(2); // removes elem at index 2
+//         food.clear(); // clears entire array
+
+
+//         // use size instead of length for arraylist
+//         for (int i = 0; i < food.size(); i++) {
+
+//             // use get to retrieve values from arraylist
+//             System.out.println(food.get(i));
+//         }
+//     }
+// }
 
 
 
