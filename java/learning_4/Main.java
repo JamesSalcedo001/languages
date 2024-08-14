@@ -1,34 +1,30 @@
-// wrapper classes - provides a way to use primitive data types as reference data types, contain useful methods, can be used with collections (ex: ArrayList)
+// arraylists - collection, a type of resizeable array, elements can be added and removed after compilation phase, only store reference data types
 
-
-// primitive    // wrapper
-// ............ // ........
-/*
-    boolean     Boolean
-    char        Character
-    int         Integer
-    double      Double
-
-    autoboxing = the automatic conversion that the Java compiler makes between the primitive data types and their corresponding object wrapper classes
-
-    unboxing = the reverse of autoboxing, automatic conversion of wrapper class to primitive
- */
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        
-        Boolean a = true;
-        Character b = '@';       
-        Integer c = 123;
-        Double d = 3.14;
-        String e = "James";
+        ArrayList<String> food = new ArrayList<String>();
+
+        // add values to arraylist
+
+        food.add("pizza");
+        food.add("hamburger");
+        food.add("hotdog");
+
+        // replace value at index 0 with "sushi"
+        food.set(0, "sushi");
+
+        food.remove(2); // removes elem at index 2
+        food.clear(); // clears entire array
 
 
-        // unboxing to a primitive data type
-        if (a==true) {
-            System.out.println("This is true");
+        // use size instead of length for arraylist
+        for (int i = 0; i < food.size(); i++) {
+
+            // use get to retrieve values from arraylist
+            System.out.println(food.get(i));
         }
-
     }
 }
 
@@ -63,6 +59,50 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// wrapper classes - provides a way to use primitive data types as reference data types, contain useful methods, can be used with collections (ex: ArrayList)
+
+
+// primitive    // wrapper
+// ............ // ........
+/*
+    boolean     Boolean
+    char        Character
+    int         Integer
+    double      Double
+
+    autoboxing = the automatic conversion that the Java compiler makes between the primitive data types and their corresponding object wrapper classes
+
+    unboxing = the reverse of autoboxing, automatic conversion of wrapper class to primitive
+ */
+
+//  public class Main {
+//     public static void main(String[] args) {
+        
+//         Boolean a = true;
+//         Character b = '@';       
+//         Integer c = 123;
+//         Double d = 3.14;
+//         String e = "James";
+
+
+//         // unboxing to a primitive data type
+//         if (a==true) {
+//             System.out.println("This is true");
+//         }
+
+//     }
+// }
 
 
 
