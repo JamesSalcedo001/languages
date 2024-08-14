@@ -1,61 +1,30 @@
-// 2d arrays
-
-
 public class Main {
     public static void main(String[] args) {
-
-// alternate way to assign 2D array
-
-        String[][] cars = {
-            {"Camaro", "Corvette", "Silverado"}, 
-            {"Mustang", "Ranger", "F-150"}, 
-            {"Ferrari", "Lambo", "Tesla"}
-        };
-
-//         String[][] cars = new String[3][3];
-//         //                           c o l                          
-//         // row 1, column 1        r  ["Camaro"][][]
-//         //                        o  [][][]
-//         //                        w  [][][]
-//         cars[0][0] = "Camaro";
+        // String reference data types that can store one or more characters reference data types have access to useful methods
 
 
+        String name = "James";
 
-// //                                   c o l                          
-//         // row 1, column 2        r  ["Camaro"]["Corvette"][]
-//         //                        o  [][][]
-//         //                        w  [][][]
-//         cars[0][1] = "Corvette";
-        
-//         // row 1, column 3
-//         cars[0][2] = "Silverado";
+        // boolean result = name.equals("James");
+        // boolean result = name.equalsIgnoreCase("james");
 
-//         // row 2, column 1
-//         cars[1][0] = "Mustang";
+        // int result = name.length();
 
-//         // row 2, column 2
-//         cars[1][1] = "Range Rover";
+        // char result = name.charAt(0);
 
-//         // row 2, column 3
-//         cars[1][2] = "F-150";
+        // int result = name.indexOf("J");
 
-//         // row 3, column 1
-//         cars[2][0] = "Ferrari";
+        // boolean result = name.isEmpty();
 
-//         // row 3, column 2
-//         cars[2][1] = "Lambo";
+        // String result = name.toUpperCase();
+        // String result = name.toLowerCase();
 
-//         //row 3, column 3
-//         cars[2][2] = "Tesla";
+        // String result = name.trim();
+
+        String result = name.replace('J', 'Z');
 
 
-        for (int i = 0; i < cars.length; i++) {
-            System.out.println();
-            for (int j = 0; j < cars[i].length; j++) {
-                System.out.print(cars[i][j] + " | ");
-            }
-        }
-
+        System.out.println(result);
 
     }
 }
@@ -80,6 +49,85 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 2d arrays
+
+
+// public class Main {
+//     public static void main(String[] args) {
+
+// // alternate way to assign 2D array
+
+//         String[][] cars = {
+//             {"Camaro", "Corvette", "Silverado"}, 
+//             {"Mustang", "Ranger", "F-150"}, 
+//             {"Ferrari", "Lambo", "Tesla"}
+//         };
+
+// //         String[][] cars = new String[3][3];
+// //         //                           c o l                          
+// //         // row 1, column 1        r  ["Camaro"][][]
+// //         //                        o  [][][]
+// //         //                        w  [][][]
+// //         cars[0][0] = "Camaro";
+
+
+
+// // //                                   c o l                          
+// //         // row 1, column 2        r  ["Camaro"]["Corvette"][]
+// //         //                        o  [][][]
+// //         //                        w  [][][]
+// //         cars[0][1] = "Corvette";
+        
+// //         // row 1, column 3
+// //         cars[0][2] = "Silverado";
+
+// //         // row 2, column 1
+// //         cars[1][0] = "Mustang";
+
+// //         // row 2, column 2
+// //         cars[1][1] = "Range Rover";
+
+// //         // row 2, column 3
+// //         cars[1][2] = "F-150";
+
+// //         // row 3, column 1
+// //         cars[2][0] = "Ferrari";
+
+// //         // row 3, column 2
+// //         cars[2][1] = "Lambo";
+
+// //         //row 3, column 3
+// //         cars[2][2] = "Tesla";
+
+
+//         for (int i = 0; i < cars.length; i++) {
+//             System.out.println();
+//             for (int j = 0; j < cars[i].length; j++) {
+//                 System.out.print(cars[i][j] + " | ");
+//             }
+//         }
+
+
+//     }
+// }
 
 
 
@@ -531,10 +579,5 @@ public class Main {
 
 
 
-// public class Main {
-//     public static void main(String[] args) {
-        
-//     }
-// }
 
 
