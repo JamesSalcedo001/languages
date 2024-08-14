@@ -1,8 +1,26 @@
-// public class Main {
-//     public static void main(String[] args) {
-        
-//     }
-// }
+// generate random values, great for game design
+
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Random random = new Random();
+
+        // generate random number between 1 and 6, if you want 0 - 5, you can leave out the +1, and if you want number between -1000000000 and 1000000000
+
+        // int x = random.nextInt(6)+1;
+
+        // double y = random.nextDouble();
+
+        boolean z = random.nextBoolean();
+
+        // System.out.println(x);
+
+        // System.out.println(y);
+
+        System.out.println(z);
+    }
+}
 
 
 
