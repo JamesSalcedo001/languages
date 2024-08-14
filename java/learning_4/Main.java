@@ -1,31 +1,107 @@
-// arrays
+// 2d arrays
+
 
 public class Main {
     public static void main(String[] args) {
+        String[][] cars = new String[3][3];
+        //                           c o l                          
+        // row 1, column 1        r  ["Camaro"][][]
+        //                        o  [][][]
+        //                        w  [][][]
+        cars[0][0] = "Camaro";
 
-        // only one data type can be used
 
-        // String[] cars = {"Camaro", "Corvette", "Tesla"};
 
-        // cars[0] = "Mustang";
+//                                   c o l                          
+        // row 1, column 2        r  ["Camaro"]["Corvette"][]
+        //                        o  [][][]
+        //                        w  [][][]
+        cars[0][1] = "Corvette";
+        
+        // row 1, column 3
+        cars[0][2] = "Silverado";
 
-        // System.out.println(cars[3]);
+        // row 2, column 1
+        cars[1][0] = "Mustang";
 
-        String[] cars = new String[3];
+        // row 2, column 2
+        cars[1][1] = "Range Rover";
 
-        cars[0] = "Camaro";
-        cars[1] = "Corvette";
-        cars[2] = "Tesla";
+        // row 2, column 3
+        cars[1][2] = "F-150";
 
-        System.out.println(cars[2]);
+        // row 3, column 1
+        cars[2][0] = "Ferrari";
 
-        // loop through elems in arrays
+        // row 3, column 2
+        cars[2][1] = "Lambo";
 
-        for (int i = 0; i < cars.length; i++) {
-            System.out.println(cars[i]);
-        }
+        //row 3, column 3
+        cars[2][2] = "Tesla";
+
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// arrays
+
+// public class Main {
+//     public static void main(String[] args) {
+
+//         // only one data type can be used
+
+//         // String[] cars = {"Camaro", "Corvette", "Tesla"};
+
+//         // cars[0] = "Mustang";
+
+//         // System.out.println(cars[3]);
+
+//         String[] cars = new String[3];
+
+//         cars[0] = "Camaro";
+//         cars[1] = "Corvette";
+//         cars[2] = "Tesla";
+
+//         System.out.println(cars[2]);
+
+//         // loop through elems in arrays
+
+//         for (int i = 0; i < cars.length; i++) {
+//             System.out.println(cars[i]);
+//         }
+//     }
+// }
 
 
 
