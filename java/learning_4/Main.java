@@ -1,39 +1,29 @@
-// nested loops set a number of rows and columns and display rectangle of particular symbol
-
-import java.util.Scanner;
+// arrays
 
 public class Main {
     public static void main(String[] args) {
 
-        // nested loops
+        // only one data type can be used
 
-        Scanner scanner = new Scanner(System.in);
-        int rows;
-        int columns;
-        String symbol = "";
+        // String[] cars = {"Camaro", "Corvette", "Tesla"};
 
-        System.out.println("Enter # of rows: ");
-        rows = scanner.nextInt();
+        // cars[0] = "Mustang";
 
-        System.out.println("Enter # of columns: ");
-        columns = scanner.nextInt();
+        // System.out.println(cars[3]);
 
-        System.out.println("Enter symbol to use: ");
-        symbol = scanner.next();
+        String[] cars = new String[3];
 
-        // outer loop in charge of rows
+        cars[0] = "Camaro";
+        cars[1] = "Corvette";
+        cars[2] = "Tesla";
 
-        for (int i = 1; i <= rows; i++) {
-            System.out.println();
-            
-            // inner loop in charge of columns
+        System.out.println(cars[2]);
 
-            for (int j = 1; j <= columns; j++) {
-                System.out.print(symbol);
-            }
+        // loop through elems in arrays
+
+        for (int i = 0; i < cars.length; i++) {
+            System.out.println(cars[i]);
         }
-
-        
     }
 }
 
@@ -49,6 +39,60 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// nested loops set a number of rows and columns and display rectangle of particular symbol
+
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+
+//         // nested loops
+
+//         Scanner scanner = new Scanner(System.in);
+//         int rows;
+//         int columns;
+//         String symbol = "";
+
+//         System.out.println("Enter # of rows: ");
+//         rows = scanner.nextInt();
+
+//         System.out.println("Enter # of columns: ");
+//         columns = scanner.nextInt();
+
+//         System.out.println("Enter symbol to use: ");
+//         symbol = scanner.next();
+
+//         // outer loop in charge of rows
+
+//         for (int i = 1; i <= rows; i++) {
+//             System.out.println();
+            
+//             // inner loop in charge of columns
+
+//             for (int j = 1; j <= columns; j++) {
+//                 System.out.print(symbol);
+//             }
+//         }
+
+        
+//     }
+// }
 
 
 
