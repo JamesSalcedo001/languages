@@ -1,30 +1,39 @@
+// nested loops set a number of rows and columns and display rectangle of particular symbol
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // while loop executes block of code as long as its condition remains true
+
+        // nested loops
 
         Scanner scanner = new Scanner(System.in);
-        String name = "";
+        int rows;
+        int columns;
+        String symbol = "";
 
-        // while loop
+        System.out.println("Enter # of rows: ");
+        rows = scanner.nextInt();
 
-        // while(name.isBlank()) {
-        //     System.out.print("Enter your name: ");
-        //     name = scanner.nextLine();
+        System.out.println("Enter # of columns: ");
+        columns = scanner.nextInt();
 
-        // }
+        System.out.println("Enter symbol to use: ");
+        symbol = scanner.next();
 
+        // outer loop in charge of rows
 
+        for (int i = 1; i <= rows; i++) {
+            System.out.println();
+            
+            // inner loop in charge of columns
 
-        // do while loop
+            for (int j = 1; j <= columns; j++) {
+                System.out.print(symbol);
+            }
+        }
 
-         do {
-            System.out.print("Enter your name: ");
-            name = scanner.nextLine();
-        } while(name.isBlank());
-
-        System.out.println("Hello " + name);
+        
     }
 }
 
@@ -50,6 +59,42 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         // while loop executes block of code as long as its condition remains true
+
+//         Scanner scanner = new Scanner(System.in);
+//         String name = "";
+
+//         // while loop
+
+//         // while(name.isBlank()) {
+//         //     System.out.print("Enter your name: ");
+//         //     name = scanner.nextLine();
+
+//         // }
+
+
+
+//         // do while loop
+
+//          do {
+//             System.out.print("Enter your name: ");
+//             name = scanner.nextLine();
+//         } while(name.isBlank());
+
+//         System.out.println("Hello " + name);
+//     }
+// }
 
 
 
