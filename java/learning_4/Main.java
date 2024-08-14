@@ -3,41 +3,58 @@
 
 public class Main {
     public static void main(String[] args) {
-        String[][] cars = new String[3][3];
-        //                           c o l                          
-        // row 1, column 1        r  ["Camaro"][][]
-        //                        o  [][][]
-        //                        w  [][][]
-        cars[0][0] = "Camaro";
+
+// alternate way to assign 2D array
+
+        String[][] cars = {
+            {"Camaro", "Corvette", "Silverado"}, 
+            {"Mustang", "Ranger", "F-150"}, 
+            {"Ferrari", "Lambo", "Tesla"}
+        };
+
+//         String[][] cars = new String[3][3];
+//         //                           c o l                          
+//         // row 1, column 1        r  ["Camaro"][][]
+//         //                        o  [][][]
+//         //                        w  [][][]
+//         cars[0][0] = "Camaro";
 
 
 
-//                                   c o l                          
-        // row 1, column 2        r  ["Camaro"]["Corvette"][]
-        //                        o  [][][]
-        //                        w  [][][]
-        cars[0][1] = "Corvette";
+// //                                   c o l                          
+//         // row 1, column 2        r  ["Camaro"]["Corvette"][]
+//         //                        o  [][][]
+//         //                        w  [][][]
+//         cars[0][1] = "Corvette";
         
-        // row 1, column 3
-        cars[0][2] = "Silverado";
+//         // row 1, column 3
+//         cars[0][2] = "Silverado";
 
-        // row 2, column 1
-        cars[1][0] = "Mustang";
+//         // row 2, column 1
+//         cars[1][0] = "Mustang";
 
-        // row 2, column 2
-        cars[1][1] = "Range Rover";
+//         // row 2, column 2
+//         cars[1][1] = "Range Rover";
 
-        // row 2, column 3
-        cars[1][2] = "F-150";
+//         // row 2, column 3
+//         cars[1][2] = "F-150";
 
-        // row 3, column 1
-        cars[2][0] = "Ferrari";
+//         // row 3, column 1
+//         cars[2][0] = "Ferrari";
 
-        // row 3, column 2
-        cars[2][1] = "Lambo";
+//         // row 3, column 2
+//         cars[2][1] = "Lambo";
 
-        //row 3, column 3
-        cars[2][2] = "Tesla";
+//         //row 3, column 3
+//         cars[2][2] = "Tesla";
+
+
+        for (int i = 0; i < cars.length; i++) {
+            System.out.println();
+            for (int j = 0; j < cars[i].length; j++) {
+                System.out.print(cars[i][j] + " | ");
+            }
+        }
 
 
     }
