@@ -1,62 +1,13 @@
-// separate shopping lists - add together
-
-import java.util.*;
-
 public class Main {
 
     public static void main(String[] args) {
-        
-        // 2d arraylists - dynamic list of lists
-        // change size during runtime
+         // foreach loop = traversing technique to iterate through elems in an array/collection, less steps more readable, less flexible though
 
+         String[] animals = { "cat", "dog", "rat", "bird"};
 
-        ArrayList<ArrayList<String>> groceryList = new ArrayList<>();
-
-
-
-
-
-
-
-        ArrayList<String> bakeryList = new ArrayList<>();
-        bakeryList.add("pasta");
-        bakeryList.add("garlic bread");
-        bakeryList.add("donuts");
-
-
-        ArrayList<String> produceList = new ArrayList<>();
-
-        produceList.add("tomatoes");
-        produceList.add("zucchini");
-        produceList.add("peppers");
-
-        ArrayList<String> drinksList = new ArrayList<>();
-
-        drinksList.add("soda");
-        drinksList.add("coffee");
-
-
-        groceryList.add(bakeryList);
-        groceryList.add(produceList);
-        groceryList.add(drinksList);
-
-        
-        // retrieves first list of lists
-        // System.out.println(groceryList.get(0));
-
-
-        // retrieves first element of the first list
-        System.out.println(groceryList.get(0).get(0));
-
-
-        // getting last element of the last list
-        System.out.println(groceryList.get(2).get(1));
-
-
-        
-
-        // System.out.println(bakeryList.get(0)); // retrieves a specific elem
-
+         for (String i : animals) {
+            System.out.println(i);
+         }
     }
 }
 
@@ -83,7 +34,67 @@ public class Main {
 
 
 
+// separate shopping lists - add together
 
+// import java.util.*;
+
+// public class Main {
+
+//     public static void main(String[] args) {
+        
+//         // 2d arraylists - dynamic list of lists
+//         // change size during runtime
+
+
+//         ArrayList<ArrayList<String>> groceryList = new ArrayList<>();
+
+
+
+
+
+
+
+//         ArrayList<String> bakeryList = new ArrayList<>();
+//         bakeryList.add("pasta");
+//         bakeryList.add("garlic bread");
+//         bakeryList.add("donuts");
+
+
+//         ArrayList<String> produceList = new ArrayList<>();
+
+//         produceList.add("tomatoes");
+//         produceList.add("zucchini");
+//         produceList.add("peppers");
+
+//         ArrayList<String> drinksList = new ArrayList<>();
+
+//         drinksList.add("soda");
+//         drinksList.add("coffee");
+
+
+//         groceryList.add(bakeryList);
+//         groceryList.add(produceList);
+//         groceryList.add(drinksList);
+
+        
+//         // retrieves first list of lists
+//         // System.out.println(groceryList.get(0));
+
+
+//         // retrieves first element of the first list
+//         System.out.println(groceryList.get(0).get(0));
+
+
+//         // getting last element of the last list
+//         System.out.println(groceryList.get(2).get(1));
+
+
+        
+
+//         // System.out.println(bakeryList.get(0)); // retrieves a specific elem
+
+//     }
+// }
 
 
 
