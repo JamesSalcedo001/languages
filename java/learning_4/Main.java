@@ -1,9 +1,18 @@
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
          // foreach loop = traversing technique to iterate through elems in an array/collection, less steps more readable, less flexible though
 
-         String[] animals = { "cat", "dog", "rat", "bird"};
+        //  String[] animals = { "cat", "dog", "rat", "bird"};
+
+        ArrayList<String> animals = new ArrayList<String>();
+
+        animals.add("Cat");
+        animals.add("Dog");
+        animals.add("Rat");
+        animals.add("Bird");
 
          for (String i : animals) {
             System.out.println(i);
