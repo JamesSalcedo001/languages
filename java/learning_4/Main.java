@@ -1,28 +1,17 @@
-// OOP contructing car instances
-
-
 public class Main {
 
     public static void main(String[] args) {
-        // object - instance of a class that may contain attributes and methods
+        // constructor = special method called when object is instantiated  
 
-         Car myCar = new Car();
-         Car myCar2 = new Car();
+        Human human = new Human("Rick", 65, 70);
+        Human human2 = new Human("Morty", 16, 50);
 
 
-         System.out.println(myCar.model);
-         System.out.println(myCar.make);
+        human2.eat();
+        human.drink();
 
-         System.out.println();
-
-         System.out.println(myCar2.make);
-         System.out.println(myCar.model);
-
-         myCar.drive();
-
-         myCar.brake();
+        System.out.println(human.name);
     }
-    
 }
 
 
@@ -50,6 +39,51 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// OOP contructing car instances
+
+
+// public class Main {
+
+//     public static void main(String[] args) {
+//         // object - instance of a class that may contain attributes and methods
+
+//          Car myCar = new Car();
+//          Car myCar2 = new Car();
+
+
+//          System.out.println(myCar.model);
+//          System.out.println(myCar.make);
+
+//          System.out.println();
+
+//          System.out.println(myCar2.make);
+//          System.out.println(myCar.model);
+
+//          myCar.drive();
+
+//          myCar.brake();
+//     }
+    
+// }
 
 
 
