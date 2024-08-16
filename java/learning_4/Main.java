@@ -1,16 +1,10 @@
+// overloaded constructors - multiple constructors within a class with the same name, but diff params, name + params = signature
+
+
 public class Main {
 
     public static void main(String[] args) {
-        // constructor = special method called when object is instantiated  
-
-        Human human = new Human("Rick", 65, 70);
-        Human human2 = new Human("Morty", 16, 50);
-
-
-        human2.eat();
-        human.drink();
-
-        System.out.println(human.name);
+        
     }
 }
 
@@ -31,6 +25,33 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+// constructors
+
+// public class Main {
+
+//     public static void main(String[] args) {
+//         // constructor = special method called when object is instantiated  
+
+//         Human human = new Human("Rick", 65, 70);
+//         Human human2 = new Human("Morty", 16, 50);
+
+
+//         human2.eat();
+//         human.drink();
+
+//         System.out.println(human.name);
+//     }
+// }
 
 
 
