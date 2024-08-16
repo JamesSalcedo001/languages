@@ -4,7 +4,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        Pizza pizza = new Pizza("thick crust", "tomato", "mozzarella", "pepperoni");
+        Pizza pizza = new Pizza("thick crust", "tomato", "mozzarella);
 
         System.out.println("Here are the ingredients to your pizza: ");
 
