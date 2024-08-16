@@ -1,18 +1,22 @@
-// toString method - method that all obj inherit, returns string that textually reps an object, can be used implicitly or explicitly
+// static keyword modifier
 
 public class Main {
 
     public static void main(String[] args) {
         
-        Car car = new Car();
+        // static = modifier a single copy of a variable/method is created and shared, the class owns the static member
 
-        // System.out.println(car.make);
-        // System.out.println(car.model);
-        // System.out.println(car.color);
-        // System.out.println(car.year);
+        Friend friend1 = new Friend("Spongebob");
+        Friend friend2 = new Friend("Patrick");
+        Friend friend3 = new Friend("Squidward");
+        Friend friend4 = new Friend("Sandy");
 
-        System.out.println(car);
-        // same as with the twoString method, will return address in memory
+
+
+
+
+        Friend.displayFriends();
+
     }
 }
 
@@ -34,7 +38,23 @@ public class Main {
 
 
 
+// toString method - method that all obj inherit, returns string that textually reps an object, can be used implicitly or explicitly
 
+// public class Main {
+
+//     public static void main(String[] args) {
+        
+//         Car car = new Car();
+
+//         // System.out.println(car.make);
+//         // System.out.println(car.model);
+//         // System.out.println(car.color);
+//         // System.out.println(car.year);
+
+//         System.out.println(car);
+//         // same as with the twoString method, will return address in memory
+//     }
+// }
 
 
 
