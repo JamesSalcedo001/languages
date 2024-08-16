@@ -1,17 +1,18 @@
-// overloaded constructors - multiple constructors within a class with the same name, but diff params, name + params = signature
-
+// toString method - method that all obj inherit, returns string that textually reps an object, can be used implicitly or explicitly
 
 public class Main {
 
     public static void main(String[] args) {
-        Pizza pizza = new Pizza("thick crust", "tomato", "mozzarella);
+        
+        Car car = new Car();
 
-        System.out.println("Here are the ingredients to your pizza: ");
+        // System.out.println(car.make);
+        // System.out.println(car.model);
+        // System.out.println(car.color);
+        // System.out.println(car.year);
 
-        System.out.println(pizza.bread);
-        System.out.println(pizza.sauce);
-        System.out.println(pizza.cheese);
-        System.out.println(pizza.topping);
+        System.out.println(car);
+        // same as with the twoString method, will return address in memory
     }
 }
 
@@ -29,6 +30,45 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// overloaded constructors - multiple constructors within a class with the same name, but diff params, name + params = signature
+
+
+// public class Main {
+
+//     public static void main(String[] args) {
+//         Pizza pizza = new Pizza("thick crust", "tomato", "mozzarella");
+
+//         System.out.println("Here are the ingredients to your pizza: ");
+
+//         System.out.println(pizza.bread);
+//         System.out.println(pizza.sauce);
+//         System.out.println(pizza.cheese);
+//         System.out.println(pizza.topping);
+//     }
+// }
 
 
 
