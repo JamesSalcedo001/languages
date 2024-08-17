@@ -1,58 +1,45 @@
-// queues - FIFO data structure - First In First Out (ex: line of people), a collection designed for holding elements prior to processing, linear data structure. head is the item at the front of the queue, tail is the item at the end
+// priority queue - FIFO ds that serves elements with the highest priorities first before elements with lower priority
 
-// add - enqueue, offer()
-// remove - dequeue, poll()
-
-// Queue is an interface in Java, cannot instantiate the type queue, to utilize you need a class that implements queue, linked lists and priority queues are two classes that implement queues
-
-/*
-
-1. keyboard buffer: letters should appear on the screen in the order they are pressed
-
-2. printer queue: print jobs should be completed in order
-
-3. used in LinkedLists, PriorityQueues, and Breadth-first Search
- 
- */
-
-import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.Collections;
 
 public class Main {
 
     public static void main(String[] args) {
+        
+        // Queue<Double> queue = new PriorityQueue<>();
+        // Queue<Double> queue = new PriorityQueue<>(Collections.reverseOrder());
+        // reverses the order that items are prioritized
 
-        Queue<String> queue = new LinkedList<String>();
-
-        // better to use offer, poll, and peek 
-
-        queue.offer("Karen");
-        queue.offer("Chad");
-        queue.offer("Steve");
-        queue.offer("Harold");
-
-        queue.isEmpty(); // returns false, checks if the queue is empty
-
-        // checks the amount of items in the queue
-        queue.size();
+        Queue<String> queue = new PriorityQueue<>(Collections.reverseOrder());
+        // The collections.reverseOrder() is called a comparator
 
 
-        // boolean whether or not an item exists
-        queue.contains("Harold");
+
+        // queue.offer(3.0);
+        // queue.offer(2.5);
+        // queue.offer(4.0);
+        // queue.offer(1.5);
+        // queue.offer(2.0);
+
+        queue.offer("B");
+        queue.offer("C");
+        queue.offer("A");
+        queue.offer("F");
+        queue.offer("D");
 
 
-        // checks the front of the queue (the head, which is the first element which was added (Karen) without altering anything)
-        // System.out.println(queue.peek());
 
-        // removes element at the head (first element at index of 0), which means Karen is removed, poll will not throw an exception
-        queue.poll();
 
-        // next Chad is removed
-        queue.poll();
+        // while loop that displays and removes element by element each iteration until empty, starting with the item at the head(3.0) as a normal queue, however a priority queue takes these items and sorts them in ascending order, so the first value displayed and removed will be 1.5, then 2.0, etc.
 
-        System.out.println(queue);
-         
-    } 
+
+        while(!queue.isEmpty()) {
+            System.out.println(queue.poll());
+        }
+
+    }
 }
 
 
@@ -77,6 +64,75 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// queues - FIFO data structure - First In First Out (ex: line of people), a collection designed for holding elements prior to processing, linear data structure. head is the item at the front of the queue, tail is the item at the end
+
+// add - enqueue, offer()
+// remove - dequeue, poll()
+
+// Queue is an interface in Java, cannot instantiate the type queue, to utilize you need a class that implements queue, linked lists and priority queues are two classes that implement queues
+
+/*
+
+1. keyboard buffer: letters should appear on the screen in the order they are pressed
+
+2. printer queue: print jobs should be completed in order
+
+3. used in LinkedLists, PriorityQueues, and Breadth-first Search
+ 
+ */
+
+// import java.util.LinkedList;
+// import java.util.Queue;
+
+// public class Main {
+
+//     public static void main(String[] args) {
+
+//         Queue<String> queue = new LinkedList<String>();
+
+//         // better to use offer, poll, and peek 
+
+//         queue.offer("Karen");
+//         queue.offer("Chad");
+//         queue.offer("Steve");
+//         queue.offer("Harold");
+
+//         queue.isEmpty(); // returns false, checks if the queue is empty
+
+//         // checks the amount of items in the queue
+//         queue.size();
+
+
+//         // boolean whether or not an item exists
+//         queue.contains("Harold");
+
+
+//         // checks the front of the queue (the head, which is the first element which was added (Karen) without altering anything)
+//         // System.out.println(queue.peek());
+
+//         // removes element at the head (first element at index of 0), which means Karen is removed, poll will not throw an exception
+//         queue.poll();
+
+//         // next Chad is removed
+//         queue.poll();
+
+//         System.out.println(queue);
+         
+//     } 
+// }
 
 
 
