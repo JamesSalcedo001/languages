@@ -1,21 +1,52 @@
-// method overriding - declaring method in sub class, which is aleady present in parent class, done so that a child class can give its own implementation
+// super = keyword refers to the superclass (parent) of object, very similar to this keyword
 
 
 public class Main {
 
     public static void main(String[] args) {
         
-        Animal animal = new Animal();
-        Dog dog = new Dog();
+        Hero hero1 = new Hero("Batman", 42, "$$$");
 
-        dog.speak();
-        animal.speak();
+        Hero hero2 = new Hero("Superman", 43, "everything");
+
+        System.out.println(hero1.name);
+        System.out.println(hero1.age);
+        System.out.println(hero1.power);
+
+        System.out.println(hero2.toString());
     }
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// method overriding - declaring method in sub class, which is aleady present in parent class, done so that a child class can give its own implementation
+
+
+// public class Main {
+
+//     public static void main(String[] args) {
+        
+//         Animal animal = new Animal();
+//         Dog dog = new Dog();
+
+//         dog.speak();
+//         animal.speak();
+//     }
+// }
 
 
 
