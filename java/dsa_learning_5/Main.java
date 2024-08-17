@@ -3,6 +3,43 @@
 // can use a linked list to make a stack or a queue
 
 
+/*
+    Linked List = Stores nodes into 2 parts (data + address)
+    Nodes are in non consecutive memory locations
+    elements are linked using pointers
+
+
+
+                            Singly Linked List
+                    Node            Node             Node
+         [data | address] ->  [data | address] -> [data | address] 
+
+
+                            Doubly Linked List
+                    Node                        Node
+        [address | data | address] <-> [address | data | address]
+
+    advantages:
+    1: dynamic data structure (allocates needed memory while running)
+    2: insertion and deletion of Nodes is easy O(1) Constant Time
+    3: No/Low memory waste
+
+    disadvantages:
+    1: greater memory usage (additional pointer)
+    2: no random access of elements (no index[i])
+    3: accessing/searching elems is more time consuming O(n) linear time
+
+    uses: 
+    1: implement Stacks/Queues
+    2. GPS navigation
+    3: music playlist
+
+
+
+ 
+ */
+
+
 import java.util.LinkedList;
 
 public class Main {
@@ -60,10 +97,15 @@ public class Main {
         linkedList.addLast("G");
 
         // removes the element at the head or beginning of list
-        linkedList.removeFirst();
+        // linkedList.removeFirst();
 
         // removes element at tail or end of list
-        linkedList.removeLast();
+        // linkedList.removeLast();
+
+
+        // store within variable
+        String first = linkedList.removeFirst();
+        String last = linkedList.removeLast();
 
 
         System.out.println(linkedList);
