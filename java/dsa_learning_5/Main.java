@@ -1,44 +1,73 @@
-// priority queue - FIFO ds that serves elements with the highest priorities first before elements with lower priority
+// linked lists (singly) - good at inserting or deleting elements, bad at searching for elements, searching through linked list is linear time O(n), but insertion or deletion is constant time O(1)
 
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Collections;
+// can use a linked list to make a stack or a queue
+
+
+import java.util.LinkedList;
 
 public class Main {
 
     public static void main(String[] args) {
+
+
+        // doubly linked list standard
+        LinkedList<String> linkedList = new LinkedList<>();
+
+        // linkedList.push("A");
+        // linkedList.push("B");
+        // linkedList.push("C");
+        // linkedList.push("D");
+        // linkedList.push("F");
+
+        // the last element added is shifted to the beginning of the list. ie. when A is added with the push() method, it is the first or Head of the Linked List, but when B is added afterwards, A is shifted to the right and B is set to the first element. When C is added afterwards, C is set as the first element. When this list is displayed it reads [F, D, C, B, A]
         
-        // Queue<Double> queue = new PriorityQueue<>();
-        // Queue<Double> queue = new PriorityQueue<>(Collections.reverseOrder());
-        // reverses the order that items are prioritized
-
-        Queue<String> queue = new PriorityQueue<>(Collections.reverseOrder());
-        // The collections.reverseOrder() is called a comparator
+        // linkedList.pop(); // removes the element at the Head, which is F
 
 
 
-        // queue.offer(3.0);
-        // queue.offer(2.5);
-        // queue.offer(4.0);
-        // queue.offer(1.5);
-        // queue.offer(2.0);
+        // treating a linkedList as a queue, one can use offer() and poll(). when an element is added with the offer() method, the elements are added left to right like a normal list
 
-        queue.offer("B");
-        queue.offer("C");
-        queue.offer("A");
-        queue.offer("F");
-        queue.offer("D");
+        linkedList.offer("A");
+        linkedList.offer("B");
+        linkedList.offer("C");
+        linkedList.offer("D");
+        linkedList.offer("F");
 
+        // linkedList.poll();
+        // removes the left most element, or the element at the Head
 
 
+        // insert an element into linkedlist
+        linkedList.add(4, "E");
 
-        // while loop that displays and removes element by element each iteration until empty, starting with the item at the head(3.0) as a normal queue, however a priority queue takes these items and sorts them in ascending order, so the first value displayed and removed will be 1.5, then 2.0, etc.
+        // remove an element from linkedList
+        linkedList.remove("E");
 
 
-        while(!queue.isEmpty()) {
-            System.out.println(queue.poll());
-        }
+        // find the index of an item
+        System.out.println(linkedList.indexOf("F"));
 
+        // check the item at the Head of the linkedlist
+        System.out.println(linkedList.peekFirst());
+
+        // check the item at the tail of the linkedlist
+        System.out.println(linkedList.peekLast());
+
+        // add element to the head(the beginning of the list)
+        linkedList.addFirst("0");
+
+        // add element to the tail
+        linkedList.addLast("G");
+
+        // removes the element at the head or beginning of list
+        linkedList.removeFirst();
+
+        // removes element at tail or end of list
+        linkedList.removeLast();
+
+
+        System.out.println(linkedList);
+        
     }
 }
 
@@ -62,6 +91,60 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// priority queue - FIFO ds that serves elements with the highest priorities first before elements with lower priority
+
+// import java.util.PriorityQueue;
+// import java.util.Queue;
+// import java.util.Collections;
+
+// public class Main {
+
+//     public static void main(String[] args) {
+        
+//         // Queue<Double> queue = new PriorityQueue<>();
+//         // Queue<Double> queue = new PriorityQueue<>(Collections.reverseOrder());
+//         // reverses the order that items are prioritized
+
+//         Queue<String> queue = new PriorityQueue<>(Collections.reverseOrder());
+//         // The collections.reverseOrder() is called a comparator
+
+
+
+//         // queue.offer(3.0);
+//         // queue.offer(2.5);
+//         // queue.offer(4.0);
+//         // queue.offer(1.5);
+//         // queue.offer(2.0);
+
+//         queue.offer("B");
+//         queue.offer("C");
+//         queue.offer("A");
+//         queue.offer("F");
+//         queue.offer("D");
+
+
+
+
+//         // while loop that displays and removes element by element each iteration until empty, starting with the item at the head(3.0) as a normal queue, however a priority queue takes these items and sorts them in ascending order, so the first value displayed and removed will be 1.5, then 2.0, etc.
+
+
+//         while(!queue.isEmpty()) {
+//             System.out.println(queue.poll());
+//         }
+
+//     }
+// }
 
 
 
