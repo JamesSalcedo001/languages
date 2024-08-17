@@ -1,22 +1,15 @@
-// static keyword modifier
+// method overriding - declaring method in sub class, which is aleady present in parent class, done so that a child class can give its own implementation
+
 
 public class Main {
 
     public static void main(String[] args) {
         
-        // static = modifier a single copy of a variable/method is created and shared, the class owns the static member
+        Animal animal = new Animal();
+        Dog dog = new Dog();
 
-        Friend friend1 = new Friend("Spongebob");
-        Friend friend2 = new Friend("Patrick");
-        Friend friend3 = new Friend("Squidward");
-        Friend friend4 = new Friend("Sandy");
-
-
-
-
-
-        Friend.displayFriends();
-
+        dog.speak();
+        animal.speak();
     }
 }
 
@@ -26,6 +19,40 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// static keyword modifier
+
+// public class Main {
+
+//     public static void main(String[] args) {
+        
+//         // static = modifier a single copy of a variable/method is created and shared, the class owns the static member
+
+//         Friend friend1 = new Friend("Spongebob");
+//         Friend friend2 = new Friend("Patrick");
+//         Friend friend3 = new Friend("Squidward");
+//         Friend friend4 = new Friend("Sandy");
+
+
+
+
+
+//         Friend.displayFriends();
+
+//     }
+// }
 
 
 
