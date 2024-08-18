@@ -1,3 +1,7 @@
+// linkedLists vs arraylists, most applications arraylist performs better, however with larger data sets, when inserting or deleting elements, linkedLists perform better
+
+
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -27,7 +31,10 @@ public class Main {
         // linkedList.get(0);
         // linkedList.get(500000);
         // linkedList.get(999999);
-        
+        // linkedList.remove(0);
+        // linkedList.remove(500000);
+        linkedList.remove(999999);
+
 
         // do something
 
@@ -50,7 +57,12 @@ public class Main {
 
         // arrayList.get(500000);
 
-        arrayList.get(999999);
+        // arrayList.get(999999);
+
+        // arrayList.remove(0);
+        // arrayList.remove(500000);
+
+        arrayList.remove(999999);
 
         // do something
 
