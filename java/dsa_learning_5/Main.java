@@ -1,3 +1,59 @@
+// dynamic arrays
+
+// import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // ArrayList<String> arrayList = new ArrayList<>();
+
+        DynamicArray dynamicArray = new DynamicArray();
+
+        dynamicArray.add("A");
+        dynamicArray.add("B");
+        dynamicArray.add("C");
+
+        System.out.println(dynamicArray);
+
+        // System.out.println(dynamicArray.capacity);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // linked lists (singly) - good at inserting or deleting elements, bad at searching for elements, searching through linked list is linear time O(n), but insertion or deletion is constant time O(1)
 
 // can use a linked list to make a stack or a queue
@@ -40,91 +96,78 @@
  */
 
 
-import java.util.LinkedList;
+// import java.util.LinkedList;
 
-public class Main {
+// public class Main {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
 
-        // doubly linked list standard
-        LinkedList<String> linkedList = new LinkedList<>();
+//         // doubly linked list standard
+//         LinkedList<String> linkedList = new LinkedList<>();
 
-        // linkedList.push("A");
-        // linkedList.push("B");
-        // linkedList.push("C");
-        // linkedList.push("D");
-        // linkedList.push("F");
+//         // linkedList.push("A");
+//         // linkedList.push("B");
+//         // linkedList.push("C");
+//         // linkedList.push("D");
+//         // linkedList.push("F");
 
-        // the last element added is shifted to the beginning of the list. ie. when A is added with the push() method, it is the first or Head of the Linked List, but when B is added afterwards, A is shifted to the right and B is set to the first element. When C is added afterwards, C is set as the first element. When this list is displayed it reads [F, D, C, B, A]
+//         // the last element added is shifted to the beginning of the list. ie. when A is added with the push() method, it is the first or Head of the Linked List, but when B is added afterwards, A is shifted to the right and B is set to the first element. When C is added afterwards, C is set as the first element. When this list is displayed it reads [F, D, C, B, A]
         
-        // linkedList.pop(); // removes the element at the Head, which is F
+//         // linkedList.pop(); // removes the element at the Head, which is F
 
 
 
-        // treating a linkedList as a queue, one can use offer() and poll(). when an element is added with the offer() method, the elements are added left to right like a normal list
+//         // treating a linkedList as a queue, one can use offer() and poll(). when an element is added with the offer() method, the elements are added left to right like a normal list
 
-        linkedList.offer("A");
-        linkedList.offer("B");
-        linkedList.offer("C");
-        linkedList.offer("D");
-        linkedList.offer("F");
+//         linkedList.offer("A");
+//         linkedList.offer("B");
+//         linkedList.offer("C");
+//         linkedList.offer("D");
+//         linkedList.offer("F");
 
-        // linkedList.poll();
-        // removes the left most element, or the element at the Head
-
-
-        // insert an element into linkedlist
-        linkedList.add(4, "E");
-
-        // remove an element from linkedList
-        linkedList.remove("E");
+//         // linkedList.poll();
+//         // removes the left most element, or the element at the Head
 
 
-        // find the index of an item
-        System.out.println(linkedList.indexOf("F"));
+//         // insert an element into linkedlist
+//         linkedList.add(4, "E");
 
-        // check the item at the Head of the linkedlist
-        System.out.println(linkedList.peekFirst());
-
-        // check the item at the tail of the linkedlist
-        System.out.println(linkedList.peekLast());
-
-        // add element to the head(the beginning of the list)
-        linkedList.addFirst("0");
-
-        // add element to the tail
-        linkedList.addLast("G");
-
-        // removes the element at the head or beginning of list
-        // linkedList.removeFirst();
-
-        // removes element at tail or end of list
-        // linkedList.removeLast();
+//         // remove an element from linkedList
+//         linkedList.remove("E");
 
 
-        // store within variable
-        String first = linkedList.removeFirst();
-        String last = linkedList.removeLast();
+//         // find the index of an item
+//         System.out.println(linkedList.indexOf("F"));
+
+//         // check the item at the Head of the linkedlist
+//         System.out.println(linkedList.peekFirst());
+
+//         // check the item at the tail of the linkedlist
+//         System.out.println(linkedList.peekLast());
+
+//         // add element to the head(the beginning of the list)
+//         linkedList.addFirst("0");
+
+//         // add element to the tail
+//         linkedList.addLast("G");
+
+//         // removes the element at the head or beginning of list
+//         // linkedList.removeFirst();
+
+//         // removes element at tail or end of list
+//         // linkedList.removeLast();
 
 
-        System.out.println(linkedList);
+//         // store within variable
+//         String first = linkedList.removeFirst();
+//         String last = linkedList.removeLast();
+
+
+//         System.out.println(linkedList);
         
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+//     }
+// }
 
 
 
