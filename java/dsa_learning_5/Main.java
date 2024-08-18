@@ -1,62 +1,78 @@
-// dynamic arrays
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// dynamic arrays - arraylists in java - array that can change capacity
+
+/*
+
+advantages: 
+
+1: random access of elements O(1) constant time
+2: good locality of reference and data cache utilization
+3: easy to insert/delete at the end
+
+disadvantages
+
+1: wastes more memory than something like a linked list
+2: shifting elements is time consuming O(n) linear time
+3: expanding/shrinking array is time consuming O(n)
+
+*/ 
 
 // import java.util.ArrayList;
 
-public class Main {
+// public class Main {
 
-    public static void main(String[] args) {
-        // ArrayList<String> arrayList = new ArrayList<>();
+//     public static void main(String[] args) {
+//         // ArrayList<String> arrayList = new ArrayList<>();
 
-        DynamicArray dynamicArray = new DynamicArray(5);
+//         DynamicArray dynamicArray = new DynamicArray(5);
 
-        dynamicArray.add("A");
-        dynamicArray.add("B");
-        dynamicArray.add("C");
-        dynamicArray.add("D");
-        dynamicArray.add("E");
-        dynamicArray.add("F");
+//         dynamicArray.add("A");
+//         dynamicArray.add("B");
+//         dynamicArray.add("C");
+//         dynamicArray.add("D");
+//         dynamicArray.add("E");
+//         dynamicArray.add("F");
 
-        // dynamicArray.insert(0, "X");
-        dynamicArray.delete("A");
-        dynamicArray.delete("B");
-        dynamicArray.delete("C");
-
-
-
-        // System.out.println(dynamicArray.search("C"));
-
-        System.out.println(dynamicArray);
-        System.out.println("empty: " + dynamicArray.isEmpty());
-
-        System.out.println("size: " + dynamicArray.size);
-
-        System.out.println("capacity: " + dynamicArray.capacity);
-
-        // System.out.println(dynamicArray.capacity);
-    }
-}
+//         // dynamicArray.insert(0, "X");
+//         dynamicArray.delete("A");
+//         dynamicArray.delete("B");
+//         dynamicArray.delete("C");
 
 
 
+//         // System.out.println(dynamicArray.search("C"));
 
+//         System.out.println(dynamicArray);
+//         System.out.println("empty: " + dynamicArray.isEmpty());
 
+//         System.out.println("size: " + dynamicArray.size);
 
+//         System.out.println("capacity: " + dynamicArray.capacity);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//         // System.out.println(dynamicArray.capacity);
+//     }
+// }
 
 
 
