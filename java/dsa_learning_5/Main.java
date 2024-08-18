@@ -1,17 +1,18 @@
 // binary search algorithm - search algorithm that finds the position of a target value within a sorted array. Half of the array is eliminated during each "step" runtime of binary search is O(log n), very effective with large data sets, less effective with smaller data sets
 
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        int array[] = new int[100];
-        int target = 42;
+        int array[] = new int[1000000];
+        int target = 777777;
 
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
+
 
         // int index = Arrays.binarySearch(array, target);
 
@@ -27,7 +28,30 @@ public class Main {
     }
 
     private static int binarySearch(int[] array, int target) {
-        return 0;
+        int low = 0;
+        int high = array.length - 1;
+
+        System.out.println("starting low: " + low);
+        System.out.println("starting high: " + high);
+        System.out.println();
+
+        while (low <= high) {
+            int middle = low + (high - low) / 2;
+            int value = array[middle];
+
+            System.out.println("current low: " + low);
+
+            System.out.println("Middle: " + value);
+            System.out.println("current high: " + high);
+
+            System.out.println();
+
+
+            if (value < target) low = middle + 1;
+            else if (value > target) high = middle - 1;
+            else return middle; // target found
+        }
+        return -1; // target not found
     }
 }
 
