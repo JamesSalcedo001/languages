@@ -21,7 +21,14 @@ public class DynamicArray {
     }
 
     public void insert(int index, Object data) {
-
+        if (size >= capacity) {
+            grow();
+        }
+        for (int i = size; i > index; i--) {
+            array[i] = array[i - 1];
+        }
+        array[index] = data;
+        size++;
     }
 
     public void delete(Object data) {
@@ -47,11 +54,14 @@ public class DynamicArray {
     public String toString() {
         String string = "";
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < capacity; i++) {
             string += array[i] + ", ";
         }
         if (string != "") {
             string = "[" + string.substring(0, string.length() - 2) + "]";
+        }
+        else {
+            string = "[]"; 
         }
         return string; 
     }

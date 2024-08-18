@@ -14,6 +14,11 @@ public class Main {
         dynamicArray.add("C");
 
         System.out.println(dynamicArray);
+        System.out.println("empty: " + dynamicArray.isEmpty());
+
+        System.out.println("size: " + dynamicArray.size);
+
+        System.out.println("capacity: " + dynamicArray.capacity);
 
         // System.out.println(dynamicArray.capacity);
     }
