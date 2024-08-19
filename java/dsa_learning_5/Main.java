@@ -1,4 +1,94 @@
 /*
+
+    Insertion sort - after comparing elements to the left, shift elements to the right to make room to insert a value
+
+    quadratic time O(n ^ 2)
+
+    small data set - decent
+
+    large data set - very poor
+
+    less steps than bubble sort
+    best case is O(n) compared to selection sort O(n ^ 2)
+
+
+ */
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int array[] = {9, 1, 8, 2, 7, 3, 6, 5, 4};
+
+        insertionSort(array);
+
+        for (int i : array) {
+            System.out.println(i + " ") ;
+        }
+        
+    }
+
+    private static void insertionSort(int[] array) {
+       for (int i = 1; i < array.length; i++) {
+            int temp = array[i];
+            int j = i - 1;
+
+            while (j >= 0 && array[j] > temp) {
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j + 1] = temp;
+       } 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     Selection Sort
 
     O (n ^ 2) - quadratic runtime - insertion sort, bubblesort, and selection sort are all within this category
@@ -13,49 +103,38 @@
 
 
 
-public class Main {
+// public class Main {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
        
-        int array[] = {8, 7, 9, 2, 3, 1, 5, 4, 6};
+//         int array[] = {8, 7, 9, 2, 3, 1, 5, 4, 6};
 
-        selectionSort(array);
-
-
-        for (int i : array) {
-            System.out.println(i);
-        }
-    }
-
-    private static void selectionSort(int[] array) {
-        for (int i = 0; i < array.length - 1; i++) {
-            int min = i;
-            for (int j = i + 1; j < array.length; j++) {
-                // ascending order
-                if (array[min] > array[j]) {
-                // descending order
-        //      if (array[min] < array[j]) {
-                    min = j;
-                }
-            }
-
-            int temp = array[i];
-            array[i] = array[min];
-            array[min] = temp;
-        }
-    }
-}
+//         selectionSort(array);
 
 
+//         for (int i : array) {
+//             System.out.println(i);
+//         }
+//     }
 
+//     private static void selectionSort(int[] array) {
+//         for (int i = 0; i < array.length - 1; i++) {
+//             int min = i;
+//             for (int j = i + 1; j < array.length; j++) {
+//                 // ascending order
+//                 if (array[min] > array[j]) {
+//                 // descending order
+//         //      if (array[min] < array[j]) {
+//                     min = j;
+//                 }
+//             }
 
-
-
-
-
-
-
-
+//             int temp = array[i];
+//             array[i] = array[min];
+//             array[min] = temp;
+//         }
+//     }
+// }
 
 
 
