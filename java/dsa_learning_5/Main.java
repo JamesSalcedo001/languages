@@ -11,6 +11,8 @@
     less steps than bubble sort
     best case is O(n) compared to selection sort O(n ^ 2)
 
+    better to use Insertion Sort over Bubble Sort or Selection Sort
+
 
  */
 
@@ -24,7 +26,7 @@ public class Main {
         insertionSort(array);
 
         for (int i : array) {
-            System.out.println(i + " ") ;
+            System.out.print(i + " ") ;
         }
         
     }
