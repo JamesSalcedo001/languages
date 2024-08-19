@@ -1,4 +1,89 @@
 /*
+    Selection Sort
+
+    O (n ^ 2) - quadratic runtime - insertion sort, bubblesort, and selection sort are all within this category
+ 
+
+    search through an array and keep track of the minimum value during each iteration. at the end of each iteration, we swap variables
+
+    small data set - okay
+    large data set - very poor
+
+ */
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+       
+        int array[] = {8, 7, 9, 2, 3, 1, 5, 4, 6};
+
+        selectionSort(array);
+
+
+        for (int i : array) {
+            System.out.println(i);
+        }
+    }
+
+    private static void selectionSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                // ascending order
+                if (array[min] > array[j]) {
+                // descending order
+        //      if (array[min] < array[j]) {
+                    min = j;
+                }
+            }
+
+            int temp = array[i];
+            array[i] = array[min];
+            array[min] = temp;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     Bubble sort
 
     - runs at O(n ^ 2) - quadratic time - bubblesort, insertion sort, and selection sort all fall within this O() runtime 
@@ -16,33 +101,33 @@
 
 
 
-public class Main {
+// public class Main {
 
-    public static void main(String[] args) {
-        int array[] = {9, 1, 8, 2, 7, 3, 6, 4, 5};
+//     public static void main(String[] args) {
+//         int array[] = {9, 1, 8, 2, 7, 3, 6, 4, 5};
 
-        bubbleSort(array);
+//         bubbleSort(array);
 
-        for (int i : array) {
-            System.out.println(i);
-        }
-    }
+//         for (int i : array) {
+//             System.out.println(i);
+//         }
+//     }
 
-    public static void bubbleSort(int array[]) {
-        for (int i = 0; i < array.length - 1; i++) {
-            for (int j = 0; j < array.length - i - 1; j++) {
-                // ascending order
-                if (array[j] > array[j + 1]) {
-                // descending order 
-            //  if (array[j] < array[j + 1]) {
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                }
-            }
-        }
-    }
-}
+//     public static void bubbleSort(int array[]) {
+//         for (int i = 0; i < array.length - 1; i++) {
+//             for (int j = 0; j < array.length - i - 1; j++) {
+//                 // ascending order
+//                 if (array[j] > array[j + 1]) {
+//                 // descending order 
+//             //  if (array[j] < array[j + 1]) {
+//                     int temp = array[j];
+//                     array[j] = array[j + 1];
+//                     array[j + 1] = temp;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 
 
