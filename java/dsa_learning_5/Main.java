@@ -1,59 +1,143 @@
-// binary search algorithm - search algorithm that finds the position of a target value within a sorted array. Half of the array is eliminated during each "step" runtime of binary search is O(log n), very effective with large data sets, less effective with smaller data sets
+ // interpolation search = improvement over binary search, best used for "uniformly" distributed "guesses" where a value might be based on calculated probe results, if probe is incorrect, search area is narrowed, and new probe is calculated
 
-// import java.util.Arrays;
+// average case: O(log(log(n)))
+// worst case: O(n) [values increase exponentially]
+
+
 
 public class Main {
 
     public static void main(String[] args) {
 
-        int array[] = new int[1000000];
-        int target = 777777;
+        int[] array = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024};
 
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-        }
+        int index = interpolationSearch(array, 256);
 
-
-        // int index = Arrays.binarySearch(array, target);
-
-        int index = binarySearch(array, target);
-
-
-        if (index == -1) {
-            System.out.println(target + " not found");
+        if (index != -1) {
+            System.out.println("Element found at index: " + index);
         } else {
-            System.out.println("Element found at: " + index);
+            System.out.println("Element not found");
         }
-        
+
+
     }
 
-    private static int binarySearch(int[] array, int target) {
-        int low = 0;
+    private static int interpolationSearch(int[] array, int value) {
+
         int high = array.length - 1;
+        int low = 0;
 
-        System.out.println("starting low: " + low);
-        System.out.println("starting high: " + high);
-        System.out.println();
+        while (value >= array[low] && value <= array[high] && low <= high) {
 
-        while (low <= high) {
-            int middle = low + (high - low) / 2;
-            int value = array[middle];
+            int probe = low + (high - low) * (value - array[low]) / (array[high] - array[low]);
 
-            System.out.println("current low: " + low);
+            System.out.println("probe: " + probe);
 
-            System.out.println("Middle: " + value);
-            System.out.println("current high: " + high);
+            if (array[probe] == value) {
+                return probe;
+            } else if (array[probe] < value) {
+                low = probe + 1;
+            } else {
+                high = probe - 1;
+            }
+        } 
 
-            System.out.println();
 
-
-            if (value < target) low = middle + 1;
-            else if (value > target) high = middle - 1;
-            else return middle; // target found
-        }
-        return -1; // target not found
+        return -1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// binary search algorithm - search algorithm that finds the position of a target value within a sorted array. Half of the array is eliminated during each "step" runtime of binary search is O(log n), very effective with large data sets, less effective with smaller data sets
+
+// import java.util.Arrays;
+
+// public class Main {
+
+//     public static void main(String[] args) {
+
+//         int array[] = new int[1000000];
+//         int target = 777777;
+
+//         for (int i = 0; i < array.length; i++) {
+//             array[i] = i;
+//         }
+
+
+//         // int index = Arrays.binarySearch(array, target);
+
+//         int index = binarySearch(array, target);
+
+
+//         if (index == -1) {
+//             System.out.println(target + " not found");
+//         } else {
+//             System.out.println("Element found at: " + index);
+//         }
+        
+//     }
+
+//     private static int binarySearch(int[] array, int target) {
+//         int low = 0;
+//         int high = array.length - 1;
+
+//         System.out.println("starting low: " + low);
+//         System.out.println("starting high: " + high);
+//         System.out.println();
+
+//         while (low <= high) {
+//             int middle = low + (high - low) / 2;
+//             int value = array[middle];
+
+//             System.out.println("current low: " + low);
+
+//             System.out.println("Middle: " + value);
+//             System.out.println("current high: " + high);
+
+//             System.out.println();
+
+
+//             if (value < target) low = middle + 1;
+//             else if (value > target) high = middle - 1;
+//             else return middle; // target found
+//         }
+//         return -1; // target not found
+//     }
+// }
 
 
 
