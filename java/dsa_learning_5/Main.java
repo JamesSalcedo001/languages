@@ -1,3 +1,41 @@
+// merge sort - O(n log n) - quasilinear time - quicksort, mergesort, and heapsort fall into this category of runtime better than O(n ^ 2) - quadratic time specifically with time, insertion sort, selection sort, and bubble sort when working with larger data sets, however mergesort uses more space than bubble sort, selection sort, and insertion sort because it creates numerous subarrays 
+
+// O(n) linear space - merge sort
+
+// O(1) - constant space - bubble sort, selection sort and insertion sort
+
+public class Main {
+
+    public static void main(String[] args) {
+         
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // recursion - when a thing is defined in terms of itself, apply the result of a procedure, to a procedure. a recursive method calls itself. can be a substitute for iteration. Divide a problem into sub problems of the same type as the original. commonly used with advanced sorting algorithms and navigating trees.
 
 // advantages
@@ -62,39 +100,17 @@
 
 
 
-public class Main {
+// public class Main {
 
-    public static void main(String[] args) {
-        System.out.println(power(2, 8));
-    }
+//     public static void main(String[] args) {
+//         System.out.println(power(2, 8));
+//     }
 
-    private static int power(int base, int exponent) {
-        if (exponent < 1) return 1; // base case
-        return base * power(base, exponent - 1);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//     private static int power(int base, int exponent) {
+//         if (exponent < 1) return 1; // base case
+//         return base * power(base, exponent - 1);
+//     }
+// }
 
 
 
