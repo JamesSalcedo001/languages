@@ -1,5 +1,10 @@
 // recursion - when a thing is defined in terms of itself, apply the result of a procedure, to a procedure. a recursive method calls itself. can be a substitute for iteration. Divide a problem into sub problems of the same type as the original. commonly used with advanced sorting algorithms and navigating trees.
 
+// advantages
+
+// esasier to write/read
+// easier to debug
+
 public class Main {
 
     public static void main(String[] args) {
