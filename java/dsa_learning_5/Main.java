@@ -9,11 +9,42 @@
 // sometimes slower
 // uses more memory
 
+
+// call stack- stack data structure that stores info about the active subroutines of a computer program. keeps track of the order in which a program needs to function 
+
+// stack overflow error - when the program runs out of memory
+
+
+
+// iterative version
+// public class Main {
+
+//     public static void main(String[] args) {
+//         walk(5);
+//     }
+
+//     private static void walk(int steps) {
+//         for (int i = 0; i < steps; i++) {
+//             System.out.println("You take a step");
+//         }
+//     }
+
+// }
+
+
+// recursive version
 public class Main {
 
     public static void main(String[] args) {
-        // code here
+        walk(5);
     }
+
+    private static void walk(int steps) {
+        if (steps < 1) return; // base case
+        System.out.println("You take a step");
+        walk(steps - 1); // recursive case
+    }
+
 }
 
 
