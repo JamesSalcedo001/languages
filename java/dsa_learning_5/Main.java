@@ -1,4 +1,11 @@
+// recursion - when a thing is defined in terms of itself, apply the result of a procedure, to a procedure. a recursive method calls itself. can be a substitute for iteration.
 
+public class Main {
+
+    public static void main(String[] args) {
+        // code here
+    }
+}
 
 
 
