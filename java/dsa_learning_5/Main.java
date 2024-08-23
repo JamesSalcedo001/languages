@@ -1,75 +1,14 @@
-// merge sort - runtime complexity of O(n log n) - quasilinear time - quicksort, mergesort, and heapsort fall into this category of runtime better than O(n ^ 2) - quadratic time specifically with time, insertion sort, selection sort, and bubble sort when working with larger data sets, however mergesort uses more space than bubble sort, selection sort, and insertion sort because it creates numerous subarrays 
+// QuickSort Algorithm
 
-// O(n) linear space - space complexity - merge sort
-
-// O(1) - constant space - bubble sort, selection sort and insertion sort
 
 public class Main {
 
     public static void main(String[] args) {
-         int[] array = {8, 2, 5, 3, 4, 7, 6, 1};
-
-         mergeSort(array);
-
-         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i] + " ");
-         }
-    }
-
-    private static void mergeSort(int[] array) {
-        int length = array.length;
-        if (length <= 1) return; // base case
-
-        int middle = length / 2;
-        int[] leftArray = new int[middle];
-        int[] rightArray = new int[length - middle];
-
-        int i = 0; // left array
-        int j = 0; // right array
-
-        for (; i < length; i++) {
-            if (i < middle) {
-                leftArray[i] = array[i];
-            }
-            else {
-                rightArray[j] = array[i];
-                j++;
-            }
-        }
-        mergeSort(leftArray);
-        mergeSort(rightArray);
-        merge(leftArray, rightArray, array);
-    }
-
-    // helper method
-    private static void merge(int[] leftArray, int[] rightArray, int[] array) {
-
-        int leftSize = array.length / 2;
-        int rightSize = array.length - leftSize;
-        int i = 0, l = 0, r = 0; // indices
         
-        //check conditions for merging
-        while (l < leftSize && r < rightSize) {
-            if (leftArray[l] < rightArray[r]) {
-                array[i] = leftArray[l];
-                i++;
-                l++;
-            }
-            else {
-                array[i] = rightArray[r];
-                i++;
-                r++;
-            }
-        }
-        while (l < leftSize) {
-            array[i] = leftArray[l];
-            i++;
-            l++;
-        }
-        while (r < rightSize) {
-            array[i] = rightArray[r];
-            i++;
-            r++; 
+        int[] array = {8, 2, 5, 3, 9, 4, 7, 6, 1};
+
+        for (int i : array) {
+            System.out.println(i + " ");
         }
     }
 }
@@ -82,6 +21,104 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// merge sort - runtime complexity of O(n log n) - quasilinear time - quicksort, mergesort, and heapsort fall into this category of runtime better than O(n ^ 2) - quadratic time specifically with time, insertion sort, selection sort, and bubble sort when working with larger data sets, however mergesort uses more space than bubble sort, selection sort, and insertion sort because it creates numerous subarrays 
+
+// O(n) linear space - space complexity - merge sort
+
+// O(1) - constant space - bubble sort, selection sort and insertion sort
+
+// public class Main {
+
+//     public static void main(String[] args) {
+//          int[] array = {8, 2, 5, 3, 4, 7, 6, 1};
+
+//          mergeSort(array);
+
+//          for (int i = 0; i < array.length; i++) {
+//             System.out.println(array[i] + " ");
+//          }
+//     }
+
+//     private static void mergeSort(int[] array) {
+//         int length = array.length;
+//         if (length <= 1) return; // base case
+
+//         int middle = length / 2;
+//         int[] leftArray = new int[middle];
+//         int[] rightArray = new int[length - middle];
+
+//         int i = 0; // left array
+//         int j = 0; // right array
+
+//         for (; i < length; i++) {
+//             if (i < middle) {
+//                 leftArray[i] = array[i];
+//             }
+//             else {
+//                 rightArray[j] = array[i];
+//                 j++;
+//             }
+//         }
+//         mergeSort(leftArray);
+//         mergeSort(rightArray);
+//         merge(leftArray, rightArray, array);
+//     }
+
+//     // helper method
+//     private static void merge(int[] leftArray, int[] rightArray, int[] array) {
+
+//         int leftSize = array.length / 2;
+//         int rightSize = array.length - leftSize;
+//         int i = 0, l = 0, r = 0; // indices
+        
+//         //check conditions for merging
+//         while (l < leftSize && r < rightSize) {
+//             if (leftArray[l] < rightArray[r]) {
+//                 array[i] = leftArray[l];
+//                 i++;
+//                 l++;
+//             }
+//             else {
+//                 array[i] = rightArray[r];
+//                 i++;
+//                 r++;
+//             }
+//         }
+//         while (l < leftSize) {
+//             array[i] = leftArray[l];
+//             i++;
+//             l++;
+//         }
+//         while (r < rightSize) {
+//             array[i] = rightArray[r];
+//             i++;
+//             r++; 
+//         }
+//     }
+// }
 
 
 
