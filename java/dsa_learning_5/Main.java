@@ -1,4 +1,8 @@
-// QuickSort Algorithm
+// QuickSort Algorithm - moves smaller elements to left of a pivot, recursively divide array in 2 partitions
+
+// runtime complexity = best case O(n log(n)), average case O(n log(n)), worst case O(n ^ 2) if already sorted
+
+// space complexity = O(log(n)) due to recursion
 
 
 public class Main {
