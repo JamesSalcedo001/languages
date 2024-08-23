@@ -1,6 +1,6 @@
-// merge sort - O(n log n) - quasilinear time - quicksort, mergesort, and heapsort fall into this category of runtime better than O(n ^ 2) - quadratic time specifically with time, insertion sort, selection sort, and bubble sort when working with larger data sets, however mergesort uses more space than bubble sort, selection sort, and insertion sort because it creates numerous subarrays 
+// merge sort - runtime complexity of O(n log n) - quasilinear time - quicksort, mergesort, and heapsort fall into this category of runtime better than O(n ^ 2) - quadratic time specifically with time, insertion sort, selection sort, and bubble sort when working with larger data sets, however mergesort uses more space than bubble sort, selection sort, and insertion sort because it creates numerous subarrays 
 
-// O(n) linear space - merge sort
+// O(n) linear space - space complexity - merge sort
 
 // O(1) - constant space - bubble sort, selection sort and insertion sort
 
@@ -46,7 +46,31 @@ public class Main {
 
         int leftSize = array.length / 2;
         int rightSize = array.length - leftSize;
-
+        int i = 0, l = 0, r = 0; // indices
+        
+        //check conditions for merging
+        while (l < leftSize && r < rightSize) {
+            if (leftArray[l] < rightArray[r]) {
+                array[i] = leftArray[l];
+                i++;
+                l++;
+            }
+            else {
+                array[i] = rightArray[r];
+                i++;
+                r++;
+            }
+        }
+        while (l < leftSize) {
+            array[i] = leftArray[l];
+            i++;
+            l++;
+        }
+        while (r < rightSize) {
+            array[i] = rightArray[r];
+            i++;
+            r++; 
+        }
     }
 }
 
