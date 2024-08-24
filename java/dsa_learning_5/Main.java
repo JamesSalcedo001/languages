@@ -5,7 +5,12 @@
 // key.hashCode() % capacity = index
 
 
-// bucket - an indexed storage location for one or more Entries
+// bucket - an indexed storage location for one or more Entries, can store multiple Entries in case of a collision (linked similarly a LinkedList)
+
+// collision - hash function generates the same index for more than one key --------- less collisions = more efficiency
+
+
+// runtime complexity: best case O(1) constant time, worst case O(n) linear time
 
 
 
