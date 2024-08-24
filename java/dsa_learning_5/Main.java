@@ -1,3 +1,55 @@
+// graphs - directed and undirected - adjacency matrix one of two ways used to represent a graph, 2D array  - runtime complexity to locate an edge with an adjacency matrix is O(1) or constant time which is good, space complexity is O(v ^ 2 or n ^ 2) which is not great, suits graphs with a lot of edges. Adjacency list is an array/arraylist of linked lists - time complexity is O(V) or O(n), space complexity O(V + E) 
+
+
+
+
+// adjacency matrix 
+
+public class Main {
+
+    public static void main(String[] args) {
+        //
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // hash tables - data structure that stores unique keys to values ex: <Integer, String>, each key/vvalue pair is known as an Entry. FAST insertion, look up, and deletion of key/value pairs. not ideal for small data sets, great with large data sets
 
 // hashing - takes a key and computes an integer (formula will vary based on key and index type). in a hashtable we use the hash % capacity to calculate an index number
@@ -51,37 +103,37 @@
 
 
 
-import java.util.*;
+// import java.util.*;
 
-public class Main {
+// public class Main {
 
-    public static void main(String[] args) {
-        Hashtable<String, String> table = new Hashtable<>(21);
+//     public static void main(String[] args) {
+//         Hashtable<String, String> table = new Hashtable<>(21);
 
-        // adding values to hashtable
+//         // adding values to hashtable
 
-        table.put("100", "Spongebob");
-        table.put("123", "Patrick");
-        table.put("321", "Sandy");
-        table.put("555", "Squidward");
-        table.put("777", "Gary");
+//         table.put("100", "Spongebob");
+//         table.put("123", "Patrick");
+//         table.put("321", "Sandy");
+//         table.put("555", "Squidward");
+//         table.put("777", "Gary");
 
 
-        // remove value from hashtable
-        // table.remove(777);
+//         // remove value from hashtable
+//         // table.remove(777);
         
 
-        // iterating over key/value pairs and printing each 
-        for (String key : table.keySet()) {
-            // System.out.println(key.hashCode() % 10 + "\t" + key + "\t" + table.get(key));
+//         // iterating over key/value pairs and printing each 
+//         for (String key : table.keySet()) {
+//             // System.out.println(key.hashCode() % 10 + "\t" + key + "\t" + table.get(key));
 
-            // changing the modulus value can determine if there are collisions or not
-            System.out.println(key.hashCode() % 21 + "\t" + key + "\t" + table.get(key));
-        }
+//             // changing the modulus value can determine if there are collisions or not
+//             System.out.println(key.hashCode() % 21 + "\t" + key + "\t" + table.get(key));
+//         }
         
 
-    }
-}
+//     }
+// }
 
 
 
