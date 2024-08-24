@@ -15,6 +15,9 @@ public class Main {
         table.put(555, "Squidward");
         table.put(777, "Gary");
 
+
+        // remove value from hashtable
+        // table.remove(777);
         
 
         // iterating over key/value pairs and printing each 
