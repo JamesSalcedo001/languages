@@ -1,19 +1,51 @@
 // hash tables
 
+// import java.util.*;
+
+// public class Main {
+
+//     public static void main(String[] args) {
+//         Hashtable<Integer, String> table = new Hashtable<>(10);
+
+//         // adding values to hashtable
+
+//         table.put(100, "Spongebob");
+//         table.put(123, "Patrick");
+//         table.put(321, "Sandy");
+//         table.put(555, "Squidward");
+//         table.put(777, "Gary");
+
+
+//         // remove value from hashtable
+//         // table.remove(777);
+        
+
+//         // iterating over key/value pairs and printing each 
+//         for (Integer key : table.keySet()) {
+//             System.out.println(key.hashCode() % 10 + "\t" + key + "\t" + table.get(key));
+//         }
+        
+
+//     }
+// }
+
+
+
+
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        Hashtable<Integer, String> table = new Hashtable<>(10);
+        Hashtable<String, String> table = new Hashtable<>(21);
 
         // adding values to hashtable
 
-        table.put(100, "Spongebob");
-        table.put(123, "Patrick");
-        table.put(321, "Sandy");
-        table.put(555, "Squidward");
-        table.put(777, "Gary");
+        table.put("100", "Spongebob");
+        table.put("123", "Patrick");
+        table.put("321", "Sandy");
+        table.put("555", "Squidward");
+        table.put("777", "Gary");
 
 
         // remove value from hashtable
@@ -21,8 +53,11 @@ public class Main {
         
 
         // iterating over key/value pairs and printing each 
-        for (Integer key : table.keySet()) {
-            System.out.println(key.hashCode() % 10 + "\t" + key + "\t" + table.get(key));
+        for (String key : table.keySet()) {
+            // System.out.println(key.hashCode() % 10 + "\t" + key + "\t" + table.get(key));
+
+            // changing the modulus value can determine if there are collisions or not
+            System.out.println(key.hashCode() % 21 + "\t" + key + "\t" + table.get(key));
         }
         
 
