@@ -22,7 +22,7 @@ public class Main {
 
         // iterating over key/value pairs and printing each 
         for (Integer key : table.keySet()) {
-            System.out.println(key + "\t" + table.get(key));
+            System.out.println(key.hashCode() % 10 + "\t" + key + "\t" + table.get(key));
         }
         
 
