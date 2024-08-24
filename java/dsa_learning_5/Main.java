@@ -1,6 +1,11 @@
 // hash tables - data structure that stores unique keys to values ex: <Integer, String>, each key/vvalue pair is known as an Entry. FAST insertion, look up, and deletion of key/value pairs. not ideal for small data sets, great with large data sets
 
-// hashing - takes a key and computes an integer (formula will vary based on key and index type)
+// hashing - takes a key and computes an integer (formula will vary based on key and index type). in a hashtable we use the hash % capacity to calculate an index number
+
+// key.hashCode() % capacity = index
+
+
+// bucket - an indexed storage location for one or more Entries
 
 
 
