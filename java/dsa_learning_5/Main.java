@@ -3,7 +3,13 @@
 
 
 
-// adjacency matrix 
+// adjacency matrix - a 2D array to storre 1's/0's to represent edges
+
+// # of rows = # of unique nodes
+// # of columns = # of unique nodes
+
+// runtime complexity to check an Edge: O(1)
+// space complexity: O(v ^ 2)
 
 public class Main {
 
