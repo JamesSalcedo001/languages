@@ -9,12 +9,37 @@
 // # of columns = # of unique nodes
 
 // runtime complexity to check an Edge: O(1)
-// space complexity: O(v ^ 2)
+// space complexity: O(v ^ 2) v for vertices
 
 public class Main {
 
     public static void main(String[] args) {
-        //
+        
+        Graph graph = new Graph(5);
+
+        graph.addNode(new Node('A')); // index of 0
+        graph.addNode(new Node('B')); // index of 1
+        graph.addNode(new Node('C'));
+        graph.addNode(new Node('D'));
+        graph.addNode(new Node('E'));
+
+        graph.addEdge(0, 1); // adding an edge between Nodes A and B, which have indices 0 and 1
+        graph.addEdge(1, 2); // adding an edge between Nodes B and C
+        graph.addEdge(2, 3); // Node C has two edges here
+       
+       // D is going to be left with no edges, this is an example of a directed graph
+        graph.addEdge(2, 4);
+        
+
+        // E has two edges, E - A
+        graph.addEdge(4, 0);
+
+        // E - C
+        graph.addEdge(4, 2);
+
+        graph.print();
+
+
     }
 }
 
