@@ -39,6 +39,10 @@ public class Main {
 
         graph.print();
 
+        System.out.println();
+
+        System.out.println(graph.checkEdge(3, 2));
+
 
     }
 }
