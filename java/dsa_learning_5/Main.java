@@ -1,6 +1,7 @@
 // adjacency list - an array / arraylist of linkedlists, each linkedlist has a unique node at the head(beginning of list[0]), all adjacent neighbors to that node are added to that node's linkedlist
 
-
+// runtime complexity to check an Edge - O(v)
+// space complexity - O(v + e)
 
 public class Main {
 
