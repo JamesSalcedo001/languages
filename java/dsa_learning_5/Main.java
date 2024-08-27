@@ -1,49 +1,9 @@
-// graphs - directed and undirected - adjacency matrix one of two ways used to represent a graph, 2D array  - runtime complexity to locate an edge with an adjacency matrix is O(1) or constant time which is good, space complexity is O(v ^ 2 or n ^ 2) which is not great, suits graphs with a lot of edges. Adjacency list is an array/arraylist of linked lists - time complexity is O(V) or O(n), space complexity O(V + E) 
-
-
-
-
-// adjacency matrix - a 2D array to storre 1's/0's to represent edges
-
-// # of rows = # of unique nodes
-// # of columns = # of unique nodes
-
-// runtime complexity to check an Edge: O(1)
-// space complexity: O(v ^ 2) v for vertices
+// adjacency list
 
 public class Main {
 
     public static void main(String[] args) {
-        
-        Graph graph = new Graph(5);
-
-        graph.addNode(new Node('A')); // index of 0
-        graph.addNode(new Node('B')); // index of 1
-        graph.addNode(new Node('C'));
-        graph.addNode(new Node('D'));
-        graph.addNode(new Node('E'));
-
-        graph.addEdge(0, 1); // adding an edge between Nodes A and B, which have indices 0 and 1
-        graph.addEdge(1, 2); // adding an edge between Nodes B and C
-        graph.addEdge(2, 3); // Node C has two edges here
-       
-       // D is going to be left with no edges, this is an example of a directed graph
-        graph.addEdge(2, 4);
-        
-
-        // E has two edges, E - A
-        graph.addEdge(4, 0);
-
-        // E - C
-        graph.addEdge(4, 2);
-
-        graph.print();
-
-        System.out.println();
-
-        System.out.println(graph.checkEdge(3, 2));
-
-
+        // code
     }
 }
 
@@ -74,6 +34,79 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// graphs - directed and undirected - adjacency matrix one of two ways used to represent a graph, 2D array  - runtime complexity to locate an edge with an adjacency matrix is O(1) or constant time which is good, space complexity is O(v ^ 2 or n ^ 2) which is not great, suits graphs with a lot of edges. Adjacency list is an array/arraylist of linked lists - time complexity is O(V) or O(n), space complexity O(V + E) 
+
+
+
+
+// adjacency matrix - a 2D array to storre 1's/0's to represent edges
+
+// # of rows = # of unique nodes
+// # of columns = # of unique nodes
+
+// runtime complexity to check an Edge: O(1)
+// space complexity: O(v ^ 2) v for vertices
+
+// public class Main {
+
+//     public static void main(String[] args) {
+        
+//         Graph graph = new Graph(5);
+
+//         graph.addNode(new Node('A')); // index of 0
+//         graph.addNode(new Node('B')); // index of 1
+//         graph.addNode(new Node('C'));
+//         graph.addNode(new Node('D'));
+//         graph.addNode(new Node('E'));
+
+//         graph.addEdge(0, 1); // adding an edge between Nodes A and B, which have indices 0 and 1
+//         graph.addEdge(1, 2); // adding an edge between Nodes B and C
+//         graph.addEdge(2, 3); // Node C has two edges here
+       
+//        // D is going to be left with no edges, this is an example of a directed graph
+//         graph.addEdge(2, 4);
+        
+
+//         // E has two edges, E - A
+//         graph.addEdge(4, 0);
+
+//         // E - C
+//         graph.addEdge(4, 2);
+
+//         graph.print();
+
+//         System.out.println();
+
+//         System.out.println(graph.checkEdge(3, 2));
+
+
+//     }
+// }
 
 
 
