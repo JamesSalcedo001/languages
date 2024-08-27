@@ -1,4 +1,6 @@
-// adjacency list
+// adjacency list - an array / arraylist of linkedlists, each linkedlist has a unique node at the head(beginning of list[0]), all adjacent neighbors to that node are added to that node's linkedlist
+
+
 
 public class Main {
 
