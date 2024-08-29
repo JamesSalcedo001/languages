@@ -16,12 +16,16 @@ public class Main {
 
         Graph graph = new Graph(5);
 
+        // populating graph with nodes
+
         graph.addNode(new Node('A'));
         graph.addNode(new Node('B'));
         graph.addNode(new Node('C'));
         graph.addNode(new Node('D'));
         graph.addNode(new Node('E'));
 
+        // populating graph with edges
+        
         graph.addEdge(0, 1);
         graph.addEdge(1, 2);
         graph.addEdge(1, 4);
