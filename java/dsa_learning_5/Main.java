@@ -35,6 +35,8 @@ public class Main {
         tree.insert(new NodeBST(4));
         tree.insert(new NodeBST(8));
 
+        tree.display();
+
     }
 }
 

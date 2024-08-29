@@ -18,15 +18,25 @@ public class BinarySearchTree {
             else {
                 root.right = insertHelper(root.right, node);
             }
-            return null;
+            return root;
     }
 
     public void display() {
-
+        displayHelper(root);
     }
 
     private void displayHelper(NodeBST root) {
+        if(root != null) {
+            // increasing order - in order traversal, displayed in non decreasing order
+            displayHelper(root.left);
+            System.out.println(root.data);
+            displayHelper(root.right);
 
+            // decreasing order
+            // displayHelper(root.right);
+            // System.out.println(root.data);
+            // displayHelper(root.left);
+        }
     }
 
      public boolean search(int data) {
