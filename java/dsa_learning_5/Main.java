@@ -10,11 +10,11 @@ public class Main {
 
         GraphTwo graph = new GraphTwo();
 
-        graph.addNode(new Node('A'));
-        graph.addNode(new Node('B'));
-        graph.addNode(new Node('C'));
-        graph.addNode(new Node('D'));
-        graph.addNode(new Node('E'));
+        graph.addNode(new NodeTwo('A'));
+        graph.addNode(new NodeTwo('B'));
+        graph.addNode(new NodeTwo('C'));
+        graph.addNode(new NodeTwo('D'));
+        graph.addNode(new NodeTwo('E'));
 
         graph.addEdge(0, 1);
         graph.addEdge(1, 2);
