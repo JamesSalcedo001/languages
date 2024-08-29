@@ -10,6 +10,23 @@
 
 // depth = number of edges below root node
 
+// height = number of edges above furthest leaf node
+
+
+
+
+
+
+// binary search trees 
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        BinarySearchTree tree = new BinarySearchTree();
+    }
+}
+
 
 
 
