@@ -1,64 +1,87 @@
+// DFS ( Depth first search) - search algorithm for traversing a tree or graph data structure
+
+// 3 steps
+
+// 1. pick a route
+// 2. keep going until you reach a dead end, or a previously visited node
+// 3. backtrack to last node that has unvisited adjacent neighbors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // adjacency list - an array / arraylist of linkedlists, each linkedlist has a unique node at the head(beginning of list[0]), all adjacent neighbors to that node are added to that node's linkedlist
 
 // runtime complexity to check an Edge - O(v)
 // space complexity - O(v + e)
 
-public class Main {
+// public class Main {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
         
 
-        GraphTwo graph = new GraphTwo();
+//         GraphTwo graph = new GraphTwo();
 
-        graph.addNode(new NodeTwo('A'));
-        graph.addNode(new NodeTwo('B'));
-        graph.addNode(new NodeTwo('C'));
-        graph.addNode(new NodeTwo('D'));
-        graph.addNode(new NodeTwo('E'));
+//         graph.addNode(new NodeTwo('A'));
+//         graph.addNode(new NodeTwo('B'));
+//         graph.addNode(new NodeTwo('C'));
+//         graph.addNode(new NodeTwo('D'));
+//         graph.addNode(new NodeTwo('E'));
 
-        graph.addEdge(0, 1);
-        graph.addEdge(1, 2);
-        graph.addEdge(1, 4);
-        graph.addEdge(2, 3);
-        graph.addEdge(2, 4);
-        graph.addEdge(4, 0);
-        graph.addEdge(4, 2);
+//         graph.addEdge(0, 1);
+//         graph.addEdge(1, 2);
+//         graph.addEdge(1, 4);
+//         graph.addEdge(2, 3);
+//         graph.addEdge(2, 4);
+//         graph.addEdge(4, 0);
+//         graph.addEdge(4, 2);
 
-        graph.print();
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//         graph.print();
+//     }
+// }
 
 
 
