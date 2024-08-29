@@ -14,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Graph graph = new Graph(5);
+        GraphThree graph = new GraphThree(5);
 
         // populating graph with nodes
 
@@ -25,7 +25,7 @@ public class Main {
         graph.addNode(new Node('E'));
 
         // populating graph with edges
-        
+
         graph.addEdge(0, 1);
         graph.addEdge(1, 2);
         graph.addEdge(1, 4);
@@ -35,6 +35,8 @@ public class Main {
         graph.addEdge(4, 2);
 
         graph.print();
+
+        graph.depthFirstSearch(3);
 
         
     }
