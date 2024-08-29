@@ -1,69 +1,79 @@
+// Tree data structure - non linear data structure where nodes are organized in a hierarchy
+
+// examples of tree data structures are - file explorers, databases, DNS, and HTML DOM
+
+// the top of tree is known as the root node, it does not have any incoming edges, only outgoing edges, any nodes at bottom of tree are known as leaf nodes, which do not have outgoing edges but they do have incoming edges, and then branch nodes are in the middle, they have incoming and outgoing edges. nodes with outgoing edges are known as parents, nodes with incoming edges are known as child nodes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // breadth first search - search algorithm for traversing a tree or graph data structure
 
 // done one 'level' at a time, rather than one 'branch' at a time
 
 
-public class Main {
+// public class Main {
 
-    public static void main(String[] args) {
-        // Breadth FS = Traverse a graph level by level
-		//			   Utilizes a Queue
-		//			   Better if destination is on average close to start
-		//			   Siblings are visited before children
+//     public static void main(String[] args) {
+//         // Breadth FS = Traverse a graph level by level
+// 		//			   Utilizes a Queue
+// 		//			   Better if destination is on average close to start
+// 		//			   Siblings are visited before children
 		
-		// Depth FS   = Traverse a graph branch by branch
-		//			   Utilizes a Stack
-		//			   Better if destination is on average far from the start
-		//			   Children are visited before siblings
-		//			   More popular for games/puzzles
+// 		// Depth FS   = Traverse a graph branch by branch
+// 		//			   Utilizes a Stack
+// 		//			   Better if destination is on average far from the start
+// 		//			   Children are visited before siblings
+// 		//			   More popular for games/puzzles
 		
-		GraphFour graph = new GraphFour(5);
+// 		GraphFour graph = new GraphFour(5);
 		
-		graph.addNode(new Node('A'));
-		graph.addNode(new Node('B'));
-		graph.addNode(new Node('C'));
-		graph.addNode(new Node('D'));
-		graph.addNode(new Node('E'));
+// 		graph.addNode(new Node('A'));
+// 		graph.addNode(new Node('B'));
+// 		graph.addNode(new Node('C'));
+// 		graph.addNode(new Node('D'));
+// 		graph.addNode(new Node('E'));
 		
-		graph.addEdge(0, 1);
-		graph.addEdge(1, 2);
-		graph.addEdge(1, 4);
-		graph.addEdge(2, 3);
-		graph.addEdge(2, 4);
-		graph.addEdge(4, 0);
-		graph.addEdge(4, 2);
+// 		graph.addEdge(0, 1);
+// 		graph.addEdge(1, 2);
+// 		graph.addEdge(1, 4);
+// 		graph.addEdge(2, 3);
+// 		graph.addEdge(2, 4);
+// 		graph.addEdge(4, 0);
+// 		graph.addEdge(4, 2);
 		
-		graph.print();
+// 		graph.print();
 
-        graph.breadthFirstSearch(0);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//         graph.breadthFirstSearch(0);
+//     }
+// }
 
 
 
