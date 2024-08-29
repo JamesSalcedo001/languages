@@ -2,7 +2,13 @@
 
 // examples of tree data structures are - file explorers, databases, DNS, and HTML DOM
 
-// the top of tree is known as the root node, it does not have any incoming edges, only outgoing edges, any nodes at bottom of tree are known as leaf nodes, which do not have outgoing edges but they do have incoming edges, and then branch nodes are in the middle, they have incoming and outgoing edges. nodes with outgoing edges are known as parents, nodes with incoming edges are known as child nodes
+// the top of tree is known as the root node, it does not have any incoming edges, only outgoing edges, any nodes at bottom of tree are known as leaf nodes, which do not have outgoing edges but they do have incoming edges, and then branch nodes are in the middle, they have incoming and outgoing edges. nodes with outgoing edges are known as parents, nodes with incoming edges are known as child nodes, nodes with incoming AND outgoing nodes are called parent/children nodes. children nodes that share the same parent node are called sibling nodes
+
+// subtree is smaller tree held within a larger tree
+
+// size = number of nodes
+
+// depth = number of edges below root node
 
 
 
