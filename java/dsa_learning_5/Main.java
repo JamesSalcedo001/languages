@@ -24,6 +24,17 @@ public class Main {
 
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
+
+        tree.insert(new NodeBST(5));
+        tree.insert(new NodeBST(1));
+        tree.insert(new NodeBST(9));
+        tree.insert(new NodeBST(2));
+        tree.insert(new NodeBST(7));
+        tree.insert(new NodeBST(3));
+        tree.insert(new NodeBST(6));
+        tree.insert(new NodeBST(4));
+        tree.insert(new NodeBST(8));
+
     }
 }
 

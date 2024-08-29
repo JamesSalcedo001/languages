@@ -2,7 +2,7 @@ public class BinarySearchTree {
     NodeBST root;
 
     public void insert(NodeBST node) {
-        root = insertHelper(root, node)
+        root = insertHelper(root, node);
     }
 
     private NodeBST insertHelper(NodeBST root, NodeBST node) {
