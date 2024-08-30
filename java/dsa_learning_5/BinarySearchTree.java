@@ -105,7 +105,12 @@ public class BinarySearchTree {
      }
 
      private int predecessor(NodeBST root) { // find greatest value below left child of this root node
-        return 0;
+        root = root.left;
+
+        while(root.right != null) {
+            root = root.right;
+        }
+        return root.data;
      }
 
 }

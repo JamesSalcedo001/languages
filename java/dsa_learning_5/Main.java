@@ -17,7 +17,9 @@
 
 
 
-// binary search trees 
+// binary search trees - tree data structure where each node is greater than its left child, but less than its right. 
+
+// benefit = easy to locate a node when they are in this order
 
 
 public class Main {
@@ -35,9 +37,14 @@ public class Main {
         tree.insert(new NodeBST(4));
         tree.insert(new NodeBST(8));
 
+        tree.remove(0);
         tree.display();
 
+        
+
         System.out.println(tree.search(1));
+
+
 
     }
 }
