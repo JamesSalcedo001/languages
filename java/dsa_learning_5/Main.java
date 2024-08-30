@@ -37,6 +37,8 @@ public class Main {
 
         tree.display();
 
+        System.out.println(tree.search(1));
+
     }
 }
 
