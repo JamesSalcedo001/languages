@@ -40,11 +40,22 @@ public class BinarySearchTree {
     }
 
      public boolean search(int data) {
-        return false;
+        return searchHelper(root, data);
      }
 
      private boolean searchHelper(NodeBST root, int data) {
-        return true;
+        if (root == null) {
+            return false;
+        }
+        else if (root.data == data) {
+            return true;
+        }
+        else if (root.data > data) {
+            return searchHelper(root.left, data);
+        }
+        else {
+            return searchHelper(root.right, data);
+        }        
      }
 
      public void remove(int data) {
