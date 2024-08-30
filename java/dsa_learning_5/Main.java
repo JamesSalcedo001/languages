@@ -12,7 +12,92 @@
 
 // height = number of edges above furthest leaf node
 
+// tree traversal = process of visiting all the nodes of a tree - begin at root node and follow a certain procedure to visit all the nodes of a tree - three procedures - in order, post order and preorder traversal
 
+//  in order- left -> root -> right - for binary search tree navigating in non decreasing order
+
+/*
+
+sample: 
+
+        public class Node {
+            int data;
+            Node left;
+            Node right;
+
+            public Node(int data) {
+                this.data = data;
+            }
+        }
+
+
+
+        private void traverseTree(Node root) {
+            traverseTree(root.left);
+            System.out.println(root.data);
+            traverseTree(root.right)
+        }
+
+
+ */
+
+
+ /*
+ 
+ post order - left -> right -> root - used to delete a tree from leaf to root
+
+ sample: 
+
+        public class Node {
+            int data;
+            Node left;
+            Node right;
+
+            public Node(int data) {
+                this.data = data;
+            }
+        }
+
+
+
+        private void traverseTree(Node root) {
+            traverseTree(root.left);
+            System.out.println(root.right);
+            traverseTree(root.data)
+        }
+
+
+  */
+
+
+
+/*
+
+pre order - root -> left -> right - used to create a copy of a tree, but in order to do this one must create a root node and a branch node to hold the leaves
+
+
+
+sample: 
+
+        public class Node {
+            int data;
+            Node left;
+            Node right;
+
+            public Node(int data) {
+                this.data = data;
+            }
+        }
+
+
+
+        private void traverseTree(Node root) {
+            traverseTree(root.data);
+            System.out.println(root.left);
+            traverseTree(root.right)
+        }
+
+ */
 
 
 
@@ -27,32 +112,32 @@
 // space complexity - O(n)
 
 
-public class Main {
+// public class Main {
 
-    public static void main(String[] args) {
-        BinarySearchTree tree = new BinarySearchTree();
+//     public static void main(String[] args) {
+//         BinarySearchTree tree = new BinarySearchTree();
 
-        tree.insert(new NodeBST(5));
-        tree.insert(new NodeBST(1));
-        tree.insert(new NodeBST(9));
-        tree.insert(new NodeBST(2));
-        tree.insert(new NodeBST(7));
-        tree.insert(new NodeBST(3));
-        tree.insert(new NodeBST(6));
-        tree.insert(new NodeBST(4));
-        tree.insert(new NodeBST(8));
+//         tree.insert(new NodeBST(5));
+//         tree.insert(new NodeBST(1));
+//         tree.insert(new NodeBST(9));
+//         tree.insert(new NodeBST(2));
+//         tree.insert(new NodeBST(7));
+//         tree.insert(new NodeBST(3));
+//         tree.insert(new NodeBST(6));
+//         tree.insert(new NodeBST(4));
+//         tree.insert(new NodeBST(8));
 
-        tree.remove(0);
-        tree.display();
+//         tree.remove(0);
+//         tree.display();
 
         
 
-        System.out.println(tree.search(1));
+//         System.out.println(tree.search(1));
 
 
 
-    }
-}
+//     }
+// }
 
 
 
