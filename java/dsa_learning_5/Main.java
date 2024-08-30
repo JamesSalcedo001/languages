@@ -21,6 +21,11 @@
 
 // benefit = easy to locate a node when they are in this order
 
+// time complexity - best case O(log n), worst case O(n)
+
+
+// space complexity - O(n)
+
 
 public class Main {
 
