@@ -82,3 +82,8 @@ gridButton.addEventListener("click", () => {
     }
 });
 
+
+function checker(elementId) {
+    let gridColumns = document.querySelectorAll(".gridCol");
+    gridColumns.forEach()
+}
