@@ -44,3 +44,15 @@ button {
     padding: 5px;
     color: #fff;
 }
+
+input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 70px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    
+}
