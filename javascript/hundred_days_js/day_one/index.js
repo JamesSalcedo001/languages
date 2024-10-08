@@ -1,4 +1,4 @@
-let contaier = document.querySelector(".container");
+let container = document.querySelector(".container");
 let gridButton = document.getElementById("submit-grid");
 let clearGridButton = document.getElementById("clear-grid");
 let gridWidth = document.getElementById("width-range");
@@ -69,7 +69,16 @@ gridButton.addEventListener("click", () => {
                     !isTouchDevice() ? e.clientY : e.touches[0].clientY,
                 ), id;
                 checker(elementId);
-            })
+            });
+
+            col.addEventListener(events[deviceType].up, () => {
+                draw = false;
+            });
+
+            div.appendChild(col);
         }
+
+        container.appendChild(div);
     }
-})
+});
+
