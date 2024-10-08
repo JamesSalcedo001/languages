@@ -36,3 +36,11 @@ span {
     margin-bottom: 20px;
     gap: 10px;
 }
+
+button {
+    background-color: #43a047;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+}
