@@ -47,5 +47,29 @@ gridButton.addEventListener("click", () => {
     for (let i = 0; i < gridHeight.value; i++) {
         count += 2;
         let div = document.createEvent("div");
+        div.classList.add("gridRow");
+
+        for (let j = 0; j < gridWidth.value; j++) {
+            count += 2;
+            let col = document.createEvent("col");
+            col.classList.add("gridCol");
+            col.setAttribute("id", `gridCol${count}`);
+            col.addeventListener(events[deviceType].down, () => {
+                draw = true;
+                if(erase) {
+                    col.style.backgroundColor = "transparent";
+                } else {
+                    col.style.backgroundColor = colorButton.value;
+                }
+            });
+
+            col.addEventListener(events[deviceType].move, (e) => {
+                let elementId = document.elementFromPoint(
+                    !isTouchDevice() ? e.clientX : e.touches[0].clientX,
+                    !isTouchDevice() ? e.clientY : e.touches[0].clientY,
+                ), id;
+                checker(elementId);
+            })
+        }
     }
 })
