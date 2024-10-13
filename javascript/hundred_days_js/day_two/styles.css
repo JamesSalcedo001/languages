@@ -37,4 +37,8 @@ button {
     place-items: center;
     border-radius: 3px;
     border: none;
+    background-color: #fff;
+    outline: none;
+    color: #020929;
+    cursor: pointer;
 }
