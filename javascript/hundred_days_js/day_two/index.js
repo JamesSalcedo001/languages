@@ -54,7 +54,7 @@ optionButtons.forEach((button) => {
 
 advancedOptionButton.forEach((button) => {
     button.addEventListener("change", () => {
-        modifyText(button.id, false, null);
+        modifyText(button.id, false, button.value);
     });
 });
 
@@ -69,7 +69,7 @@ linkButton.addEventListener("click", () => {
     }
 });
 
-const highLighter = (className, needsRemoval) => {
+const highlighter = (className, needsRemoval) => {
     className.forEach((button) => {
         button.addEventListener("click", () => {
             if (needsRemoval) {
