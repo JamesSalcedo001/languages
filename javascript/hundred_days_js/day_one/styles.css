@@ -1,19 +1,22 @@
 * {
+    /* Reset padding, margin, and set box-sizing for all elements to ensure consistent layout */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: monospace;
+    font-family: monospace; /* Use monospace font for all elements */
 }
 
 body {
+    /* Set a green background for the body */
     background-color: #43a047;
 }
 
 .wrapper {
+    /* Define styles for the central wrapper (background, width, centered positioning, padding, border radius) */
     background-color: #fff;
     width: 80vmin;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Center the wrapper */
     top: 50%;
     left: 50%;
     padding: 40px 20px;
@@ -21,16 +24,19 @@ body {
 }
 
 label {
+    /* Ensure labels are displayed as block elements */
     display: block;
 }
 
 span {
+    /* Slightly adjust the position of span elements */
     position: relative;
     font-size: 22px;
     bottom: -1px;
 }
 
 .opt-wrapper {
+    /* Flex layout for options, evenly space elements and add gap between them */
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -38,6 +44,7 @@ span {
 }
 
 button {
+    /* Style buttons with background, border, padding, and text color */
     background-color: #43a047;
     border: none;
     border-radius: 5px;
@@ -46,6 +53,7 @@ button {
 }
 
 input[type="color"] {
+    /* Remove default styles for color input and set custom appearance */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -54,31 +62,30 @@ input[type="color"] {
     height: 40px;
     border: none;
     cursor: pointer;
-
 }
 
-input[type="color"]::-webkit-color-swatch{
-    border-radius: 8px;
-    border: 4px solid #000;
-}
-
-input[type="color"]::-moz-color-swatch{
+input[type="color"]::-webkit-color-swatch,
+input[type="color"]::-moz-color-swatch {
+    /* Customize the color swatch (rounded corners, border) */
     border-radius: 8px;
     border: 4px solid #000;
 }
 
 .gridCol {
+    /* Define each grid cell's size and border */
     height: 1em;
     width: 1em;
     border: 1px solid #ddd;
 }
 
 .gridRow {
+    /* Flexbox for grid rows to align grid cells horizontally */
     display: flex;
 }
 
 @media only screen and (max-width: 768px) {
     .gridCol {
+        /* Adjust grid cell size for smaller screens */
         height: 0.8em;
         width: 0.8em;
     }
