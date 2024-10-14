@@ -39,5 +39,15 @@ const initializer = () => {
         fontSizeRef.appendChild(option);
     }
 
+    fontSizeRef.value = 3;
+};
 
+const modifyText = (command, defaultVi, value) => {
+    document.execCommand(command, defaultVi, value);
 }
+
+optionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        modifyText(button.id, false, null);
+    });
+})
