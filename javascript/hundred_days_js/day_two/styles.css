@@ -49,3 +49,9 @@ select {
     border-radius: 3px;
     cursor: pointer;
 }
+
+.options label,
+.options select {
+    font-family: 'Poppins', sans-serif;
+}
+
