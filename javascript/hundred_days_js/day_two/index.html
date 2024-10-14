@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include FontAwesome for icons and the stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Online Text Editor</title>
 </head>
+
 <body>
     <div class="container">
+        <!-- Editor buttons for text formatting options -->
         <div class="options">
+            <!-- Bold button -->
             <button id="bold" class="option-button format">
                 <i class="fa-solid fa-bold"></i>
             </button>
 
+            <!-- Superscript button -->
             <button id="superscript" class="option-button script">
                 <i class="fa-solid fa-superscript"></i>
-            </button> 
-            
+            </button>
+
+            <!-- Subscript button -->
             <button id="subscript" class="option-button script">
                 <i class="fa-solid fa-subscript"></i>
             </button>
 
+            <!-- Ordered and unordered list buttons -->
             <button id="insertOrderedList" class="option-button">
-                <div class="fa-solid fa-list-ol"></div>
+                <i class="fa-solid fa-list-ol"></i>
             </button>
-
             <button id="insertUnorderedList" class="option-button">
                 <i class="fa-solid fa-list"></i>
             </button>
 
+            <!-- Undo and redo buttons -->
             <button id="undo" class="option-button">
                 <i class="fa-solid fa-rotate-left"></i>
             </button>
-
             <button id="redo" class="option-button">
                 <i class="fa-solid fa-rotate-right"></i>
             </button>
 
+            <!-- Link and unlink buttons -->
             <button id="createLink" class="adv-option-button">
                 <i class="fa fa-link"></i>
             </button>
@@ -46,29 +54,29 @@
                 <i class="fa fa-unlink"></i>
             </button>
 
+            <!-- Text alignment buttons -->
             <button id="justifyLeft" class="option-button align">
                 <i class="fa-solid fa-align-left"></i>
             </button>
-
             <button id="justifyCenter" class="option-button align">
                 <i class="fa-solid fa-align-center"></i>
             </button>
-
             <button id="justifyRight" class="option-button align">
                 <i class="fa-solid fa-align-right"></i>
             </button>
-
             <button id="justifyFull" class="option-button align">
                 <i class="fa-solid fa-align-justify"></i>
             </button>
 
+            <!-- Indent and outdent buttons -->
             <button id="indent" class="option-button spacing">
                 <i class="fa-solid fa-indent"></i>
             </button>
-
             <button id="outdent" class="option-button spacing">
                 <i class="fa-solid fa-outdent"></i>
             </button>
+
+            <!-- Heading selector -->
             <select id="formatBlock" class="adv-option-button">
                 <option value="H1">H1</option>
                 <option value="H2">H2</option>
@@ -77,21 +85,28 @@
                 <option value="H5">H5</option>
                 <option value="H6">H6</option>
             </select>
+
+            <!-- Font name and size selectors -->
             <select id="fontName" class="adv-option-button"></select>
             <select id="fontSize" class="adv-option-button"></select>
+
+            <!-- Color pickers for font and highlight colors -->
             <div class="input-wrapper">
-                <input type="color" name="" id="foreColor" class="adv-option-button">
+                <input type="color" id="foreColor" class="adv-option-button">
                 <label for="foreColor">Font Color</label>
             </div>
             <div class="input-wrapper">
-                <input type="color" name="" id="backColor" class="adv-option-button">
+                <input type="color" id="backColor" class="adv-option-button">
                 <label for="backColor">Highlight Color</label>
             </div>
         </div>
+
+        <!-- Editable text area for content -->
         <div id="text-input" contenteditable="true"></div>
     </div>
 
+    <!-- Link to the JavaScript file -->
     <script src="index.js"></script>
-    
 </body>
+
 </html>

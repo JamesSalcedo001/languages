@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:...');
 
-
+/* Basic styling for all elements */
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure consistent sizing */
 }
 
 body {
+    /* Set background color for the page */
     background-color: #338cf4;
 }
 
 .container {
+    /* Main container styles: background, width, centered on the screen, rounded corners, shadow */
     background-color: #fff;
     width: 90vmin;
     padding: 50px 30px;
@@ -24,13 +26,15 @@ body {
 }
 
 .options {
+    /* Flexbox to align the buttons and inputs, wrapping when necessary */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* Space between buttons and inputs */
 }
 
 button {
+    /* Styling for buttons: size, centering content, rounded corners, and cursor */
     width: 20px;
     height: 20px;
     display: grid;
@@ -38,12 +42,12 @@ button {
     border-radius: 3px;
     border: none;
     background-color: #fff;
-    outline: none;
     color: #020929;
     cursor: pointer;
 }
 
 select {
+    /* Style dropdown inputs with padding, border, and rounded corners */
     padding: 7px;
     border: 1px solid #020929;
     border-radius: 3px;
@@ -52,10 +56,12 @@ select {
 
 .options label,
 .options select {
+    /* Set font style using 'Poppins' from Google Fonts */
     font-family: 'Poppins', sans-serif;
 }
 
 input[type="color"] {
+    /* Remove default appearance of color input, set size, cursor, and transparency */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -66,23 +72,22 @@ input[type="color"] {
     cursor: pointer;
 }
 
-input[type="color"]::-webkit-color-swatch{
-    border-radius: 15px;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #020929;
-}
-
-input[type="color"]::-moz-color-swatch{
+input[type="color"]::-webkit-color-swatch,
+input[type="color"]::-moz-color-swatch {
+    /* Customize color swatch with rounded corners and shadow */
     border-radius: 15px;
     box-shadow: 0 0 0 2px #fff, 0 0 0 3px #020929;
 }
 
 #text-input {
+    /* Style the editable text area */
     margin-top: 10px;
     border: 1px solid #ddd;
     padding: 20px;
-    height: 50vh;
+    height: 50vh; /* Set height to half of the viewport height */
 }
 
-.active{
+.active {
+    /* Style for active buttons */
     background-color: #e0e9ff;
 }
