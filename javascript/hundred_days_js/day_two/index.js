@@ -87,3 +87,11 @@ const highLighter = (className, needsRemoval) => {
         });
     });
 };
+
+const highLighterRemover = (className) => {
+    className.forEach((button) => {
+        button.classList.remove("active");
+    });
+};
+
+window.onload = initializer();
