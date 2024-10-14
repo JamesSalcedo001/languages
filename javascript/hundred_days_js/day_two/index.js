@@ -68,3 +68,22 @@ linkButton.addEventListener("click", () => {
         modifyText(linkButton.id, false, userLink);
     }
 });
+
+const highLighter = (className, needsRemoval) => {
+    className.forEach((button) => {
+        button.addEventListener("click", () => {
+            if (needsRemoval) {
+                let alreadyActive = false;
+                if (button.classList.contains("active")) {
+                    alreadyActive = true;
+                }
+                highLighterRemover(className);
+                if (!alreadyActive) {
+                    button.classList.add("active");
+                }
+            } else {
+                button.classList.toggle("active");
+            }
+        });
+    });
+};
