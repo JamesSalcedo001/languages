@@ -51,3 +51,15 @@ body {
     border: 1px solid #aaa;
     padding: 0 2.05rem 0 1rem;
 }
+
+.input-box span {
+    position: absolute;
+    right: 13px;
+    cursor: pointer;
+    line-height: 53px;
+    color: #707070;
+}
+
+.input-box span:hover {
+    color: #43A847 !important;
+}
