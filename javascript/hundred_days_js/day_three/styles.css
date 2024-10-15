@@ -16,3 +16,10 @@ body {
     min-height: 100vh;
     background: #43A047;
 }
+
+.container {
+    width: 450px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
