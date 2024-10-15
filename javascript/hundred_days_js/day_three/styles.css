@@ -116,3 +116,10 @@ body {
     flex-wrap: wrap;
     margin-top: 1rem;
 }
+
+.pass-settings .options .option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100% / 2);
+}
