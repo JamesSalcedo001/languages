@@ -63,3 +63,7 @@ const copyPassword = () => {
         copyIcon.style.color = "#707070";
     }, 1500);
 }
+
+copyIcon.addEventListener("click", copyPassword);
+lengthSlider.addEventListener("input", updateSlider);
+generateBtn.addEventListener("click", generatePassword);
