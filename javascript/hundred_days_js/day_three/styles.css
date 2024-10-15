@@ -80,3 +80,18 @@ body {
     border-radius: inherit;
     transition: width 0.3s ease;
 }
+
+.pass-indicator#weak::before {
+    width: 20%;
+    background: #e64a4a; 
+}
+
+.pass-indicator#medium::before {
+    width: 20%;
+    background: #f1c806; 
+}
+
+.pass-indicator#strong::before {
+    width: 20%;
+    background: #43A047; 
+}
