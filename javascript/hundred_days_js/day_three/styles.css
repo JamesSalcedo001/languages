@@ -87,12 +87,12 @@ body {
 }
 
 .pass-indicator#medium::before {
-    width: 20%;
+    width: 50%;
     background: #f1c806; 
 }
 
 .pass-indicator#strong::before {
-    width: 20%;
+    width: 100%;
     background: #43A047; 
 }
 
