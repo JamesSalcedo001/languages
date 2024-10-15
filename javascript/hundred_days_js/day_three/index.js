@@ -12,3 +12,22 @@ const characters = {
     numbers: "0123456789",
     symbols: "!$%&|[](){}:;.,*+-#@<>~"
 }
+
+const generatePassword = () => {
+    let staticPassword = "",
+    randomPassword = "",
+    excludeDuplicate = false,
+    passLength = lengthSlider.value;
+
+    options.forEach(option => {
+        if (option.checked) {
+            if (option.id !== "exc-duplicate" && option.id !== "spaces") {
+                staticPassword += characters[option.id];
+            } else if (option.id === "spaces") {
+                staticPassword += `  ${staticPassword}  `;
+            } else {
+                excludeDuplicate = true;
+            }
+        }
+    });
+}
