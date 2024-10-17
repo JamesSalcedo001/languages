@@ -16,6 +16,8 @@ app.post("/calculate", (req, res) => {
     const { firstOperand, operator, secondOperand } = req.body;
     let result;
 
+    console.log(`Recieved request: ${firstOperand} ${operator} ${secondOperand}`);
+
     // convert the operands to numbers
     const num1 = parseFloat(firstOperand);
     const num2 = parseFloat(secondOperand);
@@ -42,8 +44,11 @@ app.post("/calculate", (req, res) => {
             return res.status(400).json("Invalid operator");
     }
 
-    // return result as a JSON response
-    res.json(result.toString());
+    console.log(`Calculation successful: Result = ${result}`);
+
+    // return result as a JSON response with 200 status
+    res.status(200).json({ result: result.toString() });
+    // res.json(result.toString());
 });
 
 // start the server
