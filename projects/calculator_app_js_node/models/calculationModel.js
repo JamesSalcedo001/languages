@@ -38,4 +38,15 @@ class CalculationModel {
         calculation.result = result;
         return calculation;
     }
+
+    // delete calculation by id
+    static delete(id) {
+        const index = history.findIndex(calc => calc.id === parseInt(id));
+        if (index === -1) return null;
+
+        return history.splice(index, 1)[0]; // remove calculation and return it
+    }
 }
+
+
+module.exports = CalculationModel;
