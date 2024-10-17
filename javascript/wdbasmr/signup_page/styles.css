@@ -107,3 +107,12 @@ body {
     height: 50%;
     border-radius: 28px;
 }
+
+.form > input {
+    border: 2px solid #e0e0e0;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 0 24px;
+    color: #11274c;
+    transition: all 0.375s;
+}
