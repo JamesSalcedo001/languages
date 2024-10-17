@@ -36,6 +36,8 @@ function calculateResult() {
     const secondOperand = currentInput;
     const data = { firstOperand, operator, secondOperand };
 
+    console.log("Sending request to server: ", data);
+
     fetch("http://localhost:3000/calculate", {
         method: "POST",
         headers: {
@@ -43,12 +45,26 @@ function calculateResult() {
         },
         body: JSON.stringify(data),
     })
-    .then(res => res.json())
     .then(res => {
+        if (!res.ok) {
+            // if response status not OK, throw error
+            return res.json().then(errorData => {
+                console.error("Error from server: ", errorData.error);
+                throw new Error(errorData.error);
+            });
+        }
+        return res.json();
+    })
+    .then(res => {
+        console.log("Recieved result from server: ", data.res);
         display.value = res;
         currentInput = res;
         firstOperand = "";
         operator = "";
     })
-    .catch(error => console.error("Error: ", error))
+    .catch(error => {
+        // log and display error to user
+        console.error("Request Failed: ", error.message);
+        display.value = `Error: ${error.message}`;
+    });
 }
