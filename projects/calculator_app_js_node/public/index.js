@@ -18,6 +18,16 @@ buttons.forEach(button => {
             firstOperand = "";
             operator = "";
             display.value = "";
+        } else if (value === "=") {
+            // send the calculation to the backend
+            calculateResult();
+        } else {
+            // operator is clicked
+            if (currentInput) {
+                firstOperand = currentInput;
+                currentInput = "";
+                operator = value;
+            }
         }
-    })
-})
+    });
+});
