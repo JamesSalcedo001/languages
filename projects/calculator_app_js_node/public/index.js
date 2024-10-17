@@ -4,3 +4,8 @@ let currentInput = "";
 let operator = "";
 let firstOperand = "";
 
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const value = button.textContent;
+    })
+})
