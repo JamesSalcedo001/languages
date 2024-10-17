@@ -81,3 +81,9 @@ body {
     left: 50%;
     translate: -50% 0;
 }
+
+.card .logo i{
+    font-size: 50px;
+    color: #216ce7;
+    font-weight: 500;
+}
