@@ -87,3 +87,11 @@ body {
     color: #216ce7;
     font-weight: 500;
 }
+
+.card > h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 30px;
+    color: #2a3444;
+    
+}
