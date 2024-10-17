@@ -92,3 +92,14 @@ exports.updateCalculation = (re, res) => {
 };
 
 
+// delete a calculation (Delete)
+exports.deleteCalculation = (req, res) => {
+    const { id } = req.params;
+    const deletedCalculation = CalculationModel.delete(id);
+
+    if (!deletedCalculation) {
+        return res.status(404).json({ error: "Calculation not found" });
+    }
+
+    res.status(204).send(); // successful delete no content
+}
