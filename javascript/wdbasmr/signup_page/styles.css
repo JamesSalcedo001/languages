@@ -145,3 +145,12 @@ body {
     color: #fff;
     background: #143d81;
 }
+
+.card > footer {
+    color: #7c7c7c;
+}
+
+.card > footer > a {
+    color: #216ce7;
+    transition: all 0.375s;
+}
