@@ -92,6 +92,12 @@ body {
     font-size: 22px;
     font-weight: 400;
     margin: 0 0 30px;
-    color: #2a3444;
-    
+    color: #2a3444;  
+}
+
+
+.form {
+    margin: 0 0 30px;
+    display: grid;
+    gap: 18px;
 }
