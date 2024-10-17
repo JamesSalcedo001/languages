@@ -35,4 +35,20 @@ buttons.forEach(button => {
 function calculateResult() {
     const secondOperand = currentInput;
     const data = { firstOperand, operator, secondOperand };
+
+    fetch("http://localhost:3000/calculate", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    })
+    .then(res => res.json())
+    .then(res => {
+        display.value = res;
+        currentInput = res;
+        firstOperand = "";
+        operator = "";
+    })
+    .catch(error => console.error("Error: ", error))
 }
