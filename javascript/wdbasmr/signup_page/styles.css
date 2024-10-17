@@ -140,3 +140,8 @@ body {
     letter-spacing: 2px;
     transition: all 0.375s;
 }
+
+.form > button:hover {
+    color: #fff;
+    background: #143d81;
+}
