@@ -56,9 +56,9 @@ function calculateResult() {
         return res.json();
     })
     .then(res => {
-        console.log("Recieved result from server: ", data.res);
-        display.value = res;
-        currentInput = res;
+        console.log("Recieved result from server: ", res.result);
+        display.value = res.result;
+        currentInput = res.result;
         firstOperand = "";
         operator = "";
     })
