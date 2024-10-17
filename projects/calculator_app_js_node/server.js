@@ -15,4 +15,33 @@ app.use(cors());
 app.post("calculate", (req, res) => {
     const { firstOperand, operator, secondOperand } = req.body;
     let result;
-})
+
+    // convert the operands to numbers
+    const num1 = parseFloat(firstOperand);
+    const num2 = parseFloat(secondOperand);
+
+    // perform calculation based on operator
+    switch (operator) {
+        case "+":
+            result = num1 + num2;
+            break;
+        case "-":
+            result = num1 - num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "/":
+            if (num2 !== 0) {
+                result = num1 / num2;
+            } else {
+                return res.status(400).json("Cannot divide by zero");
+            }
+            break;
+        default:
+            return res.status(400).json("Invalid operator");
+    }
+
+    // return result as a JSON response
+    res.json(result.toString());
+});
