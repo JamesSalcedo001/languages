@@ -1,8 +1,11 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
+const calculatorRoutes = require("./routes/calculatorRoutes");
 
 const app = express();
 const PORT = 3000;
+
 
 // middleware to parse JSON
 app.use(express.json());
@@ -11,45 +14,12 @@ app.use(express.json());
 app.use(cors());
 
 
-// route to handle calculation requests
-app.post("/calculate", (req, res) => {
-    const { firstOperand, operator, secondOperand } = req.body;
-    let result;
+// serve static files (HTML/CSS/JS)
+app.use(express.static(path.join(__dirname, "views")));
 
-    console.log(`Recieved request: ${firstOperand} ${operator} ${secondOperand}`);
+// use the calculator routes
+app.use("/api", calculatorRoutes);
 
-    // convert the operands to numbers
-    const num1 = parseFloat(firstOperand);
-    const num2 = parseFloat(secondOperand);
-
-    // perform calculation based on operator
-    switch (operator) {
-        case "+":
-            result = num1 + num2;
-            break;
-        case "-":
-            result = num1 - num2;
-            break;
-        case "*":
-            result = num1 * num2;
-            break;
-        case "/":
-            if (num2 !== 0) {
-                result = num1 / num2;
-            } else {
-                return res.status(400).json("Cannot divide by zero");
-            }
-            break;
-        default:
-            return res.status(400).json("Invalid operator");
-    }
-
-    console.log(`Calculation successful: Result = ${result}`);
-
-    // return result as a JSON response with 200 status
-    res.status(200).json({ result: result.toString() });
-    // res.json(result.toString());
-});
 
 // start the server
 app.listen(PORT, () => {
