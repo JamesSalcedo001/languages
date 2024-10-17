@@ -12,7 +12,7 @@ app.use(cors());
 
 
 // route to handle calculation requests
-app.post("calculate", (req, res) => {
+app.post("/calculate", (req, res) => {
     const { firstOperand, operator, secondOperand } = req.body;
     let result;
 
