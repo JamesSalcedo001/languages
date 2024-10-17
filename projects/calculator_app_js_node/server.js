@@ -45,3 +45,8 @@ app.post("calculate", (req, res) => {
     // return result as a JSON response
     res.json(result.toString());
 });
+
+// start the server
+app.listen(PORT, () => {
+    console.log(`server is running on http://localhost:${PORT}`);
+})
