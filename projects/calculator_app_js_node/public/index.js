@@ -31,3 +31,8 @@ buttons.forEach(button => {
         }
     });
 });
+
+function calculateResult() {
+    const secondOperand = currentInput;
+    const data = { firstOperand, operator, secondOperand };
+}
