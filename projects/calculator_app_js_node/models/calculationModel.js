@@ -24,6 +24,11 @@ class CalculationModel {
         return history;
     }
 
+    // Retrieve a specific calculation by id (for Edit functionality)
+    static getById(id) {
+        return history.find(calc => calc.id === parseInt(id));
+    }
+
     // Update an existing calculation by id (U)
     static update(id, firstOperand, operator, secondOperand, result) {
         const calculation = history.find(calc => calc.id === parseInt(id));

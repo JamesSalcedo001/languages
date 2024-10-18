@@ -8,6 +8,9 @@ router.post("/calculate", calculatorController.performCalculation);
 // Read all calculations
 router.get("/history", calculatorController.getAllCalculations);
 
+// Read a specific calculation (for Edit functionality)
+router.get("/history/:id", calculatorController.getCalculationById);
+
 // Update a calculation by id
 router.put("/history/:id", calculatorController.updateCalculation);
 
