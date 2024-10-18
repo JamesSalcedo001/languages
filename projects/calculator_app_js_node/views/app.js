@@ -1,28 +1,27 @@
+// Main display variables
 const display = document.getElementById("display");
 const buttons = document.querySelectorAll("button");
 let currentInput = "";
 let operator = "";
 let firstOperand = "";
 
+// Handle button click events
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         const value = button.textContent;
 
         if (value >= "0" && value <= "9" || value === ".") {
-            // handle number input
+            // Handle number input
             currentInput += value;
             display.value = currentInput;
         } else if (value === "C") {
-            // clear display
-            currentInput = "";
-            firstOperand = "";
-            operator = "";
-            display.value = "";
+            // Clear the display
+            clearCalculator();
         } else if (value === "=") {
-            // send the calculation to the backend
+            // Send the calculation to the backend
             calculateResult();
         } else {
-            // operator is clicked
+            // Handle operator input
             if (currentInput) {
                 firstOperand = currentInput;
                 currentInput = "";
@@ -32,39 +31,57 @@ buttons.forEach(button => {
     });
 });
 
+// Clear calculator function
+function clearCalculator() {
+    currentInput = "";
+    firstOperand = "";
+    operator = "";
+    display.value = "";
+}
+
+// Send calculation to the backend
 function calculateResult() {
     const secondOperand = currentInput;
     const data = { firstOperand, operator, secondOperand };
 
-    console.log("Sending request to server: ", data);
-
-    fetch("http://localhost:3000/calculate", {
+    fetch("http://localhost:3000/api/calculate", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
     })
+    .then(res => res.json())
     .then(res => {
-        if (!res.ok) {
-            // if response status not OK, throw error
-            return res.json().then(errorData => {
-                console.error("Error from server: ", errorData.error);
-                throw new Error(errorData.error);
-            });
-        }
-        return res.json();
-    })
-    .then(res => {
-        console.log("Recieved result from server: ", res.result);
         display.value = res.result;
         currentInput = res.result;
         firstOperand = "";
         operator = "";
     })
     .catch(error => {
-        // log and display error to user
-        console.error("Request Failed: ", error.message);
+        console.error("Error:", error);
         display.value = `Error: ${error.message}`;
     });
 }
+
+// Fetch and display calculation history
+function fetchHistory() {
+    fetch("http://localhost:3000/api/history")
+    .then(res => res.json())
+    .then(history => {
+        const historyDiv = document.getElementById("history");
+        historyDiv.innerHTML = ""; // Clear previous history
+
+        history.forEach(calc => {
+            const calcItem = document.createElement("div");
+            calcItem.innerHTML = `${calc.firstOperand} ${calc.operator} ${calc.secondOperand} = ${calc.result}
+            <button onclick="deleteCalculation(${calc.id})">Delete</button>
+            <button onclick="editCalculation(${calc.id})">Edit</button>`;
+            historyDiv.appendChild(calcItem);
+        });
+    })
+    .catch(error => console.error("Error fetching history:", error));
+}
+
+document.body.innerHTML += '<div id="history"></div>';
+fetchHistory();
