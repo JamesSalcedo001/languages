@@ -1,26 +1,16 @@
 const CalculationModel = require("../models/calculationModel");
 
-// Perform calculation (Create)
-exports.performCalculation = (req, res) => {
-    const { firstOperand, operator, secondOperand } = req.body;
+// Helper function to perform calculation
+function computeResult(firstOperand, operator, secondOperand) {
+    const num1 = parseFloat(firstOperand);
+    const num2 = parseFloat(secondOperand);
 
-    // Check if inputs are valid
-    if (!firstOperand || !operator || !secondOperand) {
-        return res.status(400).json({ error: "Missing or invalid input" });
+    if (isNaN(num1) || isNaN(num2)) {
+        throw new Error("Invalid number input");
     }
 
     let result;
 
-    // Convert operands to numbers
-    const num1 = parseFloat(firstOperand);
-    const num2 = parseFloat(secondOperand);
-
-    // Ensure both operands are valid numbers
-    if (isNaN(num1) || isNaN(num2)) {
-        return res.status(400).json({ error: "Invalid number input" });
-    }
-
-    // Perform calculation based on operator
     switch (operator) {
         case "+":
             result = num1 + num2;
@@ -33,17 +23,32 @@ exports.performCalculation = (req, res) => {
             break;
         case "/":
             if (num2 === 0) {
-                return res.status(400).json({ error: "Cannot divide by zero" });
+                throw new Error("Cannot divide by zero");
             }
             result = num1 / num2;
             break;
         default:
-            return res.status(400).json({ error: "Invalid operator" });
+            throw new Error("Invalid operator");
     }
 
-    // Log and respond with the result
-    const newCalculation = CalculationModel.create(firstOperand, operator, secondOperand, result);
-    res.status(201).json(newCalculation);
+    return result;
+}
+
+// Perform calculation (Create)
+exports.performCalculation = (req, res) => {
+    const { firstOperand, operator, secondOperand } = req.body;
+
+    if (!firstOperand || !operator || !secondOperand) {
+        return res.status(400).json({ error: "Missing or invalid input" });
+    }
+
+    try {
+        const result = computeResult(firstOperand, operator, secondOperand);
+        const newCalculation = CalculationModel.create(firstOperand, operator, secondOperand, result);
+        res.status(201).json(newCalculation);
+    } catch (error) {
+        return res.status(400).json({ error: error.message });
+    }
 };
 
 // Retrieve all calculations (Read)
@@ -66,34 +71,19 @@ exports.getCalculationById = (req, res) => {
 exports.updateCalculation = (req, res) => {
     const { id } = req.params;
     const { firstOperand, operator, secondOperand } = req.body;
-    let result;
 
-    // Convert operands to numbers and perform calculation
-    const num1 = parseFloat(firstOperand);
-    const num2 = parseFloat(secondOperand);
-
-    switch (operator) {
-        case "+":
-            result = num1 + num2;
-            break;
-        case "-":
-            result = num1 - num2;
-            break;
-        case "*":
-            result = num1 * num2;
-            break;
-        case "/":
-            if (num2 === 0) return res.status(400).json({ error: "Cannot divide by zero" });
-            result = num1 / num2;
-            break;
-        default:
-            return res.status(400).json({ error: "Invalid operator" });
+    if (!firstOperand || !operator || !secondOperand) {
+        return res.status(400).json({ error: "Missing or invalid input" });
     }
 
-    const updatedCalculation = CalculationModel.update(id, firstOperand, operator, secondOperand, result);
-    if (!updatedCalculation) return res.status(404).json({ error: "Calculation not found" });
-
-    res.status(200).json(updatedCalculation);
+    try {
+        const result = computeResult(firstOperand, operator, secondOperand);
+        const updatedCalculation = CalculationModel.update(id, firstOperand, operator, secondOperand, result);
+        if (!updatedCalculation) return res.status(404).json({ error: "Calculation not found" });
+        res.status(200).json(updatedCalculation);
+    } catch (error) {
+        return res.status(400).json({ error: error.message });
+    }
 };
 
 // Delete a calculation (Delete)
@@ -102,5 +92,5 @@ exports.deleteCalculation = (req, res) => {
     const deletedCalculation = CalculationModel.delete(id);
 
     if (!deletedCalculation) return res.status(404).json({ error: "Calculation not found" });
-    res.status(204).send(); // No content
+    res.status(204).send();
 };

@@ -1,21 +1,21 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Adjusted for history display */
     align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 20px;
 }
 
 .calculator {
-    width: 50%;
+    width: 300px;
     padding: 20px;
     border: 1px solid #000;
     border-radius: 5px;
 }
 
 #display {
-    width: 92%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     text-align: right;
@@ -24,7 +24,6 @@ body {
 
 .buttons {
     display: grid;
-    flex-wrap: wrap;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
@@ -33,4 +32,17 @@ button {
     padding: 20px;
     font-size: 1rem;
     cursor: pointer;
+}
+
+#history {
+    width: 300px;
+    margin-top: 20px;
+}
+
+#history div {
+    margin-bottom: 10px;
+}
+
+#history button {
+    margin-left: 5px;
 }
