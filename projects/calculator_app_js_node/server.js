@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const calculatorRoutes = require("./routes/calculatorRoutes");
+const sequelize = require("./config/database"); // import sequelize instance
 
 const app = express();
 const PORT = 3000;
@@ -16,7 +17,21 @@ app.use(express.static(path.join(__dirname, "views")));
 // Use calculator routes
 app.use("/api", calculatorRoutes);
 
+
+// test db connection
+sequelize
+.authenticate()
+.then(() => {
+    console.log("Connection to DB has been established!");
+
+    // start server only after db connection is established
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+    });
+})
+.catch((err) => {
+    console.error("Unable to connect to DB")
+})
+
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+
