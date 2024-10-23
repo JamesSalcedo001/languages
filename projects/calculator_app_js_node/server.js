@@ -24,13 +24,19 @@ sequelize
 .then(() => {
     console.log("Connection to DB has been established!");
 
+    // sync models
+    sequelize.sync().then(() => {
+        console.log("Database synchronized.");
+    })
+
+
     // start server only after db connection is established
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
     });
 })
 .catch((err) => {
-    console.error("Unable to connect to DB")
+    console.error("Unable to connect to DB.", err)
 })
 
 // Start the server
