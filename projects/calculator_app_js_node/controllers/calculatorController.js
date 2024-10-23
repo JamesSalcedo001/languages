@@ -35,26 +35,37 @@ function computeResult(firstOperand, operator, secondOperand) {
 }
 
 // Perform calculation (Create)
-exports.performCalculation = (req, res) => {
+exports.performCalculation = async (req, res) => {
     const { firstOperand, operator, secondOperand } = req.body;
-
+  
     if (!firstOperand || !operator || !secondOperand) {
-        return res.status(400).json({ error: "Missing or invalid input" });
+      return res.status(400).json({ error: 'Missing or invalid input' });
     }
-
+  
     try {
-        const result = computeResult(firstOperand, operator, secondOperand);
-        const newCalculation = CalculationModel.create(firstOperand, operator, secondOperand, result);
-        res.status(201).json(newCalculation);
+      const result = computeResult(firstOperand, operator, secondOperand);
+      const newCalculation = await Calculation.create({
+        firstOperand,
+        operator,
+        secondOperand,
+        result,
+      });
+      res.status(201).json(newCalculation);
     } catch (error) {
-        return res.status(400).json({ error: error.message });
+      return res.status(400).json({ error: error.message });
     }
-};
+  };
 
 // Retrieve all calculations (Read)
-exports.getAllCalculations = (req, res) => {
-    const calculations = CalculationModel.getAll();
-    res.status(200).json(calculations);
+exports.getAllCalculations = async (req, res) => {
+    try {
+        const calculations = await Calculation.findAll({
+            order: ['createdAt', 'DESC'],
+        });
+        res.status(200).json(calculations);
+    } catch (error) {
+        res.status(500).json({ error: "Database error" });
+    }
 };
 
 // Retrieve a single calculation by id (for Edit functionality)
