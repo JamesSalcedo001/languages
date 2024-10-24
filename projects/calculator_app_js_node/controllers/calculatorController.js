@@ -113,10 +113,18 @@ exports.updateCalculation = async (req, res) => {
 };
 
 // Delete a calculation (Delete)
-exports.deleteCalculation = (req, res) => {
+exports.deleteCalculation = async (req, res) => {
     const { id } = req.params;
-    const deletedCalculation = CalculationModel.delete(id);
+    try {
+        const calculation = await Calculation.findByPk(id);
+        if (!calculation) {
+            return res.status(404).json({ error: "Calculation not found" });
+        }
 
-    if (!deletedCalculation) return res.status(404).json({ error: "Calculation not found" });
-    res.status(204).send();
+        await calculation.destroy();
+
+        res.status(204).send();
+    } catch (error) {
+        res.status(500).json({ error: 'Database error' });
+    }
 };
