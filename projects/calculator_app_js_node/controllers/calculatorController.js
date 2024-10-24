@@ -1,4 +1,4 @@
-const CalculationModel = require("../models/calculationModel");
+const Calculation = require("../models/Calculation");
 
 // Helper function to perform calculation
 function computeResult(firstOperand, operator, secondOperand) {
@@ -60,7 +60,7 @@ exports.performCalculation = async (req, res) => {
 exports.getAllCalculations = async (req, res) => {
     try {
         const calculations = await Calculation.findAll({
-            order: ['createdAt', 'DESC'],
+            order: [['createdAt', 'DESC']],
         });
         res.status(200).json(calculations);
     } catch (error) {
@@ -68,14 +68,18 @@ exports.getAllCalculations = async (req, res) => {
     }
 };
 
-// Retrieve a single calculation by id (for Edit functionality)
-exports.getCalculationById = (req, res) => {
+// Retrieve a single calculation by id 
+exports.getCalculationById = async (req, res) => {
     const { id } = req.params;
-    const calculation = CalculationModel.getById(id);
-    if (!calculation) {
-        return res.status(404).json({ error: "Calculation not found" });
+    try {
+        const calculation = Calculation.findByPk(id);
+        if (!calculation) {
+            return res.status(404).json({ error: "Calculation not found" });
+        }
+        res.status(200).json(calculation);
+    } catch (error) {
+        res.status(500).json({ error: "Database error" });
     }
-    res.status(200).json(calculation);
 };
 
 // Update existing calculation (Update)
