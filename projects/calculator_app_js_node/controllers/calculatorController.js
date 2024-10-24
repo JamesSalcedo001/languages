@@ -83,7 +83,7 @@ exports.getCalculationById = async (req, res) => {
 };
 
 // Update existing calculation (Update)
-exports.updateCalculation = (req, res) => {
+exports.updateCalculation = async (req, res) => {
     const { id } = req.params;
     const { firstOperand, operator, secondOperand } = req.body;
 
@@ -92,10 +92,21 @@ exports.updateCalculation = (req, res) => {
     }
 
     try {
+        const calculation = await Calculation.findByPk(id);
+        if (!calculation) {
+            return res.status(404).json({ error: "Calculation not found" });
+        }
+
         const result = computeResult(firstOperand, operator, secondOperand);
-        const updatedCalculation = CalculationModel.update(id, firstOperand, operator, secondOperand, result);
-        if (!updatedCalculation) return res.status(404).json({ error: "Calculation not found" });
-        res.status(200).json(updatedCalculation);
+
+        calculation.firstOperand = firstOperand;
+        calculation.operator = operator;
+        calculation.secondOperand = secondOperand;
+        calculation.result = result;
+
+        await calculation.save();
+
+        res.status(200).json(calculation);
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
