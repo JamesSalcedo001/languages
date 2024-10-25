@@ -18,26 +18,52 @@ app.use(express.static(path.join(__dirname, "views")));
 app.use("/api", calculatorRoutes);
 
 
-// test db connection
-sequelize
-.authenticate()
-.then(() => {
-    console.log("Connection to DB has been established!");
-
-    // sync models
-    sequelize.sync().then(() => {
-        console.log("Database synchronized.");
-    })
-
-
-    // start server only after db connection is established
-    app.listen(PORT, () => {
+(async () => {
+    try {
+      await sequelize.authenticate();
+      console.log("Connection to DB has been established!");
+  
+      await sequelize.sync();
+      console.log("Database synchronized.");
+  
+      app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
-    });
-})
-.catch((err) => {
-    console.error("Unable to connect to DB.", err)
-})
+      });
+    } catch (err) {
+      console.error("Unable to connect to DB or synchronize database.", err);
+    }
+  })();
+  
+
+
+
+
+
+
+
+
+
+
+// test db connection
+// sequelize
+// .authenticate()
+// .then(() => {
+//     console.log("Connection to DB has been established!");
+
+//     // sync models
+//     sequelize.sync().then(() => {
+//         console.log("Database synchronized.");
+//     })
+
+
+//     // start server only after db connection is established
+//     app.listen(PORT, () => {
+//         console.log(`Server is running on http://localhost:${PORT}`);
+//     });
+// })
+// .catch((err) => {
+//     console.error("Unable to connect to DB.", err)
+// })
 
 // Start the server
 
