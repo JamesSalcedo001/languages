@@ -72,7 +72,7 @@ exports.getAllCalculations = async (req, res) => {
 exports.getCalculationById = async (req, res) => {
     const { id } = req.params;
     try {
-        const calculation = Calculation.findByPk(id);
+        const calculation = await Calculation.findByPk(id);
         if (!calculation) {
             return res.status(404).json({ error: "Calculation not found" });
         }
