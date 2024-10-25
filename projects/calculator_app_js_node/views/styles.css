@@ -46,3 +46,7 @@ button {
 #history button {
     margin-left: 5px;
 }
+
+button:hover {
+    background-color: #f0f0f0;
+}

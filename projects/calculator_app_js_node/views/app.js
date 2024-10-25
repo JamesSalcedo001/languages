@@ -137,9 +137,9 @@ function editCalculation(id) {
     fetch(`http://localhost:3000/api/history/${id}`)
         .then(res => res.json())
         .then(calc => {
-            firstOperand = calc.firstOperand;
+            firstOperand = calc.firstOperand.toString();
             operator = calc.operator;
-            currentInput = calc.secondOperand;
+            currentInput = calc.secondOperand.toString();
             display.value = `${firstOperand} ${operator} ${currentInput}`;
             console.log("Populated edit fields:", calc);
 
