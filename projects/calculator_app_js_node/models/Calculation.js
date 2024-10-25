@@ -5,7 +5,7 @@ const sequelize = require("../config/database");
 
 const Calculation = sequelize.define("Calculation", {
     firstOperand: {
-        type: DataTypes.FLOAT,
+        type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
     },
     operator: {
@@ -13,11 +13,11 @@ const Calculation = sequelize.define("Calculation", {
         allowNull: false,
     },
     secondOperand: {
-        type: DataTypes.FLOAT,
+        type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
     },
     result: {
-        type: DataTypes.FLOAT,
+        type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
     },
 });
