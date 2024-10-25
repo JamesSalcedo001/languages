@@ -5,15 +5,15 @@ const sequelize = require("../config/database");
 
 const Calculation = sequelize.define("Calculation", {
     firstOperand: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: false,
     },
     operator: {
-        type: DataTypes.STRING,
+        type: DataTypes.ENUM("+", "-", "*", "/"),
         allowNull: false,
     },
     secondOperand: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: false,
     },
     result: {
