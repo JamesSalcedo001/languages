@@ -14,6 +14,17 @@ const Calculation = sequelize.define("Calculation", {
     operator: {
         type: DataTypes.ENUM("+", "-", "*", "/"),
         allowNull: false,
-    }
+    },
+    secondOperand: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: false,
+    },
+    result: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: false,
+    },
+}, {
+    timestamps: true,
+});
 
-})
+module.exports = Calculation;
