@@ -17,17 +17,28 @@ document.addEventListener("DOMContentLoaded", function () {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const value = button.textContent;
-  
+
       console.log(`Button pressed: ${value}, isEditing: ${isEditing}`);
-  
+
       if ((value >= "0" && value <= "9") || value === ".") {
-        currentInput += value;
-        display.value = operator ? `${firstOperand} ${operator} ${currentInput}` : currentInput;
+        if (!operator) {
+          // Building the first operand
+          firstOperand += value;
+          display.value = firstOperand;
+        } else {
+          // Building the second operand
+          currentInput += value;
+          display.value = `${firstOperand} ${operator} ${currentInput}`;
+        }
       } else if (value === "C") {
-        clearCalculator();
+        if (isEditing) {
+          clearCurrentInput();
+        } else {
+          clearCalculator();
+        }
       } else if (value === "=") {
         console.log("Equals button pressed, isEditing:", isEditing);
-        if (operator && firstOperand !== "") {
+        if (operator && firstOperand !== "" && currentInput !== "") {
           if (isEditing) {
             console.log("Calling updateCalculation");
             updateCalculation(editId);
@@ -37,18 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         } else {
           display.value = "Invalid operation";
-          console.log("Invalid operation: operator or firstOperand missing");
+          console.log("Invalid operation: missing operands or operator");
         }
       } else if (["+", "-", "*", "/"].includes(value)) {
-        if (currentInput !== "" && !operator) {
-          firstOperand = currentInput;
-          currentInput = "";
+        if (firstOperand !== "") {
           operator = value;
           display.value = `${firstOperand} ${operator}`;
-        } else if (operator && currentInput !== "") {
-          // Handle cases where operator is already set
-          // Optionally update operator or calculate intermediate result
-          console.log("Operator already set, currentInput:", currentInput);
+        } else {
+          console.log("Operator entered without a first operand");
         }
       }
     });
@@ -60,14 +67,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Clear calculator function
 function clearCalculator() {
-    currentInput = "";
-    firstOperand = "";
-    operator = "";
-    display.value = "";
-    isEditing = false;
-    editId = null;
-    console.log("Calculator cleared, isEditing set to", isEditing);
-  }
+  currentInput = "";
+  firstOperand = "";
+  operator = "";
+  display.value = "";
+  isEditing = false;
+  editId = null;
+  console.log("Calculator cleared, isEditing set to", isEditing);
+}
+
+// New function to clear the entire calculation during editing
+function clearCurrentInput() {
+  currentInput = "";
+  firstOperand = "";
+  operator = "";
+  display.value = "";
+  console.log("Current input cleared, isEditing remains", isEditing);
+}
 
 // Send calculation to the backend
 function calculateResult() {
