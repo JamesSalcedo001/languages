@@ -48,5 +48,16 @@ exports.createCalculation = async (req, res) => {
         }
 
         const result = computeResult(firstOperand, operator, secondOperand);
+
+        const calculation = await Calculation.create({
+            firstOperand,
+            operator,
+            secondOperand,
+            result,
+        });
+
+        res.status(201).json(calculation);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
     }
-}
+};
