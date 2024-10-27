@@ -73,3 +73,19 @@ exports.getAllCalculations = async (req, res) => {
         res.status(500).json({ error: "Database error" });
     }
 };
+
+
+
+// get a calculation by ID
+exports.getCalculationById = async (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    try {
+        const calculation = await Calculation.findByPk(id);
+        if (!calculation) {
+            return res.status(404).json({ error: "Calculation not found" });
+        }
+        res.status(200).json(calculation);
+    } catch (error) {
+        res.status(500).json({ error: "Database error" });
+    }
+};
