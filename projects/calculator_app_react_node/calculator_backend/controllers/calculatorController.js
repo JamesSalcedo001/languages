@@ -34,4 +34,19 @@ function computeResult(num1, operator, num2) {
 
 exports.createCalculation = async (req, res) => {
     let {firstOperand, operator, secondOperand } = req.body;
+
+    if (firstOperand === undefined || operator === undefined || secondOperand === undefined) {
+        return res.status(400).json({ error: "Missing or invalid input" });
+    }
+
+    try {
+        firstOperand = parseFloat(firstOperand);
+        secondOperand = parseFloat(secondOperand);
+
+        if (isNaN(firstOperand) || isNaN(secondOperand)) {
+            throw new Error("Invalid numer input");
+        }
+
+        const result = computeResult(firstOperand, operator, secondOperand);
+    }
 }
