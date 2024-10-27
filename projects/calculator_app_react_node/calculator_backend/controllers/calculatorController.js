@@ -109,5 +109,18 @@ exports.updateCalculation = async (req, res) => {
         }
 
         const result = computeResult(firstOperand, operator, secondOperand);
+
+        const [updatedRowsCount, updatedRows] = await Calculation.update(
+            {
+                firstOperand,
+                operator,
+                secondOperand,
+                result,
+            },
+            {
+                where: { id },
+                returning: true,
+            }
+        );
     }
 }
