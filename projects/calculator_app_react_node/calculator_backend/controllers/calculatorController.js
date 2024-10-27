@@ -61,3 +61,15 @@ exports.createCalculation = async (req, res) => {
         res.status(400).json({ error: error.message });
     }
 };
+
+
+
+// get all calculations
+exports.getAllCalculations = async (req, res) => {
+    try {
+        const calculations = await Calculation.findAll({ order: [["createdAt", "DESC"]] });
+        res.status(200).json(calculations);
+    } catch (error) {
+        res.status(500).json({ error: "Database error" });
+    }
+};
