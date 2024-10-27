@@ -29,3 +29,9 @@ function computeResult(num1, operator, num2) {
 
     return result;
 }
+
+// create new calculation
+
+exports.createCalculation = async (req, res) => {
+    let {firstOperand, operator, secondOperand } = req.body;
+}
