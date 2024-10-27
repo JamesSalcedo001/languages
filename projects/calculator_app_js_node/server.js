@@ -1,8 +1,10 @@
+// server.js
+
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const helmet = require("helmet");
-const rateLimit = require('express-rate-limit'); // Added rate limiter
+const rateLimit = require("express-rate-limit");
 const calculatorRoutes = require("./routes/calculatorRoutes");
 const sequelize = require("./config/database");
 

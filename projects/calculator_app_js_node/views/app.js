@@ -1,60 +1,61 @@
+// app.js
+
 // Global variables
 let currentInput = "";
 let operator = "";
 let firstOperand = "";
 let display;
+let isEditing = false; // Indicates if we're in edit mode
+let editId = null; // Stores the ID of the calculation being edited
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Ensure the display element and buttons are properly selected
-    display = document.getElementById("display");
-    const buttons = document.querySelectorAll(".buttons button");
+  // Ensure the display element and buttons are properly selected
+  display = document.getElementById("display");
+  const buttons = document.querySelectorAll(".buttons button");
 
-    // Check if display and buttons elements are correctly found
-    if (!display) {
-        console.error("Display element not found");
-    } else {
-        console.log("Display element found");
-    }
-
-    if (buttons.length === 0) {
-        console.error("Buttons not found");
-    } else {
-        console.log("Buttons found:", buttons.length, "buttons");
-    }
-
-    // Handle button click events
-    buttons.forEach(button => {
-        console.log("Attaching event listener to button:", button.textContent);
-        button.addEventListener("click", () => {
-            const value = button.textContent;
-            console.log("Button clicked:", value);
-
-            if ((value >= "0" && value <= "9") || value === ".") {
-                currentInput += value;
-                display.value = currentInput;
-                console.log("Display updated:", display.value);
-            } else if (value === "C") {
-                clearCalculator();
-            } else if (value === "=") {
-                if (operator && firstOperand !== "") {
-                    calculateResult();
-                } else {
-                    display.value = "Invalid operation";
-                    console.log("Invalid operation: operator or firstOperand missing");
-                }
-            } else {
-                if (currentInput !== "" && !operator) {
-                    firstOperand = currentInput;
-                    currentInput = "";
-                    operator = value;
-                    console.log("First operand and operator set:", firstOperand, operator);
-                }
-            }
-        });
+  // Handle button click events
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const value = button.textContent;
+  
+      console.log(`Button pressed: ${value}, isEditing: ${isEditing}`);
+  
+      if ((value >= "0" && value <= "9") || value === ".") {
+        currentInput += value;
+        display.value = operator ? `${firstOperand} ${operator} ${currentInput}` : currentInput;
+      } else if (value === "C") {
+        clearCalculator();
+      } else if (value === "=") {
+        console.log("Equals button pressed, isEditing:", isEditing);
+        if (operator && firstOperand !== "") {
+          if (isEditing) {
+            console.log("Calling updateCalculation");
+            updateCalculation(editId);
+          } else {
+            console.log("Calling calculateResult");
+            calculateResult();
+          }
+        } else {
+          display.value = "Invalid operation";
+          console.log("Invalid operation: operator or firstOperand missing");
+        }
+      } else if (["+", "-", "*", "/"].includes(value)) {
+        if (currentInput !== "" && !operator) {
+          firstOperand = currentInput;
+          currentInput = "";
+          operator = value;
+          display.value = `${firstOperand} ${operator}`;
+        } else if (operator && currentInput !== "") {
+          // Handle cases where operator is already set
+          // Optionally update operator or calculate intermediate result
+          console.log("Operator already set, currentInput:", currentInput);
+        }
+      }
     });
+  });
 
-    // Initialize and fetch history on page load
-    fetchHistory();
+  // Initialize and fetch history on page load
+  fetchHistory();
 });
 
 // Clear calculator function
@@ -63,141 +64,140 @@ function clearCalculator() {
     firstOperand = "";
     operator = "";
     display.value = "";
-    console.log("Calculator cleared");
-}
+    isEditing = false;
+    editId = null;
+    console.log("Calculator cleared, isEditing set to", isEditing);
+  }
 
 // Send calculation to the backend
 function calculateResult() {
-    const secondOperand = currentInput;
-    const data = { firstOperand, operator, secondOperand };
+  console.log("calculateResult called");
+  const secondOperand = currentInput;
+  const data = { firstOperand, operator, secondOperand };
 
-    console.log("Sending calculation to server:", data);
-
-    fetch("http://localhost:3000/api/calculate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+  fetch("http://localhost:3000/api/calculate", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
+    .then((res) => {
+      if (!res.ok) {
+        return res.json().then((errorData) => {
+          throw new Error(errorData.error || "Unknown error");
+        });
+      }
+      return res.json();
     })
-    .then(res => {
-        if (!res.ok) {
-            return res.json().then(errorData => {
-                throw new Error(errorData.error || "Unknown error");
-            });
-        }
-        return res.json();
+    .then((res) => {
+      display.value = res.result;
+      currentInput = res.result.toString();
+      firstOperand = "";
+      operator = "";
+      isEditing = false; // Reset edit mode variables after calculation
+      editId = null;
+      console.log("Calculation result:", res.result);
+      fetchHistory(); // Update history after calculation
     })
-    .then(res => {
-        display.value = res.result;
-        currentInput = res.result.toString();
-        firstOperand = "";
-        operator = "";
-        console.log("Calculation result:", res.result);
-        fetchHistory(); // Update history after calculation
-    })
-    .catch(error => {
-        console.error("Error:", error.message);
-        display.value = `Error: ${error.message}`;
+    .catch((error) => {
+      console.error("Error:", error.message);
+      display.value = `Error: ${error.message}`;
     });
 }
 
 // Fetch and display calculation history
 function fetchHistory() {
-    console.log("Fetching calculation history...");
-    fetch("http://localhost:3000/api/history")
-    .then(res => res.json())
-    .then(history => {
-        const historyDiv = document.getElementById("history");
-        historyDiv.innerHTML = ""; // Clear previous history
+  console.log("Fetching calculation history...");
+  fetch("http://localhost:3000/api/history")
+    .then((res) => res.json())
+    .then((history) => {
+      const historyDiv = document.getElementById("history");
+      historyDiv.innerHTML = ""; // Clear previous history
 
-        history.forEach(calc => {
-            const calcItem = document.createElement("div");
-            calcItem.innerHTML = `${calc.firstOperand} ${calc.operator} ${calc.secondOperand} = ${calc.result}`;
+      history.forEach((calc) => {
+        const calcItem = document.createElement("div");
+        calcItem.innerHTML = `${calc.firstOperand} ${calc.operator} ${calc.secondOperand} = ${calc.result}`;
 
-            const editButton = document.createElement("button");
-            editButton.textContent = "Edit";
-            editButton.addEventListener("click", () => editCalculation(calc.id));
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+        editButton.addEventListener("click", () => editCalculation(calc.id));
 
-            const deleteButton = document.createElement("button");
-            deleteButton.textContent = "Delete";
-            deleteButton.addEventListener("click", () => deleteCalculation(calc.id));
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click", () => deleteCalculation(calc.id));
 
-            calcItem.appendChild(editButton);
-            calcItem.appendChild(deleteButton);
+        calcItem.appendChild(editButton);
+        calcItem.appendChild(deleteButton);
 
-            historyDiv.appendChild(calcItem);
-        });
-        console.log("History displayed");
+        historyDiv.appendChild(calcItem);
+      });
+      console.log("History displayed");
     })
-    .catch(error => console.error("Error fetching history:", error));
+    .catch((error) => console.error("Error fetching history:", error));
 }
 
 // Edit a calculation from history
 function editCalculation(id) {
-    console.log("Editing calculation:", id);
-    fetch(`http://localhost:3000/api/history/${id}`)
-        .then(res => res.json())
-        .then(calc => {
-            firstOperand = calc.firstOperand.toString();
-            operator = calc.operator;
-            currentInput = calc.secondOperand.toString();
-            display.value = `${firstOperand} ${operator} ${currentInput}`;
-            console.log("Populated edit fields:", calc);
+  console.log("Editing calculation:", id);
+  fetch(`http://localhost:3000/api/history/${id}`)
+    .then((res) => res.json())
+    .then((calc) => {
+      firstOperand = calc.firstOperand.toString();
+      operator = calc.operator;
+      currentInput = calc.secondOperand.toString();
+      display.value = `${firstOperand} ${operator} ${currentInput}`;
+      console.log("Populated edit fields:", calc);
 
-            const equalsButton = document.getElementById("equalsButton");
-            // Remove existing event listener to prevent duplicates
-            equalsButton.onclick = null;
-            equalsButton.addEventListener("click", function handler() {
-                updateCalculation(id);
-                // Remove the event listener after it's used once
-                equalsButton.removeEventListener("click", handler);
-            });
-        })
-        .catch(error => console.error("Error editing calculation:", error));
+      // Set edit mode
+      isEditing = true;
+      editId = parseInt(id, 10); // Ensure editId is an integer
+    })
+    .catch((error) => console.error("Error editing calculation:", error));
 }
 
 // Update a calculation
 function updateCalculation(id) {
-    const secondOperand = currentInput;
-    const data = { firstOperand, operator, secondOperand };
+  console.log("updateCalculation called with id:", id);
+  const secondOperand = currentInput;
+  const data = { firstOperand, operator, secondOperand };
 
-    console.log("Updating calculation:", id, data);
-
-    fetch(`http://localhost:3000/api/history/${id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+  fetch(`http://localhost:3000/api/history/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
+    .then((res) => {
+      if (!res.ok) {
+        return res.json().then((errorData) => {
+          throw new Error(errorData.error || "Unknown error");
+        });
+      }
+      return res.json();
     })
-    .then(res => {
-        if (!res.ok) {
-            return res.json().then(errorData => {
-                throw new Error(errorData.error || "Unknown error");
-            });
-        }
-        return res.json();
+    .then((updatedCalc) => {
+      display.value = updatedCalc.result;
+      currentInput = updatedCalc.result.toString();
+      firstOperand = "";
+      operator = "";
+      isEditing = false; // Reset edit mode variables after update
+      editId = null;
+      console.log("Calculation updated:", updatedCalc);
+      fetchHistory();
     })
-    .then(updatedCalc => {
-        display.value = updatedCalc.result;
-        currentInput = updatedCalc.result.toString();
-        firstOperand = "";
-        operator = "";
-        console.log("Calculation updated:", updatedCalc);
-        fetchHistory();
-    })
-    .catch(error => {
-        console.error("Error:", error.message);
-        display.value = `Error: ${error.message}`;
+    .catch((error) => {
+      console.error("Error:", error.message);
+      display.value = `Error: ${error.message}`;
     });
 }
 
 // Delete a calculation from history
 function deleteCalculation(id) {
-    console.log("Deleting calculation:", id);
-    fetch(`http://localhost:3000/api/history/${id}`, {
-        method: "DELETE",
-    })
+  console.log("Deleting calculation:", id);
+  fetch(`http://localhost:3000/api/history/${id}`, {
+    method: "DELETE",
+  })
     .then(() => {
-        console.log("Calculation deleted");
-        fetchHistory();
+      console.log("Calculation deleted");
+      fetchHistory();
     })
-    .catch(error => console.error("Error deleting calculation:", error));
+    .catch((error) => console.error("Error deleting calculation:", error));
 }
