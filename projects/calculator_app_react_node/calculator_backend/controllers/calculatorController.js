@@ -89,3 +89,25 @@ exports.getCalculationById = async (req, res) => {
         res.status(500).json({ error: "Database error" });
     }
 };
+
+// update a calculation
+
+exports.updateCalculation = async (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    let { firstOperand, operator, secondOperand } = req.body;
+
+    if (firstOperand === undefined || operator === undefined || secondOperand === undefined) {
+        return res.status(400).json({ error: "Missing or invalid input" });
+    }
+
+    try {
+        firstOperand = parseFloat(firstOperand);
+        secondOperand = parseFloat(secondOperand);
+
+        if (isNaN(firstOperand) || isNaN(secondOperand)) {
+            throw new Error("Invalid number input");
+        }
+
+        const result = computeResult(firstOperand, operator, secondOperand);
+    }
+}
