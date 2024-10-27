@@ -149,5 +149,8 @@ exports.deleteCalculation = async (req, res) => {
         }
 
         await calculation.destroy();
+        res.status(204).send();
+    } catch (error) {
+        res.status(500).json({ error: "Database error" });
     }
-}
+};
