@@ -17,3 +17,15 @@ app.use(express.json());
 // routes
 app.use("/api", calculatorRoutes);
 
+// start the server
+
+(async () => {
+    try {
+        await sequelize.authenticate();
+        console.log("Database connected!");
+
+        // synchronize models with database
+        await sequelize.sync({ force: false }) // set to true to reset tables
+        console.log("Database syncronized!")
+    }
+})
