@@ -2,7 +2,7 @@
 
 const express = require("express");
 const router = express.Router();
-const calculatorController = require("../constorllers/calculatorController");
+const calculatorController = require("../controllers/calculatorController");
 
 router.post("/calculations", calculatorController.createCalculation);
 router.get("/calculations", calculatorController.getAllCalculations);
