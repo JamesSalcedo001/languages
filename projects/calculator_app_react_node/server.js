@@ -26,6 +26,13 @@ app.use("/api", calculatorRoutes);
 
         // synchronize models with database
         await sequelize.sync({ force: false }) // set to true to reset tables
-        console.log("Database syncronized!")
+        console.log("Database syncronized!");
+
+        app.listen(PORT, () => {
+            console.log(`Server is running on http://localhost:${PORT}`);
+        });
+
+    } catch (error) {
+        console.error("Unable to connect to database: ", error);
     }
-})
+})();
