@@ -45,7 +45,7 @@ export async function createCalculation(req, res) {
         secondOperand = parseFloat(secondOperand);
 
         if (isNaN(firstOperand) || isNaN(secondOperand)) {
-            throw new Error("Invalid numer input");
+            throw new Error("Invalid number input");
         }
 
         const result = computeResult(firstOperand, operator, secondOperand);
