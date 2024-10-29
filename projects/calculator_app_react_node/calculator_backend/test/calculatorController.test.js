@@ -1,7 +1,7 @@
 // test
 
-const { expect } = require("chai");
-const { computeResult } = require("../controllers/calculatorController");
+import { expect } from "chai";
+import { computeResult } from "../controllers/calculatorController";
 
 describe("computeResult Function", () => {
     it("should add two numbers correctly", () => {

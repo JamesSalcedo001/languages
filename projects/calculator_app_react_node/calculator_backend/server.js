@@ -1,10 +1,10 @@
 // server.js
 
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const sequelize = require('./config/database');
-const calculatorRoutes = require('./routes/calculatorRoutes');
+import "dotenv/config";
+import express from "express";
+import cors from "cors";
+import sequelize from "./config/database.js";
+import calculatorRoutes from "./routes/calculatorRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
