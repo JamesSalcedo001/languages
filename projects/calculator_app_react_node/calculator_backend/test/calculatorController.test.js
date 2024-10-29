@@ -24,5 +24,7 @@ describe("computeResult Function", () => {
         expect(result).to.equal(5);
     });
 
-    
+    it("should throw an error when dividing by zero", () => {
+        expect(() => computeResult(5, "/", 0)).to.throw("Cannot divide by zero");
+    });
 })
