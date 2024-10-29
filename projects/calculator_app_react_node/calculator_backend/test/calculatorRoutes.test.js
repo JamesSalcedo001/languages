@@ -1,10 +1,12 @@
 // test/calculatorRoutes.test.js
 
 import request from "supertest";
-import { expect } from "chai";
-import app from "../server";
-import sequelize from "../config/database";
-import Calculation from "../models/Calculation";
+import chai from "chai";
+import app from "../server.js";
+import sequelize from "../config/database.js";
+import Calculation from "../models/Calculation.js";
+
+const { expect } = chai;
 
 describe("Calculator API Ednpoints", () => {
     // before running tests sync the database
@@ -105,7 +107,12 @@ describe("Calculator API Ednpoints", () => {
 
             expect(response.status).to.equal(204);
         });
-    })
 
+        it("should return a 404 when deleting a non-existent calculation", async () => {
+            const response = await request(app).delete("/api/calculations/999");
 
-})
+            expect(response.status).to.equal(404);
+            expect(response.body).to.have.property("error", "Calculation not found");
+        });
+    });
+});
