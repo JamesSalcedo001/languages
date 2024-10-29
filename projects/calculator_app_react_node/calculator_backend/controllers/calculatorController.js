@@ -1,6 +1,6 @@
 // controllers/calculatorController.js
 
-import Calculation from "../models/Calculation";
+import Calculation from "../models/Calculation.js";
 
 // helper function to perform calculations
 
@@ -24,7 +24,7 @@ export function computeResult(num1, operator, num2) {
             result = num1 / num2;
             break;
         default:
-            throw new Error("invalid operator");
+            throw new Error("Invalid operator");
     }
 
     return result;
