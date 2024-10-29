@@ -41,5 +41,15 @@ describe("Calculator API Ednpoints", () => {
         });
     });
 
-    
+    describe("GET /api/calculations", () => {
+        it("should retrieve all calculations", async () => {
+            const response = await request(app).get("/api/calculations");
+
+            expect(response.status).to.equal(200);
+            expect(response.body).to.be.an("array");
+            expect(response.body.length).to.be.greaterThan(0);
+        });
+    });
+
+
 })
