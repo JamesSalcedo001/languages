@@ -1,14 +1,13 @@
 // test/calculatorRoutes.test.js
 
 import request from "supertest";
-import chai from "chai";
+import { expect } from "chai";
 import app from "../server.js";
 import sequelize from "../config/database.js";
 import Calculation from "../models/Calculation.js";
 
-const { expect } = chai;
 
-describe("Calculator API Ednpoints", () => {
+describe("Calculator API Endpoints", () => {
     // before running tests sync the database
     before(async () => {
         await sequelize.sync({ force: true });
