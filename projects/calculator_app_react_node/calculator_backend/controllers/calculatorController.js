@@ -1,6 +1,6 @@
 // controllers/calculatorController.js
 
-const Calculation = require("../models/Calculation");
+import Calculation from "../models/Calculation";
 
 // helper function to perform calculations
 
@@ -30,13 +30,10 @@ export function computeResult(num1, operator, num2) {
     return result;
 }
 
-// export computeresult function for testing
-
-exports.computeResult = computeResult;
 
 // create new calculation
 
-exports.createCalculation = async (req, res) => {
+export async function createCalculation(req, res) {
     let {firstOperand, operator, secondOperand } = req.body;
 
     if (firstOperand === undefined || operator === undefined || secondOperand === undefined) {
@@ -69,7 +66,7 @@ exports.createCalculation = async (req, res) => {
 
 
 // get all calculations
-exports.getAllCalculations = async (req, res) => {
+export async function getAllCalculations(req, res) {
     try {
         const calculations = await Calculation.findAll({ order: [["createdAt", "DESC"]] });
         res.status(200).json(calculations);
@@ -81,7 +78,7 @@ exports.getAllCalculations = async (req, res) => {
 
 
 // get a calculation by ID
-exports.getCalculationById = async (req, res) => {
+export async function getCalculationById (req, res) {
     const id = parseInt(req.params.id, 10);
     try {
         const calculation = await Calculation.findByPk(id);
@@ -96,7 +93,7 @@ exports.getCalculationById = async (req, res) => {
 
 // update a calculation
 
-exports.updateCalculation = async (req, res) => {
+export async function updateCalculation(req, res) {
     const id = parseInt(req.params.id, 10);
     let { firstOperand, operator, secondOperand } = req.body;
 
@@ -143,7 +140,7 @@ exports.updateCalculation = async (req, res) => {
 
 // delete a calculation
 
-exports.deleteCalculation = async (req, res) => {
+export async function deleteCalculation(req, res) {
     const id = parseInt(req.params.id, 10);
 
     try {
