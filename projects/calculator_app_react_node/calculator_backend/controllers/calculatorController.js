@@ -30,6 +30,10 @@ function computeResult(num1, operator, num2) {
     return result;
 }
 
+// export computeresult function for testing
+
+exports.computeResult = computeResult;
+
 // create new calculation
 
 exports.createCalculation = async (req, res) => {
