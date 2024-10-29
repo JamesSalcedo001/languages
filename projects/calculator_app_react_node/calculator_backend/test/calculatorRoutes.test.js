@@ -51,5 +51,27 @@ describe("Calculator API Ednpoints", () => {
         });
     });
 
+    describe("GET /api/calculations/:id", () => {
+        it("should retrive a calculation by ID", async () => {
+            const response = await request(app).get("/api/calculations/1");
+
+            expect(response.status).to.equal(200);
+            expect(response.body).to.include({
+                id: 1,
+                firstOperand: "5.00",
+                operator: "+",
+                secondOperand: "3.00",
+                result: "8.00",
+            });
+        });
+
+        it("should return a 404 for non-existent ID", async () => {
+            const response = await request(app).get("/api/calculations/999");
+
+            expect(response.status).to.equal(404);
+            expect(response.body).to.have.property("error", "Calculation not found");
+        });
+    });
+
 
 })
