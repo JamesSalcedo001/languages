@@ -99,5 +99,13 @@ describe("Calculator API Ednpoints", () => {
         });
     });
 
+    describe("DELETE /api/calculations/:id", () => {
+        it("should delete a calculation", async () => {
+            const response = await request(app).delete("/api/calculations/1");
+
+            expect(response.status).to.equal(204);
+        });
+    })
+
 
 })
