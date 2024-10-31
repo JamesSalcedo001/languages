@@ -7,7 +7,7 @@
   "scripts": {
     "prestart": "node swagger.js",
     "start": "node server.js",
-    "test": "mocha",
+    "test": "cross-env NODE_ENV=test mocha",
     "build-docs": "node swagger.js"
   },
   "keywords": [],
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "chai": "^5.1.2",
+    "cross-env": "^7.0.3",
     "mocha": "^10.7.3",
     "supertest": "^7.0.0"
   }

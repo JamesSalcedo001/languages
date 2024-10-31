@@ -31,7 +31,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use('/api', calculatorRoutes);
 
 // Start the server
-// if (process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== 'test') {
   (async () => {
     try {
       await sequelize.authenticate();
@@ -49,6 +49,6 @@ app.use('/api', calculatorRoutes);
       console.error('Unable to connect to the database:', error);
     }
   })();
-// }
+}
 
 export default app;
