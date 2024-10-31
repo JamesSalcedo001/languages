@@ -4,7 +4,7 @@ import request from "supertest";
 import { expect } from "chai";
 import app from "../server.js";
 import sequelize from "../config/database.js";
-import Calculation from "../models/Calculation.js";
+// import Calculation from "../models/Calculation.js";
 
 
 describe("Calculator API Endpoints", () => {
