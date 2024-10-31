@@ -7,6 +7,9 @@ import cors from 'cors';
 import sequelize from './config/database.js';
 import calculatorRoutes from './routes/calculatorRoutes.js';
 
+import swaggerUi from "swagger-ui-express";
+import swaggerFile from "./swagger_output.json" asser { type: "json" };
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
