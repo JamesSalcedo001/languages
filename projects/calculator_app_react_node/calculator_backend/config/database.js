@@ -2,6 +2,9 @@
 
 
 import "dotenv/config";
+import dotenvFlow from 'dotenv-flow';
+dotenvFlow.config();
+
 import { Sequelize } from "sequelize";
 
 const env = process.env.NODE_ENV || 'development';

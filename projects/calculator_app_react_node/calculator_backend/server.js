@@ -1,5 +1,8 @@
 import dotenv from 'dotenv';
 dotenv.config();
+import dotenvFlow from 'dotenv-flow';
+dotenvFlow.config();
+
 import express from 'express';
 import cors from 'cors';
 import sequelize from './config/database.js';
