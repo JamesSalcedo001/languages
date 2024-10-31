@@ -1,0 +1,336 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Calculator API",
+    "description": "API documentation for the Calculator application",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/calculations": {
+      "post": {
+        "tags": [
+          "Calculations"
+        ],
+        "description": "Create a new calculation",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Calculation details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstOperand": {
+                  "type": "number",
+                  "example": 10
+                },
+                "operator": {
+                  "type": "string",
+                  "example": "+"
+                },
+                "secondOperand": {
+                  "type": "number",
+                  "example": 5
+                }
+              },
+              "required": [
+                "firstOperand",
+                "operator",
+                "secondOperand"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Calculation created successfully",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "example": 1
+                },
+                "firstOperand": {
+                  "type": "number",
+                  "example": 10
+                },
+                "operator": {
+                  "type": "string",
+                  "example": "+"
+                },
+                "secondOperand": {
+                  "type": "number",
+                  "example": 5
+                },
+                "result": {
+                  "type": "number",
+                  "example": 15
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2023-10-20T12:00:00Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2023-10-20T12:00:00Z"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Calculations"
+        ],
+        "description": "Get all calculations",
+        "responses": {
+          "200": {
+            "description": "List of calculations",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number",
+                    "example": 1
+                  },
+                  "firstOperand": {
+                    "type": "number",
+                    "example": 10
+                  },
+                  "operator": {
+                    "type": "string",
+                    "example": "+"
+                  },
+                  "secondOperand": {
+                    "type": "number",
+                    "example": 5
+                  },
+                  "result": {
+                    "type": "number",
+                    "example": 15
+                  },
+                  "createdAt": {
+                    "type": "string",
+                    "example": "2023-10-20T12:00:00Z"
+                  },
+                  "updatedAt": {
+                    "type": "string",
+                    "example": "2023-10-20T12:00:00Z"
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/calculations/{id}": {
+      "get": {
+        "tags": [
+          "Calculations"
+        ],
+        "description": "Get a calculation by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Calculation ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Calculation found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "example": 1
+                },
+                "firstOperand": {
+                  "type": "number",
+                  "example": 10
+                },
+                "operator": {
+                  "type": "string",
+                  "example": "+"
+                },
+                "secondOperand": {
+                  "type": "number",
+                  "example": 5
+                },
+                "result": {
+                  "type": "number",
+                  "example": 15
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2023-10-20T12:00:00Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2023-10-20T12:00:00Z"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Calculations"
+        ],
+        "description": "Update a calculation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Calculation ID"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Updated calculation details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstOperand": {
+                  "type": "number",
+                  "example": 20
+                },
+                "operator": {
+                  "type": "string",
+                  "example": "-"
+                },
+                "secondOperand": {
+                  "type": "number",
+                  "example": 5
+                }
+              },
+              "required": [
+                "firstOperand",
+                "operator",
+                "secondOperand"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Calculation updated successfully",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "example": 1
+                },
+                "firstOperand": {
+                  "type": "number",
+                  "example": 20
+                },
+                "operator": {
+                  "type": "string",
+                  "example": "-"
+                },
+                "secondOperand": {
+                  "type": "number",
+                  "example": 5
+                },
+                "result": {
+                  "type": "number",
+                  "example": 15
+                },
+                "createdAt": {
+                  "type": "string",
+                  "example": "2023-10-20T12:00:00Z"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "example": "2023-10-20T12:05:00Z"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Calculations"
+        ],
+        "description": "Delete a calculation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Calculation ID"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Calculation deleted successfully"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "prestart": "node swagger.js",
+    "start": "node server.js",
+    "test": "mocha",
+    "build-docs": "node swagger.js"
   },
   "keywords": [],
   "author": "",

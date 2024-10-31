@@ -5,9 +5,7 @@ import swaggerAutogen from "swagger-autogen";
 const swaggerAutogenInstance = swaggerAutogen();
 
 const outputFile = "./swagger_output.json";
-
 const endpointsFiles = ["./server.js"];
-
 
 const doc = {
     info: {
@@ -22,6 +20,4 @@ const doc = {
     produces: ["application/json"],
 };
 
-swaggerAutogenInstance(outputFile, endpointsFiles, doc).then(() => {
-    import("./server.js");
-})
+swaggerAutogenInstance(outputFile, endpointsFiles, doc);
