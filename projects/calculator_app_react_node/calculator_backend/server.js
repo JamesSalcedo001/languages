@@ -1,3 +1,5 @@
+// server.js
+
 import dotenv from 'dotenv';
 dotenv.config();
 import dotenvFlow from 'dotenv-flow';
@@ -32,6 +34,12 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 // Routes
 app.use('/api', calculatorRoutes);
+
+// Error Handling Middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Internal Server Error' });
+});
 
 // Start the server
 if (process.env.NODE_ENV !== 'test') {

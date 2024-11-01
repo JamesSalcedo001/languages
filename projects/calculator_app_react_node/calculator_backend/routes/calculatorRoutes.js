@@ -1,7 +1,9 @@
 // routes/calculatorRoutes.js
 
 import express from 'express';
-import * as calculatorController from '../controllers/calculatorController.js';
+import { body } from 'express-validator';
+import CalculationController from '../controllers/calculationController.js';
+
 const router = express.Router();
 
 /**
@@ -11,33 +13,27 @@ const router = express.Router();
  * @returns {Calculation.model} 201 - Created calculation
  * @returns {Error} 400 - Invalid input
  */
-router.post('/calculations', (req, res) => {
-  // #swagger.tags = ['Calculations']
-  // #swagger.description = 'Create a new calculation'
-  /* #swagger.parameters['body'] = {
-          in: 'body',
-          description: 'Calculation details',
-          required: true,
-          schema: {
-              $firstOperand: 10,
-              $operator: '+',
-              $secondOperand: 5
-          }
-      } */
-  /* #swagger.responses[201] = {
-          description: 'Calculation created successfully',
-          schema: {
-              id: 1,
-              firstOperand: 10.00,
-              operator: '+',
-              secondOperand: 5.00,
-              result: 15.00,
-              createdAt: '2023-10-20T12:00:00Z',
-              updatedAt: '2023-10-20T12:00:00Z'
-          }
-      } */
-  calculatorController.createCalculation(req, res);
-});
+router.post(
+  '/calculations',
+  [
+    body('firstOperand')
+      .notEmpty()
+      .withMessage('First operand is required')
+      .isNumeric()
+      .withMessage('First operand must be a number'),
+    body('operator')
+      .notEmpty()
+      .withMessage('Operator is required')
+      .isIn(['+', '-', '*', '/'])
+      .withMessage('Invalid operator'),
+    body('secondOperand')
+      .notEmpty()
+      .withMessage('Second operand is required')
+      .isNumeric()
+      .withMessage('Second operand must be a number'),
+  ],
+  CalculationController.createCalculation
+);
 
 /**
  * @route GET /api/calculations
@@ -45,25 +41,7 @@ router.post('/calculations', (req, res) => {
  * @returns {Array.<Calculation>} 200 - List of calculations
  * @returns {Error} 500 - Server error
  */
-router.get('/calculations', (req, res) => {
-  // #swagger.tags = ['Calculations']
-  // #swagger.description = 'Get all calculations'
-  /* #swagger.responses[200] = {
-          description: 'List of calculations',
-          schema: [
-              {
-                  id: 1,
-                  firstOperand: 10.00,
-                  operator: '+',
-                  secondOperand: 5.00,
-                  result: 15.00,
-                  createdAt: '2023-10-20T12:00:00Z',
-                  updatedAt: '2023-10-20T12:00:00Z'
-              }
-          ]
-      } */
-  calculatorController.getAllCalculations(req, res);
-});
+router.get('/calculations', CalculationController.getAllCalculations);
 
 /**
  * @route GET /api/calculations/{id}
@@ -72,24 +50,7 @@ router.get('/calculations', (req, res) => {
  * @returns {Calculation.model} 200 - Calculation object
  * @returns {Error} 404 - Calculation not found
  */
-router.get('/calculations/:id', (req, res) => {
-  // #swagger.tags = ['Calculations']
-  // #swagger.description = 'Get a calculation by ID'
-  // #swagger.parameters['id'] = { description: 'Calculation ID' }
-  /* #swagger.responses[200] = {
-          description: 'Calculation found',
-          schema: {
-              id: 1,
-              firstOperand: 10.00,
-              operator: '+',
-              secondOperand: 5.00,
-              result: 15.00,
-              createdAt: '2023-10-20T12:00:00Z',
-              updatedAt: '2023-10-20T12:00:00Z'
-          }
-      } */
-  calculatorController.getCalculationById(req, res);
-});
+router.get('/calculations/:id', CalculationController.getCalculationById);
 
 /**
  * @route PUT /api/calculations/{id}
@@ -100,34 +61,27 @@ router.get('/calculations/:id', (req, res) => {
  * @returns {Error} 400 - Invalid input
  * @returns {Error} 404 - Calculation not found
  */
-router.put('/calculations/:id', (req, res) => {
-  // #swagger.tags = ['Calculations']
-  // #swagger.description = 'Update a calculation'
-  // #swagger.parameters['id'] = { description: 'Calculation ID' }
-  /* #swagger.parameters['body'] = {
-          in: 'body',
-          description: 'Updated calculation details',
-          required: true,
-          schema: {
-              $firstOperand: 20,
-              $operator: '-',
-              $secondOperand: 5
-          }
-      } */
-  /* #swagger.responses[200] = {
-          description: 'Calculation updated successfully',
-          schema: {
-              id: 1,
-              firstOperand: 20.00,
-              operator: '-',
-              secondOperand: 5.00,
-              result: 15.00,
-              createdAt: '2023-10-20T12:00:00Z',
-              updatedAt: '2023-10-20T12:05:00Z'
-          }
-      } */
-  calculatorController.updateCalculation(req, res);
-});
+router.put(
+  '/calculations/:id',
+  [
+    body('firstOperand')
+      .notEmpty()
+      .withMessage('First operand is required')
+      .isNumeric()
+      .withMessage('First operand must be a number'),
+    body('operator')
+      .notEmpty()
+      .withMessage('Operator is required')
+      .isIn(['+', '-', '*', '/'])
+      .withMessage('Invalid operator'),
+    body('secondOperand')
+      .notEmpty()
+      .withMessage('Second operand is required')
+      .isNumeric()
+      .withMessage('Second operand must be a number'),
+  ],
+  CalculationController.updateCalculation
+);
 
 /**
  * @route DELETE /api/calculations/{id}
@@ -136,14 +90,6 @@ router.put('/calculations/:id', (req, res) => {
  * @returns {null} 204 - Calculation deleted successfully
  * @returns {Error} 404 - Calculation not found
  */
-router.delete('/calculations/:id', (req, res) => {
-  // #swagger.tags = ['Calculations']
-  // #swagger.description = 'Delete a calculation'
-  // #swagger.parameters['id'] = { description: 'Calculation ID' }
-  /* #swagger.responses[204] = {
-          description: 'Calculation deleted successfully'
-      } */
-  calculatorController.deleteCalculation(req, res);
-});
+router.delete('/calculations/:id', CalculationController.deleteCalculation);
 
 export default router;
