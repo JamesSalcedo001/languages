@@ -20,6 +20,13 @@ export function Calculator({ onNewCalculation }) {
                     value={firstOperand}
                     onChange={(e) => setFirstOperand(e.target.value)}
                 />
+                <select value={operator} onChange={(e) => setOperator(e.target.value)}>
+                    <option value="">Operator</option>
+                    <option value="+">+</option>
+                    <option value="-"></option>
+                    <option value="*">&times;</option>
+                    <option value="/">&divide;</option>
+                </select>
             </div>
         </div>
     )
