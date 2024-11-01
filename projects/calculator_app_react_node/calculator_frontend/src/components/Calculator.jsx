@@ -5,6 +5,9 @@ import { useState } from "react";
 export function Calculator({ onNewCalculation }) {
     const [firstOperand, setFirstOperand] = useState("");
     const [operator, setOperator] = useState("");
+    const [secondOperand, setSecondOperand] = useState("");
+    const [result, setResult] = usestate(null);
+    const [error, setError] = useState("");
 
 
     return (
