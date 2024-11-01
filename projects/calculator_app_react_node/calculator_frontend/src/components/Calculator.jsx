@@ -33,6 +33,9 @@ export function Calculator({ onNewCalculation }) {
                     value={secondOperand}
                     onChange={(e) => setSecondOperand(e.target.value)}
                 />
+                <button onClick={handleCalculation} disabled={!firstOperand || !operator || !secondOperand}>Calculate</button>
+                {result !== null && <h3>Result: {result}</h3>}
+                {error && <p className="error">{error}</p>}
             </div>
         </div>
     )
