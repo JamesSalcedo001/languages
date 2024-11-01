@@ -1,0 +1,22 @@
+
+.app {
+  text-align: center;
+  margin: 20px;
+}
+
+.calculator,
+.history {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.calculator input,
+.calculator select {
+  margin: 5px;
+}
+
+.error {
+  color: red;
+}
