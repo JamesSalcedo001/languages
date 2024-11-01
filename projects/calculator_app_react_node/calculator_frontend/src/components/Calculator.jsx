@@ -27,6 +27,12 @@ export function Calculator({ onNewCalculation }) {
                     <option value="*">&times;</option>
                     <option value="/">&divide;</option>
                 </select>
+                <input 
+                    type="number"
+                    placeholder="secondOperand"
+                    value={secondOperand}
+                    onChange={(e) => setSecondOperand(e.target.value)}
+                />
             </div>
         </div>
     )
