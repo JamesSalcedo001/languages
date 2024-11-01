@@ -2,8 +2,6 @@
 
 import dotenv from 'dotenv';
 dotenv.config();
-import dotenvFlow from 'dotenv-flow';
-dotenvFlow.config();
 
 import express from 'express';
 import cors from 'cors';
@@ -21,6 +19,8 @@ try {
   console.error('Error loading swagger_output.json:', error);
   swaggerFile = {}; // Fallback to an empty object or handle as needed
 }
+
+console.log('Server.js is running');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -41,14 +41,21 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
+// Catch unhandled promise rejections
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
 // Start the server
 if (process.env.NODE_ENV !== 'test') {
+  console.log('Starting server with NODE_ENV:', process.env.NODE_ENV); 
   (async () => {
     try {
+      console.log('Authenticating database connection...'); 
       await sequelize.authenticate();
       console.log('Database connected!');
 
-      // Synchronize models with the database
+      console.log('Synchronizing models...');
       await sequelize.sync({ force: false }); // Set force: true to reset tables
       console.log('Database synchronized.');
 

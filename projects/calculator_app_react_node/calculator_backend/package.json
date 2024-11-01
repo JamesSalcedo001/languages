@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "prestart": "node swagger.js",
-    "start": "node server.js",
+    "start": "cross-env NODE_ENV=development node server.js",
     "test": "cross-env NODE_ENV=test mocha",
     "build-docs": "node swagger.js"
   },
@@ -16,7 +16,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "dotenv-flow": "^4.1.0",
     "express": "^4.21.1",
     "express-validator": "^6.14.3",
     "pg": "^8.13.1",

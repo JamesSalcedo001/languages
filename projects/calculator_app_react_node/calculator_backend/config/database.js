@@ -1,8 +1,7 @@
 // config/database.js
 
-import 'dotenv/config';
-import dotenvFlow from 'dotenv-flow';
-dotenvFlow.config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 import { Sequelize } from 'sequelize';
 
@@ -28,6 +27,7 @@ const config = {
 };
 
 const currentConfig = config[env];
+
 
 const sequelize = new Sequelize(
   currentConfig.database,
