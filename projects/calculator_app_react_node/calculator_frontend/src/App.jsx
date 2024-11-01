@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Calculator } from './components/Calculator';
-
+import { History } from './components/History';
 import './App.css'
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
     <div className='app'>
       <h1>Calculator App</h1>
       <Calculator onNewCalculation={fetchCalculations} />
+      <History calculations={calculations} />
     </div>
   )
 }
