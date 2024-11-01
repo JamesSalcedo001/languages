@@ -26,7 +26,7 @@ function App() {
   return (
     <div className='app'>
       <h1>Calculator App</h1>
-      <Calculator />
+      <Calculator onNewCalculation={fetchCalculations} />
     </div>
   )
 }
