@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 // src/components/Calculator.js
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-function Calculator({ onNewCalculation }) {
+export function Calculator({ onNewCalculation }) {
   const [firstOperand, setFirstOperand] = useState('');
   const [operator, setOperator] = useState('');
   const [secondOperand, setSecondOperand] = useState('');
@@ -74,4 +75,3 @@ function Calculator({ onNewCalculation }) {
   );
 }
 
-export default Calculator;
