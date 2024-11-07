@@ -11,6 +11,43 @@ myArray.pop(); // remove the last element: [1, 2, 3, 4, 5]
 
 
 
+// simple problem example for arrays
+
+// find the sum of all numbers in an array
+
+let numbers = [1, 2, 3, 4, 5];
+
+let sum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i]; // add each number to sum
+}
+
+console.log(sum);
+
+// use case: arrays are perfect for situations where you need quick access by index or need to iterate over all elements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // stacks: last in, first out LIFO data structure, you can only remove or add a plate to a stack, you can only take off the top in order
 
