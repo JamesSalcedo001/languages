@@ -180,3 +180,40 @@ node1.next = node2; // link node1 to node2
 
 console.log("node1 value: ", node1.value);
 console.log("node1.next value, link between node1 and node2: ", node1.next.value);
+
+
+
+
+
+
+
+
+
+
+// simple problem for linked lists
+
+
+
+
+
+// traverse a linked list and print each value
+
+let node3 = { value: 3, next: null };
+let node4 = { value: 4, next: null };
+let node5 = { value: 5, next: null };
+
+node3.next = node4;
+node4.next = node5;
+
+function printList(head) {
+    let currentNode = head;
+    while (currentNode !== null) {
+        console.log("current node value: ", currentNode.value); // print current node's value
+        currentNode = currentNode.next; // move to next node
+    }
+}
+
+printList(node3); // output: 3, 4, 5
+
+
+// use case: linked lists are used for dynamic data structures where elements can be added or removed easily without reallocating memory.
