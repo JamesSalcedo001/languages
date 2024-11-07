@@ -31,3 +31,23 @@ myQueue.push(1); // add 1: [1]
 myQueue.push(2); // add 2: [1, 2]
 
 console.log("remove first item of queue following FIFO: ", myQueue.shift()); // remove the first item 1, result: [2]
+
+
+
+
+// hashmaps: collection of key-pairs that allows for fast retrieval based on keys. useful for storing and accessing data by unique identifiers
+
+
+let myHashMap = {
+    "name": "James",
+    "age": 29
+};
+
+console.log("hashmap value access by key: ", myHashMap["name"]); // access value by key: "James"
+
+myHashMap["city"] = "Houston"; // add a new key-value pair
+
+console.log("add a new k/v and access it: ", myHashMap["city"]);
+
+
+
