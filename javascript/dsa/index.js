@@ -3,7 +3,7 @@
 // simple use
 
 let myArray = [1, 2, 3, 4, 5];
-console.log(myArray[0]); // access first element
+console.log("accessing array elem with index: ", myArray[0]); // access first element
 
 myArray.push(6); // add an element to the end: [1, 2, 3, 4, 5, 6]
 
@@ -18,7 +18,7 @@ let myStack = [];
 
 myStack.push(1); // add 1: [1]
 myStack.push(2); // add 2: [1, 2]
-console.log(myStack.pop()); // remove last-added item, which would be 2, result: [1] 
+console.log("demonstrating stack pop / element removal: ", myStack.pop()); // remove last-added item, which would be 2, result: [1] 
 
 
 
@@ -27,3 +27,7 @@ console.log(myStack.pop()); // remove last-added item, which would be 2, result:
 
 let myQueue = [];
 
+myQueue.push(1); // add 1: [1]
+myQueue.push(2); // add 2: [1, 2]
+
+console.log("remove first item of queue following FIFO: ", myQueue.shift()); // remove the first item 1, result: [2]
