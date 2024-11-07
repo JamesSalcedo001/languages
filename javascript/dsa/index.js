@@ -60,6 +60,35 @@ console.log("demonstrating stack pop / element removal: ", myStack.pop()); // re
 
 
 
+
+// simple problem for stacks
+
+// check if string has balanced parentheses (()))
+
+function isBalanced(str) {
+    let stack = [];
+    for (let char of str) {
+        if (char === "(") {
+            stack.push(char);
+        } else if (char === ")") {
+            if (stack.length === 0) return false; // no matching "("
+            stack.pop(); // remove the last "("
+        }
+    }
+    return stack.length === 0; // true if all "(" have been matched
+}
+
+console.log("(()()) is balanced?: ", isBalanced("(()())"));  // output: true
+console.log("()()()() is balanced?: ", isBalanced("()()()()")); // output: true?
+console.log("(())) is balanced?: ", isBalanced("(()))")); // output: false
+
+
+// use case: stacks are useful for problems involving nested structures or backtracking
+
+
+
+
+
 // queues: first in, first out - FIFO ds - line at a store, when the first person gets in line, they are helped first, and after is the second to get in line etc
 
 let myQueue = [];
