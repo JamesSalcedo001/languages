@@ -139,6 +139,38 @@ console.log("add a new k/v and access it: ", myHashMap["city"]);
 
 
 
+
+
+
+// simple problem for Hashmaps
+
+
+
+// count the number of times each character appears in a string
+
+function charCount(str) {
+    let countMap = {};
+    for (let char of str) {
+        if (countMap[char]) {
+            countMap[char]++;
+        } else {
+            countMap[char] = 1;
+        }
+    }
+    return countMap;
+}
+
+console.log("count for each repeat letter in hello string: ", charCount("hello")); // output: { h: 1, e: 1, l: 2, o: 1 };
+
+
+// use case: Hashmaps are perfect for counting and grouping data quickly
+
+
+
+
+
+
+
 // linked lists: collection of nodes where each node contains a value and a reference to the next node. unlike arrays, elements are not stored in contiguous memory locations
 
 let node1 = { value: 1, next: null };
