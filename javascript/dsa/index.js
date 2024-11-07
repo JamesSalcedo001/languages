@@ -114,7 +114,7 @@ queue.push("Person 1"); // enqueue person 1: ["Person 1"]
 queue.push("Person2"); // enqueue person 2; ["Person 1", "Person 2"]; adding each new element to the end of the line
 console.log(queue.shift()); // Dequeue Person 1: output: Person 1, queue becomes ["Person 2"];
 
-// queues are used for tasks that need first in first out approach, like handling requests in an order
+// use case: queues are used for tasks that need first in first out approach, like handling requests in an order
 
 
 
