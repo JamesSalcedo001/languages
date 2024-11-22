@@ -567,6 +567,26 @@ function getSubstring(str, start, end) {
 console.log("get substring of 'JavaScript' between indices 4 and 10 ->: ", getSubstring("JavaScript", 4, 10))
 
 
+console.log("\n*****\n")
+
+
+
+
+// padStart challenge: write function that takes string and total length, pads the string from start with zeros until reaches total length
+
+// input: padWithZeros("42", 5)
+
+// output: "00042"
+
+function padWithZeros(str, charPaddingNum) {
+    return str.padStart(charPaddingNum, "0");
+}
+
+
+console.log("move 45 up to indices 4 and 5, and pad anything before them with zeros ->: ", padWithZeros("42", 5))
+
+
+console.log("\n*****\n")
 
 
 
