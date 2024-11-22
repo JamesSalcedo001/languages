@@ -524,6 +524,31 @@ console.log("Replace all instances of 'JavaScript' with 'JS' ->: ", replaceAllWo
 
 
 
+console.log("\n*****\n")
+
+
+
+
+
+
+// concat() challenge: write function that takes three strings and concats them together with spaces in between
+
+// ex input: concatStrings("Hello", "JavaScript", "World")
+
+// output: Hello JavaScript World
+
+function concatStrings(str1, str2, str3) {
+    return str1.concat(" ", str2, " ", str3)
+}
+
+console.log(concatStrings("Hello", "JavaScript", "World"))
+
+
+
+
+
+
+
 
 
 
