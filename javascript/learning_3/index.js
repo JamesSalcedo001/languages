@@ -190,6 +190,9 @@ console.log("\n*****\n")
 
 
 function splitString(str, delimiter) {
+    // function takes in two args a string, and optionally a character to split the string at
+
+    // return the result of using split method on the given string
     return str.split(delimiter ? delimiter : " ");
 }
 
