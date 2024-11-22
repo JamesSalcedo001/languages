@@ -51,6 +51,27 @@ console.log("\n*****\n")
 
 
 
+
+// indexOf(): finds first occurrence of specified value in string
+
+let exString6 = "Hello World!";
+console.log("Hello world indexOf('world') ->: ". exString6.indexOf("world")); // output: 7
+console.log("Hello world! indexOf('o') ->: ", exString6.indexOf("o")); // output -> 4 (first o)
+console.log("Hello world! indexOf('Python') ->: ", exString6.indexOf("Python")) // output: -1 (not found)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // String challenges
 
 
@@ -215,12 +236,6 @@ console.log(splitString("Dogs are cool"))
 console.log(splitString("Dogs are cool", "o"))
 
 
-
-
-// Number methods
-
-// Number Challenges
-
 // Array methods
 
 // Array Challenges
@@ -232,6 +247,10 @@ console.log(splitString("Dogs are cool", "o"))
 // Loops Methods
 
 // Loops Challenges
+
+// Number methods
+
+// Number Challenges
 
 // Intermediate Challenges
 
