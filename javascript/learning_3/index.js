@@ -62,7 +62,10 @@ console.log("\n*****\n")
 // result: "S"
 
 function getCharacterAt(str, num) {
-    // return the result of using the charAt() method on the string passed into the function, using the num argument as the index at which to check the string
+    
+
+    // first check if the num arg is less than 0 which is out of range, then check if the num arg is greater than or equal to the length of the string, which is also out of range, and then if these checks pass, return the result of using the charAt() method on the string passed into the function, using the num argument as the index at which to check the string
+    
     return num < 0 || num >= str.length ? "Index out of range" : str.charAt(num);
 }
 
