@@ -181,6 +181,25 @@ console.log("\n*****\n")
 
 
 
+
+// split() challenge: write function thay takes string and delimiter( a character at which to separate) as arguments and splits the string into array of substrings based on delimiter. if no delimiter provided, split by spaces
+
+// ex input: splitString("split this sentence into words");
+
+// ex output: ["Split", "this", "sentence", "into", "words"];
+
+
+function splitString(str, delimiter) {
+    return str.split(delimiter ? delimiter : " ");
+}
+
+console.log(splitString("Dogs are cool"))
+
+console.log(splitString("Dogs are cool", "o"))
+
+
+
+
 // Number methods
 
 // Number Challenges
