@@ -108,9 +108,17 @@ console.log("\n*****\n")
 // replaceAll(): replaces all occurrences of specified value with another value
 
 let exString10 = "JavaScript is fun, and JavaAscript is powerful!";
-console.log(exString10.replaceAll("JavaScript", "JS")); // output: JS is fun, and JS is powerful!
+console.log("replacing original words JavaScript with JS ->: ", exString10.replaceAll("JavaScript", "JS")); // output: JS is fun, and JS is powerful!
 
 
+console.log("\n*****\n")
+
+
+// concat(): joins two or more strings
+
+let string1 = "Hello";
+let string2 = "World";
+console.log("concatenating 'Hello' and 'World' together along with punctuation ->: ", string1.concat(", ", string2, "!")); // output: Hello, World!
 
 
 
