@@ -1,4 +1,4 @@
-// String methods
+console.log("\n*** String methods ***\n")
 
 // charAt()
 
@@ -55,24 +55,33 @@ console.log("\n*****\n")
 // indexOf(): finds first occurrence of specified value in string
 
 let exString6 = "Hello World!";
-console.log("Hello world indexOf('world') ->: ". exString6.indexOf("world")); // output: 7
+console.log("Hello world indexOf('world') ->: ", exString6.indexOf("World")); // output: 7
 console.log("Hello world! indexOf('o') ->: ", exString6.indexOf("o")); // output -> 4 (first o)
 console.log("Hello world! indexOf('Python') ->: ", exString6.indexOf("Python")) // output: -1 (not found)
 
 
 
+console.log("\n*****\n")
+
+
+
+// lastIndexOf(): finds last occurrence of specified value in string
+
+
+let exString7 = "Hello world!";
+
+console.log("Hello world! lastIndexOf('o') ->: ", exString7.lastIndexOf("o")); // output: 8 (last o)
+console.log("Hello world! lastIndexOf('Hello') ->: ", exString7.lastIndexOf("Hello")); // output: 0
+console.log("Hello world lastIndexOf('Python') ->: ", exString7.lastIndexOf("Python")) // output: -1 (not found)
+
+
+
+console.log("\n*****\n")
 
 
 
 
-
-
-
-
-
-
-
-// String challenges
+console.log("*** String Challenges ***")
 
 
 
@@ -91,9 +100,9 @@ function getCharacterAt(str, num) {
 }
 
 
-console.log(getCharacterAt("Hello World!", 12)); // output: "Index out of range"
-console.log(getCharacterAt("Hello World!", 0)) // output: "H"
-console.log(getCharacterAt("Hello World!", -1)) // output; "Index out of range"
+console.log("Hello World! function takes in string and number and returns character at specified index 12 ->: ", getCharacterAt("Hello World!", 12)); // output: "Index out of range"
+console.log("Hello World! function takes in string and number and returns character at specified index 0 ->: ", getCharacterAt("Hello World!", 0)) // output: "H"
+console.log("Hello World! function takes in string and number and returns character at specified index -1 ->: ", getCharacterAt("Hello World!", -1)) // output; "Index out of range"
 
 
 console.log("\n*****\n")
@@ -115,9 +124,9 @@ function getSlice(str, start, end) {
     return start < 0 || end >= str.length ? "Invalid indices" : str.slice(start, end);
 }
 
-console.log(getSlice("Cats are cool!", 0, 6))
-console.log(getSlice("Cats are cool!", -1, 6))
-console.log(getSlice("Cats are cool!", 0, 14))
+console.log("getSlice function takes in string, and starting and ending indexes, returns that substring between indexes 0, 6 ->: ", getSlice("Cats are cool!", 0, 6))
+console.log("getSlice function takes in string, and starting and ending indexes, returns that substring between indexes -1, 6 ->: ", getSlice("Cats are cool!", -1, 6))
+console.log("getSlice function takes in string, and starting and ending indexes, returns that substring between indexes 0, 14 ->: ", getSlice("Cats are cool!", 0, 14))
 
 
 
@@ -236,21 +245,33 @@ console.log(splitString("Dogs are cool"))
 console.log(splitString("Dogs are cool", "o"))
 
 
-// Array methods
 
-// Array Challenges
 
-// Object Methods
 
-// Object Challenges
 
-// Loops Methods
 
-// Loops Challenges
 
-// Number methods
 
-// Number Challenges
+
+// console.log("\n*** Array methods ***\n")
+
+// console.log("\n*** Array Challenges ***\n")
+
+
+// console.log("\n*** Object methods ***\n")
+
+// console.log("\n*** Object Challenges ***\n")
+
+
+// console.log("\n*** Loops methods ***\n")
+
+// console.log("\n*** Loops Challenges ***\n")
+
+
+
+// console.log("\n*** Numbers methods ***\n")
+
+// console.log("\n*** Numbers Challenges ***\n")
 
 // Intermediate Challenges
 
