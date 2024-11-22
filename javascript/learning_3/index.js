@@ -454,6 +454,33 @@ console.log("check if/where 'a' is in 'Hello, world!' ->: ",findLastIndex("Hello
 
 
 
+
+
+
+
+
+
+// trim() challenge: write function that takes string with extra spaces at the beginning and end and returns the trimmed string
+
+function trimString(str) {
+    return str.trim();
+}
+
+console.log(trimString("       Hello, World!!!            "))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // console.log("\n*** Array methods ***\n")
 
 // console.log("\n*** Array Challenges ***\n")
