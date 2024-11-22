@@ -396,6 +396,34 @@ console.log("splitString() takes in string and splits by specified character or 
 
 
 
+// indexOf() challenge: write function that takes a string and a word, returns the first index of the word in the string, if not found, return "Not found"
+
+// findIndex("Hello, world!", "world")
+
+// ex output: 7
+
+
+
+function findIndex(str, word) {
+    // convert both string and word to lowercase for case-insensitive matching
+    const lowerStr = str.toLowerCase();
+    const lowerWord = word.toLowerCase();
+
+    // use the indexOf method on the string to check for the presence of the word, store result in a variable index
+    const index = lowerStr.indexOf(lowerWord);
+    
+    // use ternary to check if the result returns -1, if not it returns the index where the word is located in the string
+    return index === -1 ? "Not found" : index;
+}
+
+console.log(findIndex("Hello, World!", "world")) // 7
+console.log(findIndex("Hello, World!", "hello" )) // 0
+console.log(findIndex("Hello, World!", "cat" )) // Not found
+
+
+
+
+
 
 
 
