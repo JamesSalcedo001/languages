@@ -704,6 +704,20 @@ console.log("returns value after removing from end of array with pop() ->: ", fr
 console.log("array [apple, banana, cherry] after using pop() ->: ", fruits2);
 
 
+console.log("\n*****\n")
+
+
+
+// shift(): removes first elem from an array and returns it (opposite of pop())
+
+let fruits3 = ["apple", "banana", "cherry"];
+let firstFruit = fruits.shift();
+
+console.log("[apple, banana, cherry] after using shift() ->: ", fruits);
+
+console.log("first value of fruits array removed and returned", firstFruit);
+
+
 
 // console.log("\n*** Array Challenges ***\n")
 
