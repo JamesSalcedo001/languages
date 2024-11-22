@@ -198,9 +198,15 @@ console.log("\n*****\n")
 
 
 function splitString(str, delimiter = " ") {
+    // set default parameter for delimiter, so if no delim is provided, it uses a space to separate by
+
+    // check if the type of the string and if the delimiter if exists is also a string or throws an error
     if (typeof str !== "string" || (delimiter && typeof delimiter !== "string")) {
         throw new Error("Both args must be strings");
     }
+    
+
+    // returns an array as a result of using the split method on the given string, split either by a space by default or a specified delimiter
     return str.split(delimiter);
 }
 
