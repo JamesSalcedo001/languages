@@ -105,7 +105,10 @@ console.log("\n*****\n")
 
 
 
+// replaceAll(): replaces all occurrences of specified value with another value
 
+let exString10 = "JavaScript is fun, and JavaAscript is powerful!";
+console.log(exString10.replaceAll("JavaScript", "JS")); // output: JS is fun, and JS is powerful!
 
 
 
