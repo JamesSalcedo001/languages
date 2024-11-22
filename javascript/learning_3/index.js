@@ -88,6 +88,8 @@ console.log("\n*****\n")
 // result: "S"
 
 function getSlice(str, start, end) {
+
+    // function takes in three args, a string, a start index and an end index, and uses a ternary which first checks if the start index is less than 0 which would be invalid, or if the end index is greater than or equal to the length of the string, both of which would be invalid, returns error message if either are true, and if both pass, returns the subarray with the characters sliced from the original
     
     return start < 0 || end >= str.length ? "Invalid indices" : str.slice(start, end);
 }
