@@ -53,6 +53,23 @@ console.log("\n*****\n")
 
 // String challenges
 
+
+
+// charAt() challenge: write function that takes string and num as args, and returns the character at given index. if index is out of bounds, return message saying index out of range
+
+// ex output: getCharacterAt("JavaScript", 4);
+
+// result: "S"
+
+function getCharacterAt(str, num) {
+    // return the result of using the charAt() method on the string passed into the function, using the num argument as the index at which to check the string
+    return num < 0 || num >= str.length ? "Index out of range" : str.charAt(num);
+}
+
+console.log(getCharacterAt("Hello World!", 12));
+
+
+
 // Number methods
 
 // Number Challenges
