@@ -668,7 +668,33 @@ console.log("'JavaScript is awesome' ends with 'awesome'? ->: ", checkEndsWith("
 console.log("'JavaScript is awesome' ends with 'Pawsome'? ->: ", checkEndsWith("JavaScript is awesome", "Pawsome"))
 
 
-// console.log("\n*** Array methods ***\n")
+
+
+console.log("\n*****\n")
+
+
+
+
+
+console.log("\n*** Array methods ***\n")
+
+
+
+// push(): adds one or more elems to end of array
+
+let fruits = ["apple", "banana"];
+
+fruits.push("cherry");
+
+console.log("add 'cherry' to array [apple, banana] ->: ", fruits); // output: ["apple", "banana", "cherry"] <- added to end of array
+
+
+
+
+
+
+
+
 
 // console.log("\n*** Array Challenges ***\n")
 
