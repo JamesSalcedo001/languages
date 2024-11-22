@@ -141,6 +141,17 @@ console.log("\n*****\n")
 
 
 
+// padStart(): pads current string from start with another string until reaches specified length
+
+
+let string4 = "5";
+
+console.log("padding -> before the 5, making 5 the 6th character padStart(6, '->') ->: ", string4.padStart(6, "->"));
+
+
+
+
+console.log("\n*****\n")
 
 
 
