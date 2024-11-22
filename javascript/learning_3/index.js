@@ -189,11 +189,19 @@ console.log("\n*****\n")
 // ex output: ["Split", "this", "sentence", "into", "words"];
 
 
-function splitString(str, delimiter) {
-    // function takes in two args a string, and optionally a character to split the string at
+// function splitString(str, delimiter) {
+//     // function takes in two args a string, and optionally a character to split the string at
 
-    // return the result of using split method on the given string
-    return str.split(delimiter ? delimiter : " ");
+//     // return the result of using split method on the given string
+//     return str.split(delimiter ? delimiter : " ");
+// }
+
+
+function splitString(str, delimiter = " ") {
+    if (typeof str !== "string" || (delimiter && typeof delimiter !== "string")) {
+        throw new Error("Both args must be strings");
+    }
+    return str.split(delimiter);
 }
 
 console.log(splitString("Dogs are cool"))
