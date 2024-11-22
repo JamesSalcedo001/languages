@@ -160,7 +160,11 @@ console.log("\n*****\n")
 
 
 function checkIncludes(str, word) {
-    return str.toLowerCase().includes(word.toLowerCase());
+    if (typeof str !== "string" || typeof word !== "string") {
+        throw new Error("Both arguments must be strings");
+    }
+
+    return str.includes(word) || str.toLowerCase().includes(word.toLowerCase());
 }
 
 console.log(checkIncludes("Raspberry pi is NOT a food", "raspberry"))
