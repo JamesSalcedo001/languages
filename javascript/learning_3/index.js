@@ -104,6 +104,32 @@ console.log("\n*****\n")
 
 
 
+// toUpperCase and toLowerCase challenge: write function that takes string and returns object with two properties: 
+
+/*
+    1: string converted to all uppercase
+    2: string converted to all lowercase
+
+*/
+
+// ex output: covertCase("JavaScript")
+
+// result: { uppercase: "JAVASCRIPT", lowercase: "javascript"}
+
+
+function convertCase(str) {
+    let upperLower = {};
+    let upper = str.toUpperCase();
+    let lower = str.toLowerCase();
+
+    upperLower["uppercase"] = upper;
+    upperLower["lowercase"] = lower;
+    
+    return upperLower;
+}
+
+
+console.log(convertCase("Cats are Cool"))
 
 
 // Number methods
