@@ -159,6 +159,22 @@ console.log("\n*****\n")
 
 
 
+// padEnd(): pads current string from the end with another string until it reaches specified length
+
+let string5 = "5";
+console.log("padding -> after the 5, totaling 6 character padEnd(6, '->') ->: ", string5.padEnd(6, "->"));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
