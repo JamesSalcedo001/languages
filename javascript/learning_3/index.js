@@ -81,7 +81,48 @@ console.log("\n*****\n")
 
 
 
-console.log("*** String Challenges ***")
+
+// trim(): removes whitespace from both ends of string
+
+let exString8 = "   Hello, World!     ";
+console.log("   Hello, World!     trimmed() ->: ", exString8.trim()); // output: Hello, World!
+
+
+console.log("\n*****\n")
+
+
+
+
+// replace(): replaces first occurrence of specified value with another value
+
+
+let exString9 = "JavaScript is fun!";
+console.log("replacing the word 'fun' with 'awesome' ->: ", exString9.replace("fun", "awesome")); // output: JavaScript is awesome!
+
+
+console.log("\n*****\n")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("\n*****\n")
+
+
+
+console.log("\n*** String Challenges ***\n")
 
 
 
