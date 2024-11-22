@@ -160,10 +160,14 @@ console.log("\n*****\n")
 
 
 function checkIncludes(str, word) {
+    // function takes in string argument and word argument
+
+    // first validate input to make sure both arguments are of string datatype
     if (typeof str !== "string" || typeof word !== "string") {
         throw new Error("Both arguments must be strings");
     }
 
+    // first attempt to return the result of using includes method to check if word is part of string, and if needed converts to lowercase to format and compare
     return str.includes(word) || str.toLowerCase().includes(word.toLowerCase());
 }
 
