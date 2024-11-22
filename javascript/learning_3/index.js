@@ -606,6 +606,29 @@ console.log("padding with asterisks after 42 ->: ", padWithAsterisks("42", 5))
 
 
 
+console.log("\n*****\n")
+
+
+
+
+
+
+// repeat challenge(): write function that takes string and number, returns string repeated that many times
+
+// input: repeatedString("Ha!", 3)
+
+// output: "Ha!Ha!Ha!"
+
+function repeatedString(str, num) {
+    return str.repeat(num);
+}
+
+console.log("repeat string 'Ha!' 3 times ->: ", repeatedString("Ha!", 3))
+
+
+
+
+
 
 // console.log("\n*** Array methods ***\n")
 
