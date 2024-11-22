@@ -652,6 +652,21 @@ console.log("\n*****\n")
 
 
 
+// endsWith() challenge: write function that takes a string and suffix, and checks if string ends with the suffix. return true or false
+
+// input: checkEndsWith("JavaScript is awesome", "awesome")
+
+// output: true
+
+function checkEndsWith(str, suffix) {
+    return str.endsWith(suffix);
+}
+
+
+console.log("'JavaScript is awesome' ends with 'awesome'? ->: ", checkEndsWith("JavaScript is awesome", "awesome"))
+
+console.log("'JavaScript is awesome' ends with 'Pawsome'? ->: ", checkEndsWith("JavaScript is awesome", "Pawsome"))
+
 
 // console.log("\n*** Array methods ***\n")
 
