@@ -117,20 +117,28 @@ console.log("\n*****\n")
 // result: { uppercase: "JAVASCRIPT", lowercase: "javascript"}
 
 
+// function convertCase(str) {
+//     // initialize empty object
+//     let upperLower = {};
+//     // store converted upper and lowercase strings as variables
+//     let upper = str.toUpperCase();
+//     let lower = str.toLowerCase();
+
+//     // assign new key/value pairs using the upper and lower variables
+//     upperLower["uppercase"] = upper;
+//     upperLower["lowercase"] = lower;
+
+//     // return the result
+//     return upperLower;
+// }
+
+
 function convertCase(str) {
-    // initialize empty object
-    let upperLower = {};
-    // store converted upper and lowercase strings as variables
-    let upper = str.toUpperCase();
-    let lower = str.toLowerCase();
-
-    // assign new key/value pairs using the upper and lower variables
-    upperLower["uppercase"] = upper;
-    upperLower["lowercase"] = lower;
-
-    // return the result
-    return upperLower;
-}
+    return {
+        uppercase: str.toUpperCase(),
+        lowercase: str.toLowerCase()
+    };
+} 
 
 
 console.log(convertCase("Cats are Cool"))
