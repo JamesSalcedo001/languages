@@ -691,8 +691,17 @@ console.log("add 'cherry' to array [apple, banana] ->: ", fruits); // output: ["
 
 
 
+console.log("\n*****\n")
 
 
+
+// pop() removes last element from array and returns it, opposite of push, which adds an element to the end
+
+let fruits2 = ["apple", "banana", "cherry"];
+
+console.log("returns value after removing from end of array with pop() ->: ", fruits2.pop());
+
+console.log("array [apple, banana, cherry] after using pop() ->: ", fruits2);
 
 
 
