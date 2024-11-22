@@ -416,9 +416,9 @@ function findIndex(str, word) {
     return index === -1 ? "Not found" : index;
 }
 
-console.log(findIndex("Hello, World!", "world")) // 7
-console.log(findIndex("Hello, World!", "hello" )) // 0
-console.log(findIndex("Hello, World!", "cat" )) // Not found
+console.log("check if/where 'world' is in 'Hello, World!' ->: ", findIndex("Hello, World!", "world")) // 7
+console.log("check if/where 'hello' is in 'Hello, World!' ->: ",findIndex("Hello, World!", "hello" )) // 0
+console.log("check if/where 'cat' is in 'Hello, World!' ->: ",findIndex("Hello, World!", "cat" )) // Not found
 
 
 
