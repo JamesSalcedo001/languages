@@ -144,6 +144,35 @@ function convertCase(str) {
 console.log(convertCase("Cats are Cool"))
 
 
+
+console.log("\n*****\n")
+
+
+
+
+
+// includes challenge: write function that takes a string and word as arguments and checks if the word exists in the string. return true if it does, and false otherwise
+
+
+// ex input: checkIncludes("Learning JavaScript is fun!", "JavaScript");
+
+// ex output: true
+
+
+function checkIncludes(str, word) {
+    return str.toLowerCase().includes(word.toLowerCase());
+}
+
+console.log(checkIncludes("Raspberry pi is NOT a food", "raspberry"))
+console.log(checkIncludes("Raspberry pi is NOT a food", "not"))
+console.log(checkIncludes("Raspberry pi is NOT a food", "cats"))
+
+
+
+console.log("\n*****\n")
+
+
+
 // Number methods
 
 // Number Challenges
