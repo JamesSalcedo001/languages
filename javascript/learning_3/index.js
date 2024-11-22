@@ -547,6 +547,30 @@ console.log(concatStrings("Hello", "JavaScript", "World"))
 
 
 
+console.log("\n*****\n")
+
+
+
+
+
+// substring challenge: write function that takes string and two numbers (start and end) and returns sustring between those two indices
+
+// ex input: getSubstring("JavaScript", 4, 10)
+
+// output: "Script"
+
+
+function getSubstring(str, start, end) {
+    return str.substring(start, end)
+}
+
+console.log("get substring of 'JavaScript' between indices 4 and 10 ->: ", getSubstring("JavaScript", 4, 10))
+
+
+
+
+
+
 
 
 
