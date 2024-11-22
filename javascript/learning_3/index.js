@@ -171,7 +171,7 @@ function convertCase(str) {
 } 
 
 
-console.log(convertCase("Cats are Cool"))
+console.log("convertCase() takes in string and returns object with two properties one is lowercase version and one is uppercase ->: ", convertCase("Cats are Cool"))
 
 
 
@@ -201,9 +201,9 @@ function checkIncludes(str, word) {
     return str.includes(word) || str.toLowerCase().includes(word.toLowerCase());
 }
 
-console.log(checkIncludes("Raspberry pi is NOT a food", "raspberry"))
-console.log(checkIncludes("Raspberry pi is NOT a food", "not"))
-console.log(checkIncludes("Raspberry pi is NOT a food", "cats"))
+console.log("checkIncludes() takes in a string, and a word, checks if the word is in the string, and returns whether it exists or not 'raspberry' ->: ", checkIncludes("Raspberry pi is NOT a food", "raspberry"))
+console.log("checkIncludes() takes in a string, and a word, checks if the word is in the string, and returns whether it exists or not 'not' ->: ", checkIncludes("Raspberry pi is NOT a food", "not"))
+console.log("checkIncludes() takes in a string, and a word, checks if the word is in the string, and returns whether it exists or not 'cats' ->: ", checkIncludes("Raspberry pi is NOT a food", "cats"))
 
 
 
@@ -240,9 +240,9 @@ function splitString(str, delimiter = " ") {
     return str.split(delimiter);
 }
 
-console.log(splitString("Dogs are cool"))
+console.log("splitString() takes in string and splits by specified character or by spaces(' ') ->: ", splitString("Dogs are cool"))
 
-console.log(splitString("Dogs are cool", "o"))
+console.log("splitString() takes in string and splits by specified character or by spaces('o') ->: ", splitString("Dogs are cool", "o"))
 
 
 
