@@ -475,8 +475,22 @@ console.log("\n*****\n")
 
 
 
+// replace challenge: write function that takes string, word to replace, and replacement word, returns the string with first occurrence replaced
+
+// input: replaceWord("I like JavaScript", "like", "love");
+
+// output: I love JavaScript
 
 
+
+
+function replaceWord(str, targetWord, replacementWord) {
+
+    return str.replace(targetWord, replacementWord);
+}
+
+
+console.log("Replacing 'like' with 'love' ->: ", replaceWord("I like JavaScript", "like", "love"))
 
 
 
