@@ -211,6 +211,20 @@ console.log("Does string end with 'Java'? ->: ", string8.endsWith("Java")); // o
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log("\n*****\n")
 
 
