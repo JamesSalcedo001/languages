@@ -166,13 +166,45 @@ console.log("padding -> after the 5, totaling 6 character padEnd(6, '->') ->: ",
 
 
 
+console.log("\n*****\n")
+
+
+
+
+// repeat(): repeats string a specified num of times
+
+let string6 = "Ha!";
+console.log("repeats the string Ha! 3 times without spaces ->: ", string6.repeat(3)); // output: Ha!Ha!Ha!
+
+
+
+
+console.log("\n*****\n")
 
 
 
 
 
+// startsWith(): checks if string starts with specified value
+
+let string7 = "JavaScript";
+
+console.log("Does string start with 'Java'? ->: ", string7.startsWith("Java")); // output: true
+console.log("Does string start with 'Script'? ->: ", string7.startsWith("Script")); // output: false
 
 
+console.log("\n*****\n")
+
+
+
+
+
+// endsWith(): checks if string ends with specified value
+
+let string8 = "JavaScript";
+console.log("Does string end with 'Script'? ->: ", string8.endsWith("Script")); // output: True
+
+console.log("Does string end with 'Java'? ->: ", string8.endsWith("Java")); // output: false
 
 
 
