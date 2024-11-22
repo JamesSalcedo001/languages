@@ -493,6 +493,34 @@ function replaceWord(str, targetWord, replacementWord) {
 console.log("Replacing 'like' with 'love' ->: ", replaceWord("I like JavaScript", "like", "love"))
 
 
+console.log("\n*****\n")
+
+
+
+
+
+
+
+
+
+
+
+
+// replaceAll() challenge: write function that takes a string, word to replace, and replacement word, and returns the string with all occurrences replaced
+
+
+// ex input: replaceAllWords("I like JavaScript because JavaScript is fun", "JavaScript", "JS")
+
+// output: "I like JS because JS is fun"
+
+
+function replaceAllWords(str, target, replacement) {
+    return str.replaceAll(target, replacement)
+}
+
+console.log("Replace all instances of 'JavaScript' with 'JS' ->: ", replaceAllWords("I like JavaScript because JavaScript is fun", "JavaScript", "JS"))
+
+
 
 
 
