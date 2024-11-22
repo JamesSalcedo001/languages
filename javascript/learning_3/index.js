@@ -422,9 +422,34 @@ console.log(findIndex("Hello, World!", "cat" )) // Not found
 
 
 
+console.log("\n*****\n")
 
 
 
+
+
+
+
+
+// lastIndexOf() challenge: write function that takes string and letter, and returns index of the last occurrence of the letter of string. if letter is not found, return not found
+
+// input: findLastIndex("Hello, world!", "o")
+
+// output: 8
+
+
+function findLastIndex(str, char) {
+    const lowerStr = str.toLowerCase();
+    const lowerChar = char.toLowerCase();
+
+    const index = lowerStr.lastIndexOf(lowerChar);
+    
+    return index === -1 ? "Not found" : index;
+}
+
+
+console.log(findLastIndex("Hello, world!", "o"));
+console.log(findLastIndex("Hello, world!", "a"));
 
 
 
