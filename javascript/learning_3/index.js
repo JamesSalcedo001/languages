@@ -454,7 +454,7 @@ console.log("check if/where 'a' is in 'Hello, world!' ->: ",findLastIndex("Hello
 
 
 
-
+console.log("\n*****\n")
 
 
 
@@ -466,7 +466,11 @@ function trimString(str) {
     return str.trim();
 }
 
-console.log(trimString("       Hello, World!!!            "))
+console.log("       Hello, World!!!            trimmed ->:", trimString("       Hello, World!!!            "))
+
+
+
+console.log("\n*****\n")
 
 
 
