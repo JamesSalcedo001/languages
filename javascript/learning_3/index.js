@@ -118,13 +118,17 @@ console.log("\n*****\n")
 
 
 function convertCase(str) {
+    // initialize empty object
     let upperLower = {};
+    // store converted upper and lowercase strings as variables
     let upper = str.toUpperCase();
     let lower = str.toLowerCase();
 
+    // assign new key/value pairs using the upper and lower variables
     upperLower["uppercase"] = upper;
     upperLower["lowercase"] = lower;
-    
+
+    // return the result
     return upperLower;
 }
 
