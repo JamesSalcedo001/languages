@@ -123,6 +123,29 @@ console.log("concatenating 'Hello' and 'World' together along with punctuation -
 
 
 
+console.log("\n*****\n")
+
+
+
+// substring(): extracts characters between two indices
+
+
+let string3 = "JavaScript";
+console.log("substring of 'JavaScript' between 0, 4 ->: ", string3.substring(0, 4)); // output: "Java"
+console.log("substring of 'JavaScript' between 4 and the end, using only the one argument of 4 ->: ", string3.substring(4)); // output: script
+
+
+
+console.log("\n*****\n")
+
+
+
+
+
+
+
+
+
 
 
 
