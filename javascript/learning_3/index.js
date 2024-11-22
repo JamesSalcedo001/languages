@@ -591,7 +591,18 @@ console.log("\n*****\n")
 
 
 
+// padEnd challenge: write function that takes string and total length, pads string from end with asterisks until reaches total length
 
+// input: padWithAsterisks("42", 5)
+
+// output: "42***"
+
+
+function padWithAsterisks(str, charPaddingNum) {
+    return str.padEnd(charPaddingNum, "*")
+}
+
+console.log("padding with asterisks after 42 ->: ", padWithAsterisks("42", 5))
 
 
 
