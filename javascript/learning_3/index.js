@@ -627,6 +627,29 @@ console.log("repeat string 'Ha!' 3 times ->: ", repeatedString("Ha!", 3))
 
 
 
+console.log("\n*****\n")
+
+
+// startsWith() challenge: write function that takes a string and a prefix, and checks if string starts with prefix return true or false
+
+
+// input: checkStartsWith("JavaScript is awesome", "Java")
+// output: true
+
+
+function checkStartsWith(str, prefix) {
+    return str.startsWith(prefix);
+}
+
+console.log("'JavaScript is awesome' starts with 'Java' ? ->: ", checkStartsWith("JavaScript is awesome", "Java"))
+
+console.log("'JavaScript is awesome' starts with 'java' ? ->: ", checkStartsWith("JavaScript is awesome", "java"))
+
+
+
+console.log("\n*****\n")
+
+
 
 
 
