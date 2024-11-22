@@ -448,8 +448,8 @@ function findLastIndex(str, char) {
 }
 
 
-console.log(findLastIndex("Hello, world!", "o"));
-console.log(findLastIndex("Hello, world!", "a"));
+console.log("check if/where 'o' is in 'Hello, world!' ->: ", findLastIndex("Hello, world!", "o"));
+console.log("check if/where 'a' is in 'Hello, world!' ->: ",findLastIndex("Hello, world!", "a"));
 
 
 
