@@ -80,6 +80,27 @@ console.log("\n*****\n")
 
 
 
+// slice() challenge: write function that takes a string and 2 numbers, start and end, and returns substring from start index to(but not including) the end index. if start or end are invalid, return message saying invalid indices
+
+
+// ex output: getslice("JavaScript", 0, 4)
+
+// result: "S"
+
+function getSlice(str, start, end) {
+    
+    return start < 0 || end >= str.length ? "Invalid indices" : str.slice(start, end);
+}
+
+console.log(getSlice("Cats are cool!", 0, 6))
+console.log(getSlice("Cats are cool!", -1, 6))
+console.log(getSlice("Cats are cool!", 0, 14))
+
+
+
+console.log("\n*****\n")
+
+
 
 
 
