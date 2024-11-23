@@ -782,6 +782,15 @@ console.log(sum); // output: 10
 
 
 
+// find(): returns the first element in the array that satisfies a test
+
+let numbers4 = [5, 12, 8, 130, 44];
+
+let found = numbers4.find(num => num > 10);
+
+console.log("finds the FIRST number in an array which satisfies condition num > 10 ->: ", found)
+
+
 
 // console.log("\n*** Array Challenges ***\n")
 
