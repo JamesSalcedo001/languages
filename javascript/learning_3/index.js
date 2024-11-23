@@ -715,7 +715,28 @@ let firstFruit = fruits.shift();
 
 console.log("[apple, banana, cherry] after using shift() ->: ", fruits);
 
-console.log("first value of fruits array removed and returned", firstFruit);
+console.log("first value of fruits array removed and returned ->: ", firstFruit);
+
+
+
+console.log("\n*****\n")
+
+
+
+// unshift(): adds one or more elements to the beginning of the array(the opposite of push)
+
+let fruits4 = ["banana", "cherry"];
+
+console.log("unshift also returns the number of elements after the new one is added ->: ", fruits4.unshift("apple"));
+
+console.log("adding another fruit 'tomato' ->: ", fruits4.unshift("tomato"))
+
+console.log("fruits array after unshift adds 'apple' ->: ", fruits4)
+
+
+
+console.log("\n*****\n")
+
 
 
 
