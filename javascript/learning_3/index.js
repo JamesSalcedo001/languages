@@ -740,6 +740,41 @@ console.log("\n*****\n")
 
 
 
+
+
+
+// map(): creates a new array by applying a function to each element of the original array
+
+let numbers = [1, 2, 3];
+let squaredNumbers = numbers.map(num => num ** 2);
+console.log("numbers array after each value squared ->: ", squaredNumbers)
+
+
+
+console.log("\n*****\n")
+
+
+
+
+
+
+// filter(): creates new array with all elems that pass a condition/test(a function)
+
+let numbers2 = [1, 2, 3, 4, 5];
+
+let evenNumbers = numbers2.filter(num => num % 2 === 0);
+
+console.log("numbers array [1, 2, 3, 4, 5] filtered by the condition of being divisible by 2 without a remainder(even numbers only) ->: ", evenNumbers)
+
+
+
+console.log("\n*****\n")
+
+
+
+
+
+
 // console.log("\n*** Array Challenges ***\n")
 
 
