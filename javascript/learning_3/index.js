@@ -773,6 +773,14 @@ console.log("\n*****\n")
 
 
 
+// reduce(): reduces an array to a single value by applying a function cumulatively, it starts at the specified accumulation value, which one can change, and takes each value, adds it to the accumulated value, and continues the cycle until all numbers have been added. 
+
+let numbers3 = [1, 2, 3, 4];
+
+let sum = numbers3.reduce((acc, num) => acc + num, 0);
+console.log(sum); // output: 10
+
+
 
 
 // console.log("\n*** Array Challenges ***\n")
