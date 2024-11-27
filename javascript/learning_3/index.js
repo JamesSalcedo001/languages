@@ -813,6 +813,14 @@ console.log("\n*****\n")
 
 
 
+// every(): checks if all elements in the array pass a test
+
+let numbers6 = [2, 4, 6];
+let allEven = numbers.every(num => num % 2 === 0);
+
+console.log("Checks if all numbers [2, 4, 6] in array are even ->: ", allEven);
+
+
 
 
 
