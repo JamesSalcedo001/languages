@@ -788,7 +788,31 @@ let numbers4 = [5, 12, 8, 130, 44];
 
 let found = numbers4.find(num => num > 10);
 
-console.log("finds the FIRST number in an array which satisfies condition num > 10 ->: ", found)
+console.log("finds the FIRST ELEMENT in an array which satisfies condition num > 10 ->: ", found)
+
+
+
+
+console.log("\n*****\n")
+
+
+
+
+
+// findIndex(): returns index of the first element that satisifes a test
+
+let numbers5 = [5, 12, 8, 130, 44]
+
+let index = numbers.findIndex(num => num > 10);
+console.log("returns first element INDEX that matches condition num > 10 ->: ", index);
+
+
+console.log("\n*****\n")
+
+
+
+
+
 
 
 
