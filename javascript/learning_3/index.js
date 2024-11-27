@@ -818,7 +818,26 @@ console.log("\n*****\n")
 let numbers6 = [2, 4, 6];
 let allEven = numbers.every(num => num % 2 === 0);
 
-console.log("Checks if all numbers [2, 4, 6] in array are even ->: ", allEven);
+console.log("Checks if all numbers [2, 4, 6] in array are even ->: ", allEven); // output: true
+
+
+
+
+console.log("\n*****\n")
+
+
+
+
+
+// some(): checks if at least one element in the array passes a test
+
+let numbers7 = [1, 2, 3];
+
+let hasEven = numbers.some(num => num % 2 === 0);
+
+console.log("Is at least one element even in array [1, 2, 3] ? ->: ", hasEven); // output: true
+
+
 
 
 
