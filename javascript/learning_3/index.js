@@ -840,6 +840,14 @@ console.log("Is at least one element even in array [1, 2, 3] ? ->: ", hasEven); 
 
 
 
+// concat(): merge two orr more arrays
+
+let array1 = [1, 2]
+let array2 = [3, 4]
+let mergedArray = array1.concat(array2)
+
+console.log("Merging array [1, 2] and array [3, 4] ->: ", mergedArray);
+
 
 
 
