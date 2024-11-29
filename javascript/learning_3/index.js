@@ -849,6 +849,14 @@ let mergedArray = array1.concat(array2)
 console.log("Merging array [1, 2] and array [3, 4] ->: ", mergedArray);
 
 
+// slice(): returns shallow copy of portion of an array into a new array
+
+let numbers1 = [1, 2, 3, 4, 5];
+
+let slicedArray = numbers.slice(1, 4);
+
+console.log("return shallow copy of elements from index 1, 2, 3, and excluding 4th index ->: ", slicedArray);
+
 
 
 // console.log("\n*** Array Challenges ***\n")
