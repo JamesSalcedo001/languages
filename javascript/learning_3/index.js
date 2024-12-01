@@ -838,6 +838,9 @@ let hasEven = numbers.some(num => num % 2 === 0);
 console.log("Is at least one element even in array [1, 2, 3] ? ->: ", hasEven); // output: true
 
 
+console.log("\n*****\n")
+
+
 
 
 // concat(): merge two orr more arrays
@@ -849,6 +852,12 @@ let mergedArray = array1.concat(array2)
 console.log("Merging array [1, 2] and array [3, 4] ->: ", mergedArray);
 
 
+
+
+console.log("\n*****\n")
+
+
+
 // slice(): returns shallow copy of portion of an array into a new array
 
 let numbers1 = [1, 2, 3, 4, 5];
@@ -856,6 +865,45 @@ let numbers1 = [1, 2, 3, 4, 5];
 let slicedArray = numbers.slice(1, 4);
 
 console.log("return shallow copy of elements from index 1, 2, 3, and excluding 4th index ->: ", slicedArray);
+
+
+
+
+console.log("\n*****\n")
+
+
+
+
+
+// splice(): adds or removes elements from array
+
+let numbers8 = [1, 2, 3, 4, 5];
+
+numbers8.splice(2, 1, 10, 11); // removes 1 element at index 2, adds 10 and 11
+
+console.log("splice array[1, 2, 3, 4, 5] with the arguments (2, 1, 10, 11), which starts at index of 2, removes 1 element, and replaces it with the numbers 10 and 11 ->: ", numbers8);
+
+
+
+console.log("\n*****\n")
+
+
+
+
+// sort(): sorts the elements of an array (default is lexigraphical)
+
+let numbers9 = [1, 2, 3, 4, 5];
+numbers9.sort();
+console.log(numbers9);
+
+
+
+
+
+
+
+
+
 
 
 
