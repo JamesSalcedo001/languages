@@ -903,6 +903,13 @@ console.log("numeric sorting using comparison function sort((a, b) => a - b) ->:
 
 
 
+// reverse(): reverses the order of the elements in an array
+
+let nums1 = [1, 2, 3];
+nums1.reverse();
+
+console.log("reversed array [1, 2, 3] ->: ", nums1);
+
 
 
 
