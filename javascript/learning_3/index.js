@@ -945,7 +945,12 @@ console.log("\n*****\n")
 
 
 
+// forEach: executes a function for each element in the array
 
+
+let nums2 = [1, 2, 3];
+
+nums2.forEach(num => console.log(`multiply ${num} by 2 ->: `, num * 2));
 
 
 
