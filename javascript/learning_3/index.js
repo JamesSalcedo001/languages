@@ -899,7 +899,7 @@ console.log("numbers array [5, 3, 8, 1] sorted lexigraphically ->:  ", numbers9)
 
 
 numbers9.sort((a, b) => a - b);
-console.log()
+console.log("numeric sorting using comparison function sort((a, b) => a - b) ->: ", numbers9);
 
 
 
