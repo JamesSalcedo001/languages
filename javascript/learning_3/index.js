@@ -897,10 +897,15 @@ numbers9.sort();
 console.log("numbers array [5, 3, 8, 1] sorted lexigraphically ->:  ", numbers9);
 
 
+console.log("\n*****\n")
+
 
 numbers9.sort((a, b) => a - b);
 console.log("numeric sorting using comparison function sort((a, b) => a - b) ->: ", numbers9);
 
+
+
+console.log("\n*****\n")
 
 
 // reverse(): reverses the order of the elements in an array
@@ -909,6 +914,43 @@ let nums1 = [1, 2, 3];
 nums1.reverse();
 
 console.log("reversed array [1, 2, 3] ->: ", nums1);
+
+
+
+console.log("\n*****\n")
+
+
+
+// join(): joins all elements of array into a string
+
+let words = ["Hello", "world"];
+let sentence = words.join(" ");
+console.log("join together all elements of array into a string, empty string leaves a space between each in the new string ->: ", sentence);
+
+
+
+console.log("\n*****\n")
+
+
+let modifiedSentence = words.join("-");
+
+console.log("instead of space, use the - to connect the joined elements from the previous array ->: ", modifiedSentence);
+
+
+
+
+console.log("\n*****\n")
+
+
+
+
+
+
+
+
+
+
+
 
 
 
