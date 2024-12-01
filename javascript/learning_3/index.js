@@ -892,13 +892,14 @@ console.log("\n*****\n")
 
 // sort(): sorts the elements of an array (default is lexigraphical)
 
-let numbers9 = [1, 2, 3, 4, 5];
+let numbers9 = [5, 3, 8, 1];
 numbers9.sort();
-console.log(numbers9);
+console.log("numbers array [5, 3, 8, 1] sorted lexigraphically ->:  ", numbers9);
 
 
 
-
+numbers9.sort((a, b) => a - b);
+console.log()
 
 
 
