@@ -69,3 +69,10 @@ function createInputWithLabel(labelText, inputType = "text") {
 }
 
 
+// adding the input field
+
+// invoke function and set to a variable
+const inputWithLabel = createInputWithLabel("Enter your name: ");
+
+// append the newly created input as a child of the app div
+document.getElementById("app").appendChild(inputWithLabel);
