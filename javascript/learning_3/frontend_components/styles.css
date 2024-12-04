@@ -1,1 +1,9 @@
-/* 1: create button  */
+/* 3: card */
+
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgba(222, 222, 222, 0.4);
+}
