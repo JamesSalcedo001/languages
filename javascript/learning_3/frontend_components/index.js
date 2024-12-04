@@ -13,3 +13,12 @@ function createButton(text, onClick) {
     return button;
     
 }
+
+
+// add the button to the dom
+
+// button variable calls the createButton function, which takes in Click Me as the text for the first argument, and an anonymous function call to use the alert Button Clicked when the function is invoked
+const button = createButton("Click Me", () => alert("Button Clicked!"));
+
+// append the button element as a child element of the div with an id of 'app' 
+document.getElementById("app").appendChild(button);
