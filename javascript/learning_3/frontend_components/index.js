@@ -103,4 +103,9 @@ function createCard(title, content) {
 }
 
 
+// adding card
 
+const card = createCard("Card Title", "This is the card content.");
+
+// append the card element as a child to app
+document.getElementById("app").appendChild(card);
