@@ -94,6 +94,10 @@ function createCard(title, content) {
     const cardTitle = document.createElement("h3");
     const cardContent = document.createElement("p");
 
+    // assign the textcontent of the card's title and content to the arguments passed into the function
+    cardTitle.textContent = title;
+    cardContent.textContent = content;
+
 
     // append the newly created h3 and p elements to the card element
     card.appendChild(cardTitle);
