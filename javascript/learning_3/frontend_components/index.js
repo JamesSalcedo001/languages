@@ -273,3 +273,14 @@ function createNavbar(links) {
 
     return nav;
 }
+
+
+// create navbar and store results as variable
+const navbar = createNavbar([
+    { text: "Home", href: "#home" },
+    { text: "About", href: "#about" },
+    { text: "Contact", href: "#contact" },
+]);
+
+// query the div with class name 'app' and append the created navbar as a child element
+document.getElementById("app").appendChild(navbar);
