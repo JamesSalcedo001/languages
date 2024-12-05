@@ -80,6 +80,18 @@
 
 
 
+
+
+
+////////////////////////////////////
+
+
+
+
+
+
+
+
 // ex 3 add a card
 
 
@@ -121,77 +133,143 @@
 
 
 
+////////////////////////////////////
+
+
+
+
+
+
+
+
 
 // ex 4 add a modal
 
 
-function createModal(contentText, onClose) {
-    // create container element
-    const modal = document.createElement("div");
+// function createModal(contentText, onClose) {
+//     // create container element
+//     const modal = document.createElement("div");
 
-    // assign a class of modal and the display property to none
-    modal.className = "modal";
-    modal.style.display = "none";
+//     // assign a class of modal and the display property to none
+//     modal.className = "modal";
+//     modal.style.display = "none";
 
-    // create another div to store the content in the modal
-    const modalContent = document.createElement("div");
+//     // create another div to store the content in the modal
+//     const modalContent = document.createElement("div");
     
-    // aassign this div the class of modal-content
-    modalContent.className = "modal-content";
+//     // aassign this div the class of modal-content
+//     modalContent.className = "modal-content";
 
-    // create a paragraph element inside the content div to display words
-    const content = document.createElement("p");
+//     // create a paragraph element inside the content div to display words
+//     const content = document.createElement("p");
 
-    // assign the textContent of the paragraph to be whatever is passed as the first argument of the createModal function
-    content.textContent = contentText;
+//     // assign the textContent of the paragraph to be whatever is passed as the first argument of the createModal function
+//     content.textContent = contentText;
 
 
-    // create a button to close the modal
-    const closeButton = document.createElement("button");
+//     // create a button to close the modal
+//     const closeButton = document.createElement("button");
 
-    // Set the textContent property to a value of "Close"
-    closeButton.textContent = "Close";
+//     // Set the textContent property to a value of "Close"
+//     closeButton.textContent = "Close";
 
-    // attach click event listener to the button which sets the modal display property back to none, which makes it invisible
-    closeButton.addEventListener("click", () => {
-        modal.style.display = "none";
-        if (onClose) onClose();
+//     // attach click event listener to the button which sets the modal display property back to none, which makes it invisible
+//     closeButton.addEventListener("click", () => {
+//         modal.style.display = "none";
+//         if (onClose) onClose();
+//     });
+
+//     // appending content as a child of modalContent, closeButton as a child of modalContent, and appending modalContent as a child of modal
+//     modalContent.appendChild(content);
+//     modalContent.appendChild(closeButton);
+//     modal.appendChild(modalContent);
+
+//     return modal;
+// }
+
+
+
+// function createButton(text, onClick) {
+//     const button = document.createElement("button");
+
+//     button.textContent = text;
+
+//     button.addEventListener("click", onClick);
+
+//     return button;
+// }
+
+
+
+
+// // invoke function to create modal and store it as variable
+
+// const modal = createModal("This is modal content", () => console.log("Modal Closed."));
+
+// // append created modal to the dom
+// document.body.appendChild(modal);
+
+
+// // button to show modal
+// const showModalButton = createButton("Show Modal", () => {
+//     modal.style.display = "flex";
+// });
+
+// document.getElementById("app").appendChild(showModalButton);
+
+
+
+
+
+
+
+
+
+////////////////////////////////////
+
+
+
+
+
+
+
+
+// ex 4 add a navbar
+
+
+
+function createNavbar(links) {
+
+    // create nav and ul elements
+
+    const nav = document.createElement("nav");
+    const ul = document.createElement("ul");
+
+    // iterate through links passed into function as arguments
+
+    links.forEach(link => {
+
+        // create li and a elements
+
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+
+
+        // assign an href and textContent attribute to each a tag using each link object's text property and href property values
+
+        a.href = link.href;
+        a.textContent = link.text;
+
+        // take each new li formed and append the newly formed a tags as children of the li elements
+        li.appendChild(a);
+
+        // take each li element and append to the newly created ul as children
+        ul.appendChild(li);
     });
 
-    // appending content as a child of modalContent, closeButton as a child of modalContent, and appending modalContent as a child of modal
-    modalContent.appendChild(content);
-    modalContent.appendChild(closeButton);
-    modal.appendChild(modalContent);
+    // append the ul to the nav as a child element
 
-    return modal;
+    nav.appendChild(ul);
+
+    return nav;
 }
-
-
-
-function createButton(text, onClick) {
-    const button = document.createElement("button");
-
-    button.textContent = text;
-
-    button.addEventListener("click", onClick);
-
-    return button;
-}
-
-
-
-
-// invoke function to create modal and store it as variable
-
-const modal = createModal("This is modal content", () => console.log("Modal Closed."));
-
-// append created modal to the dom
-document.body.appendChild(modal);
-
-
-// button to show modal
-const showModalButton = createButton("Show Modal", () => {
-    modal.style.display = "flex";
-});
-
-document.getElementById("app").appendChild(showModalButton);
