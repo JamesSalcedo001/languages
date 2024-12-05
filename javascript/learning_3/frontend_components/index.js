@@ -326,3 +326,17 @@ function createList(items, ordered = false ) {
 
 
 
+
+// create the (ordered) list
+
+const list = createList(["Tomo", "Binx", "Dhalia", "Barbie", "Peanut"], true);
+
+
+// create the unordered list
+
+// const list = createList(["Tomo", "Binx", "Dhalia", "Barbie", "Peanut"]);
+
+
+// query the div with class app and append newly created list as a child element
+
+document.getElementById("app").appendChild(list);
