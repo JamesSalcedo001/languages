@@ -234,53 +234,95 @@
 
 
 
-// ex 4 add a navbar
+// ex 5 add a navbar
 
 
 
-function createNavbar(links) {
+// function createNavbar(links) {
 
-    // create nav and ul elements
+//     // create nav and ul elements
 
-    const nav = document.createElement("nav");
-    const ul = document.createElement("ul");
+//     const nav = document.createElement("nav");
+//     const ul = document.createElement("ul");
 
-    // iterate through links passed into function as arguments
+//     // iterate through links passed into function as arguments
 
-    links.forEach(link => {
+//     links.forEach(link => {
 
-        // create li and a elements
+//         // create li and a elements
 
+//         const li = document.createElement("li");
+//         const a = document.createElement("a");
+
+
+//         // assign an href and textContent attribute to each a tag using each link object's text property and href property values
+
+//         a.href = link.href;
+//         a.textContent = link.text;
+
+//         // take each new li formed and append the newly formed a tags as children of the li elements
+//         li.appendChild(a);
+
+//         // take each li element and append to the newly created ul as children
+//         ul.appendChild(li);
+//     });
+
+//     // append the ul to the nav as a child element
+
+//     nav.appendChild(ul);
+
+//     return nav;
+// }
+
+
+// // create navbar and store results as variable
+// const navbar = createNavbar([
+//     { text: "Home", href: "#home" },
+//     { text: "About", href: "#about" },
+//     { text: "Contact", href: "#contact" },
+// ]);
+
+// // query the div with class name 'app' and append the created navbar as a child element
+// document.getElementById("app").appendChild(navbar);
+
+
+
+
+
+
+
+
+////////////////////////////////////
+
+
+
+
+// ex 6 add a list
+
+
+function createList(items, ordered = false ) {
+
+    // create function creatList, which takes an array as first arg and an ordered argument with a default of false, with option to set as true
+
+    // create element ol or ul conditionally using ternary operator based on whether ordered is set to false or true
+    const list = document.createElement(ordered ? "ol" : "ul");
+
+
+    // iterate through items array 
+    items.forEach(item => {
+
+        // for each item, create an li
         const li = document.createElement("li");
-        const a = document.createElement("a");
 
+        // assign the li a textContent attribute with the value of the item name
+        li.textContent = item;
 
-        // assign an href and textContent attribute to each a tag using each link object's text property and href property values
-
-        a.href = link.href;
-        a.textContent = link.text;
-
-        // take each new li formed and append the newly formed a tags as children of the li elements
-        li.appendChild(a);
-
-        // take each li element and append to the newly created ul as children
-        ul.appendChild(li);
+        // append newly created li to the ol/ul element as a child
+        list.appendChild(li);
     });
 
-    // append the ul to the nav as a child element
-
-    nav.appendChild(ul);
-
-    return nav;
+    return list;
 }
 
 
-// create navbar and store results as variable
-const navbar = createNavbar([
-    { text: "Home", href: "#home" },
-    { text: "About", href: "#about" },
-    { text: "Contact", href: "#contact" },
-]);
 
-// query the div with class name 'app' and append the created navbar as a child element
-document.getElementById("app").appendChild(navbar);
