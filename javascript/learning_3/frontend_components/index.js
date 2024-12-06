@@ -1,5 +1,8 @@
 // ex 1 create button
 
+
+
+
 // function createButton(text, onClick) {
 //     // create an element of type button and assign a variable name
 //     const button = document.createElement("button");
@@ -536,81 +539,157 @@
 
 
 
-// ex 8 add an accordion component
+// ex 9 add an accordion component
 
 
 
-function createAccordion(items) {
+// function createAccordion(items) {
 
-    // createAccordion takes in an items param expecting an array
+//     // createAccordion takes in an items param expecting an array
 
-    // create container div
+//     // create container div
 
-    const container = document.createElement("div");
+//     const container = document.createElement("div");
 
-    // iterate through items, destructure to extract title and content properties of objects
-    items.forEach(({ title, content }) => {
+//     // iterate through items, destructure to extract title and content properties of objects
+//     items.forEach(({ title, content }) => {
 
-        // create div, button, and another div element
+//         // create div, button, and another div element
 
-        const accordionItem = document.createElement("div");
-        const header = document.createElement("button");
-        const body = document.createElement("div");
+//         const accordionItem = document.createElement("div");
+//         const header = document.createElement("button");
+//         const body = document.createElement("div");
 
-        // set textContents of header and body elements to equal the corresponding property values title and content
+//         // set textContents of header and body elements to equal the corresponding property values title and content
 
-        header.textContent = title;
-        body.textContent = content;
+//         header.textContent = title;
+//         body.textContent = content;
 
-        // set display property of body div to 'none'
+//         // set display property of body div to 'none'
 
-        body.style.display = "none";
+//         body.style.display = "none";
 
 
-        // attach click event listener to header button
+//         // attach click event listener to header button
 
-        header.addEventListener("click", () => {
-            // set variable isVisible
+//         header.addEventListener("click", () => {
+//             // set variable isVisible
 
-            const isVisible = body.style.display === "block";
+//             const isVisible = body.style.display === "block";
 
-            // use ternary to conditionally render either display of block or none
+//             // use ternary to conditionally render either display of block or none
 
-            body.style.display = isVisible ? "none" : "block";
-        })
+//             body.style.display = isVisible ? "none" : "block";
+//         })
 
-        // append header as a child of accordionItem
+//         // append header as a child of accordionItem
 
-        accordionItem.appendChild(header);
+//         accordionItem.appendChild(header);
 
-        // append body as child of accordionItem
+//         // append body as child of accordionItem
 
-        accordionItem.appendChild(body);
+//         accordionItem.appendChild(body);
 
-        // append accordionItem as child of container
+//         // append accordionItem as child of container
 
-        container.appendChild(accordionItem);
-    })
+//         container.appendChild(accordionItem);
+//     })
 
-    return container;
+//     return container;
+// }
+
+
+
+
+
+// // create accordion
+
+// const accordion = createAccordion([
+//     { title: "Section 1", content: "Content for section 1" },
+//     { title: "Section 2", content: "Content for section 2" },
+//     { title: "Section 3", content: "Content for section 3" }
+// ])
+
+
+// // append accordion to DOM
+
+// document.body.appendChild(accordion);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////
+
+
+
+
+
+
+// ex 10 add a tooltip component
+
+
+// createTooltip takes two args, the DOM element to which the tooltip will be attached, and the text that will appear in the tooltip
+
+function createTooltip(targetElement, tooltipText) {
+
+
+    // create div element serving as tooltip
+
+
+    // style tooltip with CSS
+
+    const tooltip = document.createElement("div");
+    tooltip.textContent = tooltipText;
+    tooltip.style.position = "absolute";
+    tooltip.style.background = "black";
+    tooltip.style.color = "white";
+    tooltip.style.padding = "5px";
+    tooltip.style.borderRadius = "3px";
+    tooltip.style.display = "none";
+
+    // append tooltip to the body of DOM 
+
+    document.body.appendChild(tooltip);
+
+
+    // add even listener for mouseenter event on targetElement
+
+    targetElement.addEventListener("mouseenter", (e) => {
+
+        // get X and Y coordinates of mouse pointer relative to the DOM
+    
+        // sets the horizontal position of the tooltip to the X coordinate of the mouse pointer
+
+        tooltip.style.left = `${e.pageX}px`;
+
+        // sets the vertical position of the tooltip to slightly below the Y coordinate of the mouse pointer
+
+        tooltip.style.top = `${e.pageY + 10}px`;
+
+        // make tooltip visible
+
+        tooltip.style.display = "block";
+    });
+
+
+    // on mouse leave, hide tooltip
+    
+    targetElement.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+    });
+
+    return tooltip;
 }
-
-
-
-
-
-// create accordion
-
-const accordion = createAccordion([
-    { title: "Section 1", content: "Content for section 1" },
-    { title: "Section 2", content: "Content for section 2" },
-    { title: "Section 3", content: "Content for section 3" }
-])
-
-
-// append acordion to DOM
-
-document.body.appendChild(accordion);
-
-
 
