@@ -300,43 +300,97 @@
 // ex 6 add a list
 
 
-function createList(items, ordered = false ) {
+// function createList(items, ordered = false ) {
 
-    // create function creatList, which takes an array as first arg and an ordered argument with a default of false, with option to set as true
+//     // create function creatList, which takes an array as first arg and an ordered argument with a default of false, with option to set as true
 
-    // create element ol or ul conditionally using ternary operator based on whether ordered is set to false or true
-    const list = document.createElement(ordered ? "ol" : "ul");
+//     // create element ol or ul conditionally using ternary operator based on whether ordered is set to false or true
+//     const list = document.createElement(ordered ? "ol" : "ul");
 
 
-    // iterate through items array 
-    items.forEach(item => {
+//     // iterate through items array 
+//     items.forEach(item => {
 
-        // for each item, create an li
-        const li = document.createElement("li");
+//         // for each item, create an li
+//         const li = document.createElement("li");
 
-        // assign the li a textContent attribute with the value of the item name
-        li.textContent = item;
+//         // assign the li a textContent attribute with the value of the item name
+//         li.textContent = item;
 
-        // append newly created li to the ol/ul element as a child
-        list.appendChild(li);
+//         // append newly created li to the ol/ul element as a child
+//         list.appendChild(li);
+//     });
+
+//     return list;
+// }
+
+
+
+
+// // create the (ordered) list
+
+// const list = createList(["Tomo", "Binx", "Dhalia", "Barbie", "Peanut"], true);
+
+
+// // create the unordered list
+
+// // const list = createList(["Tomo", "Binx", "Dhalia", "Barbie", "Peanut"]);
+
+
+// // query the div with class app and append newly created list as a child element
+
+// document.getElementById("app").appendChild(list);
+
+
+
+
+
+
+
+
+////////////////////////////////////
+
+
+
+
+
+// ex 7 add a dropdown menu
+
+
+function createDropdown(options, onChange) {
+
+    // create function createDropdown, which takes in two args, the first is the array of options, the second is what is to be done when the change event occurs
+
+    // create select element
+
+    const select = document.createElement("select");
+
+    // iterate through the list of options
+
+    options.forEach(option => {
+        // create an option element
+
+        const opt = document.createElement("option");
+
+        // set the value attribute for the newly created option element to equal the 'value' property's value in each object 
+
+        opt.value = option.value;
+
+        // set the textContent attribute to equal the option object's 'label' property's value 
+
+        opt.textContent = option.label;
+
+        // append each opt element as a child to the select element
+        select.appendChild(opt);
     });
 
-    return list;
+
+    // attach an event listener to the select element and have the onChange function which is passed in as an argument apply to the event.target.value 
+    
+    select.addEventListener("change", (e) => onChange(e.target.value));
+
+    return select;
 }
 
 
 
-
-// create the (ordered) list
-
-const list = createList(["Tomo", "Binx", "Dhalia", "Barbie", "Peanut"], true);
-
-
-// create the unordered list
-
-// const list = createList(["Tomo", "Binx", "Dhalia", "Barbie", "Peanut"]);
-
-
-// query the div with class app and append newly created list as a child element
-
-document.getElementById("app").appendChild(list);
