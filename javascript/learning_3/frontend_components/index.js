@@ -483,14 +483,32 @@ function createTabs(tabData) {
         tabContent.style.display = index === 0 ? "block" : "none";
 
         // appends content section to the content container
+
         content.appendChild(tabContent);
     });
 
     // append 'tabs' container as child of 'container' container
+
     container.appendChild(tabs);
 
     // append 'content' container to the 'container' container 
+
     container.appendChild(content);
 
     return container;
 }
+
+
+
+// create tabs function 
+
+const tabs = createTabs([
+    { label: "Tab 1", contentText: "This is content for Tab 1" },
+    { label: "Tab 2", contentText: "This is content for Tab 2" },
+    { label: "Tab 3", contentText: "This is content for Tab 3" }
+]);
+
+
+// append tabs to the body of document
+
+document.body.appendChild(tabs);
