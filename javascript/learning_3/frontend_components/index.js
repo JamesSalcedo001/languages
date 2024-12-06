@@ -781,73 +781,73 @@
 // ex 12 add a carousel/slider component
 
 
-function createCarousel(images) {
+// function createCarousel(images) {
 
-    // create elements 
-    const container = document.createElement("div");
-    const img = document.createElement("img");
-    const prevButton = document.createElement("button");
-    const nextButton = document.createElement("button");
+//     // create elements 
+//     const container = document.createElement("div");
+//     const img = document.createElement("img");
+//     const prevButton = document.createElement("button");
+//     const nextButton = document.createElement("button");
 
-    // set index to 0 as a starting point
+//     // set index to 0 as a starting point
 
-    let currentIndex = 0;
+//     let currentIndex = 0;
 
-    // set img src attribute to equal the current index of whatever image is currently set to, which starts at 0
+//     // set img src attribute to equal the current index of whatever image is currently set to, which starts at 0
 
-    img.src = images[currentIndex];
-    prevButton.textContent = "Prev";
-    nextButton.textContent = "Next";
+//     img.src = images[currentIndex];
+//     prevButton.textContent = "Prev";
+//     nextButton.textContent = "Next";
 
-    // update image takes the img src attribute and does the same thing as on line 798
+//     // update image takes the img src attribute and does the same thing as on line 798
 
-    const updateImage = () => {
+//     const updateImage = () => {
 
-        // sets the image source to the URL at the currentIndex in the images array
+//         // sets the image source to the URL at the currentIndex in the images array
 
-        img.src = images[currentIndex];
-    }
-
-
-    prevButton.addEventListener("click", () => {
-
-        // decrements currentIndex by 1 to move to the previous image
-        // adds images.length to ensure index is positive (avoid negative values). use modulo to loop back to last image when currentIndex becomes less than 0
-
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
+//         img.src = images[currentIndex];
+//     }
 
 
-        // update displayed image using the helper function
+//     prevButton.addEventListener("click", () => {
 
-        updateImage();
-    })
+//         // decrements currentIndex by 1 to move to the previous image
+//         // adds images.length to ensure index is positive (avoid negative values). use modulo to loop back to last image when currentIndex becomes less than 0
 
-
-    nextButton.addEventListener("click", () => {
-
-        // increments currentIndex by 1 to move to next image, and uses modulo to loop back to first image when currentIndex exceeds the last index
-
-        currentIndex = (currentIndex + 1) % images.length;
-
-        // updates the displayed images using updateImage helper function
-
-        updateImage();
-    })
-
-    // append elements to container
-
-    container.appendChild(prevButton);
-    container.appendChild(img);
-    container.appendChild(nextButton);
-
-    return container;
-}
+//         currentIndex = (currentIndex - 1 + images.length) % images.length;
 
 
-const carousel = createCarousel([
-    'https://via.placeholder.com/150?text=Image+1',
-    'https://via.placeholder.com/150?text=Image+2',
-    'https://via.placeholder.com/150?text=Image+3'
-]);
+//         // update displayed image using the helper function
 
-document.body.appendChild(carousel);
+//         updateImage();
+//     })
+
+
+//     nextButton.addEventListener("click", () => {
+
+//         // increments currentIndex by 1 to move to next image, and uses modulo to loop back to first image when currentIndex exceeds the last index
+
+//         currentIndex = (currentIndex + 1) % images.length;
+
+//         // updates the displayed images using updateImage helper function
+
+//         updateImage();
+//     })
+
+//     // append elements to container
+
+//     container.appendChild(prevButton);
+//     container.appendChild(img);
+//     container.appendChild(nextButton);
+
+//     return container;
+// }
+
+
+// const carousel = createCarousel([
+//     'https://via.placeholder.com/150?text=Image+1',
+//     'https://via.placeholder.com/150?text=Image+2',
+//     'https://via.placeholder.com/150?text=Image+3'
+// ]);
+
+// document.body.appendChild(carousel);
