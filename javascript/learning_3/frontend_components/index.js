@@ -685,7 +685,7 @@ function createTooltip(targetElement, tooltipText) {
 
 
     // on mouse leave, hide tooltip
-    
+
     targetElement.addEventListener("mouseleave", () => {
         tooltip.style.display = "none";
     });
@@ -693,3 +693,15 @@ function createTooltip(targetElement, tooltipText) {
     return tooltip;
 }
 
+
+
+// create and append button
+
+const buttonWithToolTip = document.createElement("button");
+buttonWithToolTip.textContent = "Hover over me";
+document.body.appendChild(buttonWithToolTip);
+
+
+// invoke createTooltip function, attaching tooltip to buttonWithTooltip
+
+createTooltip(buttonWithToolTip, "This is a tooltip!");
