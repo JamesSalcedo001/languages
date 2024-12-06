@@ -357,56 +357,140 @@
 // ex 7 add a dropdown menu
 
 
-function createDropdown(options, onChange) {
+// function createDropdown(options, onChange) {
 
-    // create function createDropdown, which takes in two args, the first is the array of options, the second is what is to be done when the change event occurs
+//     // create function createDropdown, which takes in two args, the first is the array of options, the second is what is to be done when the change event occurs
 
-    // create select element
+//     // create select element
 
-    const select = document.createElement("select");
+//     const select = document.createElement("select");
 
-    // iterate through the list of options
+//     // iterate through the list of options
 
-    options.forEach(option => {
-        // create an option element
+//     options.forEach(option => {
+//         // create an option element
 
-        const opt = document.createElement("option");
+//         const opt = document.createElement("option");
 
-        // set the value attribute for the newly created option element to equal the 'value' property's value in each object 
+//         // set the value attribute for the newly created option element to equal the 'value' property's value in each object 
 
-        opt.value = option.value;
+//         opt.value = option.value;
 
-        // set the textContent attribute to equal the option object's 'label' property's value 
+//         // set the textContent attribute to equal the option object's 'label' property's value 
 
-        opt.textContent = option.label;
+//         opt.textContent = option.label;
 
-        // append each opt element as a child to the select element
-        select.appendChild(opt);
+//         // append each opt element as a child to the select element
+//         select.appendChild(opt);
+//     });
+
+
+//     // attach an event listener to the select element and have the onChange function which is passed in as an argument apply to the event.target.value 
+
+//     select.addEventListener("change", (e) => onChange(e.target.value));
+
+//     return select;
+// }
+
+
+
+// // create dropdown
+
+// const dropdown = createDropdown(
+//     [
+//         { value: "apple", label: "Apple" },
+//         { value: "banana", label: "Banana" },
+//         { value: "cherry", label: "Cherry" },
+//     ],
+//     (selectedValue) => console.log("Selected: ", selectedValue)
+// );
+
+// // when a value is selected, the change event occurs and the value is logged to the console
+
+// // append the dropdown to the body element of the DOM as a child
+
+// document.body.appendChild(dropdown);
+
+
+
+
+
+
+////////////////////////////////////
+
+
+
+
+
+
+// ex 8 add a tabs component
+
+
+function createTabs(tabData) {
+
+    // createTabs function takes in a single argument, an array of objects
+
+    // create div elements 
+
+    const container = document.createElement("div");
+    const tabs = document.createElement("div");
+    const content = document.createElement("div");
+
+
+    // style tabs with CSS
+
+    tabs.style.display = "flex";
+    tabs.style.cursor = "pointer";
+    tabs.style.gap = "10px";
+    tabs.style.marginBottom = "10px";
+
+    // iterates through the tabdata array, uses destructuring to extract label and contentText properties of each object, use index to track current position of array starting from 0
+
+    tabData.forEach(({ label, contentText }, index) => {
+
+        // create button element named tab
+
+        const tab = document.createElement("button");
+
+        // assign the textContent to equal the label value in the object
+        tab.textContent = label;
+
+        // attach click event listener
+        tab.addEventListener("click", () => {
+
+            // converts children of the content container into an array and loops through each one, hiding all content sections by setting display to none
+            Array.from(content.children).forEach(c => (c.style.display = "none"));
+            
+            // makes the content section corresponding to the clicked tab visible by setting its display back to block
+            content.children[index].style.display = "block";
+        });
+
+        // appends the tab button as a child of tabs container
+        tabs.appendChild(tab);
+
+
+        // create div for content associated with tab
+
+        const tabContent = document.createElement("div");
+
+        // sets textContent to equal contentText, which is a property value of each object
+
+        tabContent.textContent = contentText;
+
+
+        // displays the content for first tab and hides others
+
+        tabContent.style.display = index === 0 ? "block" : "none";
+
+        // appends content section to the content container
+        content.appendChild(tabContent);
     });
 
+    // append 'tabs' container as child of 'container' container
+    container.appendChild(tabs);
 
-    // attach an event listener to the select element and have the onChange function which is passed in as an argument apply to the event.target.value 
+    // append 'content' container to the 'container' container 
+    container.appendChild(content);
 
-    select.addEventListener("change", (e) => onChange(e.target.value));
-
-    return select;
+    return container;
 }
-
-
-
-// create dropdown
-
-const dropdown = createDropdown(
-    [
-        { value: "apple", label: "Apple" },
-        { value: "banana", label: "Banana" },
-        { value: "cherry", label: "Cherry" },
-    ],
-    (selectedValue) => console.log("Selected: ", selectedValue)
-);
-
-// when a value is selected, the change event occurs and the value is logged to the console
-
-// append the dropdown to the body element of the DOM as a child
-
-document.body.appendChild(dropdown);
