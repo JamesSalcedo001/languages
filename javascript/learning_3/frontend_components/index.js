@@ -842,3 +842,12 @@ function createCarousel(images) {
 
     return container;
 }
+
+
+const carousel = createCarousel([
+    'https://via.placeholder.com/150?text=Image+1',
+    'https://via.placeholder.com/150?text=Image+2',
+    'https://via.placeholder.com/150?text=Image+3'
+]);
+
+document.body.appendChild(carousel);
