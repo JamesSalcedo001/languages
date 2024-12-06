@@ -724,37 +724,121 @@
 
 
 
-// ex 11 add a tooltip component
+// ex 11 add a toast component
 
 
 
 // createToast function with two params, first is message, second is the amount of time it should go on for in ms, with a default of 3000 (or 3 seconds)
 
-function createToast(message, duration = 3000) {
+// function createToast(message, duration = 3000) {
 
-    // create and style div
+//     // create and style div
 
-    const toast = document.createElement("div");
-    toast.textContent = message;
-    toast.style.position = "fixed";
-    toast.style.bottom = "20px";
-    toast.style.right = "20px";
-    toast.style.padding = "10px";
-    toast.style.backgroundColor = "#333";
-    toast.style.color = "white";
-    toast.style.borderRadius = "5px";
-    toast.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
+//     const toast = document.createElement("div");
+//     toast.textContent = message;
+//     toast.style.position = "fixed";
+//     toast.style.bottom = "20px";
+//     toast.style.right = "20px";
+//     toast.style.padding = "10px";
+//     toast.style.backgroundColor = "#333";
+//     toast.style.color = "white";
+//     toast.style.borderRadius = "5px";
+//     toast.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
 
-    // append toast div to the body of DOM
+//     // append toast div to the body of DOM
 
-    document.body.appendChild(toast);
+//     document.body.appendChild(toast);
 
-    // use setTimeout to remove the toast element from dom after the duration set
+//     // use setTimeout to remove the toast element from dom after the duration set
 
-    setTimeout(() => {
-        toast.remove();
-    }, duration);
+//     setTimeout(() => {
+//         toast.remove();
+//     }, duration);
+// }
+
+
+// createToast("This is a toast message!");
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////
+
+
+
+
+
+
+// ex 12 add a carousel/slider component
+
+
+function createCarousel(images) {
+
+    // create elements 
+    const container = document.createElement("div");
+    const img = document.createElement("img");
+    const prevButton = document.createElement("button");
+    const nextButton = document.createElement("button");
+
+    // set index to 0 as a starting point
+
+    let currentIndex = 0;
+
+    // set img src attribute to equal the current index of whatever image is currently set to, which starts at 0
+
+    img.src = images[currentIndex];
+    prevButton.textContent = "Prev";
+    nextButton.textContent = "Next";
+
+    // update image takes the img src attribute and does the same thing as on line 798
+
+    const updateImage = () => {
+
+        // sets the image source to the URL at the currentIndex in the images array
+
+        img.src = images[currentIndex];
+    }
+
+
+    prevButton.addEventListener("click", () => {
+
+        // decrements currentIndex by 1 to move to the previous image
+        // adds images.length to ensure index is positive (avoid negative values). use modulo to loop back to last image when currentIndex becomes less than 0
+
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+
+
+        // update displayed image using the helper function
+
+        updateImage();
+    })
+
+
+    nextButton.addEventListener("click", () => {
+
+        // increments currentIndex by 1 to move to next image, and uses modulo to loop back to first image when currentIndex exceeds the last index
+
+        currentIndex = (currentIndex + 1) % images.length;
+
+        // updates the displayed images using updateImage helper function
+
+        updateImage();
+    })
+
+    // append elements to container
+
+    container.appendChild(prevButton);
+    container.appendChild(img);
+    container.appendChild(nextButton);
+
+    return container;
 }
-
-
-createToast("This is a toast message!");
