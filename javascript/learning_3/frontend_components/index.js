@@ -426,89 +426,180 @@
 // ex 8 add a tabs component
 
 
-function createTabs(tabData) {
+// function createTabs(tabData) {
 
-    // createTabs function takes in a single argument, an array of objects
+//     // createTabs function takes in a single argument, an array of objects
 
-    // create div elements 
+//     // create div elements 
+
+//     const container = document.createElement("div");
+//     const tabs = document.createElement("div");
+//     const content = document.createElement("div");
+
+
+//     // style tabs with CSS
+
+//     tabs.style.display = "flex";
+//     tabs.style.cursor = "pointer";
+//     tabs.style.gap = "10px";
+//     tabs.style.marginBottom = "10px";
+
+//     // iterates through the tabdata array, uses destructuring to extract label and contentText properties of each object, use index to track current position of array starting from 0
+
+//     tabData.forEach(({ label, contentText }, index) => {
+
+//         // create button element named tab
+
+//         const tab = document.createElement("button");
+
+//         // assign the textContent to equal the label value in the object
+
+//         tab.textContent = label;
+
+//         // attach click event listener
+
+//         tab.addEventListener("click", () => {
+
+//             // converts children of the content container into an array and loops through each one, hiding all content sections by setting display to none
+
+//             Array.from(content.children).forEach(c => (c.style.display = "none"));
+            
+//             // makes the content section corresponding to the clicked tab visible by setting its display back to block
+
+//             content.children[index].style.display = "block";
+//         });
+
+//         // appends the tab button as a child of tabs container
+
+//         tabs.appendChild(tab);
+
+
+//         // create div for content associated with tab
+
+//         const tabContent = document.createElement("div");
+
+//         // sets textContent to equal contentText, which is a property value of each object
+
+//         tabContent.textContent = contentText;
+
+
+//         // displays the content for first tab and hides others
+
+//         tabContent.style.display = index === 0 ? "block" : "none";
+
+//         // appends content section to the content container
+
+//         content.appendChild(tabContent);
+//     });
+
+//     // append 'tabs' container as child of 'container' container
+
+//     container.appendChild(tabs);
+
+//     // append 'content' container to the 'container' container 
+
+//     container.appendChild(content);
+
+//     return container;
+// }
+
+
+
+// // create tabs function 
+
+// const tabs = createTabs([
+//     { label: "Tab 1", contentText: "This is content for Tab 1" },
+//     { label: "Tab 2", contentText: "This is content for Tab 2" },
+//     { label: "Tab 3", contentText: "This is content for Tab 3" }
+// ]);
+
+
+// // append tabs to the body of document
+
+// document.body.appendChild(tabs);
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////
+
+
+
+
+
+
+// ex 8 add an accordion component
+
+
+
+function createAccordion(items) {
+
+    // createAccordion takes in an items param expecting an array
+
+    // create container div
 
     const container = document.createElement("div");
-    const tabs = document.createElement("div");
-    const content = document.createElement("div");
+
+    // iterate through items, destructure to extract title and content properties of objects
+    items.forEach(({ title, content }) => {
+
+        // create div, button, and another div element
+
+        const accordionItem = document.createElement("div");
+        const header = document.createElement("button");
+        const body = document.createElement("div");
+
+        // set textContents of header and body elements to equal the corresponding property values title and content
+
+        header.textContent = title;
+        body.textContent = content;
+
+        // set display property of body div to 'none'
+
+        body.style.display = "none";
 
 
-    // style tabs with CSS
+        // attach click event listener to header button
 
-    tabs.style.display = "flex";
-    tabs.style.cursor = "pointer";
-    tabs.style.gap = "10px";
-    tabs.style.marginBottom = "10px";
+        header.addEventListener("click", () => {
+            // set variable isVisible
 
-    // iterates through the tabdata array, uses destructuring to extract label and contentText properties of each object, use index to track current position of array starting from 0
+            const isVisible = body.style.display === "block";
 
-    tabData.forEach(({ label, contentText }, index) => {
+            // use ternary to conditionally render either display of block or none
 
-        // create button element named tab
+            body.style.display = isVisible ? "none" : "block";
+        })
 
-        const tab = document.createElement("button");
+        // append header as a child of accordionItem
 
-        // assign the textContent to equal the label value in the object
-        tab.textContent = label;
+        accordionItem.appendChild(header);
 
-        // attach click event listener
-        tab.addEventListener("click", () => {
+        // append body as child of accordionItem
 
-            // converts children of the content container into an array and loops through each one, hiding all content sections by setting display to none
-            Array.from(content.children).forEach(c => (c.style.display = "none"));
-            
-            // makes the content section corresponding to the clicked tab visible by setting its display back to block
-            content.children[index].style.display = "block";
-        });
+        accordionItem.appendChild(body);
 
-        // appends the tab button as a child of tabs container
-        tabs.appendChild(tab);
-
-
-        // create div for content associated with tab
-
-        const tabContent = document.createElement("div");
-
-        // sets textContent to equal contentText, which is a property value of each object
-
-        tabContent.textContent = contentText;
-
-
-        // displays the content for first tab and hides others
-
-        tabContent.style.display = index === 0 ? "block" : "none";
-
-        // appends content section to the content container
-
-        content.appendChild(tabContent);
-    });
-
-    // append 'tabs' container as child of 'container' container
-
-    container.appendChild(tabs);
-
-    // append 'content' container to the 'container' container 
-
-    container.appendChild(content);
+        // append accordionItem as child of container
+        
+        container.appendChild(accordionItem);
+    })
 
     return container;
 }
 
 
 
-// create tabs function 
-
-const tabs = createTabs([
-    { label: "Tab 1", contentText: "This is content for Tab 1" },
-    { label: "Tab 2", contentText: "This is content for Tab 2" },
-    { label: "Tab 3", contentText: "This is content for Tab 3" }
-]);
 
 
-// append tabs to the body of document
 
-document.body.appendChild(tabs);
+
+
+
