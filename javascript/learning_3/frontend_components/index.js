@@ -588,7 +588,7 @@ function createAccordion(items) {
         accordionItem.appendChild(body);
 
         // append accordionItem as child of container
-        
+
         container.appendChild(accordionItem);
     })
 
@@ -599,7 +599,18 @@ function createAccordion(items) {
 
 
 
+// create accordion
 
+const accordion = createAccordion([
+    { title: "Section 1", content: "Content for section 1" },
+    { title: "Section 2", content: "Content for section 2" },
+    { title: "Section 3", content: "Content for section 3" }
+])
+
+
+// append acordion to DOM
+
+document.body.appendChild(accordion);
 
 
 
