@@ -642,66 +642,116 @@
 
 // createTooltip takes two args, the DOM element to which the tooltip will be attached, and the text that will appear in the tooltip
 
-function createTooltip(targetElement, tooltipText) {
+// function createTooltip(targetElement, tooltipText) {
 
 
-    // create div element serving as tooltip
+//     // create div element serving as tooltip
 
 
-    // style tooltip with CSS
+//     // style tooltip with CSS
 
-    const tooltip = document.createElement("div");
-    tooltip.textContent = tooltipText;
-    tooltip.style.position = "absolute";
-    tooltip.style.background = "black";
-    tooltip.style.color = "white";
-    tooltip.style.padding = "5px";
-    tooltip.style.borderRadius = "3px";
-    tooltip.style.display = "none";
+//     const tooltip = document.createElement("div");
+//     tooltip.textContent = tooltipText;
+//     tooltip.style.position = "absolute";
+//     tooltip.style.background = "black";
+//     tooltip.style.color = "white";
+//     tooltip.style.padding = "5px";
+//     tooltip.style.borderRadius = "3px";
+//     tooltip.style.display = "none";
 
-    // append tooltip to the body of DOM 
+//     // append tooltip to the body of DOM 
 
-    document.body.appendChild(tooltip);
+//     document.body.appendChild(tooltip);
 
 
-    // add even listener for mouseenter event on targetElement
+//     // add even listener for mouseenter event on targetElement
 
-    targetElement.addEventListener("mouseenter", (e) => {
+//     targetElement.addEventListener("mouseenter", (e) => {
 
-        // get X and Y coordinates of mouse pointer relative to the DOM
+//         // get X and Y coordinates of mouse pointer relative to the DOM
     
-        // sets the horizontal position of the tooltip to the X coordinate of the mouse pointer
+//         // sets the horizontal position of the tooltip to the X coordinate of the mouse pointer
 
-        tooltip.style.left = `${e.pageX}px`;
+//         tooltip.style.left = `${e.pageX}px`;
 
-        // sets the vertical position of the tooltip to slightly below the Y coordinate of the mouse pointer
+//         // sets the vertical position of the tooltip to slightly below the Y coordinate of the mouse pointer
 
-        tooltip.style.top = `${e.pageY + 10}px`;
+//         tooltip.style.top = `${e.pageY + 10}px`;
 
-        // make tooltip visible
+//         // make tooltip visible
 
-        tooltip.style.display = "block";
-    });
+//         tooltip.style.display = "block";
+//     });
 
 
-    // on mouse leave, hide tooltip
+//     // on mouse leave, hide tooltip
 
-    targetElement.addEventListener("mouseleave", () => {
-        tooltip.style.display = "none";
-    });
+//     targetElement.addEventListener("mouseleave", () => {
+//         tooltip.style.display = "none";
+//     });
 
-    return tooltip;
+//     return tooltip;
+// }
+
+
+
+// // create and append button
+
+// const buttonWithToolTip = document.createElement("button");
+// buttonWithToolTip.textContent = "Hover over me";
+// document.body.appendChild(buttonWithToolTip);
+
+
+// // invoke createTooltip function, attaching tooltip to buttonWithTooltip
+
+// createTooltip(buttonWithToolTip, "This is a tooltip!");
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////
+
+
+
+
+
+
+// ex 11 add a tooltip component
+
+
+
+// createToast function with two params, first is message, second is the amount of time it should go on for in ms, with a default of 3000 (or 3 seconds)
+
+function createToast(message, duration = 3000) {
+
+    // create and style div
+
+    const toast = document.createElement("div");
+    toast.textContent = message;
+    toast.style.position = "fixed";
+    toast.style.bottom = "20px";
+    toast.style.right = "20px";
+    toast.style.padding = "10px";
+    toast.style.backgroundColor = "#333";
+    toast.style.color = "white";
+    toast.style.borderRadius = "5px";
+    toast.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
+
+    // append toast div to the body of DOM
+
+    document.body.appendChild(toast);
+
+    // use setTimeout to remove the toast element from dom after the duration set
+    
+    setTimeout(() => {
+        toast.remove();
+    }, duration);
 }
-
-
-
-// create and append button
-
-const buttonWithToolTip = document.createElement("button");
-buttonWithToolTip.textContent = "Hover over me";
-document.body.appendChild(buttonWithToolTip);
-
-
-// invoke createTooltip function, attaching tooltip to buttonWithTooltip
-
-createTooltip(buttonWithToolTip, "This is a tooltip!");
