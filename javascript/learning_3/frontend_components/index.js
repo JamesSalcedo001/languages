@@ -386,7 +386,7 @@ function createDropdown(options, onChange) {
 
 
     // attach an event listener to the select element and have the onChange function which is passed in as an argument apply to the event.target.value 
-    
+
     select.addEventListener("change", (e) => onChange(e.target.value));
 
     return select;
@@ -394,3 +394,19 @@ function createDropdown(options, onChange) {
 
 
 
+// create dropdown
+
+const dropdown = createDropdown(
+    [
+        { value: "apple", label: "Apple" },
+        { value: "banana", label: "Banana" },
+        { value: "cherry", label: "Cherry" },
+    ],
+    (selectedValue) => console.log("Selected: ", selectedValue)
+);
+
+// when a value is selected, the change event occurs and the value is logged to the console
+
+// append the dropdown to the body element of the DOM as a child
+
+document.body.appendChild(dropdown);
