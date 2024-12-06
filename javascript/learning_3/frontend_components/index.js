@@ -750,8 +750,11 @@ function createToast(message, duration = 3000) {
     document.body.appendChild(toast);
 
     // use setTimeout to remove the toast element from dom after the duration set
-    
+
     setTimeout(() => {
         toast.remove();
     }, duration);
 }
+
+
+createToast("This is a toast message!");
