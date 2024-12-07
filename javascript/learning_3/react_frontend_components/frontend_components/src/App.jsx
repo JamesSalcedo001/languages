@@ -1,7 +1,7 @@
 import './App.css'
 // import { Button } from './components/Button'
-import { Card } from './components/Card.'
-
+// import { Card } from './components/Card.'
+import { Modal } from './components/Modal'
 
 function App() {
 
@@ -14,8 +14,12 @@ function App() {
       {/* <Button text="Click Me" onClick={() => alert("Button Clicked!")} /> */}
 
       {/* Create Card component, passing string Card Title and This is card content as props named title and content to the card component */}
-      
-      <Card title="Card Title" content="This is card content." />
+
+      {/* <Card title="Card Title" content="This is card content." /> */}
+
+      {/* Create Modal component, passing string and a callback function as props. when button is clicked, this function executes and shows an alert with message Button Clicked */}
+
+      <Modal content="This is a modal" onClose={() => alert("Modal closed")} />
 
     </div>
   )
