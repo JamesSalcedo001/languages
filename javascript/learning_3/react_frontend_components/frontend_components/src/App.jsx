@@ -1,9 +1,22 @@
 import './App.css'
 // import { Button } from './components/Button'
 // import { Card } from './components/Card.'
-import { Modal } from './components/Modal'
+// import { Modal } from './components/Modal'
+import { Navbar } from './components/Navbar'
+
 
 function App() {
+
+
+  // links for navbar
+
+  const links = [
+    { text: "Home", href: "/" },
+    { text: "About", href: "/about" },
+    { text: "Contact", href: "/contact" }
+  ]
+
+
 
   return (
     <div style={{ padding: "20px" }}>
@@ -19,7 +32,9 @@ function App() {
 
       {/* Create Modal component, passing string and a callback function as props. when button is clicked, this function executes and shows an alert with message Button Clicked */}
 
-      <Modal content="This is a modal" onClose={() => alert("Modal closed")} />
+      {/* <Modal content="This is a modal" onClose={() => alert("Modal closed")} /> */}
+
+      <Navbar links={links} />
 
     </div>
   )

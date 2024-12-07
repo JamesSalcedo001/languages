@@ -50,7 +50,7 @@
 
 /* 3: Modal */
 
-
+/* 
 .modal {
     position: fixed;
     top: 0;
@@ -70,4 +70,47 @@
     border-radius: 5px;
     width: 300px;
     text-align: center;
+} */
+
+
+
+
+
+
+
+
+
+
+/* ************** */
+
+
+
+
+/* 4: Navbar */
+
+
+.navbar {
+    display: flex;
+    gap: 15px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+}
+
+
+.navbar li {
+    list-style: none;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+
+.navbar a:hover {
+    text-decoration: underline;
 }
