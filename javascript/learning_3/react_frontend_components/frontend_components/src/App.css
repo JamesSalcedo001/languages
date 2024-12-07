@@ -89,7 +89,7 @@
 /* 4: Navbar */
 
 
-.navbar {
+/* .navbar {
     display: flex;
     gap: 15px;
     background-color: #f8f9fa;
@@ -113,4 +113,40 @@
 
 .navbar a:hover {
     text-decoration: underline;
+} */
+
+
+
+
+
+
+
+
+/* ************** */
+
+
+
+
+/* 5: List */
+
+
+
+
+
+.custom-list {
+    margin: 10px 0;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #333;
 }
+
+.custom-list li {
+    margin: 5px 0;
+}
+
+
+
+
+
+
+

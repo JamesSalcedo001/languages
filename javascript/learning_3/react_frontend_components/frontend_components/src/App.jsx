@@ -2,7 +2,8 @@ import './App.css'
 // import { Button } from './components/Button'
 // import { Card } from './components/Card.'
 // import { Modal } from './components/Modal'
-import { Navbar } from './components/Navbar'
+// import { Navbar } from './components/Navbar'
+import { List } from "./components/List"
 
 
 function App() {
@@ -10,11 +11,18 @@ function App() {
 
   // array of objects, each representing a link for the nav bar, text being the content, and href being the URL the link navigates to when clicked
 
-  const links = [
-    { text: "Home", href: "/" },
-    { text: "About", href: "/about" },
-    { text: "Contact", href: "/contact" }
-  ]
+  // const links = [
+  //   { text: "Home", href: "/" },
+  //   { text: "About", href: "/about" },
+  //   { text: "Contact", href: "/contact" }
+  // ]
+
+
+
+  // array of list items for list component
+  const listItems = ["Item 1", "Item 2", "Item 3"];
+
+
 
 
 
@@ -26,17 +34,30 @@ function App() {
 
       {/* <Button text="Click Me" onClick={() => alert("Button Clicked!")} /> */}
 
+
+
       {/* Create Card component, passing string Card Title and This is card content as props named title and content to the card component */}
 
       {/* <Card title="Card Title" content="This is card content." /> */}
+
+
 
       {/* Create Modal component, passing string and a callback function as props. when button is clicked, this function executes and shows an alert with message Button Clicked */}
 
       {/* <Modal content="This is a modal" onClose={() => alert("Modal closed")} /> */}
 
+
+
       {/* passing links array of objects down to Navbar component as props for dynamic rendering */}
+
+      {/* <Navbar links={links} /> */}
+
+
+
+      {/* passing list array and ordered=true down to List component as props for dynamic rendering */}
+
+      <List items={listItems} ordered={true} />
       
-      <Navbar links={links} />
 
     </div>
   )
