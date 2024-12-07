@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export const Modal = ({ content, onClose }) => {
     return (
         <div

@@ -4,7 +4,7 @@ export const Button = ({ text, onClick }) => {
 
     // attaches onClick prop as click event handler for the button, and displays the value of the 'text' prop as the button's label
     
-    return <button onClick={onClick}>{text}</button>;
+    return <button className="custom-button" onClick={onClick}>{text}</button>;
 }
 
  
