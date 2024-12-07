@@ -8,7 +8,7 @@ import { Navbar } from './components/Navbar'
 function App() {
 
 
-  // links for navbar
+  // array of objects, each representing a link for the nav bar, text being the content, and href being the URL the link navigates to when clicked
 
   const links = [
     { text: "Home", href: "/" },
@@ -34,6 +34,8 @@ function App() {
 
       {/* <Modal content="This is a modal" onClose={() => alert("Modal closed")} /> */}
 
+      {/* passing links array of objects down to Navbar component as props for dynamic rendering */}
+      
       <Navbar links={links} />
 
     </div>
