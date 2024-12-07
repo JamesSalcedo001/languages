@@ -3,8 +3,8 @@ import './App.css'
 // import { Card } from './components/Card.'
 // import { Modal } from './components/Modal'
 // import { Navbar } from './components/Navbar'
-import { List } from "./components/List"
-
+// import { List } from "./components/List"
+import { Dropdown } from './components/Dropdown';
 
 function App() {
 
@@ -20,9 +20,17 @@ function App() {
 
 
   // array of list items for list component
-  const listItems = ["Item 1", "Item 2", "Item 3"];
+
+  // const listItems = ["Item 1", "Item 2", "Item 3"];
 
 
+
+
+  const dropdownOptions = [
+    { value: "option1", label: "Option 1" },
+    { value: "option2", label: "Option 2" },
+    { value: "option3", label: "Option 3" },
+  ];
 
 
 
@@ -56,8 +64,10 @@ function App() {
 
       {/* passing list array and ordered=true down to List component as props for dynamic rendering */}
 
-      <List items={listItems} ordered={true} />
+      {/* <List items={listItems} ordered={true} /> */}
       
+
+      <Dropdown options={dropdownOptions} onChange={(value) => alert(`Selected: ${value}`)} />
 
     </div>
   )
